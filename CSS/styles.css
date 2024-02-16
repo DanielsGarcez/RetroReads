@@ -1,9 +1,8 @@
 
 /*
-
+        Cores
 Verde Claro = 129458
 Verde Escuro = 1f4935
-
 */
 
 @charset "UTF-8";
@@ -25,68 +24,89 @@ body {
 }
 
 header {
+    min-width: 320px;
     background-color: var(--corVerdeEscuro);
-    color: #fff;
-    padding-top: 10px;
+    padding-top: 30px;
     text-align: center;
     margin-bottom: 10px;
-}
-
-picture{
-    margin: 0px;
-}
-
-picture img{
-    margin: 0px;
-    padding: 5px 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0px;
 }
 
 #logo{
+    margin-left: -40px;
+    margin-right: 20px;
     max-width: 200px;
-    display: inline-block;
+    position: relative;
     margin-bottom: -5px;
-    margin-right: 10px;
+}
+#logo:hover{
+    cursor: pointer;
 }
 
 .busca{
     display: inline-block;
     align-items: center;
-    size: 100px;
     padding-bottom: 10px;
 }
 .busca input{
     display: inline-block;
     border: none;
-    padding: 5px 5px;
+    width: 380px;
+    padding: 10px 10px;
     border-radius: 3px 0px 0px 3px;
 }
-
 .busca input::placeholder{
-    padding: 5px 50px;
+    padding: 10px 0px;
     text-align: left;
 }
-
 .busca button {
     display: inline-block;
     background-color: var(--corVerdeClaro);
     color: #fff;
     border: none;
-    padding: 5px 12px;
+    padding: 10px 12px;
     border-radius: 0px 3px 3px 0px;
+}
+.busca button:hover{
+    text-decoration: underline;
+}
+
+#carrinho{
+    max-height: 35px;
+    position: relative;
+    margin-bottom: -13px;
+    margin-left: 30px;
+    border: 3px solid #12945700;
+}
+#carrinho:hover{
+    cursor: pointer;
+}
+
+#user{
+    max-height: 40px;
+    position: relative;
+    margin-bottom: -15px;
+    margin-left: 20px;
+    border-radius: 100px;
+    border: 3px solid #12945700;
+}
+#user:hover{
+    cursor: pointer;
+    border: 3px solid var(--corVerdeClaro);
+    transition: .2s;
 }
 
 nav {
     background-color: var(--corVerdeClaro);
-    min-width:100vh;
-    padding: 10px;
+    min-width:100%;
+    padding: 8px 0px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.26);
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: inline-block;
 
 }
-
 nav ul {
     list-style-type: none;
     margin: 0px;
@@ -94,24 +114,39 @@ nav ul {
     padding: 0px 50px;
     display: inline-block;
 }
-
 nav ul li {
     display: inline;
     margin-right: 20px;
+    
 }
-
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
+    padding: 8.5px;
+}
+nav ul li a:hover {
+    color: var(--corVerdeEscuro);
+    background-color: white;
+    transition: .5s;
+    border-radius: 3px;
+    text-decoration: underline;
 }
 
 main {
     padding: 20px;
     background-color: white;
-    width: 400px;
-    margin: auto;
-    border: 1px solid black;
-    border-radius: 15px;
+    min-width: 400px;
+    max-width: 715px;
+    margin: auto; /*Centraliza*/
+    margin-top: 120px;
+    justify-content: space-around;
+}
+
+main ul li{
+    list-style: none;
+    display: inline-block;
+    
 }
 
 .livros {
@@ -121,15 +156,23 @@ main {
 }
 
 .livro {
-    width: 300px;
+    width: 220px;
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ccc;
+    text-align: center;
+}
+
+.livro:hover{
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.26);
+    transition: .3s;
 }
 
 .livro img {
-    width: 100%;
+    width: 60%;
     height: auto;
+    display: block;
+    margin: auto;
 }
 
 .livro h2 {
@@ -146,11 +189,14 @@ button {
     color: #fff;
     border: none;
     padding: 10px 20px;
+    margin: auto;
     cursor: pointer;
+    display: block;
 }
 
 button:hover {
     background-color: var(--corVerdeClaro);
+    transition: .5s;
 }
 
 footer {
@@ -158,8 +204,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
