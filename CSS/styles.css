@@ -99,7 +99,17 @@ header {
     transition: .2s;
 }
 
-nav {
+#tema{
+    max-height: 40px;
+    position: relative;
+    margin-bottom: -15px;
+    margin-left: 20px;
+    border-radius: 100px;
+    border: 3px solid #12945700;
+    display: inline-block;
+}
+
+nav{
     background-color: var(--corVerdeClaro);
     min-width:100%;
     padding: 8px 0px;
