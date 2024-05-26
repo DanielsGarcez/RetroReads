@@ -1,0 +1,81 @@
+
+/*      Cores
+Verde Claro = 129458
+Verde Escuro = 1f4935
+*/
+:root{
+    /*Tema Claro*/
+    --corVerdeClaro: #129458;
+    --corVerdeEscuro: #1f4935;
+
+    --corBranco: #fff;
+    /*Tema Escuro*/
+    --corPreto: #000;
+    --corCinzaEscuro: #363636;
+    --corCinza: #a7a6a6;
+}
+
+body.dark{
+    background-color: var(--corCinzaEscuro);
+}
+body.dark > header{
+    background-color: var(--corPreto);
+}
+body.dark > header > nav{
+    background-color: var(--corVerdeEscuro);
+}
+
+.checkbox{
+    opacity: 0;
+    position: relative;
+}
+
+.label:hover{
+    cursor: pointer;
+    box-shadow:0px 0px 0px #129458;
+    transition: .2s;
+}
+
+
+label{
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: white;
+}
