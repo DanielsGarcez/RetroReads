@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="icon" type="imagem/x-icon" href="/Img/Logo-favicon-sem-fundo.ico">
+    <title>Login - RetroReads</title>
+</head>
+
+<body>
+    <header>
+        <div class="barra">
+            <a href="/retroreads.html" class="logo">
+                <img src="/Img/Text No-Bg.png" alt="Logo">
+            </a>
+    </header>
+
+    <div class="container">
+        <div class="container">
+            <div class="lado lado-a"> <!--lado a-->
+                <div class="coluna1">
+                    <h2 class="titulo titulo-1">Já tem cadastro?</h2>
+                    <p class="texto texto-1">Faça o login para se conectar</p>
+                    <button id="signin" class="btn btn-1">Login</button>
+                </div>  <!--coluna 1-->  
+
+                <div class="coluna2">
+                    <h2 class="titulo titulo-2">Cadastre-se</h2>
+                    <form class="form">
+                        <label class="label-input" for="">
+                            <input type="text" placeholder="Nome">
+                        </label>
+
+                        <label class="label-input" for="">
+                            <input type="text" placeholder="CPF/CNPJ">
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <input type="email" placeholder="E-mail">
+                        </label>
+                        
+                        <label class="label-input" for="">
+                            <input type="password" placeholder="Senha">
+                        </label>
+                        
+                        
+                        <button class="btn btn-2">cadastrar</button>        
+                    </form>
+                </div><!-- Coluna 2 -->
+            </div><!-- lado a -->
+
+            <div class="lado lado-b"> <!--lado b-->
+                <div class="coluna1">
+                    <h2 class="titulo titulo-1">Seja bem vindo!</h2>
+                    <p class="texto texto-1">Crie já sua conta da RetroReads</p>
+                    <p class="texto texto-1"></p>
+                    <button id="signup" class="btn btn-1">prosseguir</button>
+                </div> <!--coluna 1-->
+
+                <div class="coluna2">
+                    <h2 class="titulo titulo-2">Faça login para continuar</h2>
+                    <form class="form">
+                    
+                        <label class="label-input" for="">
+                            <input type="email" placeholder="E-mail">
+                        </label>
+                    
+                        <label class="label-input" for="">
+                            <input type="password" placeholder="Senha">
+                        </label>
+                    
+                        <a class="password" href="#">Esqueci minha senha</a>
+                        <button class="btn btn-2">entrar</button>
+                    </form>
+                </div><!-- Coluna 2 -->
+            </div><!-- lado-b -->
+        </div>
+    <script src="../nodeJS/index.js"></script>
+</body>
+</html>

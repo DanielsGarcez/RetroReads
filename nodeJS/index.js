@@ -1,3 +1,16 @@
-const colors = require("colors"); // importa recursos do pacote colors
 
-console.log("Hello World!".rainbow) // Altera a cor do texto para azul
+// Alteração de Login/Cadastro
+
+var btnSignin = document.querySelector("#signin");
+var btnSignup = document.querySelector("#signup");
+
+var body = document.querySelector("body");
+
+
+btnSignin.addEventListener("click", function () {
+   body.className = "sign-in-js"; 
+});
+
+btnSignup.addEventListener("click", function () {
+    body.className = "sign-up-js";
+});
