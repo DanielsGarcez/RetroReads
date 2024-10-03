@@ -109,6 +109,40 @@ header {
     display: inline-block;
 }
 
+.usuario{
+    position: relative;
+    display: inline-block;
+}
+
+.userMenu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 150px;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+.userMenu a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    display: block;
+    font-size: 14px;
+}
+
+.userMenu a:hover {
+    background-color: #f1f1f1;
+}
+
+.usuario:hover .userMenu {
+    display: block;
+}
+
 nav{
     background-color: var(--corVerdeClaro);
     min-width:100%;

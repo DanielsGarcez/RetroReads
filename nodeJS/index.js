@@ -14,3 +14,22 @@ btnSignin.addEventListener("click", function () {
 btnSignup.addEventListener("click", function () {
     body.className = "sign-up-js";
 });
+
+
+
+/*visibilidade senha */
+document.querySelectorAll('.olho-senha').forEach(item => {
+    item.addEventListener('click', function() {
+        const passwordField = document.getElementById(this.getAttribute('data-target'));
+        
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            this.classList.remove("fa-eye");
+            this.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "password";
+            this.classList.remove("fa-eye-slash");
+            this.classList.add("fa-eye");
+        }
+    });
+});

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/login.css">
     <link rel="icon" type="imagem/x-icon" href="/Img/Logo-favicon-sem-fundo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Login - RetroReads</title>
 </head>
 
@@ -18,7 +19,7 @@
 
     <div class="container">
         <div class="container">
-            <div class="lado lado-a"> <!--lado a-->
+            <div class="content content-a"> <!--content a-->
                 <div class="coluna1">
                     <h2 class="titulo titulo-1">Já tem cadastro?</h2>
                     <p class="texto texto-1">Faça o login para se conectar</p>
@@ -48,9 +49,9 @@
                         <button class="btn btn-2">cadastrar</button>        
                     </form>
                 </div><!-- Coluna 2 -->
-            </div><!-- lado a -->
+            </div><!-- content a -->
 
-            <div class="lado lado-b"> <!--lado b-->
+            <div class="content content-b"> <!--content b-->
                 <div class="coluna1">
                     <h2 class="titulo titulo-1">Seja bem vindo!</h2>
                     <p class="texto texto-1">Crie já sua conta da RetroReads</p>
@@ -67,14 +68,15 @@
                         </label>
                     
                         <label class="label-input" for="">
-                            <input type="password" placeholder="Senha">
+                            <input type="password" placeholder="Senha" id="loginSenha">
+                            <i class="fa-regular fa-eye olho-senha" style="color: #b8b8b8;" data-target="loginSenha"></i>
                         </label>
                     
                         <a class="password" href="#">Esqueci minha senha</a>
                         <button class="btn btn-2">entrar</button>
                     </form>
                 </div><!-- Coluna 2 -->
-            </div><!-- lado-b -->
+            </div><!-- content-b -->
         </div>
     <script src="../nodeJS/index.js"></script>
 </body>
