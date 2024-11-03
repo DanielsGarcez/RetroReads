@@ -21,12 +21,13 @@ Verde Escuro = 1f4935
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
+    padding-top: 100px;
 }
 
 header {
     min-width: 320px;
     background-color: var(--corVerdeEscuro);
-    padding-top: 30px;
+    padding-top: 25px;
     text-align: center;
     margin-bottom: 10px;
     position: fixed;
@@ -71,28 +72,30 @@ header {
     border-radius: 0px 3px 3px 0px;
 }
 .busca button:hover{
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 #carrinho{
-    max-height: 35px;
+    max-height: 30px;
     position: relative;
-    margin-bottom: -13px;
+    margin-bottom: -10px;
     margin-left: 30px;
     border: 3px solid #12945700;
 }
+
 #carrinho:hover{
     cursor: pointer;
 }
 
 #user{
-    max-height: 40px;
+    max-height: 38px;
     position: relative;
-    margin-bottom: -15px;
-    margin-left: 20px;
+    margin-bottom: -14px;
+    margin-left: 15px;
     border-radius: 100px;
     border: 3px solid #12945700;
 }
+
 #user:hover{
     cursor: pointer;
     border: 3px solid var(--corVerdeClaro);
@@ -107,6 +110,39 @@ header {
     border-radius: 100px;
     border: 3px solid #12945700;
     display: inline-block;
+}
+
+.usuario{
+    position: relative;
+    display: inline-block;
+}
+
+.userMenu {
+display: none;
+position: absolute;
+background-color: #ffffff;
+box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+z-index: 1;
+min-width: 110px;
+padding: 10px 0;
+border-radius: 8px;
+}
+
+.userMenu a {
+color: black;
+padding: 10px 15px;
+text-decoration: none;
+text-transform: capitalize;
+display: block;
+font-size: 12px;
+}
+
+.userMenu a:hover {
+background-color: #f1f1f1;
+}
+
+.usuario:hover .userMenu {
+display: block;
 }
 
 nav{
@@ -140,7 +176,6 @@ nav ul li a:hover {
     background-color: white;
     transition: .5s;
     border-radius: 3px;
-    text-decoration: underline;
 }
 
 main {

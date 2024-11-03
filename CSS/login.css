@@ -9,10 +9,8 @@ body {
 
 header {
     background-color: #fff;
-    background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     width: 100%;
-    z-index: 999; /* Aumenta o z-index para garantir que fique acima dos outros elementos */
     position: relative;
 }
 
@@ -21,8 +19,6 @@ header {
     align-items: center; /* Garante o alinhamento vertical */
     justify-content: space-between;
     padding: 10px 0;
-    display: flex;
-    align-items: center;
 }
 
 .logo {
@@ -35,15 +31,36 @@ header {
 
 
 
+/* Visibilidade Senha */
+
+.olho-senha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .olho-senha {
+        right: 5px; /* Reduz o espaço à direita em telas pequenas */
+    }
+}
+
+
+
+
+
+/* Campo do Login/Cadastro */
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 650px;
     background-color: #fdffff;
 }
-.lado {
+.content {
     background-color: #fff;
     border-radius: 15px;
     width: 720px;
@@ -53,7 +70,7 @@ header {
     position: relative;
     box-shadow:  0 4px 30px rgba(0, 0, 0, 0.2);
 }
-.lado::before {
+.content::before {
     content: "";
     position: absolute;
     background-color: #129458;
@@ -65,23 +82,28 @@ header {
 
     left: 0;
 }
+
 .titulo {
     font-size: 28px;
     font-weight: bold;
     text-transform: none;
 }
+
 .titulo-1 {
     color: #fff;
 }
+
 .titulo-2 {
     margin-bottom: 20px;
     color: #129458;
 }
+
 .texto {
     font-size: 14px;
     font-weight: 300;
     line-height: 30px;
 }
+
 .texto-1 {
     color: #fff;
 }
@@ -90,7 +112,7 @@ header {
     border-radius: 10px;
     text-transform: uppercase;
     color: #fff;
-    font-size: 10px;
+    font-size: 11px;
     padding: 10px 40px;
     cursor: pointer;
     font-weight: bold;
@@ -99,31 +121,38 @@ header {
     border: none;
     margin-top: 1rem;
 }
+
 .btn-1 {
     background-color: transparent;
     border: 1px solid #fff;
     transition: background-color .5s;
 }
+
 .btn-1:hover {
     background-color: #fff;
     color: #129458;
 }
+
 .btn-2 {
     background-color: #129458;
     border: 1px solid #129458;
     transition: background-color .5s;
 }
+
 .btn-2:hover {
     background-color: #fff;
     border: 1px solid #129458;
     color: #129458;
 }
-.lado-a {
+
+.content-a {
     display: flex;
 }
-.lado-a .coluna2 {
+
+.content-a .coluna2 {
     z-index: 11;
 }
+
 .coluna1 {
     text-align: center;
     width: 40%;
@@ -149,12 +178,14 @@ header {
     background-color: #ecf0f1;
     padding: 10px; /* Adiciona espaço interno ao input */
 }
-input:-webkit-autofill 
-{    
+
+input:-webkit-autofill {    
     -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
     -webkit-text-fill-color: #000 !important;
 }
+
 .label-input {
+    position: relative;
     background-color: #ecf0f1;
     display: flex;
     align-items: center;
@@ -169,18 +200,21 @@ input:-webkit-autofill
 
 /* conteudo 2*/
 
-.lado-b {
+.content-b {
     position: absolute;
     display: flex;
 }
-.lado-b .coluna1 {
+
+.content-b .coluna1 {
     order: 2;
     z-index: -1;
 }
-.lado-b .coluna2 {
+
+.content-b .coluna2 {
     order: 1;
     z-index: -1;
 }
+
 .password {
     color: #34495e;
     font-size: 14px;
@@ -193,18 +227,18 @@ input:-webkit-autofill
 
 
 
-.sign-in-js .lado-a .coluna1 {
+.sign-in-js .content-a .coluna1 {
     z-index: -1;
 }
 
-.sign-in-js .lado-b .coluna2 {
+.sign-in-js .content-b .coluna2 {
     z-index: 11;
 }
-.sign-in-js .lado-b .coluna1 {
+.sign-in-js .content-b .coluna1 {
     z-index: 13;
 }
 
-.sign-in-js .lado::before {
+.sign-in-js .content::before {
     left: 60%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -215,38 +249,38 @@ input:-webkit-autofill
     z-index: 12;
 }
 
-.sign-up-js .lado::before {
+.sign-up-js .content::before {
     animation: slideout 1.3s;
 
     z-index: 12;
 }
 
-.sign-up-js .lado-b .coluna1,
-.sign-up-js .lado-b .coluna2 {
+.sign-up-js .content-b .coluna1,
+.sign-up-js .content-b .coluna2 {
     z-index: -1;
 }
 
-.sign-up-js .lado-a .coluna2 {
+.sign-up-js .content-a .coluna2 {
     z-index: 11;
 }
 
-.sign-up-js .lado-a .coluna1 {
+.sign-up-js .content-a .coluna1 {
     z-index: 13;    
 }
 
 
 /* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
-.sign-in-js .lado-a .coluna2 {
 
+.sign-in-js .content-a .coluna2 {
     z-index: -1;
     position: relative;
-    animation: deslocamentoEsq 0.5s;
+    animation: deslocamentoEsq 1.3s;
 }
 
-.sign-up-js .lado-b .coluna2 {
+.sign-up-js .content-b .coluna2 {
     position: relative;
     z-index: -1;
-    animation: deslocamentoDir 0.5s;
+    animation: deslocamentoDir 1.3s;
 }
 
 
@@ -256,19 +290,18 @@ input:-webkit-autofill
 
     from {
         left: 0;
-        opacity: 1;
+        opacity: 0.5;
         z-index: 12;
     }
 
     25% {
         left: -80px;
-        opacity: .5;
     }
 
     50% {
-        left: -100px;
-        opacity: .2;
+        opacity: 0;
     }
+
 
     to {
         left: -110px;
@@ -282,19 +315,23 @@ input:-webkit-autofill
 
     from {
         left: 0;
+        opacity: 0.5;
         z-index: 12;
     }
 
-    25% {
+    25%{
         left: 80px;
+        opacity: 0;
     }
 
     50% {
         left: 100px;
+        opacity: 0;
     }
 
     to {
         left: 110px;
+        opacity: 0;
         z-index: -1;
     }
 }
@@ -309,8 +346,6 @@ input:-webkit-autofill
         width: 40%;
     }
 
-
-
     to {
         left: 60%;
         width: 40%;
@@ -324,8 +359,6 @@ input:-webkit-autofill
         width: 40%;
     }
 
-
-
     to {
         left: 0;
         width: 40%;
@@ -339,37 +372,3 @@ input:-webkit-autofill
 
 
 
-
-/*VERSÃO MOBILE*/
-@media screen and (max-width: 1040px) {
-    .content {
-        width: 100%;
-        height: 100%;
-    }
-
-    .content::before {
-        width: 100%;
-        height: 40%;
-        top: 0;
-        border-radius: 0;
-    }
-    .lado-a, .lado-b {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    .coluna1, .coluna2 {
-        width: 100%;
-    }
-    
-    .sign-in-js .content::before {
-        top: 60%;
-        left: 0;
-        border-radius: 0;
-
-    }
-
-    .form {
-        width: 90%;
-    }
-}
