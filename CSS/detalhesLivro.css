@@ -1,0 +1,97 @@
+
+:root{
+    --corVerdeClaro: #129458;
+    --corVerdeEscuro: #1f4935;
+    --corBranco: #fff;
+    --corCinzaEscuro: #909090;
+    --corCinza: #D9D9D9;
+    --corCinzaClaro:#F6F5F4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+main {
+    padding: 20px;
+    background-color: var(--corBranco);
+    min-width: 400px;
+    max-width: 1080px;
+    margin: auto; /*Centraliza*/
+    margin-top: 120px;
+    justify-content: space-around;
+}
+
+section#DetalhesLivro{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+section#DetalhesLivro aside.capa {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+    margin-right: 20px;
+}
+
+section#DetalhesLivro aside.capa img{
+    max-width: 240px;
+}
+
+section#DetalhesLivro aside.capa button{
+    width: 100%;
+    border-radius: 6px;
+}
+
+section#DetalhesLivro aside.capa button#reservar{
+    height: 45px;
+    margin: 8px 0px;
+
+    color: var(--corBranco);
+    background-color: var(--corVerdeClaro);
+    border-style: hidden;
+
+    font-size: 18px;
+}
+section#DetalhesLivro aside.capa button#favoritos{
+    height: 30px;
+
+    background-color: var(--corBranco);
+    border: 2px solid var(--corCinzaEscuro);
+    font-size: 15px;
+}
+
+section#DetalhesLivro aside.TextoLivro h2{
+    font-weight: 600;
+}
+
+section#DetalhesLivro aside.TextoLivro h4{
+    padding-left: 3px;
+    padding-top: 5px;
+
+    font-weight: 500;
+}
+
+section#DetalhesLivro aside.TextoLivro hr{
+    margin: 10px 0px;
+}
+
+section#DetalhesProduto aside article#lista{
+    display: flex;
+}
+
+section#DetalhesProduto aside article#lista ul{
+    list-style-type: none;
+    padding: 0px 10px;
+}
+
+section#DetalhesProduto aside article#lista ul#topico{
+    background-color: var(--corCinza);
+    padding: 3px;
+}

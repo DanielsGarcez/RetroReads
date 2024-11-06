@@ -51,7 +51,7 @@ label{
     height: 26px;
     width: 50px;
 
-    transform: scale(1.5);
+    transform: scale(1.0);
 }
 
 .label .ball{

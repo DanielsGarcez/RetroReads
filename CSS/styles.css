@@ -16,6 +16,7 @@ Verde Escuro = 1f4935
 :root{
     --corVerdeClaro: #129458;
     --corVerdeEscuro: #1f4935;
+    --corBranco: #fff;
 }
 
 body {
@@ -66,7 +67,7 @@ header {
 .busca button {
     display: inline-block;
     background-color: var(--corVerdeClaro);
-    color: #fff;
+    color: var(--corBranco);
     border: none;
     padding: 10px 12px;
     border-radius: 0px 3px 3px 0px;
@@ -120,7 +121,7 @@ header {
 .userMenu {
 display: none;
 position: absolute;
-background-color: #ffffff;
+background-color: var(--corBranco);
 box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 z-index: 1;
 min-width: 110px;
@@ -166,21 +167,21 @@ nav ul li {
     
 }
 nav ul li a {
-    color: #fff;
+    color: var(--corBranco);
     text-decoration: none;
     font-weight: bold;
     padding: 8.5px;
 }
 nav ul li a:hover {
     color: var(--corVerdeEscuro);
-    background-color: white;
+    background-color: var(--corBranco);
     transition: .5s;
     border-radius: 3px;
 }
 
 main {
     padding: 20px;
-    background-color: white;
+    background-color: var(--corBranco);
     min-width: 400px;
     max-width: 715px;
     margin: auto; /*Centraliza*/
