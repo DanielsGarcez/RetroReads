@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://kit.fontawesome.com/e42cca3199.js" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/styles.css">
     <link rel="stylesheet" href="CSS/theme.css">
-    <link rel="stylesheet" href="CSS/planos.css">
+    <link rel="stylesheet" href="CSS/home.css">
 </head>
 <body>
     <header>
@@ -45,18 +45,22 @@
         <script src="nodeJS/theme.js"></script>
         <!----------------------------------------------------------------->
 
+
+
+        <!--------------------Páginas------------------->
         <nav class="theme">
             <ul>
                 <li><a href="index.html">Início</a></li>
                 <li><a href="Pages/catalogo.html">Catálogo</a></li>
-                <li><a href="/Pages/planos.html">Planos</a></li>
+                <li><a href="#planos">Planos</a></li>
                 <li><a href="Pages/sobre.html">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
 
-    <!--Conteúdo da Home-->
+
+    <!--------------------Conteúdo da Home------------------->
 
     <div class="container">
       <!--colocar o resto do conteudo embaixo da div container-->
@@ -96,9 +100,9 @@
         </div>
 
 
-        <!--Planos-->
+        <!--------------------Planos------------------->
 
-        <div class="titulo-planos">
+        <div class="titulo-planos" id="planos">
             <h2>Planos Mensais</h2>
             <p>Escolha abaixo o plano que mais combina com você</p>
         </div>
@@ -106,38 +110,61 @@
         <div class="colunas">
           <ul class="preco">
             <div class="plano">Free</div>
-            <div class="valor">R$ 0 / Mês</div>
-            <li class="descricao">Possui acesso a todas as funcionalidades básicas:</li>
+            <div class="valor">
+                R$ 0 <span class="mes">/ Mês</span>
+            </div>
+            <li class="descricao">Tenha acesso a todas as funcionalidades básicas:</li>
             <li><i class="fa-solid fa-check"></i> Reservar até 3 livros simultaneamente</li>
             <li><i class="fa-solid fa-check"></i> Estantes de livros ilimitada</li>
             <li><i class="fa-solid fa-check"></i> Anunciar até 3 livros por mês</li>
             <li><i class="fa-solid fa-check"></i> Acesso à todo catálogo de livros</li>
-            <li class="grey"><a href="#" class="button">Assinar</a></li>
+            <li class="assinar"><a href="#" class="button">Assinar</a></li>
           </ul>
       
           <ul class="preco">
             <div class="plano">Premium</div>
-            <div class="valor">R$ 14,90 / Mês</div>
+            <div class="valor">
+                R$ 14,90 <span class="mes">/ Mês</span>
+            </div>
             <li class="descricao">Tenha acesso a todas as funcionalidades básicas, com bônus de:</li>
             <li><i class="fa-solid fa-check"></i> Reservar até 10 livros simultaneamente</li>
             <li><i class="fa-solid fa-check"></i> Anunciar até 30 livros por mês </li>
             <li><i class="fa-solid fa-check"></i> Adicionar notificações aos próprios anúncios de livros</li>
             <li><i class="fa-solid fa-check"></i> Notificações de anúncios de livros novos ou promoções</li>
-            <li class="grey"><a href="#" class="button">Assinar</a></li>
+            <li class="assinar"><a href="#" class="button">Assinar</a></li>
           </ul>
       
           <ul class="preco">
             <div class="plano">Empresa</div>
-            <div class="valor">R$ 29.90 / Mês</div>
-            <li class="descricao">Possui acesso a funções exclusivas para CNPJ:</li>
+            <div class="valor">
+                R$ 29,90 <span class="mes">/ Mês</span>
+            </div>
+            <li class="descricao">Tenha acesso a funções exclusivas para CNPJ:</li>
             <li><i class="fa-solid fa-check"></i> Anuncio de livros ilimitado</li>
             <li><i class="fa-solid fa-check"></i> Reservas de até 15 livros</li>
             <li><i class="fa-solid fa-check"></i> Página financeira com várias funcionalidades</li>
             <li><i class="fa-solid fa-check"></i> Página de controle de estoque</li>
-            <li class="grey"><a href="#" class="button">Assinar</a></li>
+            <li class="assinar"><a href="#" class="button">Assinar</a></li>
           </ul>
         </div>
     </div> <!--fim da div container-->
+
+
+
+    <!--------------------Footer------------------->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="imagem-esquerda.png" alt="Imagem esquerda">
+            </div>
+            <div class="footer-middle">
+                <p>Informações importantes ou links de interesse</p>
+            </div>
+            <div class="footer-right">
+                <img src="imagem-direita.png" alt="Imagem direita">
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 

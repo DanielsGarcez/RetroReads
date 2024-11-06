@@ -19,10 +19,19 @@ Verde Escuro = 1f4935
     --corBranco: #fff;
 }
 
+@font-face {
+    font-family: adelle-mono-flex-bold;
+    src: url('../fonts/adelle-mono-flex-bold.ttf') format('truetype');
+}
+
 body {
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    padding-top: 100px;
+    font-family: 'adelle-mono-flex-bold', sans-serif;
+    margin: 0;
+    padding-bottom: 80px;
+}
+
+.container{
+    flex-grow: 1;
 }
 
 header {
@@ -171,6 +180,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 8.5px;
+    font-family: 'adelle-mono-flex-bold', sans-serif;
 }
 nav ul li a:hover {
     color: var(--corVerdeEscuro);
@@ -245,14 +255,56 @@ button:hover {
     transition: .5s;
 }
 
+
+
+
+
+/* ------------Footer------------ */
 footer {
-    background-color: var(--corVerdeEscuro);
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+    background-color: #129458; /* Verde claro */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     width: 100%;
-    position: fixed;
-    bottom: 0px;
+    position: fixed; /* Fixa o footer no final */
+    bottom: 0; /* Garante que fique no fundo */
+    left: 0; /* Garante que se estenda por toda a largura da tela */
+    flex-shrink: 0; /* Evita que o footer encolha */
+    z-index: 9999; /* Garantir que o footer fique sobre outros elementos */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer-left img,
+.footer-right img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-middle {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left img,
+    .footer-right img {
+        width: 30px;
+    }
 }
 
 

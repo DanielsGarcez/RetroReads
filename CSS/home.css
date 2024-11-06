@@ -8,6 +8,10 @@ Verde Escuro = 1f4935
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth; /* Smooth Scroll */
+}
+
 body {
   font-family: Arial, sans-serif;
   padding-top: 120px; /* Adicione um padding para compensar a altura do header */
@@ -27,25 +31,25 @@ body {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
 }
 
 .titulo-planos h2 {
   font-size: 40px;
   color: #129458; /* Cor verde escuro para o título */
   margin-bottom: 10px;
+  font-family: 'adelle-mono-flex-bold', sans-serif;
 }
 
 .titulo-planos p {
   font-size: 18px;
-  color: #666;
+  color: black;
 }
 
 
 .colunas {
   display: flex;
   justify-content: center;
-  width: 70%; /* Ajuste a largura do contêiner das colunas */
+  width: 70%;
   padding-bottom: 20px;
   padding-top: 20px;
   gap: 30px; /* espaçamento entre as tabelas */
@@ -54,29 +58,41 @@ body {
 .plano {
   background-color: white;
   color: #129458;
-  font-size: 25px;
-  font-family: 'DM Sans', sans-serif;
+  font-size: 27px;
+  font-family: 'adelle-mono-flex-bold', sans-serif;
   font-weight: bold;
   text-align: center; /* Alinhamento do nome do plano no centro */
-  padding: 30px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .valor{
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  text-align: left;
   justify-content: flex-start; /* Alinha o conteúdo à esquerda */
-  padding: 10px 20px;
-  font-size: 25px;
+  padding-left: 20px;
+  font-size: 27px;
+}
+
+.mes{
+  display: inline-block;
+  font-size: 20px;;
+  display: inline-block;
 }
 
 .preco {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 2px solid rgb(209, 209, 209);
   width: 25%; /* Ajuste de largura para que caibam lado a lado */
   transition: 0.3s;
   border-radius: 15px;
   font-size: 20px;
-  padding: 0;
   overflow: hidden; 
+  height: 100%;
+  min-height: 500px;
+  padding-bottom: 15px;
 }
 
 .preco:hover {
@@ -84,17 +100,19 @@ body {
 }
 
 
-.preco .descricao {
-  font-size: 16px;
+.descricao {
+  font-size: 15px;
   color: #666;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 10px 20px;
+  flex-grow: 0; /* Impede que a descrição cresça mais do que o necessário */
+  height: 75px; /* Altura fixa para todas as descrições */
 }
 
 
 .preco li {
-  font-size: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* Alinha o conteúdo à esquerda */
@@ -108,16 +126,40 @@ body {
   min-width: 20px;
 }
 
+.preco ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Expande para ocupar o espaço restante e alinhar itens entre planos */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Inicia os tópicos no topo */
+}
+
+.assinar{
+  margin-top: auto;
+}
 
 .button {
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
   background-color: #129458;
   border: none;
   color: white;
-  padding: 10px 25px;
+  width: 100%;
+  padding: 10px 0;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 10px; /* Ajuste aqui o valor para arredondar mais ou menos */
+  border-radius: 7px;
+  transition: background-color .5s;
+}
+
+.button:hover{
+  background-color: #fff;
+  border: 1px solid #129458;
+  color: #129458;
 }
 
 
