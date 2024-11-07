@@ -51,7 +51,10 @@ Verde Escuro = 1f4935
 
 body {
     margin: 0;
-    padding-bottom: 80px;
+    padding: 0;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column;
 }
 
 .container{
@@ -249,7 +252,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    margin-top: 100px ;
+    margin-top: 80px;;
     width: 100%;
     position: relative; /* Fixa o footer no final */
 }
