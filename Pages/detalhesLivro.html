@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../CSS/detalhesLivro.css">
 </head>
 <body>
-    <header></header>
     <main>
         <section id="DetalhesLivro">
             <aside class="capa">
@@ -27,40 +26,59 @@
 
         <hr>
 
-        <section id="DetalhesProduto">
-            <aside>
+        <section id="DetalhesAvancados">
+            <aside class="DetalhesProduto">
                 <h2>Detalhes do produto</h2>
-                <article id="lista">
-                    <ul id="topico">
-                        <li>Autor</li>
-                        <li>Ano</li>
-                        <li>ISBN</li>
-                        <li>Idioma</li>
-                        <li>País</li>
-                        <li>Páginas</li>
-                        <li>Capa</li>
-                    </ul>
-                    <ul id="dado">
-                        <li>Nome do Autor</li>
-                        <li>Ano de lançamento</li>
-                        <li>Código único</li>
-                        <li>Idioma do livro</li>
-                        <li>País de origem</li>
-                        <li>Quantidade de páginas</li>
-                        <li>Capa comum</li>
-                    </ul>
-                </article>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th class="ColunaEsq">Autor</th>
+                            <th class="ColunaDir">Nome do Autor</th>
+                        </tr>
+
+                        <tr>
+                            <th class="ColunaEsq">Ano</th>
+                            <th class="ColunaDir">Ano de lançamento</th>
+                        </tr>
+
+                        <tr>
+                            <th class="ColunaEsq">ISBN</th>
+                            <th class="ColunaDir">Código único</th>
+                        </tr>
+
+                        <tr>
+                            <th class="ColunaEsq">Idioma</th>
+                            <th class="ColunaDir">Idioma do livro</th>
+                        </tr>
+
+                        <tr>
+                            <th class="ColunaEsq">País</th>
+                            <th class="ColunaDir">País de origem</th>
+                        </tr>
+
+                        <tr>
+                            <th class="ColunaEsq">Capa</th>
+                            <th class="ColunaDir">Capa comum</th>
+                        </tr>
+                    </tbody>
+                </table>
             </aside>
 
 
-            <aside>
-                <h2>Anunciante do produto</h2>
-                <picture>Perfil do Usuario</picture>
-                <h3>Nome usuario</h3>
-                <p>conta comum</p>
-                <p>avalie usuario</p>
-                <p>-caixa de texto-</p>
-                <button>enviar</button>
+            <aside class="AnuncianteProduto">
+                <article id="Anunciante">
+                    <h2>Anunciante do produto</h2>
+                    <picture>Perfil do Usuario</picture>
+                    <h3>Nome usuario</h3>
+                    <p>conta comum</p>
+                    <button>Seguir</button>
+                </article>
+                
+                <article id="Avaliacao">
+                    <p>avalie usuario</p>
+                    <p>-caixa de texto-</p>
+                    <button>enviar</button>
+                </article>
             </aside>
         </section>
 

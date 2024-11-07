@@ -1,0 +1,77 @@
+
+/*
+        Cores
+Verde Claro = 129458
+Verde Escuro = 1f4935
+*/
+
+@charset "UTF-8";
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --corVerdeClaro: #129458;
+    --corVerdeEscuro: #1f4935;
+    --corBranco: #fff;
+}
+
+
+
+/* ------------Fontes de Texto------------ */
+@font-face {
+    font-family: adelle-mono-flex-bold;
+    src: url('../fonts/adelle-mono-flex-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Archivo-VariableFont;
+    src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ArchivoBlack-Regular;
+    src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+
+
+
+
+.livros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.livro {
+    width: 220px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.livro:hover{
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.26);
+    transition: .3s;
+}
+
+.livro img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.livro h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.livro p {
+    margin-bottom: 10px;
+}

@@ -8,6 +8,23 @@ Verde Escuro = 1f4935
   box-sizing: border-box;
 }
 
+
+
+/* ------------Fontes de Texto------------ */
+@font-face {
+  font-family: Archivo-VariableFont;
+  src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: ArchivoBlack-Regular;
+  src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+
+
+
+
 html {
   scroll-behavior: smooth; /* Smooth Scroll */
 }
@@ -43,6 +60,7 @@ body {
 .titulo-planos p {
   font-size: 18px;
   color: black;
+  font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 
@@ -72,12 +90,14 @@ body {
   justify-content: flex-start; /* Alinha o conteúdo à esquerda */
   padding-left: 20px;
   font-size: 27px;
+  font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 .mes{
   display: inline-block;
   font-size: 20px;;
   display: inline-block;
+  font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 .preco {
@@ -91,7 +111,7 @@ body {
   font-size: 20px;
   overflow: hidden; 
   height: 100%;
-  min-height: 500px;
+  min-height: 510px;
   padding-bottom: 15px;
 }
 
@@ -109,6 +129,7 @@ body {
   padding: 10px 20px;
   flex-grow: 0; /* Impede que a descrição cresça mais do que o necessário */
   height: 75px; /* Altura fixa para todas as descrições */
+  font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 
@@ -118,6 +139,7 @@ body {
   justify-content: flex-start; /* Alinha o conteúdo à esquerda */
   padding: 10px 20px;
   font-size: 15px;
+  font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 .preco li i {
@@ -152,14 +174,14 @@ body {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 7px;
-  transition: background-color .5s;
+  border-radius: 10px;
 }
 
 .button:hover{
   background-color: #fff;
   border: 1px solid #129458;
   color: #129458;
+  transition: background-color .5s;
 }
 
 
@@ -169,7 +191,7 @@ body {
 .livros-container {
   display: flex;
   flex-wrap: wrap; /* permite que os livros "quebrem" para uma nova linha se a tela for pequena */
-  gap: 30px; /* espaço entre os livros */
+  gap: 80px; /* espaço entre os livros */
   justify-content: center; /* centraliza os livros no contêiner */
   padding: 20px;
 }
@@ -180,6 +202,7 @@ body {
   padding: 20 px;
   border: 1px solid #ccc;
   text-align: center;
+  font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 .livrohome:hover{
@@ -206,19 +229,77 @@ body {
 }
 
 .buttonlh {
-  background-color: var(--corVerdeEscuro);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: auto;
-    cursor: pointer;
-    display: block;
-    border-radius: 10px;
+  background-color: #129458;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: auto;
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+}
+
+.livrohome ul{
+  list-style: none;
 }
 
 .buttonlh:hover {
-  background-color: var(--corVerdeClaro);
-  transition: .5s;
+  background-color: #fff;
+  border: 1px solid #129458;
+  color: #129458;
+  transition: background-color .5s;
+}
+
+.titulo-topfive {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.titulo-topfive h2 {
+  font-size: 40px;
+  color: #129458; /* Cor verde escuro para o título */
+  margin-bottom: 10px;
+  font-family: 'adelle-mono-flex-bold', sans-serif;
+}
+
+.titulo-topfive p {
+  font-size: 18px;
+  color: black;
+  font-family: 'Archivo-VariableFont', sans-serif;
+}
+
+.slide-banner {
+  position: relative;
+  max-width: 200px;
+  margin: 0 auto;
+  height: auto;
+  width: auto;
+}
+
+.slide {
+  display: flex;
+  list-style: none;
+  aspect-ratio: 25/10;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+
+.slide img {
+  flex: 1 0 100%;
+}
+
+.slide-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 @media only screen and (max-width: 600px) {

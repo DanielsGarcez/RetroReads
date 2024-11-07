@@ -4,6 +4,8 @@ Verde Claro = 129458
 Verde Escuro = 1f4935
 */
 
+
+
 html {
     box-sizing: border-box;
 }
@@ -40,30 +42,33 @@ html {
     position: relative;          
     left: 0;                      
     right: 0;                     
-    margin: 0;            
+    margin: 0;          
 }
 
-.sobre .texto {
+.texto {
     max-width: 100%;          
     margin: 0 auto;
     padding: 0 20px;
+    font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 .sobre h1 {
-    margin-bottom: 20px;          
+    margin-bottom: 20px;
+    font-family: 'Archivo-VariableFont', sans-serif;          
 }
 
 .sobre p {
     line-height: 1.6;              
     margin: 0; 
-    text-align:center;                     
+    text-align:center;    
+    font-family: 'Archivo-VariableFont', sans-serif;                 
 }
   
-.container {
+.info {
     padding: 0 16px;
 }
   
-.container::after, .row::after {
+.info::after, .row::after {
     content: "";
     clear: both;
     display: table;
@@ -73,26 +78,28 @@ html {
     color: grey;
 }
 
-.container .titulo {
+.info .titulo {
     font-size: 1.1em;
     color: #555;
     margin-bottom: 10px;
 }
 
-.container h2 {
+.info h2 {
     color: #129458;
     font-size: 1.5em;
     margin-top: 16px;
     margin-bottom: 8px;
+    font-family: 'adelle-mono-flex-bold', sans-serif;                 
 }
 
-.container p {
+.info p {
     font-size: 0.9em;
     color: #777;
     margin-bottom: 10px;
+    font-family: 'Archivo-VariableFont', sans-serif;                 
 }
 
-.container p:last-of-type {
+.info p:last-of-type {
     font-size: 0.9em;
     color: #1f4935;
     font-weight: bold;

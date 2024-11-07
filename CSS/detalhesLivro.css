@@ -3,6 +3,7 @@
     --corVerdeClaro: #129458;
     --corVerdeEscuro: #1f4935;
     --corBranco: #fff;
+    --corCinzaMaisEscuro:#0E0F11;
     --corCinzaEscuro: #909090;
     --corCinza: #D9D9D9;
     --corCinzaClaro:#F6F5F4;
@@ -82,16 +83,44 @@ section#DetalhesLivro aside.TextoLivro hr{
     margin: 10px 0px;
 }
 
-section#DetalhesProduto aside article#lista{
+
+
+section#DetalhesAvancados{
     display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
-section#DetalhesProduto aside article#lista ul{
-    list-style-type: none;
-    padding: 0px 10px;
+section#DetalhesAvancados h2{
+    margin: 15px 0px;
 }
 
-section#DetalhesProduto aside article#lista ul#topico{
+section#DetalhesAvancados table{
+    text-align: left;
+}
+
+section#DetalhesAvancados table th{
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--corCinzaMaisEscuro);
+}
+
+section#DetalhesAvancados table th.ColunaEsq{
     background-color: var(--corCinza);
-    padding: 3px;
+    padding-right: 40px;
 }
+
+section#DetalhesAvancados table th.ColunaDir{
+    background-color: var(--corCinzaClaro);
+    padding-right: 120px;
+}
+
+
+section#DetalhesAvancados aside{
+    min-width: 480px;
+}
+
+
+

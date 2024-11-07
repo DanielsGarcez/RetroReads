@@ -1,9 +1,18 @@
-
 /*
         Cores
 Verde Claro = 129458
 Verde Escuro = 1f4935
 */
+
+/*#tema{
+    max-height: 40px;
+    position: relative;
+    margin-bottom: -15px;
+    margin-left: 20px;
+    border-radius: 100px;
+    border: 3px solid #12945700;
+    display: inline-block;
+}*/
 
 @charset "UTF-8";
 /* Reset de estilos */
@@ -19,13 +28,28 @@ Verde Escuro = 1f4935
     --corBranco: #fff;
 }
 
+
+
+/* ------------Fontes de Texto------------ */
 @font-face {
     font-family: adelle-mono-flex-bold;
     src: url('../fonts/adelle-mono-flex-bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: Archivo-VariableFont;
+    src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ArchivoBlack-Regular;
+    src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+
+
+
 body {
-    font-family: 'adelle-mono-flex-bold', sans-serif;
     margin: 0;
     padding-bottom: 80px;
 }
@@ -80,9 +104,13 @@ header {
     border: none;
     padding: 10px 12px;
     border-radius: 0px 3px 3px 0px;
+    font-family: 'Archivo-VariableFont', sans-serif;
 }
 .busca button:hover{
     text-decoration: none;
+    background-color: #fff;
+    border-radius: 1px solid #129458;
+    color: #129458;
 }
 
 #carrinho{
@@ -110,16 +138,6 @@ header {
     cursor: pointer;
     border: 3px solid var(--corVerdeClaro);
     transition: .2s;
-}
-
-#tema{
-    max-height: 40px;
-    position: relative;
-    margin-bottom: -15px;
-    margin-left: 20px;
-    border-radius: 100px;
-    border: 3px solid #12945700;
-    display: inline-block;
 }
 
 .usuario{
@@ -180,7 +198,7 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 8.5px;
-    font-family: 'adelle-mono-flex-bold', sans-serif;
+    font-family: 'Archivo-VariableFont', sans-serif;
 }
 nav ul li a:hover {
     color: var(--corVerdeEscuro);
@@ -205,40 +223,6 @@ main ul li{
     
 }
 
-.livros {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.livro {
-    width: 220px;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-.livro:hover{
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.26);
-    transition: .3s;
-}
-
-.livro img {
-    width: 60%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.livro h2 {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.livro p {
-    margin-bottom: 10px;
-}
 
 button {
     background-color: var(--corVerdeEscuro);
@@ -257,8 +241,6 @@ button:hover {
 
 
 
-
-
 /* ------------Footer------------ */
 footer {
     background-color: #129458; /* Verde claro */
@@ -267,12 +249,9 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    margin-top: 100px ;
     width: 100%;
-    position: fixed; /* Fixa o footer no final */
-    bottom: 0; /* Garante que fique no fundo */
-    left: 0; /* Garante que se estenda por toda a largura da tela */
-    flex-shrink: 0; /* Evita que o footer encolha */
-    z-index: 9999; /* Garantir que o footer fique sobre outros elementos */
+    position: relative; /* Fixa o footer no final */
 }
 
 .footer-content {
@@ -282,9 +261,13 @@ footer {
     width: 100%;
 }
 
-footer-left img,
-.footer-right img {
+.footer-left img{
     width: 50px;
+    height: auto;
+}
+
+.footer-right img {
+    width: 100px;
     height: auto;
 }
 
