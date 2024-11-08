@@ -42,7 +42,8 @@ html {
     position: relative;          
     left: 0;                      
     right: 0;                     
-    margin: 0;          
+    margin: 0;   
+    padding-top: 130px;       
 }
 
 .texto {
@@ -54,7 +55,9 @@ html {
 
 .sobre h1 {
     margin-bottom: 20px;
-    font-family: 'Archivo-VariableFont', sans-serif;          
+    font-family: Arial, Helvetica, sans-serif;
+    color: #129458;    
+    text-transform: uppercase;     
 }
 
 .sobre p {

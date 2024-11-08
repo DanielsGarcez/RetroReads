@@ -47,7 +47,10 @@ Verde Escuro = 1f4935
 }
 
 
-
+html{
+    scroll-behavior: smooth; /* Ativa o smooth scroll */
+    scroll-padding-top: 112px; /* Compensa a altura do header */
+}
 
 body {
     margin: 0;
@@ -246,38 +249,72 @@ button:hover {
 
 /* ------------Footer------------ */
 footer {
-    background-color: #129458; /* Verde claro */
-    color: white;
+    background-color: #1f4935;
+    color: #ffffff;
+    padding: 40px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin-top: 80px;;
-    width: 100%;
-    position: relative; /* Fixa o footer no final */
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
+    max-width: 1200px;
 }
 
-.footer-left img{
-    width: 50px;
-    height: auto;
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
 }
 
-.footer-right img {
-    width: 100px;
-    height: auto;
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.footer-middle {
-    flex-grow: 1;
-    text-align: center;
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #129458;
+}
+
+.footer-bottom {
+    margin-top: 30px;
     font-size: 14px;
+    color: #bbbbbb;
+    text-align: center;
+}
+
+.footer-imagens {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+
+.footer-imagens img:first-child {
+    align-self: flex-start;
+}
+
+.footer-imagens img:last-child {
+    align-self: flex-end;
 }
 
 /* Responsividade */
@@ -293,4 +330,29 @@ footer {
     }
 }
 
+
+
+
+
+
+/* Responsividade */
+@media only screen and (max-width: 600px) {
+    header {
+        padding-top: 15px; /* Ajusta o padding do cabeçalho */
+    }
+
+    .busca input {
+        width: 100%; /* Faz a barra de busca ocupar toda a largura */
+    }
+
+    .livros-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Empilha os livros em uma coluna */
+    }
+
+    .colunas {
+        display: grid;
+        grid-template-columns: 1fr; /* Empilha os planos verticalmente */
+    }
+}
 
