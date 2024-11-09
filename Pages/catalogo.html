@@ -32,6 +32,24 @@
     </header>
 
     <main>
+        <div class="filtros">
+            <h3>Filtros</h3>
+            <form>
+                <div class="categoria">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria">
+                        <option value="ficcao">Ficção</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="romance">Romance</option>
+                        <option value="biografia">Biografia</option>
+                        <option value="historia">História</option>
+                    </select>
+                </div>
+                <div class="preco">
+                    <label for="preco">Preço</label>
+                    <input type="range" id="preco" name="preco" min="0" max="1000">
+                    <span id="preco-valor">R$0 - R$1000</span>
+                </div>
 
         <ul>
             <li>
