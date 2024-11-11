@@ -41,18 +41,105 @@ Verde Escuro = 1f4935
 
 
 
-.livros {
+/* container */
+.borda{
+    max-width: 1400px;
+    margin: 150px auto 20px;
+    padding: 10px 0px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.conteudoCatalogo{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 20px;
+}
+
+
+
+/* -------------------- Filtro -------------------- */
+.filtros-titulo h3 {
+    background-color: #129458;
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 50px;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.filtros {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #e1e1e1;
+}
+
+.categoria, .faixa-preco {
+    margin-bottom: 20px;
+}
+
+.categoria h3, .faixa-preco h3 {
+    color: rgb(96, 96, 96);
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 4px;
+    display: flex; /* Usando flexbox para alinhamento */
+    justify-content: space-between; /* Espaçamento entre o título e a seta */
+    align-items: center; /* Alinha verticalmente */
+    cursor: pointer;
+}
+
+.seta {
+    width: 20px;    /* Define a largura da seta */
+    height: 20px;   /* Define a altura da seta */
+    object-fit: contain;  /* Faz com que a imagem se ajuste ao tamanho especificado */
+    cursor: pointer;  /* Cursor de clique */
+    transition: transform 0.3s ease; /* Animação suave para a rotação */
+}
+
+.categorias-lista, .faixa-preco-lista {
+    display: none;
+}
+
+
+.mostrar{
+    display: block;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+/* -------------------- Livros -------------------- */
+.livros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas */
+    gap: 10px;
+    justify-items: stretch;
 }
 
 .livro {
-    width: 220px;
-    margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #ccc;
+    margin: 0;
     text-align: center;
+    box-sizing: border-box;
+    background-color: #fff;
 }
 
 .livro:hover{
@@ -61,7 +148,7 @@ Verde Escuro = 1f4935
 }
 
 .livro img {
-    width: 60%;
+    width: 50%;
     height: auto;
     display: block;
     margin: auto;
@@ -74,4 +161,57 @@ Verde Escuro = 1f4935
 
 .livro p {
     margin-bottom: 10px;
+}
+
+.reservar{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #129458;
+    border: none;
+    color: white;
+    width: 70%;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+.reservar:hover{
+    background-color: #fff;
+    border: 1px solid #129458;
+    color: #129458;
+    transition: background-color .5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+    .livro {
+        width: calc(33.33% - 20px); /* 3 livros por linha em telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .livro {
+        width: calc(50% - 20px); /* 2 livros por linha em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .livro {
+        width: 100%; /* 1 livro por linha em telas muito pequenas */
+    }
 }

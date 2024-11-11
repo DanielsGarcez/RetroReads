@@ -6,6 +6,7 @@
     <title>RetroReads</title>
     <link rel="stylesheet" href="../CSS/catalogo.css">
     <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="/nodeJS/index.js">
     <link rel="shortcut icon" href="../Img/Logo-favicon-sem-fundo.png" type="image/x-icon">
 </head>
 <body>
@@ -31,113 +32,114 @@
         </nav>
     </header>
 
-    <main>
-        <div class="filtros">
-            <h3>Filtros</h3>
-            <form>
-                <div class="categoria">
-                    <label for="categoria">Categoria</label>
-                    <select id="categoria" name="categoria">
-                        <option value="ficcao">Ficção</option>
-                        <option value="fantasia">Fantasia</option>
-                        <option value="romance">Romance</option>
-                        <option value="biografia">Biografia</option>
-                        <option value="historia">História</option>
-                    </select>
-                </div>
-                <div class="preco">
-                    <label for="preco">Preço</label>
-                    <input type="range" id="preco" name="preco" min="0" max="1000">
-                    <span id="preco-valor">R$0 - R$1000</span>
-                </div>
 
-        <ul>
-            <li>
+    <div class="borda">
+        <div class="conteudoCatalogo">
+            <div class="filtros">
+                <div class="filtros-titulo">
+                    <h3>Filtros</h3>
+                </div>
+                <div class="categoria">
+                    <h3>Categorias <img src="/Img/seta.png" class="seta" alt="Seta"></h3>
+                    <div class="categorias-lista">
+                        <label><input type="checkbox" class="categoria-checkbox"> Ficção</label>
+                        <label><input type="checkbox" class="categoria-checkbox"> Não-ficção</label>
+                        <label><input type="checkbox" class="categoria-checkbox"> Aventura</label>
+                        <label><input type="checkbox" class="categoria-checkbox"> Romance</label>
+                    </div>
+                </div>
+            
+                <div class="faixa-preco">
+                    <h3>Faixa de Preço <img src="/Img/seta.png" class="seta" alt="Seta"></h3>
+                    <div class="faixa-preco-lista">
+                        <label><input type="checkbox" class="faixa-preco-checkbox"> R$ 0 - R$ 50</label>
+                        <label><input type="checkbox" class="faixa-preco-checkbox"> R$ 51 - R$ 100</label>
+                        <label><input type="checkbox" class="faixa-preco-checkbox"> R$ 101 - R$ 200</label>
+                        <label><input type="checkbox" class="faixa-preco-checkbox"> Acima de R$ 200</label>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+    
+    
+            <!--------------------Livros-------------------->
+            <div class="livros">
                 <section class="livro">
-                    <picture>
-                        <img src="../Img/Livro.jpg" alt="Livro 1">
-                        <a href="index.html"></a>
-                    </picture>
+                    <img src="../Img/Livro.jpg" alt="Livro 1">
                     <h2>Título do Livro 1</h2>
                     <p>Autor: Autor do Livro 1</p>
                     <p>Descrição breve do Livro 1.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+    
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 2">
                     <h2>Título do Livro 2</h2>
                     <p>Autor: Autor do Livro 2</p>
                     <p>Descrição breve do Livro 2.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+    
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 3">
                     <h2>Título do Livro 3</h2>
                     <p>Autor: Autor do Livro 3</p>
                     <p>Descrição breve do Livro 3.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+    
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 4">
                     <h2>Título do Livro 4</h2>
                     <p>Autor: Autor do Livro 4</p>
                     <p>Descrição breve do Livro 4.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+    
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 5">
                     <h2>Título do Livro 5</h2>
                     <p>Autor: Autor do Livro 5</p>
                     <p>Descrição breve do Livro 5.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+    
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 6">
                     <h2>Título do Livro 6</h2>
                     <p>Autor: Autor do Livro 6</p>
                     <p>Descrição breve do Livro 6.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+    
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 7">
                     <h2>Título do Livro 7</h2>
                     <p>Autor: Autor do Livro 7</p>
                     <p>Descrição breve do Livro 7.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+    
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 8">
                     <h2>Título do Livro 8</h2>
                     <p>Autor: Autor do Livro 8</p>
                     <p>Descrição breve do Livro 8.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-            <li>
+                
                 <section class="livro">
                     <img src="../Img/Livro.jpg" alt="Livro 9">
                     <h2>Título do Livro 9</h2>
                     <p>Autor: Autor do Livro 9</p>
                     <p>Descrição breve do Livro 9.</p>
-                    <button>Detalhes</button>
+                    <button class="reservar">Reservar</button>
                 </section>
-            </li>
-        </ul>
-
-    </main>
+            </div>
+        </div>
+    </div>
+    <script src="/nodeJS/index.js"></script>
 </body>
 </html>
