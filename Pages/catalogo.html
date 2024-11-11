@@ -6,7 +6,7 @@
     <title>RetroReads</title>
     <link rel="stylesheet" href="../CSS/catalogo.css">
     <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="/nodeJS/index.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="shortcut icon" href="../Img/Logo-favicon-sem-fundo.png" type="image/x-icon">
 </head>
 <body>
@@ -41,21 +41,48 @@
                 </div>
                 <div class="categoria">
                     <h3>Categorias <img src="/Img/seta.png" class="seta" alt="Seta"></h3>
-                    <div class="categorias-lista">
-                        <label><input type="checkbox" class="categoria-checkbox"> Ficção</label>
-                        <label><input type="checkbox" class="categoria-checkbox"> Não-ficção</label>
-                        <label><input type="checkbox" class="categoria-checkbox"> Aventura</label>
-                        <label><input type="checkbox" class="categoria-checkbox"> Romance</label>
+                    <div class="categorias-lista" class="categorias-lista">
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Ficção
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Não-ficção
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Aventura
+                        </label>
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Romance
+                        </label>
                     </div>
                 </div>
             
                 <div class="faixa-preco">
                     <h3>Faixa de Preço <img src="/Img/seta.png" class="seta" alt="Seta"></h3>
-                    <div class="faixa-preco-lista">
-                        <label><input type="checkbox" class="faixa-preco-checkbox"> R$ 0 - R$ 50</label>
-                        <label><input type="checkbox" class="faixa-preco-checkbox"> R$ 51 - R$ 100</label>
-                        <label><input type="checkbox" class="faixa-preco-checkbox"> R$ 101 - R$ 200</label>
-                        <label><input type="checkbox" class="faixa-preco-checkbox"> Acima de R$ 200</label>
+                    <div class="faixa-preco-lista" class="faixa-preco-lista">
+                        <label>
+                            <input type="radio" name="faixaP" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Até R$ 20
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> R$20 - R$40
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> R$40 - R$60
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> R$60 - R$80
+                        </label>
                     </div>
                 </div>
             </div>
@@ -140,6 +167,6 @@
             </div>
         </div>
     </div>
-    <script src="/nodeJS/index.js"></script>
+    <script src="/nodeJS/catalogo.js"></script>
 </body>
 </html>

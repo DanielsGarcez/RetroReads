@@ -37,28 +37,12 @@ document.querySelectorAll('.olho-senha').forEach(item => {
 
 
 /* Filtros */
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleciona as seções de Categorias e Faixa de Preço
-    const categoria = document.querySelector('.categoria');
-    const faixaPreco = document.querySelector('.faixa-preco');
-
-    // Seleciona as listas dentro dessas seções
-    const categoriasLista = categoria.querySelector('.categorias-lista');
-    const faixaPrecoLista = faixaPreco.querySelector('.faixa-preco-lista');
-
-    // Seleciona as setas dentro dos elementos h3
-    const setaCategoria = categoria.querySelector('.seta');
-    const setaFaixaPreco = faixaPreco.querySelector('.seta');
-
-    // Função para alternar a visibilidade da lista de categorias e rotacionar a seta
-    categoria.addEventListener('click', () => {
-        categoriasLista.classList.toggle('mostrar'); // Alterna a classe mostrar
-        setaCategoria.style.transform = categoriasLista.classList.contains('mostrar') ? 'rotate(180deg)' : 'rotate(0deg)'; // Rotaciona a seta
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('header-categorias').addEventListener('click', () => {
+        document.getElementById('categorias-lista').classList.toggle('hidden');
     });
 
-    // Função para alternar a visibilidade da lista de faixa de preço e rotacionar a seta
-    faixaPreco.addEventListener('click', () => {
-        faixaPrecoLista.classList.toggle('mostrar'); // Alterna a classe mostrar
-        setaFaixaPreco.style.transform = faixaPrecoLista.classList.contains('mostrar') ? 'rotate(180deg)' : 'rotate(0deg)'; // Rotaciona a seta
+    document.getElementById('header-faixa-preco').addEventListener('click', () => {
+        document.getElementById('faixa-preco-lista').classList.toggle('hidden');
     });
 });

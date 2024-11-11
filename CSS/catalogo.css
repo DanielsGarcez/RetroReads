@@ -85,42 +85,57 @@ Verde Escuro = 1f4935
 
 .categoria h3, .faixa-preco h3 {
     color: rgb(96, 96, 96);
-    font-size: 16px;
+    font-size: 15px;
+    font-family: 'Archivo-VariableFont', sans-serif;
     margin-bottom: 10px;
     border-bottom: 1px solid #e1e1e1;
     padding-bottom: 4px;
-    display: flex; /* Usando flexbox para alinhamento */
-    justify-content: space-between; /* Espaçamento entre o título e a seta */
-    align-items: center; /* Alinha verticalmente */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
     cursor: pointer;
 }
 
 .seta {
-    width: 20px;    /* Define a largura da seta */
-    height: 20px;   /* Define a altura da seta */
-    object-fit: contain;  /* Faz com que a imagem se ajuste ao tamanho especificado */
-    cursor: pointer;  /* Cursor de clique */
-    transition: transform 0.3s ease; /* Animação suave para a rotação */
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+.seta.abrir {
+    transform: rotate(180deg); /* Rotaciona 180 graus (para cima) */
 }
 
 .categorias-lista, .faixa-preco-lista {
     display: none;
 }
 
-
 .mostrar{
     display: block;
 }
 
 label {
-    display: block;
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
+    font-size: 15px;
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
+label i {
+    margin-right: 10px; /* Para dar espaço entre o ícone e o texto */
+    font-size: 15px; /* Ajuste o tamanho do ícone se necessário */
+    transition: transform 0.3s ease; /* Transição suave */
 }
 
+input[type="radio"] {
+    display: none; /* Oculta o checkbox original */
+}
+
+input[type="radio"]:checked + i {
+    content: "\f14a"; /* ícone "check" para o estado selecionado */
+}
 
 
 
