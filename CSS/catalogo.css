@@ -105,11 +105,13 @@ Verde Escuro = 1f4935
 }
 
 .seta.abrir {
-    transform: rotate(180deg); /* Rotaciona 180 graus (para cima) */
+    transform: rotate(180deg); /* Girar a seta */
 }
 
 .categorias-lista, .faixa-preco-lista {
     display: none;
+    font-family: 'Archivo-VariableFont', sans-serif;
+    color: #525252;
 }
 
 .mostrar{
@@ -124,17 +126,13 @@ label {
 }
 
 label i {
-    margin-right: 10px; /* Para dar espaço entre o ícone e o texto */
-    font-size: 15px; /* Ajuste o tamanho do ícone se necessário */
-    transition: transform 0.3s ease; /* Transição suave */
+    margin-right: 10px; 
+    font-size: 13px;
+    transition: transform 0.3s ease;
 }
 
 input[type="radio"] {
-    display: none; /* Oculta o checkbox original */
-}
-
-input[type="radio"]:checked + i {
-    content: "\f14a"; /* ícone "check" para o estado selecionado */
+    display: none;
 }
 
 
@@ -155,11 +153,6 @@ input[type="radio"]:checked + i {
     text-align: center;
     box-sizing: border-box;
     background-color: #fff;
-}
-
-.livro:hover{
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.26);
-    transition: .3s;
 }
 
 .livro img {
