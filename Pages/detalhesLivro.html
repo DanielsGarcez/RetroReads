@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="../CSS/detalhesLivro.css">
 </head>
 <body>
+    <header>
+        <a href="../index.html">
+            <img src="../Img/RetroReads-White.png" alt="Logo RetroReads" id="logo">
+        </a>
+
+        <div class="busca">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="submit">Buscar</button>
+        </div>
+
+        <div class="usuario">
+            <a href="/Pages/login.html" class="login-link">Login</a>
+            <a href="/Pages/cadastro.html" class="cadastro-link">Cadastre-se</a>
+        </div>
+
+        
+        <!--------------------Páginas------------------->
+        <nav class="theme">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="Pages/sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <section id="DetalhesLivro">
             <aside class="capa">
@@ -19,8 +46,9 @@
                 <h2>Titulo do livro</h2>
                 <h4>Autor: nome do autor</h4>
                 <hr>
-                 <p>Descrição Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam animi necessitatibus accusantium aut ad. Suscipit quas esse facilis porro sunt facere dolor optio beatae adipisci, praesentium, ipsa ipsam numquam sapiente. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam ratione, tenetur repellat accusantium eius blanditiis neque illo unde laboriosam expedita laudantium voluptatem maiores cum voluptas corrupti, dolorum quos mollitia explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, enim. Quisquam at ducimus soluta quaerat harum, rem totam sint? Veniam sint delectus incidunt assumenda, quas quia recusandae dolore ab cum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eius ratione qui iste pariatur numquam est quae, esse beatae doloribus dolore quaerat voluptatibus odit, autem earum, laboriosam nobis incidunt officiis?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error fuga, cum beatae temporibus odit nesciunt eveniet libero officia nostrum quod esse iure dolore ea totam maxime? Deserunt explicabo odit rem.
-                 </p>
+                <p>
+                    Descrição Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam animi necessitatibus accusantium aut ad. Suscipit quas esse facilis porro sunt facere dolor optio beatae adipisci, praesentium, ipsa ipsam numquam sapiente. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam ratione, tenetur repellat accusantium eius blanditiis neque illo unde laboriosam expedita laudantium voluptatem maiores cum voluptas corrupti, dolorum quos mollitia explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, enim. Quisquam at ducimus soluta quaerat harum, rem totam sint? Veniam sint delectus incidunt assumenda, quas quia recusandae dolore ab cum?Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eius ratione qui iste pariatur numquam est quae, esse beatae doloribus dolore quaerat voluptatibus odit, autem earum, laboriosam nobis incidunt officiis?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error fuga, cum beatae temporibus odit nesciunt eveniet libero officia nostrum quod esse iure dolore ea totam maxime? Deserunt explicabo odit rem.
+                </p>
             </aside>
         </section>
 
@@ -66,18 +94,22 @@
 
 
             <aside class="AnuncianteProduto">
+                <h2>Anunciante do produto</h2>
                 <article id="Anunciante">
-                    <h2>Anunciante do produto</h2>
-                    <picture>Perfil do Usuario</picture>
-                    <h3>Nome usuario</h3>
-                    <p>conta comum</p>
-                    <button>Seguir</button>
+                    <picture>
+                        <img id="user" src="../Img/Male User.png" alt="User">
+                    </picture>
+                    <section class="contaUser">
+                        <h3>Nome Anunciante</h3>
+                        <p>Usuário PremiumReads</p>
+                        <button>Seguir</button>
+                    </section>
                 </article>
                 
                 <article id="Avaliacao">
-                    <p>avalie usuario</p>
-                    <p>-caixa de texto-</p>
-                    <button>enviar</button>
+                    <p>Avalie este usuário:</p>
+                    <input type="text" placeholder="Escrever comentário...">
+                    <button>Enviar</button>
                 </article>
             </aside>
         </section>

@@ -1,4 +1,14 @@
 
+@font-face {
+    font-family: Archivo-VariableFont;
+    src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ArchivoBlack-Regular;
+    src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
 :root{
     --corVerdeClaro: #129458;
     --corVerdeEscuro: #1f4935;
@@ -7,6 +17,9 @@
     --corCinzaEscuro: #909090;
     --corCinza: #D9D9D9;
     --corCinzaClaro:#F6F5F4;
+
+    --Archivo: Archivo-VariableFont;
+    --ArchivoBlack: ArchivoBlack-Regular;
 }
 
 
@@ -15,8 +28,106 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: sans-serif;
+    font-family: var(--Archivo);
 }
+
+header {
+    min-width: 320px;
+    background-color: var(--corVerdeEscuro);
+    padding-top: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0px;
+}
+
+#logo{
+    margin-left: -40px;
+    margin-right: 20px;
+    max-width: 200px;
+    position: relative;
+    margin-bottom: -5px;
+}
+#logo:hover{
+    cursor: pointer;
+}
+
+.busca{
+    display: inline-block;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.busca input{
+    display: inline-block;
+    border: none;
+    width: 380px;
+    padding: 10px 10px;
+    border-radius: 3px 0px 0px 3px;
+}
+
+.busca input::placeholder{
+    padding: 10px 0px;
+    text-align: left;
+}
+
+.busca button {
+    display: inline-block;
+    background-color: var(--corVerdeClaro);
+    color: var(--corBranco);
+    border: none;
+    padding: 10px 12px;
+    border-radius: 0px 3px 3px 0px;
+    font-family: 'Archivo-VariableFont', sans-serif;
+}
+
+.busca button:hover{
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 1px solid #129458;
+    color: #129458;
+}
+
+.usuario{
+    display: inline-block;
+}
+
+nav{
+    background-color: var(--corVerdeClaro);
+    min-width:100%;
+    padding: 8px 0px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.26);
+    display: inline-block;
+
+}
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    max-width: 1024px;
+    padding: 0px 50px;
+    display: inline-block;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+nav ul li a {
+    color: var(--corBranco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8.5px;
+    font-family: 'Archivo-VariableFont', sans-serif;
+}
+nav ul li a:hover {
+    color: var(--corVerdeEscuro);
+    background-color: var(--corBranco);
+    transition: .5s;
+    border-radius: 3px;
+}
+
 
 main {
     padding: 20px;
@@ -54,12 +165,23 @@ section#DetalhesLivro aside.capa button#reservar{
     height: 45px;
     margin: 8px 0px;
 
+    border-radius: 8px;
     color: var(--corBranco);
     background-color: var(--corVerdeClaro);
     border-style: hidden;
 
-    font-size: 18px;
+    font-size: 20px;
 }
+
+section#DetalhesLivro aside.capa button#reservar:hover{
+    background-color: var(--corBranco);
+    color: #129458;
+    border: 1px solid var(--corVerdeClaro);
+
+    transition: .5s;
+    cursor: pointer;
+}
+
 
 section#DetalhesLivro aside.capa button#favoritos{
     height: 30px;
@@ -69,6 +191,14 @@ section#DetalhesLivro aside.capa button#favoritos{
     font-size: 15px;
 }
 
+section#DetalhesLivro aside.capa button#favoritos:hover{
+    background-color: var(--corBranco);
+    color: #129458;
+
+    transition: .5s;
+    cursor: pointer;
+}
+
 section#DetalhesLivro aside.TextoLivro h2{
     font-weight: 600;
 }
@@ -76,7 +206,7 @@ section#DetalhesLivro aside.TextoLivro h2{
 section#DetalhesLivro aside.TextoLivro h4{
     padding-left: 3px;
     padding-top: 5px;
-
+    
     font-weight: 500;
 }
 
@@ -120,8 +250,85 @@ section#DetalhesAvancados table th.ColunaDir{
 
 
 section#DetalhesAvancados aside{
-    min-width: 480px;
+    min-width: 400px;
+    max-width: 480px;
+}
+
+
+article#Anunciante{
+    margin-bottom: 15px;
 }
 
 
 
+article#Anunciante{
+    display: flex;
+}
+
+
+article#Anunciante picture img#user{
+    max-width: 100px;
+}
+
+article#Anunciante section.contaUser{
+    padding-top: 5px;
+    padding-left: 20px;
+    
+    font-size: 20px;
+    color: #129458;
+}
+
+article#Anunciante section.contaUser p{
+    font-size: 18px;
+}
+
+article#Anunciante section.contaUser button{
+    font-size: 18px;
+    background-color: var(--corBranco);
+    border: 2px solid var(--corCinzaEscuro);
+    border-radius: 5px;
+
+    margin-top: 10px;
+    padding: 3px 80px;
+}
+
+article#Avaliacao {
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+article#Avaliacao input{
+    margin-top: 10px;
+    min-height: 80px;
+}
+
+article#Avaliacao input::placeholder{
+    font-size: 18px;
+}
+
+
+article#Avaliacao button{
+    max-width: 120px;
+
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+    color: var(--corBranco);
+    background-color: var(--corVerdeClaro);
+    border-style: hidden;
+
+    font-size: 20px;
+}
+
+article#Avaliacao button:hover{
+    background-color: var(--corBranco);
+    color: #129458;
+    border: 1px solid var(--corVerdeClaro);
+
+    transition: .5s;
+    cursor: pointer;
+}

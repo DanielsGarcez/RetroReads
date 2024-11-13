@@ -269,37 +269,90 @@ body {
   font-family: 'Archivo-VariableFont', sans-serif;
 }
 
-.slide-banner {
-  position: relative;
-  max-width: 200px;
+.slider{
   margin: 0 auto;
-  height: auto;
-  width: auto;
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
 }
 
-.slide {
+.slides{
+  width: 400%;
+  height: 400px;
   display: flex;
-  list-style: none;
-  aspect-ratio: 25/10;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border-radius: 0.5rem;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 25%;
+  position: relative;
+  transition: 2s;
 }
 
 .slide img {
-  flex: 1 0 100%;
+  width: 800px;
 }
 
-.slide-nav {
-  display: flex;
-  column-gap: 1rem;
+.navmanual {
   position: absolute;
-  bottom: 1.25rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manualbtn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manualbtn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manualbtn:hover {
+  background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -25%;
+}
+
+.navauto div{
+  border: 2px greenyellow;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navauto {
+  position: absolute;
+  width: 800px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navauto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navauto .auto-btn1{
+  background-color: #fff;
+}
+#radio2:checked ~ .navauto .auto-btn2{
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 600px) {

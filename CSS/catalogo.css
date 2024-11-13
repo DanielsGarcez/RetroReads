@@ -17,6 +17,9 @@ Verde Escuro = 1f4935
     --corVerdeClaro: #129458;
     --corVerdeEscuro: #1f4935;
     --corBranco: #fff;
+
+    --Archivo: Archivo-VariableFont;
+    --ArchivoBlack: ArchivoBlack-Regular;
 }
 
 
@@ -67,7 +70,7 @@ Verde Escuro = 1f4935
     margin: 0;
     text-align: center;
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--Archivo);
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -147,12 +150,17 @@ input[type="radio"] {
     justify-items: stretch;
 }
 
-.livro {
-    padding: 20px;
+div#espacamento{
+    max-width: 2000px;
+}
+
+section.livro {
+    padding: 10px;
     margin: 0;
     text-align: center;
     box-sizing: border-box;
     background-color: #fff;
+    font-family: var(--Archivo);
 }
 
 .livro img {
@@ -192,7 +200,6 @@ input[type="radio"] {
     color: #129458;
     transition: background-color .5s;
 }
-
 
 
 

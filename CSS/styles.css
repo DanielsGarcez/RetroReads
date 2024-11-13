@@ -26,6 +26,9 @@ Verde Escuro = 1f4935
     --corVerdeClaro: #129458;
     --corVerdeEscuro: #1f4935;
     --corBranco: #fff;
+
+    --Archivo: Archivo-VariableFont;
+    --ArchivoBlack: ArchivoBlack-Regular;
 }
 
 
@@ -83,6 +86,7 @@ header {
     position: relative;
     margin-bottom: -5px;
 }
+
 #logo:hover{
     cursor: pointer;
 }
@@ -92,17 +96,20 @@ header {
     align-items: center;
     padding-bottom: 10px;
 }
+
 .busca input{
     display: inline-block;
     border: none;
     width: 380px;
     padding: 10px 10px;
-    border-radius: 3px 0px 0px 3px;
+    border-radius: 4px 0px 0px 3px;
 }
+
 .busca input::placeholder{
     padding: 10px 0px;
     text-align: left;
 }
+
 .busca button {
     display: inline-block;
     background-color: var(--corVerdeClaro);
@@ -112,6 +119,7 @@ header {
     border-radius: 0px 3px 3px 0px;
     font-family: 'Archivo-VariableFont', sans-serif;
 }
+
 .busca button:hover{
     text-decoration: none;
     background-color: #fff;
@@ -119,64 +127,34 @@ header {
     color: #129458;
 }
 
-#carrinho{
-    max-height: 30px;
-    position: relative;
-    margin-bottom: -10px;
-    margin-left: 30px;
-    border: 3px solid #12945700;
-}
-
-#carrinho:hover{
-    cursor: pointer;
-}
-
-#user{
-    max-height: 38px;
-    position: relative;
-    margin-bottom: -14px;
-    margin-left: 15px;
-    border-radius: 100px;
-    border: 3px solid #12945700;
-}
-
-#user:hover{
-    cursor: pointer;
-    border: 3px solid var(--corVerdeClaro);
-    transition: .2s;
-}
-
 .usuario{
-    position: relative;
     display: inline-block;
 }
 
-.userMenu {
-display: none;
-position: absolute;
-background-color: var(--corBranco);
-box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-z-index: 1;
-min-width: 110px;
-padding: 10px 0;
-border-radius: 8px;
+.login-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    font-family: var(--Archivo), sans-serif;
 }
 
-.userMenu a {
-color: black;
-padding: 10px 15px;
-text-decoration: none;
-text-transform: capitalize;
-display: block;
-font-size: 12px;
+.cadastro-link {
+    display: inline-block;
+    background-color: #129458;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: var(--Archivo), sans-serif;
 }
 
-.userMenu a:hover {
-background-color: #f1f1f1;
-}
-
-.usuario:hover .userMenu {
-display: block;
+.cadastro-link:hover {
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 1px solid #129458;
+    color: #129458;
+    transition: .5s;
 }
 
 nav{
@@ -250,12 +228,14 @@ button:hover {
 /* ------------Footer------------ */
 footer {
     display: flex;
-    background-color: #1f4935;
+    background-color: #129458;
     color: white;
-    padding: 40px 20px;
+    padding: 20px 20px;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 80px;
+    position: relative;
 }
 
 .footer-content {
@@ -263,22 +243,27 @@ footer {
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
+    font-size: 15px;
+    margin-top: 10px;
 }
 
 .footer-column {
     flex: 1;
-    padding: 0 15px;
+    padding: 0 5px;
 }
 
 .footer-column h3 {
     margin-bottom: 15px;
     font-size: 15px;
     font-weight: bold;
+    font-family: var(--Archivo), sans-serif;
 }
 
 .footer-column ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    font-family: var(--Archivo), sans-serif;
 }
 
 .footer-column li {
@@ -291,29 +276,24 @@ footer {
     transition: color 0.3s;
 }
 
-.footer-column a:hover {
-    color: #129458;
-}
-
 .rodape {
     margin-top: 30px;
     font-size: 14px;
     color: #bbbbbb;
     text-align: center;
+    font-family: 'Archivo-VariableFont', sans-serif;
 }
 
+.img-r{
+    position: absolute;
+    left: 80px;
+    width: 130px;
+    bottom: 30px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.img-book{
+    position: absolute;
+    right: 80px;
+    width: 190px;
+    bottom: 10px;
+}
