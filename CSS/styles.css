@@ -55,13 +55,14 @@ html{
     scroll-padding-top: 112px; /* Compensa a altura do header */
 }
 
-body {
+/* body {
     margin: 0;
     padding: 0;
-    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
-}
+} 
+*/
 
 .container{
     flex-grow: 1;
@@ -191,15 +192,7 @@ nav ul li a:hover {
     border-radius: 3px;
 }
 
-main {
-    padding: 20px;
-    background-color: var(--corBranco);
-    min-width: 400px;
-    max-width: 715px;
-    margin: auto; /*Centraliza*/
-    margin-top: 120px;
-    justify-content: space-around;
-}
+
 
 main ul li{
     list-style: none;
@@ -228,7 +221,7 @@ button:hover {
 /* ------------Footer------------ */
 footer {
     display: flex;
-    background-color: #129458;
+    background-color: var(--corVerdeEscuro);
     color: white;
     padding: 20px 20px;
     flex-direction: column;

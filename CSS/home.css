@@ -31,7 +31,7 @@ html {
 
 body {
   font-family: Arial, sans-serif;
-  padding-top: 120px; /* Adicione um padding para compensar a altura do header */
+  padding-top: 84px; /* Adicione um padding para compensar a altura do header */
   margin: 0;
 }
 
@@ -41,6 +41,7 @@ body {
   align-items: center; /* Centraliza as colunas */
   min-height: calc(100vh - 100px);
   margin-top: 20px;
+  
 }
 
 
@@ -187,13 +188,12 @@ body {
 
 
 /* livros da home */
-
 .livros-container {
   display: flex;
   flex-wrap: wrap; /* permite que os livros "quebrem" para uma nova linha se a tela for pequena */
   gap: 80px; /* espaço entre os livros */
   justify-content: center; /* centraliza os livros no contêiner */
-  padding: 20px;
+  padding: 2px;
 }
 
 .livrohome {
@@ -230,6 +230,7 @@ body {
 
 .buttonlh {
   background-color: #129458;
+  border: 1px solid #129458;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -245,7 +246,6 @@ body {
 
 .buttonlh:hover {
   background-color: #fff;
-  border: 1px solid #129458;
   color: #129458;
   transition: background-color .5s;
 }
@@ -271,6 +271,8 @@ body {
 
 .slider{
   margin: 0 auto;
+  margin-left: 0;
+  margin-right: 0;
   width: 800px;
   height: 400px;
   overflow: hidden;
@@ -305,11 +307,14 @@ body {
 }
 
 .manualbtn {
-  border: 2px solid #fff;
+  background-color: white;
+  border: 2px solid grey;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
+  height: 2px;
+  width: 2px;
 }
 
 .manualbtn:not(:last-child) {
@@ -328,32 +333,6 @@ body {
   margin-left: -25%;
 }
 
-.navauto div{
-  border: 2px greenyellow;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.navauto {
-  position: absolute;
-  width: 800px;
-  margin-top: 360px;
-  display: flex;
-  justify-content: center;
-}
-
-.navauto div:not(:last-child){
-  margin-right: 40px;
-}
-
-#radio1:checked ~ .navauto .auto-btn1{
-  background-color: #fff;
-}
-#radio2:checked ~ .navauto .auto-btn2{
-  background-color: #fff;
-}
 
 @media only screen and (max-width: 600px) {
   .colunas {

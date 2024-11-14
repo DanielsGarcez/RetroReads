@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://kit.fontawesome.com/e42cca3199.js" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="stylesheet" href="CSS/theme.css">
     <link rel="stylesheet" href="CSS/home.css">
 </head>
 <body>
@@ -55,10 +54,10 @@
 
                 <!--imagem banner-->
                 <div class="slide first">
-                    <img src="https://i.pinimg.com/originals/d1/99/d7/d199d7925a28f76c4a800007e8c92f78.jpg" alt="img1"/>
+                    <img src="/Img/Banner1 - HOME.png" alt="culpadamari"/>
                 </div>
                 <div class="slide">
-                    <img src="https://images5.alphacoders.com/782/thumb-1920-782657.png" alt="img2"/>
+                    <img src="/Img/Banner2 - HOME.png" alt="img2"/>
                 </div>
 
                 <div class="navauto">
@@ -78,56 +77,17 @@
         </div>  
 
 
-        <div class="livros-container">
+        <div class="livros-container" th:each="livro : ${livros}">
             <section class="livrohome">
-                <img src="../Img/Livro.jpg" alt="Livro 1">
-                <h2>Pai rico, pai pobre</h2>
-                <p>Autor: Autor do Livro 1</p>
-                <p>R$ 10,00</p>
+                <img th:src="@{'../Img/' + ${livro.getImageName()}}" src="../Img/Livro.jpg" alt="Livro 1">
+                <h2 th:text="${livro.name}">Pai rico, pai pobre</h2>
+                <p th:text="${livro.author}">Autor: Autor do Livro 1</p>
+                <p th:text="'R$ '+${livro.preco}">R$ 10,00</p>
                 <ul>
                     <li class="grey"><a href="#" class="buttonlh">Comprar</a></li>
                 </ul>
             </section>
             
-            <section class="livrohome">
-                <img src="../Img/Livro.jpg" alt="Livro 2">
-                <h2>Pai rico, pai pobre</h2>
-                <p>Autor: Autor do Livro 2</p>
-                <p>R$ 10,00</p>
-                <ul>
-                    <li class="grey"><i href="#" class="buttonlh">Comprar</i></li>
-                </ul>
-            </section>
-            
-            <section class="livrohome">
-                <img src="../Img/Livro.jpg" alt="Livro 3">
-                <h2>Pai rico, pai pobre</h2>
-                <p>Autor: Autor do Livro 3</p>
-                <p>R$ 10,00</p>
-                <ul>
-                    <li class="grey"><i href="#" class="buttonlh">Comprar</i></li>
-                </ul>
-            </section>
-            
-            <section class="livrohome">
-                <img src="../Img/Livro.jpg" alt="Livro 4">
-                <h2>Pai rico, pai pobre</h2>
-                <p>Autor: Autor do Livro 4</p>
-                <p>R$ 10,00</p>
-                <ul>
-                    <li class="grey"><a href="#" class="buttonlh">Comprar</a></li>
-                </ul>
-            </section>
-
-            <section class="livrohome">
-                <img src="../Img/Livro.jpg" alt="Livro 5">
-                <h2>Pai rico, pai pobre</h2>
-                <p>Autor: Autor do Livro 5</p>
-                <p>R$ 10,00</p>
-                <ul>
-                    <li class="grey"><a href="#" class="buttonlh">Comprar</a></li>
-                </ul>
-            </section>
         </div>
 
 

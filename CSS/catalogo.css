@@ -184,7 +184,7 @@ section.livro {
     text-transform: uppercase;
     font-weight: bold;
     background-color: #129458;
-    border: none;
+    border: 1px solid #129458;
     color: white;
     width: 70%;
     padding: 10px 0;
@@ -192,11 +192,11 @@ section.livro {
     text-decoration: none;
     font-size: 15px;
     border-radius: 7px;
+    font-family: 'Archivo-VariableFont', sans-serif;
 }
 
 .reservar:hover{
     background-color: #fff;
-    border: 1px solid #129458;
     color: #129458;
     transition: background-color .5s;
 }

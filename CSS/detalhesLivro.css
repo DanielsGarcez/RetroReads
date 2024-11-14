@@ -31,104 +31,6 @@
     font-family: var(--Archivo);
 }
 
-header {
-    min-width: 320px;
-    background-color: var(--corVerdeEscuro);
-    padding-top: 25px;
-    text-align: center;
-    margin-bottom: 10px;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    top: 0px;
-}
-
-#logo{
-    margin-left: -40px;
-    margin-right: 20px;
-    max-width: 200px;
-    position: relative;
-    margin-bottom: -5px;
-}
-#logo:hover{
-    cursor: pointer;
-}
-
-.busca{
-    display: inline-block;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-.busca input{
-    display: inline-block;
-    border: none;
-    width: 380px;
-    padding: 10px 10px;
-    border-radius: 3px 0px 0px 3px;
-}
-
-.busca input::placeholder{
-    padding: 10px 0px;
-    text-align: left;
-}
-
-.busca button {
-    display: inline-block;
-    background-color: var(--corVerdeClaro);
-    color: var(--corBranco);
-    border: none;
-    padding: 10px 12px;
-    border-radius: 0px 3px 3px 0px;
-    font-family: 'Archivo-VariableFont', sans-serif;
-}
-
-.busca button:hover{
-    text-decoration: none;
-    background-color: #fff;
-    border-radius: 1px solid #129458;
-    color: #129458;
-}
-
-.usuario{
-    display: inline-block;
-}
-
-nav{
-    background-color: var(--corVerdeClaro);
-    min-width:100%;
-    padding: 8px 0px;
-    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.26);
-    display: inline-block;
-
-}
-nav ul {
-    list-style-type: none;
-    margin: 0px;
-    max-width: 1024px;
-    padding: 0px 50px;
-    display: inline-block;
-}
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-    
-}
-nav ul li a {
-    color: var(--corBranco);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8.5px;
-    font-family: 'Archivo-VariableFont', sans-serif;
-}
-nav ul li a:hover {
-    color: var(--corVerdeEscuro);
-    background-color: var(--corBranco);
-    transition: .5s;
-    border-radius: 3px;
-}
-
-
 main {
     padding: 20px;
     background-color: var(--corBranco);
@@ -331,4 +233,8 @@ article#Avaliacao button:hover{
 
     transition: .5s;
     cursor: pointer;
+}
+
+section.Sugestoes{
+    margin-top: 20px;
 }
