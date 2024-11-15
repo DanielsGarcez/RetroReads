@@ -328,6 +328,12 @@ body {
 #radio2:checked ~ .first{
   margin-left: -25%;
 }
+#radio3:checked ~ .first{
+  margin-left: -50%;
+}
+#radio4:checked ~ .first{
+  margin-left: -75%;
+}
 
 .navauto div{
   border: 2px solid rgb(168, 168, 168);
@@ -353,6 +359,12 @@ body {
   background-color: #129458;
 }
 #radio2:checked ~ .navauto .auto-btn2{
+  background-color: #129458;
+}
+#radio3:checked ~ .navauto .auto-btn3{
+  background-color: #129458;
+}
+#radio4:checked ~ .navauto .auto-btn4{
   background-color: #129458;
 }
 

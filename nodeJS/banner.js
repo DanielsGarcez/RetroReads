@@ -7,7 +7,7 @@ setInterval(function() {
 
 function nextImage() {
     count++;
-    if (count > 2) {
+    if (count > 4) {
         count = 1;
     }
 
