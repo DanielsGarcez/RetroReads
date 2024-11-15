@@ -269,11 +269,10 @@ body {
   font-family: 'Archivo-VariableFont', sans-serif;
 }
 
+
 .slider{
   margin: 0 auto;
-  margin-left: 0;
-  margin-right: 0;
-  width: 800px;
+  width: 1518px;
   height: 400px;
   overflow: hidden;
 }
@@ -282,6 +281,7 @@ body {
   width: 400%;
   height: 400px;
   display: flex;
+  
 }
 
 .slides input{
@@ -295,20 +295,19 @@ body {
 }
 
 .slide img {
-  width: 800px;
+  width: 100%;
 }
 
 .navmanual {
   position: absolute;
-  width: 800px;
+  width: 1518px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
 }
 
 .manualbtn {
-  background-color: white;
-  border: 2px solid grey;
+  border: 2px ;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -321,9 +320,6 @@ body {
   margin-right: 40px;
 }
 
-.manualbtn:hover {
-  background-color: #fff;
-}
 
 #radio1:checked ~ .first{
   margin-left: 0;
@@ -331,6 +327,33 @@ body {
 
 #radio2:checked ~ .first{
   margin-left: -25%;
+}
+
+.navauto div{
+  border: 2px solid rgb(168, 168, 168);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navauto {
+  position: absolute;
+  width: 1518px;
+  margin-top: 360px;
+  display: flex;
+  justify-content: center;
+}
+
+.navauto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navauto .auto-btn1{
+  background-color: #129458;
+}
+#radio2:checked ~ .navauto .auto-btn2{
+  background-color: #129458;
 }
 
 
