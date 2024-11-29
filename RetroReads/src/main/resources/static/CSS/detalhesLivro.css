@@ -1,0 +1,240 @@
+
+@font-face {
+    font-family: Archivo-VariableFont;
+    src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ArchivoBlack-Regular;
+    src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+:root{
+    --corVerdeClaro: #129458;
+    --corVerdeEscuro: #1f4935;
+    --corBranco: #fff;
+    --corCinzaMaisEscuro:#0E0F11;
+    --corCinzaEscuro: #909090;
+    --corCinza: #D9D9D9;
+    --corCinzaClaro:#F6F5F4;
+
+    --Archivo: Archivo-VariableFont;
+    --ArchivoBlack: ArchivoBlack-Regular;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--Archivo);
+}
+
+main {
+    padding: 20px;
+    background-color: var(--corBranco);
+    min-width: 400px;
+    max-width: 1080px;
+    margin: auto; /*Centraliza*/
+    margin-top: 120px;
+    justify-content: space-around;
+}
+
+section#DetalhesLivro{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+section#DetalhesLivro aside.capa {
+    display: flex;
+    flex-direction: column;
+    max-width: 240px;
+    margin-right: 20px;
+}
+
+section#DetalhesLivro aside.capa img{
+    max-width: 240px;
+}
+
+section#DetalhesLivro aside.capa button{
+    width: 100%;
+    border-radius: 6px;
+}
+
+section#DetalhesLivro aside.capa button#reservar{
+    height: 45px;
+    margin: 8px 0px;
+
+    border-radius: 8px;
+    color: var(--corBranco);
+    background-color: var(--corVerdeClaro);
+    border-style: hidden;
+
+    font-size: 20px;
+}
+
+section#DetalhesLivro aside.capa button#reservar:hover{
+    background-color: var(--corBranco);
+    color: #129458;
+    border: 1px solid var(--corVerdeClaro);
+
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+section#DetalhesLivro aside.capa button#favoritos{
+    height: 30px;
+
+    background-color: var(--corBranco);
+    border: 2px solid var(--corCinzaEscuro);
+    font-size: 15px;
+}
+
+section#DetalhesLivro aside.capa button#favoritos:hover{
+    background-color: var(--corBranco);
+    color: #129458;
+
+    transition: .5s;
+    cursor: pointer;
+}
+
+section#DetalhesLivro aside.TextoLivro h2{
+    font-weight: 600;
+}
+
+section#DetalhesLivro aside.TextoLivro h4{
+    padding-left: 3px;
+    padding-top: 5px;
+    
+    font-weight: 500;
+}
+
+section#DetalhesLivro aside.TextoLivro hr{
+    margin: 10px 0px;
+}
+
+
+
+section#DetalhesAvancados{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+section#DetalhesAvancados h2{
+    margin: 15px 0px;
+}
+
+section#DetalhesAvancados table{
+    text-align: left;
+}
+
+section#DetalhesAvancados table th{
+    padding: 8px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--corCinzaMaisEscuro);
+}
+
+section#DetalhesAvancados table th.ColunaEsq{
+    background-color: var(--corCinza);
+    padding-right: 40px;
+}
+
+section#DetalhesAvancados table th.ColunaDir{
+    background-color: var(--corCinzaClaro);
+    padding-right: 120px;
+}
+
+
+section#DetalhesAvancados aside{
+    min-width: 400px;
+    max-width: 480px;
+}
+
+
+article#Anunciante{
+    margin-bottom: 15px;
+}
+
+
+
+article#Anunciante{
+    display: flex;
+}
+
+
+article#Anunciante picture img#user{
+    max-width: 100px;
+}
+
+article#Anunciante section.contaUser{
+    padding-top: 5px;
+    padding-left: 20px;
+    
+    font-size: 20px;
+    color: #129458;
+}
+
+article#Anunciante section.contaUser p{
+    font-size: 18px;
+}
+
+article#Anunciante section.contaUser button{
+    font-size: 18px;
+    background-color: var(--corBranco);
+    border: 2px solid var(--corCinzaEscuro);
+    border-radius: 5px;
+
+    margin-top: 10px;
+    padding: 3px 80px;
+}
+
+article#Avaliacao {
+    font-size: 20px;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+article#Avaliacao input{
+    margin-top: 10px;
+    min-height: 80px;
+}
+
+article#Avaliacao input::placeholder{
+    font-size: 18px;
+}
+
+
+article#Avaliacao button{
+    max-width: 120px;
+
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+
+    color: var(--corBranco);
+    background-color: var(--corVerdeClaro);
+    border-style: hidden;
+
+    font-size: 20px;
+}
+
+article#Avaliacao button:hover{
+    background-color: var(--corBranco);
+    color: #129458;
+    border: 1px solid var(--corVerdeClaro);
+
+    transition: .5s;
+    cursor: pointer;
+}
+
+section.Sugestoes{
+    margin-top: 20px;
+}

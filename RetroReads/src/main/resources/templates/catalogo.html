@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetroReads</title>
+    <link rel="stylesheet" href="../CSS/catalogo.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../Img/Logo-favicon-sem-fundo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="/index.html">
+            <img src="/Img/RetroReads-White.png" alt="Logo RetroReads" id="logo">
+        </a>
+
+        <div class="busca">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="submit">Buscar</button>
+        </div>
+
+        <div class="usuario">
+            <a href="login.html" class="login-link">Login</a>
+            <a href="login.html" class="cadastro-link">Cadastre-se</a>
+        </div>
+
+        <nav>
+			<ul>
+				<li><a href="index.html">Início</a></li>
+			    <li><a href="catalogo.html">Catálogo</a></li>
+			    <li><a href="/index.html#planos">Planos</a></li>
+			    <li><a href="sobre.html">Sobre</a></li>
+			</ul>
+        </nav>
+    </header>
+
+
+    <div class="borda">
+        <div class="conteudoCatalogo">
+            <div class="filtros">
+                <div class="filtros-titulo">
+                    <h3>Filtros</h3>
+                </div>
+                <div class="categoria">
+                    <h3>Categorias <img src="/Img/seta.png" class="seta" alt="Seta"></h3>
+                    <div class="categorias-lista">
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Autoajuda
+                        </label>
+
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Biografias
+                        </label>
+
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Informática e Técnologia
+                        </label>
+
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Fantasia, Horror e Ficção Científica
+                        </label>
+
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> HQs, Mangás e Graphic Novels
+                        </label>
+
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Literatura e Ficção
+                        </label>
+
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Negócios e Carreira
+                        </label>
+
+                        <label>
+                            <input type="radio" name="categoria" class="categoria-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Poesia
+                        </label>
+                    </div>
+                </div>
+            
+                <div class="faixa-preco">
+                    <h3>Faixa de Preço <img src="/Img/seta.png" class="seta" alt="Seta"></h3>
+                    <div class="faixa-preco-lista" >
+                        <label>
+                            <input type="radio" name="faixaP" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Até R$ 20
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> R$20 - R$40
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> R$40 - R$60
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> R$60 - R$80
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> R$80 - R$100
+                        </label>
+
+                        <label>
+                            <input type="radio" class="faixa-preco-checkbox">
+                            <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Acima de R$100
+                        </label>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+    
+    
+            <!--------------------Livros-------------------->
+            <div class="livros" id="espacamento">
+				<section class="livro" th:each="livro : ${livros}">
+				    <img th:src="@{'./Img/' + ${livro.getImageName()}}" alt="Livro 1">
+				    <h2 th:text="${livro.getName()}">Pai rico, pai pobre</h2>
+				    <p th:text="${livro.author}">Autor: Autor do Livro 1</p>
+				    <p th:text="'R$ '+${livro.preco}">R$ 10,00</p>
+                    <button class="reservar" > <a th:href="@{'/detalheLivro/' + ${livro.id}}">Comprar</a> </button>
+				        
+				</section>
+    
+            </div>
+        </div>
+    </div>
+    <script src="/nodeJS/catalogo.js"></script>
+</body>
+</html>

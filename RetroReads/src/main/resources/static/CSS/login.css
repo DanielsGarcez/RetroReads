@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+}
+
+.barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.logo {
+    margin-left: 20px; /*distanciar da lateral*/
+}
+
+.logo img {
+    width: 140px; /*tamanho do logo */
+}
+
+
+
+/* Visibilidade Senha */
+
+.olho-senha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .olho-senha {
+        right: 5px;
+    }
+}
+
+
+
+
+
+/* Campo do Login/Cadastro */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 650px;
+    background-color: #fdffff;
+}
+.content {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 720px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    box-shadow:  0 4px 30px rgba(0, 0, 0, 0.2);
+}
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #129458;
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+
+    left: 0;
+}
+
+.titulo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: none;
+}
+
+.titulo-1 {
+    color: #fff;
+}
+
+.titulo-2 {
+    margin-bottom: 20px;
+    color: #129458;
+}
+
+.texto {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.texto-1 {
+    color: #fff;
+}
+
+.btn {
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+    margin-top: 1rem;
+}
+
+.btn-1 {
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: background-color .5s;
+}
+
+.btn-1:hover {
+    background-color: #fff;
+    color: #129458;
+}
+
+.btn-2 {
+    background-color: #129458;
+    border: 1px solid #129458;
+    transition: background-color .5s;
+}
+
+.btn-2:hover {
+    background-color: #fff;
+    border: 1px solid #129458;
+    color: #129458;
+}
+
+.content-a {
+    display: flex;
+}
+
+.content-a .coluna2 {
+    z-index: 11;
+}
+
+.coluna1 {
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+.coluna2 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.form input {
+    height: 40px;
+    width: 100%;
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    padding: 10px; /* Adiciona espaço interno ao input */
+}
+
+input:-webkit-autofill {    
+    -webkit-box-shadow: 0 0 0px 1000px #ecf0f1 inset !important;
+    -webkit-text-fill-color: #000 !important;
+}
+
+.label-input {
+    position: relative;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+.icon-modify {
+    color: #7f8c8d;
+    padding: 0 5px;
+}
+
+/* conteudo 2*/
+
+.content-b {
+    position: absolute;
+    display: flex;
+}
+
+.content-b .coluna1 {
+    order: 2;
+    z-index: -1;
+}
+
+.content-b .coluna2 {
+    order: 1;
+    z-index: -1;
+}
+
+.password {
+    color: #34495e;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+.password::first-letter {
+    text-transform: capitalize;
+}
+
+
+
+.sign-in-js .content-a .coluna1 {
+    z-index: -1;
+}
+
+.sign-in-js .content-b .coluna2 {
+    z-index: 11;
+}
+.sign-in-js .content-b .coluna1 {
+    z-index: 13;
+}
+
+.sign-in-js .content::before {
+    left: 60%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: slidein 1.3s;
+
+    z-index: 12;
+}
+
+.sign-up-js .content::before {
+    animation: slideout 1.3s;
+
+    z-index: 12;
+}
+
+.sign-up-js .content-b .coluna1,
+.sign-up-js .content-b .coluna2 {
+    z-index: -1;
+}
+
+.sign-up-js .content-a .coluna2 {
+    z-index: 11;
+}
+
+.sign-up-js .content-a .coluna1 {
+    z-index: 13;    
+}
+
+
+/* DESLOCAMENTO CONTEÚDO ATRÁS DO CONTENT:BEFORE*/
+
+.sign-in-js .content-a .coluna2 {
+    z-index: -1;
+    position: relative;
+    animation: deslocamentoEsq 1.3s;
+}
+
+.sign-up-js .content-b .coluna2 {
+    position: relative;
+    z-index: -1;
+    animation: deslocamentoDir 1.3s;
+}
+
+
+/*ANIMAÇÃOO CSS PARA O CONTEÚDO*/
+
+@keyframes deslocamentoEsq {
+
+    from {
+        left: 0;
+        opacity: 0.5;
+        z-index: 12;
+    }
+
+    25% {
+        left: -80px;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+
+    to {
+        left: -110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+@keyframes deslocamentoDir {
+
+    from {
+        left: 0;
+        opacity: 0.5;
+        z-index: 12;
+    }
+
+    25%{
+        left: 80px;
+        opacity: 0;
+    }
+
+    50% {
+        left: 100px;
+        opacity: 0;
+    }
+
+    to {
+        left: 110px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
+/*ANIMAÇÃO CSS*/
+
+@keyframes slidein {
+
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
+}
+
+
+
+
+/* Reponsividade */
+
+
+
+
+
+
+
+
+

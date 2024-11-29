@@ -1,0 +1,116 @@
+/*
+        Cores
+Verde Claro = 129458
+Verde Escuro = 1f4935
+*/
+
+
+
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.row{
+    margin-top: 40px;
+}
+  
+.coluna {
+    float: left;
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+  
+.card {
+    margin: 8px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0 auto;
+}
+  
+.sobre {
+    padding: 30px;               
+    text-align: center;  
+    background-color: #f5f5f5;         
+    color: #1f4935;                            
+    max-width: 100%;
+    padding-top: 130px;
+          
+}
+
+.texto {
+    max-width: 100%;          
+    margin: 0 auto;
+    padding: 0 20px;
+    font-family: 'Archivo-VariableFont', sans-serif;
+}
+
+.sobre h1 {
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #129458;    
+    text-transform: uppercase;     
+}
+  
+.info {
+    padding: 0 16px;
+}
+  
+.info::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+  
+.titulo {
+    color: grey;
+}
+
+.info .titulo {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.info h2 {
+    color: #129458;
+    font-size: 1.5em;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-family: 'adelle-mono-flex-bold', sans-serif;                 
+}
+
+.info p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+    font-family: 'Archivo-VariableFont', sans-serif;                 
+}
+
+.info p:last-of-type {
+    font-size: 0.9em;
+    color: #1f4935;
+    font-weight: bold;
+    margin-top: 10px;
+}
+  
+  
+@media screen and (max-width: 650px) {
+    .coluna {
+      width: 100%;
+      display: block;
+    }
+}

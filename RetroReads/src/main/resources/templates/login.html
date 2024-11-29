@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="icon" type="imagem/x-icon" href="/Img/Logo-favicon-sem-fundo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Login - RetroReads</title>
+</head>
+
+<body>
+    <header>
+        <div class="barra">
+            <a href="/index.html" class="logo">
+                <img src="/Img/Text No-Bg.png" alt="Logo">
+            </a>
+    </header>
+
+    <div class="container">
+        <div class="container">
+            <div class="content content-a"> <!--content a-->
+                <div class="coluna1">
+                    <h2 class="titulo titulo-1">Já tem cadastro?</h2>
+                    <p class="texto texto-1">Faça o login para se conectar</p>
+                    <button id="signin" class="btn btn-1">Login</button>
+                </div>  <!--coluna 1-->  
+
+                <div class="coluna2">
+                    <h2 class="titulo titulo-2">Cadastre-se</h2>
+                   <form class="form" method="post" action="/register" th:action="@{/register}" th:object="${user}">
+                        <label class="label-input" for="Username">
+                            <input name="Username" id="Username" type="text" placeholder="Nome" th:field="*{nome}">
+                        </label>
+
+                        <label class="label-input" for="cpf">
+                            <input name="cpf" id="cpf" type="text" placeholder="CPF/CNPJ" th:field="*{CPF}">
+                        </label>
+                        
+                        <label class="label-input" for="email">
+                            <input name="email" id="email" type="email" placeholder="E-mail" th:field="*{email}">
+                        </label>
+                        
+                        <label class="label-input" for="password">
+                            <input name="password" id="senha" type="password" placeholder="Senha" th:field="*{password}">
+							<i class="fa-regular fa-eye olho-senha" style="color: #b8b8b8;" data-target="senha"></i>
+                        </label>
+                        
+                        
+                        <button type="submit" class="btn btn-2">Cadastrar</button>        
+                    </form>
+                </div><!-- Coluna 2 -->
+            </div><!-- content a -->
+
+            <div class="content content-b"> <!--content b-->
+                <div class="coluna1">
+                    <h2 class="titulo titulo-1">Seja bem vindo!</h2>
+                    <p class="texto texto-1">Crie já sua conta da RetroReads</p>
+                    <p class="texto texto-1"></p>
+                    <button id="signup" class="btn btn-1">prosseguir</button>
+                </div> <!--coluna 1-->
+
+                <div class="coluna2">
+                    <h2 class="titulo titulo-2">Faça login para continuar</h2>
+                    <form class="form" method="post" action="/login">
+                    
+                        <label class="label-input" for="username">
+                            <input type="text" name="username" id="username" placeholder="E-mail">
+                        </label>
+                    
+                        <label class="label-input" for="password">
+                            <input type="password" name="password" id="senha" placeholder="Senha">
+							<i class="fa-regular fa-eye olho-senha" style="color: #b8b8b8;" data-target="senha"></i>
+                        </label>
+                    
+                        <a class="password" href="#">Esqueci minha senha</a>
+                        <button class="btn btn-2" type="submit">Entrar</button>
+                    </form>
+                </div><!-- Coluna 2 -->
+            </div><!-- content-b -->
+        </div>
+
+    <script src="../nodeJS/index.js"></script>
+</body>
+</html>

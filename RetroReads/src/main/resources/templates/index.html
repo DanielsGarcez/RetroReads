@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="shortcut icon" href="../Img/Logo-favicon-sem-fundo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/e42cca3199.js" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/home.css">
+	<link rel="stylesheet" href="CSS/sobre.css">
+</head>
+<body>
+    <header>
+        <a href="/index.html">
+            <img src="./Img/RetroReads-White.png" alt="Logo RetroReads" id="logo">
+        </a>
+
+        <div class="busca">
+            <input type="text" placeholder="Pesquisar...">
+            <button type="submit">Buscar</button>
+        </div>
+
+        <div class="usuario">
+            <a href="/Pages/login.html" class="login-link">Login</a>
+            <a href="/Pages/login.html" class="cadastro-link">Cadastre-se</a>
+        </div>
+
+        
+        <!--------------------Páginas------------------->
+        <nav class="theme">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="/catalogo.html">Catálogo</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="/sobre.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <!--------------------Conteúdo da Home------------------->
+
+    <div class="container">
+      <!--colocar o resto do conteudo embaixo da div container-->
+
+        <!--banner-->
+        <div class="slider">
+            <div class="slides">
+                <!--Botão banner-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+				<input type="radio" name="radio-btn" id="radio3">
+				<input type="radio" name="radio-btn" id="radio4">
+
+                <!--imagem banner-->
+                <div class="slide first">
+                    <img src="/Img/BOOK FRIDAY - HOME.png" alt="img1"/>
+                </div>
+                <div class="slide">
+                    <img src="/Img/Banner1 - HOME.png" alt="img2"/>
+                </div>
+				
+				<div class="slide">
+					<img src="/Img/Banner2 - HOME.png" alt="img3"/>
+				</div>
+				
+				<div class="slide">
+					<img src="/Img/ANÚNCIO CADASTRO - HOME.png" alt="img4"/>
+				</div>
+
+				<div class="navauto">
+				     <div class="auto-btn1"></div>
+				     <div class="auto-btn2"></div>
+				     <div class="auto-btn3"></div>
+				     <div class="auto-btn4"></div>
+				</div>
+            </div>
+            <div class="navmanual">
+				<label for="radio1" class="manualbtn"></label>
+				<label for="radio2" class="manualbtn"></label>
+				<label for="radio3" class="manualbtn"></label>
+				<label for="radio4" class="manualbtn"></label>
+            </div>
+        </div>
+
+        <!------------ Top Livros ---------->
+        <div class="tituloTopLivros">
+            <h2>TOP LIVROS</h2>
+        </div>  
+
+
+        <div class="livros-container" >
+
+            <section class="livrohome" th:each="livro : ${livros}">
+                <img th:src="@{'../Img/' + ${livro.getImageName()}}" alt="Livro 1">
+                <h2 th:text="${livro.name}">Pai rico, pai pobre</h2>
+                <p th:text="${livro.author}">Autor: Autor do Livro 1</p>
+                <p th:text="'R$ '+${livro.preco}">R$ 10,00</p>
+                <ul>
+                    <li class="reservar"><a th:href="@{'/detalheLivro/' + ${livro.id}}" class="buttonlh">Comprar</a></li>
+                </ul>
+            </section>
+            
+        </div>
+		
+		
+		
+		
+		<!---------- Top Autores ---------->
+		<div class="tituloTopAutores">
+			<h2>TOP AUTORES</h2>
+		</div>
+		
+		<div class="topAutores">
+			<div class="coluna">
+				<div class="card">
+					<img src="/Img/raphael.jpg" alt="Autor1" style="width:100%">
+					<div class="nomeAutores">
+						<h2>Raphael Montes</h2>
+					</div>
+				</div>
+			</div>
+			
+			<div class="coluna">
+				<div class="card">
+				 	<img src="/Img/agatha.jpg" alt="Autor2" style="width:100%">
+				    <div class="nomeAutores">
+				    	<h2>Agatha Christie</h2>
+				    </div>
+				</div>
+			</div>
+			
+			<div class="coluna">
+				<div class="card">
+			     	<img src="/Img/georgeM.jpg" alt="Autor3" style="width:100%">
+			        <div class="nomeAutores">
+			        	<h2>George R.R. Martin</h2>
+			        </div>
+			    </div>
+			</div>
+			    
+			<div class="coluna">
+				<div class="card">
+			    	<img src="/Img/georgeO.jpg" alt="Autor4" style="width:100%">
+			    	<div class="nomeAutores">
+			        	<h2>George Orwell</h2>
+			        </div>
+			    </div>
+			</div>
+		</div>
+
+
+        <!-------------------- Planos ------------------->
+
+        <div class="titulo-planos" id="planos">
+            <h2>Planos Mensais</h2>
+            <p>Escolha abaixo o plano que mais combina com você</p>
+        </div>
+
+        <div class="colunas">
+          <ul class="preco">
+            <div class="plano">Free</div>
+            <div class="valor">
+                R$ 0 <span class="mes">/ Mês</span>
+            </div>
+            <li class="descricao">Tenha acesso a todas as funcionalidades básicas:</li>
+            <li><i class="fa-solid fa-check"></i> Reservar até 3 livros simultaneamente</li>
+            <li><i class="fa-solid fa-check"></i> Estantes de livros ilimitada</li>
+            <li><i class="fa-solid fa-check"></i> Anunciar até 3 livros por mês</li>
+            <li><i class="fa-solid fa-check"></i> Acesso à todo catálogo de livros</li>
+            <li class="assinar"><a href="#" class="button">Assinar</a></li>
+          </ul>
+      
+          <ul class="preco">
+            <div class="plano">Premium</div>
+            <div class="valor">
+                R$ 14,90 <span class="mes">/ Mês</span>
+            </div>
+            <li class="descricao">Tenha acesso a todas as funcionalidades básicas, com bônus de:</li>
+            <li><i class="fa-solid fa-check"></i> Reservar até 10 livros simultaneamente</li>
+            <li><i class="fa-solid fa-check"></i> Anunciar até 30 livros por mês </li>
+            <li><i class="fa-solid fa-check"></i> Adicionar notificações aos próprios anúncios de livros</li>
+            <li><i class="fa-solid fa-check"></i> Notificações de anúncios de livros novos ou promoções</li>
+            <li class="assinar"><a href="#" class="button">Assinar</a></li>
+          </ul>
+      
+          <ul class="preco">
+            <div class="plano">Empresa</div>
+            <div class="valor">
+                R$ 29,90 <span class="mes">/ Mês</span>
+            </div>
+            <li class="descricao">Tenha acesso a funções exclusivas para CNPJ:</li>
+            <li><i class="fa-solid fa-check"></i> Anuncio de livros ilimitado</li>
+            <li><i class="fa-solid fa-check"></i> Reservas de até 15 livros</li>
+            <li><i class="fa-solid fa-check"></i> Página financeira com várias funcionalidades</li>
+            <li><i class="fa-solid fa-check"></i> Página de controle de estoque</li>
+            <li class="assinar"><a href="#" class="button">Assinar</a></li>
+          </ul>
+        </div>
+    </div> <!--fim da div container-->
+
+
+
+    <!--------------------Footer------------------->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Informações</h3>
+                <ul>
+                    <li><a href="/Pages/sobre.html">Sobre Nós</a></li>
+                    <li><a href="#">Direitos Autorais</a></li>
+                    <li><a href="#">Políticas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Ajuda</h3>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Troca e Devolução</a></li>
+                    <li><a href="#">Segurança e Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Acessibilidade</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Navegação</h3>
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="planos.html">Planos</a></li>
+                    <li><a href="#">Destaques</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Imagens no footer -->
+        <img src="/Img/R.png" alt="Imagem esquerda" class="img-r">
+        <img src="/Img/Book.png" alt="Imagem direita" class="img-book">
+
+        <div class="rodape">
+            <p>© 2024 RetroReads.com.br</p>
+        </div>
+    </footer>
+    <script src="banner.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,267 @@
+
+/*
+        Cores
+Verde Claro = 129458
+Verde Escuro = 1f4935
+*/
+
+@charset "UTF-8";
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --corVerdeClaro: #129458;
+    --corVerdeEscuro: #1f4935;
+    --corBranco: #fff;
+
+    --Archivo: Archivo-VariableFont;
+    --ArchivoBlack: ArchivoBlack-Regular;
+}
+
+
+
+/* ------------Fontes de Texto------------ */
+@font-face {
+    font-family: adelle-mono-flex-bold;
+    src: url('../fonts/adelle-mono-flex-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Archivo-VariableFont;
+    src: url('../fonts/Archivo-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: ArchivoBlack-Regular;
+    src: url('../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+
+
+
+
+/* container */
+.borda{
+    max-width: 1400px;
+    margin: 150px auto 20px;
+    padding: 10px 0px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.conteudoCatalogo{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+/* -------------------- Filtro -------------------- */
+.filtros-titulo h3 {
+    background-color: #129458;
+    color: #fff;
+    border-radius: 4px;
+    padding: 7px 50px;
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--Archivo);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.filtros {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #e1e1e1;
+}
+
+.categoria, .faixa-preco {
+    margin-bottom: 20px;
+}
+
+.categoria h3, .faixa-preco h3 {
+    color: rgb(96, 96, 96);
+    font-size: 15px;
+    font-family: 'Archivo-VariableFont', sans-serif;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 4px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    cursor: pointer;
+}
+
+.seta {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    cursor: pointer; 
+    transition: transform 0.3s ease;
+}
+
+.seta.abrir {
+    transform: rotate(180deg); /* Girar a seta */
+}
+
+.categorias-lista, .faixa-preco-lista {
+    display: none;
+    font-family: 'Archivo-VariableFont', sans-serif;
+    color: #525252;
+}
+
+.mostrar{
+    display: block;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+label i {
+    margin-right: 10px; 
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+
+
+
+
+/* -------------------- Livros -------------------- */
+.livros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas */
+    gap: 10px;
+    justify-items: stretch;
+
+
+}
+
+div#espacamento{
+    max-width: 2000px;
+}
+
+section.livro {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-family: var(--Archivo);
+}
+
+.livro img {
+    width: 150px;
+    height: 200px;
+
+    object-fit: contain;
+
+    display: block;
+    margin: auto;
+}
+
+.livro h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    font-family: var(--Archivo);
+}
+
+.livro p {
+    margin-bottom: 10px;
+
+    font-family: var(--Archivo);
+}
+
+.reservar{
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #129458;
+    border: 1px solid #129458;
+    color: white;
+    width: 70%;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 7px;
+    font-family: 'Archivo-VariableFont', sans-serif;
+
+    margin-top: auto;
+}
+
+
+.reservar:hover{
+    background-color: #fff;
+    color: #129458;
+    transition: background-color .5s;
+}
+
+button.reservar a{
+    text-decoration: none;
+    color: var(--corBranco);
+
+}
+
+button.reservar a:hover{
+    color: #129458;
+}
+
+
+
+
+
+
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+    .livro {
+        width: calc(33.33% - 20px); /* 3 livros por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .livro {
+        width: calc(50% - 20px); /* 2 livros por linha */
+    }
+}
+
+@media (max-width: 480px) {
+    .livro {
+        width: 100%; /* 1 livro por linha */
+    }
+}
+
+.buttonlh {
+    background-color: #129458;
+    border: 1px solid #129458;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: auto;
+    cursor: pointer;
+    display: block;
+    border-radius: 10px;
+  }
+
+
+  li {
+    list-style-type: none;
+  }  
