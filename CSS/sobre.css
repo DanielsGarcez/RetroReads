@@ -108,9 +108,9 @@ html {
 }
   
   
-@media screen and (max-width: 650px) {
+/* @media screen and (max-width: 650px) {
     .coluna {
       width: 100%;
       display: block;
     }
-}
+} */
