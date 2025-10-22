@@ -244,6 +244,29 @@
         </div>
     </footer>
     <script src="/nodeJS/banner.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAzQrm0ppeImY2JOueHKSiQOYl7P_NMgcY",
+            authDomain: "retroreads-556a0.firebaseapp.com",
+            projectId: "retroreads-556a0",
+            storageBucket: "retroreads-556a0.firebasestorage.app",
+            messagingSenderId: "137045514283",
+            appId: "1:137045514283:web:12062091dea60a92af726e",
+            measurementId: "G-FJ3BYWWTVZ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
 
