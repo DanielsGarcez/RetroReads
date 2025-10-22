@@ -230,6 +230,7 @@ body {
   color: #129458;
   font-family: 'adelle-mono-flex-bold', sans-serif;
   margin-top: 80px;
+  margin: auto;
   padding-bottom: 15px;
 }
 
@@ -237,7 +238,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15px;
+  gap: 50px;
+  margin: auto;
 }
 
 .coluna {
@@ -265,9 +267,6 @@ body {
   cursor: pointer;
 }
 
-
-
-
 /* ---------- Planos ---------- */
 .container{
   display: flex;
@@ -276,7 +275,6 @@ body {
   min-height: calc(100vh - 100px);
   margin-top: 20px;
 }
-
 
 .titulo-planos {
   text-align: center;
@@ -305,6 +303,7 @@ body {
   padding-bottom: 20px;
   padding-top:5px;
   gap: 30px; /* espaçamento entre as tabelas */
+  margin: auto;
 }
 
 .plano {
