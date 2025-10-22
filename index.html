@@ -14,7 +14,7 @@
 <body>
     <header>
         <a href="/index.html">
-            <img src="./Img/RetroReads-White.png" alt="Logo RetroReads" id="logo">
+            <img src="./Img/Logo-White.png" alt="Logo RetroReads" id="logo">
         </a>
 
         <div class="busca">
@@ -57,16 +57,16 @@
 
                 <!--imagem banner-->
                 <div class="slide first">
-                    <img src="/Img/BOOK FRIDAY - HOME.png" alt="culpadamari"/>
+                    <img src="/Img/Banner-BlackFriday.png" alt="culpadamari"/>
                 </div>
                 <div class="slide">
-                    <img src="/Img/Banner1 - HOME.png" alt="img2"/>
+                    <img src="/Img/Banner-Principal.png" alt="img2"/>
                 </div>
                 <div class="slide">
-                    <img src="/Img/Banner2 - HOME.png" alt="img3"/>
+                    <img src="/Img/Banner-Foruns.png" alt="img3"/>
                 </div>
                 <div class="slide">
-                    <img src="/Img/ANÚNCIO CADASTRO - HOME.png" alt="img4"/>
+                    <img src="/Img/Banner-AnuncioCadastro.png" alt="img4"/>
                 </div>
 
                 <div class="navauto">
@@ -92,7 +92,7 @@
 
         <div class="livros-container" th:each="livro : ${livros}">
             <section class="livrohome">
-                <img th:src="@{'../Img/' + ${livro.getImageName()}}" src="../Img/Livro.jpg" alt="Livro 1">
+                <img th:src="@{'../Img/' + ${livro.getImageName()}}" src="../Img/Design-Livro.jpg" alt="Livro 1">
                 <h2 th:text="${livro.name}">Pai rico, pai pobre</h2>
                 <p th:text="${livro.author}">Autor: Autor do Livro 1</p>
                 <p th:text="'R$ '+${livro.preco}">R$ 10,00</p>
@@ -236,8 +236,8 @@
         </div>
 
         <!-- Imagens no footer -->
-        <img src="/Img/R.png" alt="Imagem esquerda" class="img-r">
-        <img src="/Img/Book.png" alt="Imagem direita" class="img-book">
+        <img src="/Img/Logo-R.png" alt="Imagem esquerda" class="img-r">
+        <img src="/Img/Design-Book.png" alt="Imagem direita" class="img-book">
 
         <div class="rodape">
             <p>© 2024 RetroReads.com.br</p>
