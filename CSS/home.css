@@ -87,7 +87,6 @@ body {
   margin-right: 40px;
 }
 
-
 #radio1:checked ~ .first{
   margin-left: 0;
 }
@@ -102,7 +101,7 @@ body {
   margin-left: -75%;
 }
 
-.navauto div{
+.navauto section{
   border: 2px solid rgb(168, 168, 168);
   padding: 5px;
   border-radius: 10px;
@@ -118,7 +117,7 @@ body {
   justify-content: center;
 }
 
-.navauto div:not(:last-child){
+.navauto section:not(:last-child){
   margin-right: 40px;
 }
 
