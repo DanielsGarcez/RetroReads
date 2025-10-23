@@ -15,15 +15,15 @@
             <img src="../Img/Logo-White.png" alt="Logo RetroReads" id="logo">
         </a>
 
-        <div class="busca">
+        <section class="busca">
             <input type="text" placeholder="Pesquisar...">
             <button type="submit">Buscar</button>
-        </div>
+        </section>
 
-        <div class="usuario">
+        <section class="usuario">
             <a href="/Pages/login.html" class="login-link">Login</a>
             <a href="/Pages/login.html" class="cadastro-link">Cadastre-se</a>
-        </div>
+        </section>
 
         <nav>
             <ul>
@@ -36,15 +36,15 @@
     </header>
 
 
-    <div class="borda">
-        <div class="conteudoCatalogo">
-            <div class="filtros">
-                <div class="filtros-titulo">
+    <main class="borda">
+        <article class="conteudoCatalogo">
+            <aside class="filtros">
+                <section class="filtros-titulo">
                     <h3>Filtros</h3>
-                </div>
-                <div class="categoria">
-                    <h3>Categorias <img src="/Img/Design-seta.png" class="seta" alt="Seta"></h3>
-                    <div class="categorias-lista" class="categorias-lista">
+                </section>
+                <section class="categoria">
+                    <h3>Categorias <img src="./Img/Design-seta.png" class="seta" alt="Seta"></h3>
+                    <aside class="categorias-lista" class="categorias-lista">
                         <label>
                             <input type="radio" name="categoria" class="categoria-checkbox">
                             <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Autoajuda
@@ -84,12 +84,12 @@
                             <input type="radio" name="categoria" class="categoria-checkbox">
                             <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Poesia
                         </label>
-                    </div>
-                </div>
+                    </aside>
+                </section>
             
-                <div class="faixa-preco">
+                <section class="faixa-preco">
                     <h3>Faixa de Preço <img src="/Img/Design-seta.png" class="seta" alt="Seta"></h3>
-                    <div class="faixa-preco-lista" class="faixa-preco-lista">
+                    <aside class="faixa-preco-lista" class="faixa-preco-lista">
                         <label>
                             <input type="radio" name="faixaP" class="faixa-preco-checkbox">
                             <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Até R$ 20
@@ -119,16 +119,12 @@
                             <input type="radio" class="faixa-preco-checkbox">
                             <i class="fa-regular fa-circle-check" style="color: #129458;"></i> Acima de R$100
                         </label>
-                    </div>
-                </div>
-            </div>
-    
-    
-    
-    
+                    </aside>
+                </section>
+            </aside>
     
             <!--------------------Livros-------------------->
-            <div class="livros" id="espacamento">
+            <article class="livros" id="espacamento">
                 <section class="livro">
                     <img src="../Img/Exemplo-Livro.jpg" alt="Livro 1">
                     <h2>Título do Livro 1</h2>
@@ -268,9 +264,9 @@
                     <p>Autor: Autor do Livro 20</p>
                     <button class="reservar">Reservar</button>
                 </section>
-            </div>
-        </div>
-    </div>
+            </article>
+        </article>
+    </main>
     <script src="/nodeJS/catalogo.js"></script>
 </body>
 </html>
