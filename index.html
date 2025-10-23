@@ -83,7 +83,7 @@
 
         <div class="livros-container" th:each="livro : ${livros}">
             <section class="livrohome">
-                <img th:src="@{'../Img/' + ${livro.getImageName()}}" src="../Img/Design-Livro.jpg" alt="Livro 1">
+                <img th:src="@{'../Img/' + ${livro.getImageName()}}" src="./Img/Exemplo-Livro.jpg" alt="Livro 1">
                 <h2 th:text="${livro.name}">Pai rico, pai pobre</h2>
                 <p th:text="${livro.author}">Autor: Autor do Livro 1</p>
                 <p th:text="'R$ '+${livro.preco}">R$ 10,00</p>
