@@ -28,25 +28,29 @@
 
                 <div class="coluna2">
                     <h2 class="titulo titulo-2">Cadastre-se</h2>
-                   <form class="form" method="post" action="/register" th:action="@{/register}" th:object="${user}">
+                   
+                    <!---------- Área de Cadastro ----------->
+
+                    <form class="form">
                         <label class="label-input" for="Username">
-                            <input name="Username" id="Username" type="text" placeholder="Nome" th:field="*{nome}">
+                            <input name="Username" id="Username" type="text" placeholder="Nome">
                         </label>
 
                         <label class="label-input" for="cpf">
-                            <input name="cpf" id="cpf" type="text" placeholder="CPF/CNPJ" th:field="*{CPF}">
+                            <input name="cpf" id="cpf" type="text" placeholder="CPF/CNPJ" >
                         </label>
                         
                         <label class="label-input" for="email">
-                            <input name="email" id="email" type="email" placeholder="E-mail" th:field="*{email}">
+                            <input type="email" name="email" id="email" placeholder="E-mail" >
                         </label>
                         
                         <label class="label-input" for="password">
-                            <input name="password" id="password" type="password" placeholder="Senha" th:field="*{password}">
+                            <input type="password" name="password" id="password" placeholder="Senha" >
                         </label>
                         
                         
-                        <button type="submit" class="btn btn-2">Cadastrar</button>        
+                        <button type="submit" class="btn btn-2">Cadastrar</button>         
+                    
                     </form>
                 </div><!-- Coluna 2 -->
             </div><!-- content a -->
@@ -61,23 +65,30 @@
 
                 <div class="coluna2">
                     <h2 class="titulo titulo-2">Faça login para continuar</h2>
+
+                    <!----------- Área de Login ----------->
                     <form class="form" method="post" action="/login">
                     
                         <label class="label-input" for="username">
-                            <input type="text" name="username" id="username" placeholder="E-mail">
+                            <input type="email" name="username" onchange="validarCampo()" id="username" placeholder="E-mail">
                         </label>
                     
                         <label class="label-input" for="password">
-                            <input type="password" name="password" id="password" placeholder="Senha">
+                            <input type="password" name="password" onchange="validarCampo()" id="password" placeholder="Senha">
                         </label>
                     
-                        <a class="password" href="#">Esqueci minha senha</a>
-                        <button class="btn btn-2" type="submit">Entrar</button>
+                        <button class="password" type="submit" id="RecuperarSenha" disabled="true">Esqueci minha senha</button>
+
+                        <button class="btn btn-2" type="submit" id="botãoLogin" disabled="true">Entrar</button>
+
                     </form>
                 </div><!-- Coluna 2 -->
             </div><!-- content-b -->
         </div>
-
+    
+    
     <script src="../nodeJS/index.js"></script>
+    <script src="../nodeJS/login.js"></script>
+    
 </body>
 </html>

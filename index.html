@@ -23,8 +23,8 @@
         </section>
 
         <section class="usuario">
-            <a href="./Pages/login.html" class="login-link">Login</a>
-            <a href="./Pages/login.html" class="cadastro-link">Cadastre-se</a>
+            <a href="/Pages/login.html" class="login-link">Login</a>
+            <a href="/Pages/cadastro.html" class="cadastro-link">Cadastre-se</a>
         </section>
 
         
@@ -241,15 +241,11 @@
 
     <!--------- Scripts Vinculados --------->
     <script src="nodeJS/banner.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
 
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.4.0/firebase-auth-compat.js"></script>
+
+    <script>
         const firebaseConfig = {
             apiKey: "AIzaSyAzQrm0ppeImY2JOueHKSiQOYl7P_NMgcY",
             authDomain: "retroreads-556a0.firebaseapp.com",
@@ -261,8 +257,15 @@
         };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        firebase.initializeApp(firebaseConfig);
+
+        console.log('antes')
+        firebase.auth().signInWithEmailAndPassword("any@email.com", "123456").then(response =>{
+            console.log('Sucesso!', response)
+        }).catch(error =>{
+            console.log('Erro', error)
+        })
+        console.log('depois')
     </script>
 </body>
 </html>

@@ -26,6 +26,7 @@ header {
 }
 
 .logo img {
+    max-width: 20px;
     width: 140px; /*tamanho do logo */
 }
 
@@ -106,6 +107,14 @@ header {
 
 .texto-1 {
     color: #fff;
+}
+
+button[disabled]{
+    opacity: 0.7;
+}
+
+button:active{
+    opacity: 0.8;
 }
 
 .btn {
@@ -216,10 +225,14 @@ input:-webkit-autofill {
 }
 
 .password {
-    color: #34495e;
+    color: #129458;
     font-size: 14px;
     margin: 15px 0;
     text-align: center;
+
+    text-decoration: underline;
+    background: #7f8c8d00;
+    border: 0px;
 }
 .password::first-letter {
     text-transform: capitalize;
