@@ -99,7 +99,7 @@ body {
   margin-left: -75%;
 }
 
-.navauto section{
+.navauto article{
   border: 2px solid rgb(168, 168, 168);
   padding: 5px;
   border-radius: 10px;
@@ -115,7 +115,7 @@ body {
   justify-content: center;
 }
 
-.navauto section:not(:last-child){
+.navauto article:not(:last-child){
   margin-right: 40px;
 }
 
