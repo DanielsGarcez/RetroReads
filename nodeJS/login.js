@@ -5,7 +5,7 @@ function validarCampo(){
     document.getElementById('RecuperarSenha').disabled = !emailValido;
 
     const senhaValida = validarSenha();
-    document.getElementById("botãoLogin").disabled = !emailValido || !senhaValida;
+    document.getElementById("botãoLogin").disabled = !senhaValida;
 }
 
 
