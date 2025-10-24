@@ -1,15 +1,15 @@
-/* Bloqueia o botão de 'Recuperar Senha' se o conteúdo estiver vazio ou invalido */
+/* Bloqueia o botão de 'Recuperar Senha' e 'Entrar' se o conteúdo estiver vazio ou invalido */
 
 function validarCampo(){
-    const emailValido = emailEstaValido();
+    const emailValido = validarUsuario();
     document.getElementById('RecuperarSenha').disabled = !emailValido;
 
-    const senhaValida = senhaEstaValida();
+    const senhaValida = validarSenha();
     document.getElementById("botãoLogin").disabled = !emailValido || !senhaValida;
 }
 
 
-function emailEstaValido(){    
+function validarUsuario(){    
     const email = document.getElementById("username").value;
     if (!email){
         return false;
@@ -17,14 +17,11 @@ function emailEstaValido(){
     return validarEmail(email);
 }
 
-function senhaEstaValida(){
+function validarSenha(){
     const senha = document.getElementById("password").value;
-    if(!senha){
-        return false;
-    }
-    return true;
+    return senha.length > 0;
 }
 
 function validarEmail(email){
-    return /\$+@\$+\.\$+/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }

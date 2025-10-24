@@ -111,19 +111,19 @@ header {
 
 button[disabled]{
     opacity: 0.7;
+    pointer-events: none;
 }
 
 button:active{
     opacity: 0.8;
 }
 
-.btn {
+.botao {
     border-radius: 10px;
     text-transform: uppercase;
     color: #fff;
     font-size: 11px;
     padding: 10px 40px;
-    cursor: pointer;
     font-weight: bold;
     width: 150px;
     align-self: center;
@@ -238,6 +238,9 @@ input:-webkit-autofill {
     text-transform: capitalize;
 }
 
+#RecuperarSenha{
+    cursor: pointer;
+}
 
 
 .sign-in-js .content-a .coluna1 {
