@@ -258,14 +258,6 @@
 
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-
-        console.log('antes')
-        firebase.auth().signInWithEmailAndPassword("any@email.com", "123456").then(response =>{
-            console.log('Sucesso!', response)
-        }).catch(error =>{
-            console.log('Erro', error)
-        })
-        console.log('depois')
     </script>
 </body>
 </html>
