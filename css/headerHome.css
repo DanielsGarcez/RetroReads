@@ -1,0 +1,177 @@
+@import url('./standard.css');
+
+.header {
+    /* Dimensionamento */
+    width: 100%;
+
+    /* Alinhamento */
+    padding-top: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+
+    /* Decorativo */
+    background-color: var(--corBranco);
+
+    /* Posicionamento */
+    z-index: 999;
+    top: 0px;
+}
+
+.alinhamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+
+    margin-bottom: 20px;
+}
+
+#logo{
+    max-width: 200px;
+}
+
+#logo:hover{
+    cursor: pointer;
+}
+
+.busca{
+    display: flex;
+    align-items: center;
+
+    border: 1px solid var(--corCinzaEscuro);
+    border-radius: .6em;
+    background-color: var(--corCinzaClaro);
+
+
+}
+
+.busca{
+    border-radius: 1em;
+}
+
+#barra-busca{
+    display: flex;
+    width: 30em;
+    padding: 0.5em 1em;
+
+    border: 1px solid var(--corCinzaClaro);
+    border-radius: 1em;
+
+    background: none;
+
+    font-size: 1em;
+}
+
+#barra-busca::placeholder{
+    text-align: left;
+}
+
+#barra-busca:focus{
+    outline: none;
+}
+
+.btn-buscar {
+    /* Dimensionando */
+    display: flex;
+    padding: 10px 12px;
+
+    /* Cores */
+    background-color: var(--corPrincipal);
+    color: var(--corBranco);
+
+    /* Borda */
+    border: 1px solid var(--corPrincipal);
+    border-radius: 0em 1em 1em  0em;
+
+    font-size: 1em;
+}
+
+.btn-buscar:hover{
+    transition: 500ms;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid var(--corPrincipal);
+    color: var(--corPrincipal);
+    cursor: pointer;
+}
+
+.usuario{
+    display: flex;
+    width: auto;
+    gap: 1em;
+
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.login-link {
+    text-decoration: none;
+    color: var(--Preto);
+    align-content: center;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    color: var(--corPrincipal);
+    transition: .5s;
+}
+
+.cadastro-link {
+    /* Dimensionamento */
+    display: inline-block;
+    padding: 0.5em 1.3em;
+
+    /* Cores */
+    background-color: var(--corPrincipal);
+    color: var(--corBranco);
+
+    /* Bordas */
+    border: 1px solid var(--corPrincipal);
+    border-radius: 1em;
+    text-decoration: none;
+}
+
+.cadastro-link:hover {
+    transition: .5s;
+
+    text-decoration: none;
+
+    background-color: var(--corBranco);
+    border: 1px solid var(--corPrincipal);
+    color: var(--corPrincipal);
+}
+
+.navbar{
+    display: inline-block;
+    min-width:100%;
+    padding: .7em 0px;
+
+    background-color: var(--corPrincipal);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.26);
+}
+.lista-opcoes {
+    display: flex;
+    justify-content: center;
+
+    list-style-type: none;
+}
+.opcoes {
+    display: inline;
+}
+.opcoes a {
+    color: var(--corBranco);
+    text-decoration: none;
+    font-weight: bold;
+    padding: .7em 2em;
+}
+.opcoes a:hover {
+    transition: 500ms;
+    color: var(--corPrincipal);
+    background-color: var(--corBranco);
+}
+
+hr{
+    color: var(--corCinzaClaro);
+    border-style: solid;
+}
