@@ -1,0 +1,15 @@
+:root{
+    /* Variáveis de Cores */
+    --corPrincipal: #129357;
+    --corSecundaria: #1F4835;
+    --corBranco: #FEFEFE;
+    --corCinzaClaro:#EFEFEF;
+    --corCinza: #525252;
+    --corCinzaEscuro: #1F1F1F;
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    
+}
