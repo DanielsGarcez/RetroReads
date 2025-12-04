@@ -1,0 +1,83 @@
+.footer {
+    /* Dimensionamento */
+    width: 100%;
+
+    /* Alinhamento */
+    padding-top: 25px;
+    text-align: center;
+    margin-top: 1em;
+
+    /* Decorativo */
+    background-color: var(--corPrincipal);
+    color: var(--corBranco);
+}
+
+.footer h4{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.divisoes{
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+}
+
+.footer-meio{
+    display: flex;
+    flex-direction: row;
+    gap: 8em;
+
+    padding-bottom: 2em;
+}
+
+.footer-lista{
+    width: 12em;
+    text-align: left;
+}
+
+.footer-lista ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
+    list-style: none;
+}
+
+.footer-lista li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-logo-livro, .footer-logo-r{
+    width: 20em;
+    height: 20em;
+    overflow: hidden;
+}
+
+.footer-logo-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-livro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-img{
+    height: 80%;
+}
+
+.RetroReads-copyright{
+    text-align: center;
+}
+
+.RetroReads-copyright h4{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
