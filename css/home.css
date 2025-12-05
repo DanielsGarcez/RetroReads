@@ -9,11 +9,15 @@
 
 .banners img{
     width: 60%;
-    margin-top: 2em;
+}
+
+.banner-2 h2{
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 h1{
-    font-family: var(adelle-mono-flex-bold);
+    font-family: var(--fonteEstilizada);
     font-size: 3.5em;
 }
 
@@ -24,7 +28,7 @@ h3{
 }
 
 h2{
-    font-family: var(adelle-mono-flex-bold);
+    font-family: var(--fonteEstilizada);
     font-size: 2em;
 
     color: var(--corPrincipal);
@@ -40,12 +44,11 @@ p{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 2em;
     gap: 0px;
 }
 
 .container-banner img{
-    width: fit-content;
+    max-width: fit-content;
 }
 
 .container-banner p{

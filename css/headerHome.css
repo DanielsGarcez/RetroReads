@@ -41,8 +41,6 @@
     border: 1px solid var(--corCinzaEscuro);
     border-radius: .6em;
     background-color: var(--corCinzaClaro);
-
-
 }
 
 .busca{
@@ -142,6 +140,8 @@
     color: var(--corPrincipal);
 }
 
+/* Barra de Navegação */
+
 .navbar{
     display: inline-block;
     min-width:100%;
@@ -162,11 +162,13 @@
 .opcoes a {
     color: var(--corBranco);
     text-decoration: none;
+    font-size: 1.1em;
     font-weight: bold;
     padding: .7em 2em;
 }
 .opcoes a:hover {
     transition: 500ms;
+
     color: var(--corPrincipal);
     background-color: var(--corBranco);
 }
@@ -174,4 +176,42 @@
 hr{
     color: var(--corCinzaClaro);
     border-style: solid;
+}
+
+
+/* Header Simples */
+
+.header-simples{
+        /* Dimensionamento */
+    width: 100%;
+
+    /* Alinhamento */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 10px;
+
+    /* Decorativo */
+    background-color: var(--corBranco);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.26);
+
+    /* Posicionamento */
+    z-index: 999;
+    top: 0px;
+}
+
+.simples{
+    justify-content: left;
+}
+
+.logo-r{
+    height: fit-content;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#logo-r{
+    height: 2.5em;
+    justify-content: left;
+    padding-left: 5%;
 }

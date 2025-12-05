@@ -6,16 +6,64 @@
     <title>Planos - RetroReads</title>
 
     <!-- Link de Scripts -->
-    <script type="module" src="../scripts/headerHome.js"></script>
+    <script type="module" src="../scripts/headerSimples.js"></script>
+    <script type="module" src="../scripts/footer.js"></script>
 
     <!-- Link de Styles -->
     <link rel="stylesheet" href="../css/standard.css">
-    <link rel="stylesheet" href="../css/headerHome.css"></link>
+    <link rel="stylesheet" href="../css/headerHome.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/planos.css">
 
 </head>
 <body>
-    <main>
-        
+    <main class="main-planos">
+        <h1>Planos mensais</h1>
+        <h3>Escolha abaixo o plano que mais combina com você.</h3>
+
+        <article class="tipos-planos">
+            <section class="plano-x" id="plano-free">
+                <h3>Free</h3>
+                <h2>R$0/<span>Mês</span></h2>
+                <p>Possui acesso a todas as funcionalidades básicas:</p>
+                <ul class="descricao-planos">
+                    <li>Reservar até 3 livros simultaneamente</li>
+                    <li>Estante de livros ilimitada</li>
+                    <li>Anunciar até 3 livros por mês</li>
+                    <li>Acesso à todo catálogo de livros</li>
+                    <li>Participar de fóruns e grupos literários</li>
+                </ul>
+                <button>ASSINAR</button>                    
+            </section>
+
+            <section id="plano-premium">
+                <h3>Premium</h3>
+                <h2>R$14,90/<span>Mês</span></h2>
+                <p>Tenha acesso a todas as funcionalidades básicas, com bônus de:</p>
+                <ul class="descricao-planos">
+                    <li>Reservar até 10 livros simultaneamente</li>
+                    <li>Criar e administrar fóruns</li>
+                    <li>Anunciar até 30 livros por mês</li>
+                    <li>Adicionar notificações aos próprios anúncios de livros</li>
+                    <li>Notificações de  anúncios de livros novos ou promoções</li>
+                </ul>
+                <button>ASSINAR</button>                        
+            </section>
+
+            <section id="plano-interprise">
+                <h3>Interprise</h3>
+                <h2>R$29,90/<span>Mês</span></h2>
+                <p>Plano com acesso a funções exclusivas para CNPJ:</p>
+                <ul class="descricao-planos">
+                    <li>Anunciar livros ilimitado</li>
+                    <li>Reservas até 15 livros</li>
+                    <li>Página financeira com varias funcionalidades</li>
+                    <li>Pagina de controle de estoque</li>
+                    <li>Adicionar notificações aos próprios anúncios de livros</li>
+                </ul>
+                <button>ASSINAR</button>                    
+            </section>
+        </article>
     </main>
 </body>
 </html>

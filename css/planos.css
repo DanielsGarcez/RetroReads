@@ -1,0 +1,27 @@
+.main-planos{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    padding-top: 0.5em;
+    font-family: var(--fonteEstilizada);
+    font-size: 3.5em;
+
+    color: var(--corPrincipal);
+}
+
+h3{
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 1.5em;
+}
+
+.tipos-planos{
+
+}
+
+.plano-x{
+    border: 1px solid var(--corPreto);
+    border-radius: 1em;
+}
