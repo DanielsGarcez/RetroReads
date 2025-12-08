@@ -18,10 +18,27 @@ h3{
 }
 
 .tipos-planos{
-
+    display: flex;
+    gap: 2em;
 }
 
 .plano-x{
+    display: flex;
+    flex-direction: column;
+
     border: 1px solid var(--corPreto);
     border-radius: 1em;
+}
+
+.plano-x h3{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-justify: center;
+
+    color: var(--corPrincipal);
+
+}
+
+descricao-planos{
+    
 }
