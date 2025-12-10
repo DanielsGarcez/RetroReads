@@ -1,0 +1,119 @@
+.main-cadastro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+h2{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2.3em;
+    font-family: var(--fonteEstilizada);
+}
+
+h3{
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-shadow: var(--sombra);
+    border: var(--borda);
+    border-radius: 1em;
+    
+    /* background estica para toda a caixa */
+    align-items: stretch
+}
+
+.seccoes{
+    display: flex;
+    padding: 3em;
+    padding-bottom: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.tem-login{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    padding: 4em;
+
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+}
+
+.cadastrar{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+    width: 60%;
+}
+
+.cadastrar h2{
+    font-size: 2.5em;
+    color: var(--corPrincipal);
+}
+
+.cadastrar form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+}
+
+.cadastrar input{
+    padding: 1em;
+
+    font-size: 1em;
+
+    background-color: var(--corCinzaClaro);
+    border: var(--borda);
+    border-radius: 2em;
+}
+
+.btn-ambos{
+    padding: .5em;
+    font-size: 1.3em;
+    border-radius: 1em;
+
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+#btn-login{
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corBranco);
+}
+#btn-login:hover{
+    transition: .5s;
+    cursor: pointer;
+    color: var(--corPrincipal);
+    background-color: var(--corBranco);
+}
+
+#btn-cadastro{
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+}
+#btn-cadastro:hover{
+    transition: .5s;
+    cursor: pointer;
+    color: var(--corPrincipal);
+    background-color: var(--corBranco);
+}

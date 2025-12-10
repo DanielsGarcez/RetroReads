@@ -149,6 +149,8 @@
 
     background-color: var(--corPrincipal);
     box-shadow: var(--sombra);
+
+    margin-bottom: 1em;
 }
 .lista-opcoes {
     display: flex;
@@ -167,8 +169,7 @@
     padding: .7em 2em;
 }
 .opcoes a:hover {
-    transition: 500ms;
-
+    transition: .5s;
     color: var(--corPrincipal);
     background-color: var(--corBranco);
 }
@@ -182,7 +183,7 @@ hr{
 /* ---------- Header Simples ---------- */
 
 .header-simples{
-        /* Dimensionamento */
+    /* Dimensionamento */
     width: 100%;
 
     /* Alinhamento */
@@ -199,19 +200,13 @@ hr{
     top: 0px;
 }
 
-.simples{
-    justify-content: left;
-}
-
-.logo-r{
-    height: fit-content;
+.container-header-simples{
     display: flex;
-    justify-content: left;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 90%;
 }
 
-#logo-r{
-    height: 2.5em;
-    justify-content: left;
-    padding-left: 5%;
+#logo-r, #user-perfil{
+    height: 3em;
 }

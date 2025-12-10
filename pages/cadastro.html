@@ -13,19 +13,19 @@
     <link rel="stylesheet" href="../css/standard.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
 </head>
 <body>
     <main class="main-cadastro">
-        <article class="container-login">
+        <article class="container">
             <section class="seccoes tem-login">
                 <h2>Já tem cadastro?</h2>
                 <h3>Conclua o login para se manter conectado conosco ;)</h3>
-                <button id="btn-login" class="btn-ambos">Login</button>
+                <button id="btn-login" class="btn-ambos" onclick="window.location.href='login.html'">Login</button>
             </section>
             <section class="seccoes cadastrar">
                 <h2>Cadastre-se</h2>
-                <form action="">
+                <form id="form-cadastro">
                     <input placeholder="Nome" type="text">
                     <input placeholder="CPF/CNPJ" type="text">
                     <input placeholder="Email" type="email">

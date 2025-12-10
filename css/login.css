@@ -1,4 +1,4 @@
-.main-cadastro{
+.main-login{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,106 +7,76 @@
     margin-bottom: 5em;
 }
 
-h2{
-    padding-bottom: 1em;
-    font-size: 2.3em;
-    font-family: var(--fonteEstilizada);
-}
-
-h3{
-    font-size: 1.3em;
-}
-
-.container-login{
+.container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 3em;
+    padding: 3em;
 
     box-shadow: var(--sombra);
     border: var(--borda);
     border-radius: 1em;
-    
-    /* background estica para toda a caixa */
-    align-items: stretch
 }
 
-.seccoes{
-    display: flex;
-    padding: 3em;
-    padding-bottom: 1em;
-    justify-content: center;
-    text-align: center;
-}
-
-.tem-login{
-    display: flex;
-    flex-direction: column;
-    padding: 4em;
-
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
-
-    color: var(--corBranco);
-    background-color: var(--corPrincipal);
-}
-
-.cadastrar{
-    display: flex;
-    flex-direction: column;
-
-    gap: 1em;
-
-    width: 60%;
-}
-
-.cadastrar h2{
+.container h2{
     color: var(--corPrincipal);
+    padding-top: 0.5em;
+    padding-bottom: 2em;
+
+    text-align: center;
+    font-size: 2.5em;
+    font-family: var(--fonteEstilizada);
 }
 
-.cadastrar form{
+.container form{
     display: flex;
     flex-direction: column;
+    align-items: center;
+
     gap: 1.3em;
 }
 
-.cadastrar input{
-    height: 1.5em;
+.container input{
+    width: 20em;
     padding: 1em;
+
+    font-size: 1em;
 
     background-color: var(--corCinzaClaro);
     border: var(--borda);
     border-radius: 2em;
 }
 
-.btn-ambos{
-    padding: .5em;
-    font-size: 1.3em;
-    border-radius: 1em;
-
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 3em;
-    margin-right: 3em;
+.container p{
+    margin-top: 1.3em;
+    margin-bottom: 1em;
 }
 
-#btn-login{
-    color: var(--corBranco);
-    background-color: var(--corPrincipal);
-    border: 1px solid var(--corBranco);
-}
-#btn-login:hover{
-    transition: .5s;
-    cursor: pointer;
+.container a{
+    text-decoration: none;
+    font-weight: bold;
     color: var(--corPrincipal);
-    background-color: var(--corBranco);
 }
 
-#btn-cadastro{
+.container a:hover{
+    text-decoration: underline;
+}
+
+#btn-logar{
+    margin-top: 2em;
+    padding: .5em;
+    padding-left: 4em;
+    padding-right: 4em;
+
+    font-size: 1.3em;
+
     color: var(--corBranco);
     background-color: var(--corPrincipal);
     border: 1px solid var(--corPrincipal);
+    border-radius: 1em;
 }
-#btn-cadastro:hover{
+#btn-logar:hover{
     transition: .5s;
     cursor: pointer;
     color: var(--corPrincipal);
