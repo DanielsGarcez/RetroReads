@@ -33,6 +33,8 @@ h3{
 }
 
 .seccoes{
+    width: 100%;
+
     display: flex;
     padding: 3em;
     padding-bottom: 1em;
@@ -45,8 +47,7 @@ h3{
 
     display: flex;
     flex-direction: column;
-    padding: 4em;
-
+    
     border-top-left-radius: 1em;
     border-bottom-left-radius: 1em;
 
@@ -70,13 +71,15 @@ h3{
 .cadastrar form{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.3em;
 }
 
 .cadastrar input{
-    padding: 1em;
+    width: 70%;
 
-    font-size: 1em;
+    padding: .7em;
+    font-size: .9em;
 
     background-color: var(--corCinzaClaro);
     border: var(--borda);
@@ -84,6 +87,8 @@ h3{
 }
 
 .btn-ambos{
+    width: 60%;
+
     padding: .5em;
     font-size: 1.3em;
     border-radius: 1em;
