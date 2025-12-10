@@ -11,6 +11,9 @@
     --corCinzaClaro: #eee;
     --corPreto: #0E0F11;
 
+    --borda: 1px solid var(--corCinzaEscuro);
+    --sombra:  0px 7px 7px rgba(0, 0, 0, 0.10);
+
     --fonteComum: 'Archivo';
     --fonteEstilizada: 'IBM Plex Mono';
 }

@@ -6,7 +6,7 @@
 h1{
     padding-top: 0.5em;
     font-family: var(--fonteEstilizada);
-    font-size: 3.5em;
+    font-size: 3em;
 
     color: var(--corPrincipal);
 }
@@ -15,30 +15,83 @@ h3{
     margin-top: 1em;
     margin-bottom: 2em;
     font-size: 1.5em;
+    font-weight: normal;
 }
 
 .tipos-planos{
     display: flex;
-    gap: 2em;
+    gap: 3em;
+    margin-bottom: 5em;
+
+    justify-content: center;
 }
 
 .plano-x{
     display: flex;
     flex-direction: column;
+    width: 20%;
+    padding: 3%;
 
-    border: 1px solid var(--corPreto);
+    box-shadow: var(--sombra);
+    border: var(--borda);
     border-radius: 1em;
 }
 
 .plano-x h3{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-justify: center;
-
+    margin: 0em;
+    text-align: center;
+    
+    font-size: 2.5em;
+    font-weight: bold;
     color: var(--corPrincipal);
-
 }
 
-descricao-planos{
-    
+.plano-x h2{
+    padding-top: 1em;
+    padding-bottom: .5em;
+
+    font-size: 2em;
+}
+
+.plano-x p{
+    padding-bottom: 1.5em;
+    font-size: 1.3em;
+}
+
+.descricao-planos{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    margin-bottom: 2em;
+
+    font-size: 1.3em;
+    list-style: none;
+}
+
+.descricao-planos li{
+    background-image: url("../img/Icon-CheckMark.png");
+    background-repeat: no-repeat;
+    background-position: 0 6px; /* ajusta o alinhamento vertical */
+    background-size: 20px;      /* <-- tamanho do ícone (mude aqui) */
+    padding-left: 28px;         /* espaço pro ícone */
+    margin: 6px 0;
+}
+
+.btn-assinar{
+    padding: .5em;
+    margin-top: auto;
+    font-size: 1.3em;
+
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+    border-radius: 1em;
+}
+
+.btn-assinar:hover{
+    transition: .5s;
+    cursor: pointer;
+    color: var(--corPrincipal);
+    background-color: var(--corBranco);
 }
