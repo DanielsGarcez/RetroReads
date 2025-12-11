@@ -1,0 +1,97 @@
+.main-assinatura{
+    width: 50%;
+}
+
+h2{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2.3em;
+    font-family: var(--fonteEstilizada);
+}
+
+
+.container-assinatura{
+    display: flex;
+    flex-direction: column;
+    border: var(--borda);
+    box-shadow: var(--sombra);
+}
+
+.info-assinatura{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+
+    padding: 1em 3em;
+    padding-bottom: 0;
+}
+
+.lados-assinatura{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Parte Esquerda ---------- */
+
+.esquerda-assinatura{
+    font-size: 1.3em;
+}
+
+.esquerda-assinatura h3{
+    margin-bottom: 3%;
+
+    font-weight: normal;
+    font-size: 1.7em;
+}
+
+.esquerda-assinatura span{
+    color: var(--corPrincipal);
+    font-weight: bold;
+}
+
+.topicos-assinatura {
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+
+    padding-bottom: 2%;
+}
+
+.topicos-assinatura li{
+    list-style: none;
+    background-image: url("../img/Icon-CheckMark.png");
+    background-repeat: no-repeat;
+    background-position: 0 6px; /* ajusta o alinhamento vertical */
+    background-size: 20px;      /* <-- tamanho do ícone (mude aqui) */
+    padding-left: 28px;         /* espaço pro ícone */
+    margin: 6px 0;
+}
+
+/* ---------- Parte Direita ---------- */
+
+.direita-assinatura{
+    width: 40%;
+}
+
+.direita-assinatura p{
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+.direita-assinatura h2{
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.direita-assinatura span{
+    font-size: 2.5em;
+}
+
+/* ---------- Parte de baixo ---------- */
+
+.baixo-assinaturas{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+}

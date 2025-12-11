@@ -1,8 +1,3 @@
-.main-planos{
-    display: flex;
-    align-items: center;
-}
-
 h1{
     padding-top: 0.5em;
     font-family: var(--fonteEstilizada);
