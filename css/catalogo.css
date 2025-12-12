@@ -1,0 +1,137 @@
+h1{
+    padding-top: .5em;
+    margin-bottom: .5em;
+
+    font-family: var(--fonteEstilizada);
+    font-size: 3em;
+    color: var(--corPrincipal);
+}
+
+.container-catalogo{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 1em;
+
+    box-shadow: var(--sombra);
+    border: var(--borda);
+    border-radius: 2em;
+}
+
+/* ---------- Filtro do Catalogo ---------- */
+
+.filtro-catalogo{
+    display: flex;
+    flex-direction: column;
+
+    margin: auto 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.filtro-catalogo h3{
+    padding: .3em 2em;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+
+    border-radius: .3em;
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+}
+
+.filtro-catalogo ul{
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    text-align: left;
+}
+
+.filtro-catalogo h5{
+    font-size: 1.3em;
+    font-weight: normal;
+}
+
+.filtro-catalogo hr{
+    margin: .3em 0em;
+}
+
+.filtro-catalogo li{
+    font-weight: lighter;
+    padding-bottom: 1em;
+}
+
+.filtro-catalogo input{
+    font-size: 2em;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--corPrincipal);
+    width: .5em;
+    height: .5em;
+}
+
+/* ---------- Lista de Livro do Catalogo ---------- */
+
+.grid-catalogo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+
+    padding: 1em 2em;
+}
+
+.item-grid{
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: var(--sombra);
+    border: var(--borda);
+    border-radius: 2em;
+}
+
+.item-grid:hover{
+    border: 1px solid var(--corPrincipal);
+}
+
+.capa-livro img{
+    width: 11em;
+
+    margin: auto 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.margem-texto{
+    margin: auto 2em;
+}
+
+h2.margem-texto{
+    font-size: 1.3em;
+    margin: auto 1.3em;
+}
+
+h4.margem-texto{
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+/* ---------- Botão de Reserva do Livro ---------- */
+
+.btn-detalhes-livro{
+    padding: .3em;
+    margin: 1.5em 1.5em;
+    font-size: 1.3em;
+
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+    border-radius: 1em;
+}
+
+.btn-detalhes-livro:hover{
+    transition: .5s;
+    cursor: pointer;
+    color: var(--corPrincipal);
+    background-color: var(--corBranco);
+}

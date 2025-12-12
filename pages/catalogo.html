@@ -10,14 +10,59 @@
     <script type="module" src="../scripts/footer.js"></script>
 
     <!-- Link de Styles -->
+    <link rel="icon" type="image/png" href="../img/Logo-Page.png">
     <link rel="stylesheet" href="../css/standard.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
 
 </head>
 <body>
     <main class="main-catalogo">
-        
+        <h1>Catálogo</h1>
+
+        <article class="container-catalogo">
+
+            <section class="filtro-catalogo">
+                <h3>Filtros</h3>
+                <ul>
+                    <h5>Categorias</h5>
+                    <hr>
+                    <li><input type="checkbox"></li>
+                </ul>
+                <ul>
+                    <h5>Faixa de Preço</h5>
+                    <hr>
+                    <li><input type="checkbox"></li>
+                </ul>
+                <ul>
+                    <h5>Idioma</h5>
+                    <hr>
+                    <li><input type="checkbox"></li>
+                </ul>
+                <ul>
+                    <h5>Acabamento</h5>
+                    <hr>
+                    <li><input type="checkbox"></li>
+                </ul>
+                <ul>
+                    <h5>Disponibilidade</h5>
+                    <hr>
+                    <li><input type="checkbox"></li>
+                </ul>
+            </section>
+
+            <hr>
+            
+            <section class="grid-catalogo">
+                <article class="item-grid">
+                    <picture class="capa-livro"><img src="../img/Mockup-Livro.png" alt="capa-livro"></picture>
+                    <h2 class="margem-texto">TÍTULO DO LIVRO</h2>
+                    <h4 class="margem-texto">Autor do Livro</h4>
+                    <button class="btn-detalhes-livro" onclick="window.location.href='detalhes-livro.html'">Detalhes</button>
+                </article>
+            </section>
+        </article>
     </main>
 </body>
 </html>

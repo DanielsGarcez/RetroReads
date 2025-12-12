@@ -1,0 +1,19 @@
+h1{
+    padding-top: .5em;
+    margin-bottom: .5em;
+
+    font-family: var(--fonteEstilizada);
+    font-size: 3em;
+    color: var(--corPrincipal);
+}
+
+.container-detalhes{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 1em;
+
+    box-shadow: var(--sombra);
+    border: var(--borda);
+    border-radius: 2em;
+}

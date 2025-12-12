@@ -2,7 +2,6 @@ h1{
     padding-top: 0.5em;
     font-family: var(--fonteEstilizada);
     font-size: 3em;
-
     color: var(--corPrincipal);
 }
 
@@ -29,7 +28,7 @@ h3{
 
     box-shadow: var(--sombra);
     border: var(--borda);
-    border-radius: 1em;
+    border-radius: 2em;
 }
 
 .plano-x h3{

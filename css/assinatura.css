@@ -27,7 +27,7 @@ h1{
     gap: 2em;
 
     padding: 0em 3em;
-    padding-top: 3em;
+    padding-top: 2em;
     padding-bottom: 2em;
 }
 
@@ -64,6 +64,8 @@ h1{
 
 .topicos-assinatura li{
     list-style: none;
+    font-size: 1.3em;
+
     background-image: url("../img/Icon-CheckMark.png");
     background-repeat: no-repeat;
     background-position: 0 6px; /* ajusta o alinhamento vertical */
@@ -75,19 +77,19 @@ h1{
 /* ---------- Parte Direita ---------- */
 
 .direita-assinatura{
-    width: 40%;
+    width: 50%;
     padding-top: 1em;
 }
 
 .direita-assinatura p{
     text-align: justify;
-    font-size: 1.5em;
-    padding-bottom: 2em;
+    font-size: 1.7em;
+    padding-bottom: 3em;
 }
 
 .direita-assinatura h2{
     font-size: 2em;
-    font-weight: lighter;
+    font-weight: normal;
     justify-content: center;
     align-items: center;  
 }
@@ -100,6 +102,7 @@ h1{
 .direita-assinatura span.cifrao-assinatura{
     position: relative;
     bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ---------- Parte de baixo ---------- */
