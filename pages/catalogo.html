@@ -55,12 +55,14 @@
             <hr>
             
             <section class="grid-catalogo">
-                <article class="item-grid">
-                    <picture class="capa-livro"><img src="../img/Mockup-Livro.png" alt="capa-livro"></picture>
-                    <h2 class="margem-texto">TÍTULO DO LIVRO</h2>
-                    <h4 class="margem-texto">Autor do Livro</h4>
-                    <button class="btn-detalhes-livro" onclick="window.location.href='detalhes-livro.html'">Detalhes</button>
-                </article>
+                <template class="card-template">
+                    <article class="item-grid">
+                        <img class="capa-livro" src="" alt="capa-livro">
+                        <h2 class="margem-texto titulo-livro"></h2>
+                        <h4 class="margem-texto autor-livro"></h4>
+                        <button class="btn-detalhes-livro" onclick="window.location.href='detalhes-livro.html'">Detalhes</button>
+                    </article>
+                </template>
             </section>
         </article>
     </main>

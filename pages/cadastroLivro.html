@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Livro - RetroReads</title>
+
+    <!-- Link de Scripts -->
+    <script type="module" src="../scripts/headerSimples.js"></script>
+    <script type="module" src="../scripts/footer.js"></script>
+    <script type="module" src="../scripts/cadastroLivro.js"></script>
+
+    <!-- Link de Styles -->
+    <link rel="icon" type="image/png" href="../img/Logo-Page.png">
+    <link rel="stylesheet" href="../css/standard.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+</head>
+<body>
+    <main class="main-cadastroLivro">
+        <article class="container">
+            <form id="form-cadastroLivro">
+
+                <section class="inserir-dados">
+                    <label>Arte da Capa:</label>
+                    <input id="capa-livro" placeholder="Capa Imagem" type="file">
+                </section>
+
+                <section class="inserir-dados">
+                    <label>Tipo de Capa:</label>
+                    <select id="tipos-capa" name="tipos de capa">
+                        <option value=""></option>
+                        <option value="capa-comum">Capa Comum</option>
+                        <option value="capa-dura">Capa Dura</option>
+                    </select>
+                </section>
+                
+                <section class="inserir-dados">
+                    <label>Título do Livro:</label>
+                    <input id="titulo-livro" type="text">
+                </section>
+                
+                <section class="inserir-dados">
+                    <label>Nome do Autor:</label>
+                    <input id="autor-livro" type="text">
+                </section> 
+
+                <section class="inserir-dados">
+                    <label>Gênero:</label>
+                    <select id="genero-livro" name="generos">
+                        <option value=""></option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="Autoajuda">Autoajuda</option>
+                        <option value="Biografia">Biografia</option>
+                        <option value="Ciência">Ciência</option>
+                        <option value="Crítica Literária">Crítica Literária</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Ensaios">Ensaios</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Ficção Científica">Ficção Científica</option>
+                        <option value="Ficção Juvenil">Ficção Juvenil</option>
+                        <option value="Gastronomia">Gastronomia</option>
+                        <option value="Graphic Novels">Graphic Novels</option>
+                        <option value="História">História</option>
+                        <option value="História Alternativa">História Alternativa</option>
+                        <option value="Literatura Infantil">Literatura Infantil</option>
+                        <option value="Livros de Contos">Livros de Contos</option>
+                        <option value="Livros Ilustrados">Livros Ilustrados</option>
+                        <option value="Mistério/Policial">Mistério/Policial</option>
+                        <option value="Negócios">Negócios</option>
+                        <option value="Peças de Teatro">Peças de Teatro</option>
+                        <option value="Poesia">Poesia</option>
+                        <option value="Quadrinhos">Quadrinhos</option>
+                        <option value="Religião e Espiritualidade">Religião e Espiritualidade</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Viagem">Viagem</option>
+                    </select>
+                </section>
+                
+                <section class="inserir-dados">
+                    <label>Lançamento (Ano):</label>
+                    <input id="ano-livro" type="number">
+                </section>
+                
+                <section class="inserir-dados">
+                    <label>ISBN (Código Único)</label>
+                    <input id="ISBN" type="number">
+                </section>
+                
+                <section class="inserir-dados">
+                    <label>Idioma:</label>
+                    <select id="idioma-livro" name="idiomas">
+                        <option value=""></option>
+                        <option value="ptbr-idioma">Português(BR)</option>
+                        <option value="ptbr-idioma">Português(PT)</option>
+                        <option value="en-idioma">Inglês</option>
+                        <option value="es-idioma">Espanhol</option>
+                        <option value="it-idioma">Italiano</option>
+                        <option value="fr-idioma">Francês</option>
+                        <option value="de-idioma">Alemão</option>
+                    </select>
+                </section>
+
+                <section class="inserir-dados">
+                    <label>Quantidade de Páginas:</label>
+                    <input id="paginas-livro" placeholder="N° Páginas" type="number">
+                </section>
+
+                <section class="inserir-dados">
+                    <label>Valor (R$):</label>
+                    <input id="valor-livro" placeholder="Ex: 12.50" type="number">
+                </section>
+
+                <button id="cadastro-Livro" type="submit">Enviar</button>
+
+            </form>
+        </article>
+    </main>
+</body>
+</html>

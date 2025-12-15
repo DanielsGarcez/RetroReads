@@ -122,3 +122,25 @@ h3{
     color: var(--corPrincipal);
     background-color: var(--corBranco);
 }
+
+
+/* ---------- CADASTRO LIVRO ---------- */
+
+.main-cadastroLivro .container{
+    padding: 1em;
+}
+
+#form-cadastroLivro{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#form-cadastroLivro input, select{
+    font-size: 1em;
+}
+
+#form-cadastroLivro .inserir-dados{
+    display: flex;
+    flex-direction: column;
+}
