@@ -26,7 +26,7 @@ h3{
 
     box-shadow: var(--sombra);
     border: var(--borda);
-    border-radius: 1em;
+    border-radius: 2em;
     
     /* background estica para toda a caixa */
     align-items: stretch
@@ -124,10 +124,12 @@ h3{
 }
 
 
+
 /* ---------- CADASTRO LIVRO ---------- */
 
 .main-cadastroLivro .container{
-    padding: 1em;
+    padding: 3%;
+    margin-top: 3%;
 }
 
 #form-cadastroLivro{
@@ -136,11 +138,37 @@ h3{
     gap: 1em;
 }
 
+#form-cadastroLivro label{
+    font-weight: bold;
+    margin-left: .3em;
+    margin-bottom: .3em;
+}
+
 #form-cadastroLivro input, select{
     font-size: 1em;
+    padding: .7em;
+
+    border: var(--borda);
+    border-radius: 2em;
 }
 
 #form-cadastroLivro .inserir-dados{
     display: flex;
     flex-direction: column;
+}
+
+#btn-cadastroLivro{
+    margin-top: 10%;
+    margin-bottom: 0em;
+
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+    border: 1px solid var(--corPrincipal);
+}
+
+#btn-cadastroLivro:hover{
+    transition: .5s;
+    cursor: pointer;
+    color: var(--corPrincipal);
+    background-color: var(--corBranco);
 }
