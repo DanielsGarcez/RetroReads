@@ -4,10 +4,36 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/fi
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-cadastroLivro");
 
+    // Verifica se há formulário
     if (!form){
         console.error("Formulário não encontrado");
         return;
     }
+
+    // Preview da Imagem enviada pelo usuário
+    const inputCapa = document.getElementById("capa-livro");
+    const preview = document.getElementById("preview-capa");
+
+    inputCapa.addEventListener("change", () => {
+        const file = inputCapa.files[0];
+
+        if (!file) {
+            preview.style.display = "none";
+            preview.src = "";
+            return;
+        }
+
+        if (!file.type.startsWith("image/")) {
+            alert("Selecione apenas imagens");
+            inputCapa.value = "";
+            preview.style.display = "none";
+            return;
+        }
+
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+    });
+
 
     form.addEventListener("submit", async (e) =>{
         e.preventDefault();
@@ -80,3 +106,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function validarISBN(isbn) {
+  // Remove hífens e espaços
+  const limpo = isbn.replace(/[-\s]/g, '');
+
+  // Apenas números
+  if (!/^\d+$/.test(limpo)) return false;
+
+  // Deve ter 10 ou 13 dígitos
+  if (limpo.length !== 10 && limpo.length !== 13) return false;
+
+  // Não permitir números repetidos (ex: 1111111111)
+  if (/^(\d)\1+$/.test(limpo)) return false;
+
+  // ISBN-10
+  if (limpo.length === 10) {
+    let soma = 0;
+    for (let i = 0; i < 9; i++) {
+      soma += (10 - i) * parseInt(limpo[i]);
+    }
+    const digito = (11 - (soma % 11)) % 11;
+    return digito === parseInt(limpo[9]);
+  }
+
+  // ISBN-13
+  if (limpo.length === 13) {
+    let soma = 0;
+    for (let i = 0; i < 12; i++) {
+      soma += parseInt(limpo[i]) * (i % 2 === 0 ? 1 : 3);
+    }
+    const digito = (10 - (soma % 10)) % 10;
+    return digito === parseInt(limpo[12]);
+  }
+
+  return false;
+}
