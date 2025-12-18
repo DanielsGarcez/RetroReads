@@ -1,7 +1,7 @@
 Projeto 1 - 🧭 Landing Page Responsiva
 
 Objetivo: 
-Mostrar domínio de HTML, CSS e Responividade.
+  Mostrar domínio de HTML, CSS e Responividade.
 
 Destaques técnicos:
 ✅ Flex, Grid e media queries;
