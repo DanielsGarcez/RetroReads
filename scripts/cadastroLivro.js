@@ -1,5 +1,9 @@
 import { db } from "./firebase.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { auth } from "./firebase.js";
+import { onAuthStateChanged } from 
+  "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-cadastroLivro");
@@ -33,6 +37,18 @@ document.addEventListener("DOMContentLoaded", () => {
         preview.src = URL.createObjectURL(file);
         preview.style.display = "block";
     });
+
+    // Verifica se o usuário está logado
+    let usuarioLogado = null;
+
+    onAuthStateChanged(auth,(user) => {
+        usuarioLogado = user;
+
+        if(!user){
+            alert("Você precisa estar logado para adicionar livros");
+            
+        }
+    })
 
 
     form.addEventListener("submit", async (e) =>{
@@ -68,14 +84,23 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         // valida ISBN
-            if (!validarISBN(isbn)) {
+        if (!validarISBN(isbn)) {
             alert("ISBN inválido. Verifique o número informado.");
             return;
-            }
-
-            const isbnLimpo = isbn.replace(/[-\s]/g, '');
-            
+        }
         console.log("Cadastro válido! Enviando dados...");
+
+
+        const input = document.getElementById('capa-livro');
+        const img = document.getElementById('preview-capa');
+
+        input.addEventListener('change', () => {
+        const file = input.files[0];
+            if (file) {
+                img.src = URL.createObjectURL(file);
+            }
+        });
+
 
         try{
             // Salva no Firebase em outra coleção
@@ -90,6 +115,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 idioma: idiomaLivro,
                 paginas: numPaginas,
                 valor: valorLivro,
+
+                criadoPor: {
+                    uid: usuarioLogado.uid,
+                    email: usuarioLogado.email
+                },
 
                 criadoEm: new Date()
             });

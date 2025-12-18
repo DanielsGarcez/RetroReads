@@ -73,12 +73,17 @@ input[type="checkbox"] {
 
 /* ---------- Lista de Livro do Catalogo ---------- */
 
-.grid-catalogo{
+#grid-catalogo{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
 
     padding: 1em 2em;
+}
+
+.capa-livro{
+    margin: 1em;
+    border-radius: 1em;
 }
 
 .item-grid{
@@ -91,7 +96,9 @@ input[type="checkbox"] {
 }
 
 .item-grid:hover{
+    transition: .5s;
     border: 1px solid var(--corPrincipal);
+    transform: translateY(-5px);
 }
 
 .capa-livro img{
