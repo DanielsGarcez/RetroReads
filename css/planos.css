@@ -31,6 +31,12 @@ h3{
     border-radius: 2em;
 }
 
+.plano-x:hover{
+    transition: .5s;
+    transform: translateY(-10px);
+    box-shadow: var(--sombraDestaque);
+}
+
 .plano-x h3{
     margin: 0em;
     text-align: center;

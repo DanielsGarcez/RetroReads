@@ -8,6 +8,7 @@
     <!-- Link de Scripts -->
     <script type="module" src="../scripts/headerSimples.js"></script>
     <script type="module" src="../scripts/footer.js"></script>
+    <script type="module" src="../scripts/cadastroUser.js"></script>
 
     <!-- Link de Styles -->
     <link rel="icon" type="image/png" href="../img/Logo-Page.png">
@@ -27,12 +28,12 @@
             
             <section class="seccoes cadastrar">
                 <h2>Cadastre-se</h2>
-                <form id="form-cadastro">
-                    <input placeholder="Nome" type="text">
-                    <input placeholder="CPF/CNPJ" type="text">
-                    <input placeholder="Email" type="email">
-                    <input placeholder="Senha" type="password">
-                    <input placeholder="Senha Novamente" type="password">
+                <form id="form-cadastro-user">
+                    <input id="nome-user" placeholder="Nome" type="text">
+                    <input id="documento-user" placeholder="CPF/CNPJ" type="text">
+                    <input id="email-user" placeholder="Email" type="email">
+                    <input id="senha-user" autocomplete="new-password" placeholder="Senha" type="password">
+                    <input id="senha-user-confirmar" autocomplete="new-password" placeholder="Senha Novamente" type="password">
                     <button id="btn-cadastro" class="btn-ambos" type="submit">Cadastrar</button>
                 </form>
             </section>

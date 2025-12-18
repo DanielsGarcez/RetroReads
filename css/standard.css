@@ -13,6 +13,7 @@
 
     --borda: 1px solid var(--corCinzaEscuro);
     --sombra:  0px 7px 7px rgba(0, 0, 0, 0.10);
+    --sombraDestaque:  0px 7px 7px rgba(0, 0, 0, 0.50);
 
     --fonteComum: 'Archivo';
     --fonteEstilizada: 'IBM Plex Mono';
