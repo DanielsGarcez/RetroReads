@@ -142,3 +142,24 @@ h4.margem-texto{
     color: var(--corPrincipal);
     background-color: var(--corBranco);
 }
+
+/* ---------- RESPONSIVIDADE ---------- */
+
+@media screen and (max-width: 820px) {
+    
+    .container-catalogo{
+        width: 80%;
+    }
+
+    .container-catalogo hr{
+        display: none;
+    }
+
+    /* ---------- Filtro do Catalogo ---------- */
+    .filtro-catalogo{
+        display: none;
+    }
+
+    /* ---------- Lista de Livro do Catalogo ---------- */
+
+}

@@ -19,42 +19,45 @@
 
 .alinhamento{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 10%;
+
+    margin-right: 5%;
+    margin-left: 5%;
 
     margin-bottom: 20px;
 }
 
-#logo{
-    max-width: 200px;
+#logo-escrito{
+    width: 13em;
 }
 
-#logo:hover{
+#logo-escrito:hover{
     cursor: pointer;
 }
 
+.perfil-mobile, .logo-container{
+    display: none;
+}
+
 .busca{
+    width: 30%;
     display: flex;
     align-items: center;
 
     border: 1px solid var(--corCinzaEscuro);
-    border-radius: .6em;
+    border-radius: 2em;
     background-color: var(--corCinzaClaro);
-}
-
-.busca{
-    border-radius: 1em;
 }
 
 #barra-busca{
     display: flex;
-    width: 30em;
+    width: 100%;
     padding: 0.5em 1em;
 
     border: 1px solid var(--corCinzaClaro);
-    border-radius: 1em;
-
+    border-radius: 2em;
     background: none;
 
     font-size: 1em;
@@ -79,7 +82,7 @@
 
     /* Borda */
     border: 1px solid var(--corPrincipal);
-    border-radius: 0em 1em 1em  0em;
+    border-radius: 0em 2em 2em  0em;
 
     font-size: 1em;
 }
@@ -126,13 +129,16 @@
 
     /* Bordas */
     border: 1px solid var(--corPrincipal);
-    border-radius: 1em;
+    border-radius: 2em;
+
+    text-wrap: nowrap;
+
     text-decoration: none;
 }
 
 .cadastro-link:hover {
     transition: .5s;
-
+    
     text-decoration: none;
 
     background-color: var(--corBranco);
@@ -140,11 +146,49 @@
     color: var(--corPrincipal);
 }
 
+
+
+/* ---------- Header Simples ---------- */
+
+.header-simples{
+    /* Dimensionamento */
+    width: 100%;
+
+    /* Alinhamento */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 10px;
+
+    /* Decorativo */
+    background-color: var(--corBranco);
+    box-shadow: var(--sombra);
+
+    /* Posicionamento */
+    z-index: 999;
+    top: 0px;
+}
+
+.container-header-simples{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100%;
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#logo-r, #user-perfil{
+    height: 3em;
+}
+
+
+
 /* ---------- Barra de Navegação ---------- */
 
 .navbar{
     display: inline-block;
-    min-width:100%;
+    width: 100%;
     padding: .7em 0px;
 
     background-color: var(--corPrincipal);
@@ -180,33 +224,65 @@ hr{
 }
 
 
-/* ---------- Header Simples ---------- */
+/* -------------------- Responsividade para Tablets -------------------- */
 
-.header-simples{
-    /* Dimensionamento */
-    width: 100%;
+@media (min-width: 900px) {
+    /* ---------- Responsividade HeaderHome ---------- */
+    .alinhamento{
+        margin-right: 0em;
+        margin-left: 0em;
+        gap: 10%;
+    }
 
-    /* Alinhamento */
-    padding-top: 1em;
-    padding-bottom: 1em;
-    margin-bottom: 10px;
-
-    /* Decorativo */
-    background-color: var(--corBranco);
-    box-shadow: var(--sombra);
-
-    /* Posicionamento */
-    z-index: 999;
-    top: 0px;
+    /* ---------- Responsividade HeaderSimples ---------- */
+    .container-header-simples{
+        margin-right: 5%;
+        margin-left: 5%;
+    }
 }
 
-.container-header-simples{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 90%;
-}
+@media (max-width: 900px) {
+    /* ---------- Responsividade HeaderHome ---------- */
+    .alinhamento{
+        margin-right: 5%;
+        margin-left: 5%;
+        gap: 10%;
+    }
 
-#logo-r, #user-perfil{
-    height: 3em;
+    .logo-container{
+        display: flex;
+    }
+
+    #logo-mobile{
+        display: flex;
+        width: 2em;
+    }
+
+    #logo-escrito{
+        display: none;
+    }
+
+    .busca{
+        width: 80%;
+    }
+    
+    .perfil-mobile{
+        display: flex;
+        width: 5em;
+    }
+
+    #perfil{
+        width: 80%;
+    }
+
+    .usuario{
+        display: none;
+    }
+
+    /* ---------- Responsividade HeaderSimples ---------- */
+    .container-header-simples{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
 }

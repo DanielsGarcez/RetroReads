@@ -25,6 +25,7 @@
 
     font-family: var(--fonteComum);
 
+    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--corPrincipal) var(--corCinzaEscuro);
 }

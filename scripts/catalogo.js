@@ -9,8 +9,17 @@ import {
 const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
 
-// ------------------------
 
+function mostrarLoading() {
+  document.getElementById("loading-overlay").classList.remove("hidden");
+}
+
+function esconderLoading() {
+  document.getElementById("loading-overlay").classList.add("hidden");
+}
+
+
+// Renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {
   const clone = template.content.cloneNode(true);
 
@@ -18,6 +27,7 @@ function renderItem(data, id) {
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
 
+  /* Busaca no banco de dados e carega-os no grid  */
 /*   imagem.src = data.capa || 'https://via.placeholder.com/400x225?text=Sem+imagem'; */
   imagem.alt = data.titulo || 'Item';
   titulo.textContent = data.titulo || 'Sem título';
@@ -26,7 +36,6 @@ function renderItem(data, id) {
   clone.querySelector('.item-grid').dataset.id = id;
   return clone;
 }
-
 
 
 const livrosRef = collection(db, "livros");
