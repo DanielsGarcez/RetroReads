@@ -85,10 +85,11 @@
     border-radius: 0em 2em 2em  0em;
 
     font-size: 1em;
+
+    transition: .5s ease;
 }
 
 .btn-buscar:hover{
-    transition: 500ms;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid var(--corPrincipal);
@@ -109,13 +110,14 @@
     text-decoration: none;
     color: var(--Preto);
     align-content: center;
+
+    transition: .5s ease;
 }
 
 .login-link:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
     color: var(--corPrincipal);
-    transition: .5s;
 }
 
 .cadastro-link {
@@ -131,16 +133,14 @@
     border: 1px solid var(--corPrincipal);
     border-radius: 2em;
 
+    /* Estilos Texto */
     text-wrap: nowrap;
-
     text-decoration: none;
+
+    transition: .5s ease;
 }
 
 .cadastro-link:hover {
-    transition: .5s;
-    
-    text-decoration: none;
-
     background-color: var(--corBranco);
     border: 1px solid var(--corPrincipal);
     color: var(--corPrincipal);
@@ -211,9 +211,10 @@
     font-size: 1.1em;
     font-weight: bold;
     padding: .7em 2em;
+
+    transition: .5s ease;
 }
 .opcoes a:hover {
-    transition: .5s;
     color: var(--corPrincipal);
     background-color: var(--corBranco);
 }

@@ -6,20 +6,40 @@ import {
   onSnapshot
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
+// Variáveis de Template e Grid da área dos livros
 const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
 
 
+//---------- ÁREA DE FUNÇÕES ----------
+
+// Funçãõ que carrega a tela de carregameto
+async function carregarLoading() {
+  //espera o html carregar
+  const response = await fetch('fetch/TelaCarregamento.html');
+  const html = await response.text();
+
+  //cria um elemneto no html chamado 'section'
+  const container = document.createElement('section');
+  //insere o elemento no html
+  container.innerHTML = html;
+
+  document.body.appendChild(container);
+}
+
+// Função de mostrar a Tela de Loading
 function mostrarLoading() {
-  document.getElementById("loading-overlay").classList.remove("hidden");
+  const telaLoading = document.getElementById('sobrepor-carregamento');
+  if (telaLoading) telaLoading.style.display = 'flex';
 }
 
+// Função de esconder a Tela de Loading
 function esconderLoading() {
-  document.getElementById("loading-overlay").classList.add("hidden");
+  const telaLoading = document.getElementById('sobrepor-carregamento');
+  if (telaLoading) telaLoading.remove(); // remove do DOM
 }
 
-
-// Renderiza os Cards do Grid com informações do banco de dados
+// Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {
   const clone = template.content.cloneNode(true);
 
@@ -27,8 +47,7 @@ function renderItem(data, id) {
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
 
-  /* Busaca no banco de dados e carega-os no grid  */
-/*   imagem.src = data.capa || 'https://via.placeholder.com/400x225?text=Sem+imagem'; */
+  // Busaca no banco de dados e carega-os no grid
   imagem.alt = data.titulo || 'Item';
   titulo.textContent = data.titulo || 'Sem título';
   autor.textContent = data.autor || 'Sem título';
@@ -38,15 +57,28 @@ function renderItem(data, id) {
 }
 
 
-const livrosRef = collection(db, "livros");
-const q = query(livrosRef, orderBy("criadoEm", "desc"));
 
-onSnapshot(q, (snapshot) => {
-  grid.innerHTML = "";
+//---------- ÁREA DE INICIALIZAÇÃO ----------
 
-  snapshot.forEach((doc) => {
-    const item = renderItem(doc.data(), doc.id);
-    grid.appendChild(item);
+(async () =>{
+  //espera carregar a função tela de loading
+  await carregarLoading();
+  //mostra a tela de Loading
+  mostrarLoading();
+
+  // Pega as informações do livro no banco de dados
+  const livrosRef = collection(db, "livros");
+  const q = query(livrosRef, orderBy("criadoEm", "desc"));
+
+  onSnapshot(q, (snapshot) => {
+    grid.innerHTML = "";
+
+    snapshot.forEach((doc) => {
+      const item = renderItem(doc.data(), doc.id);
+      grid.appendChild(item);
+    });
   });
-});
 
+  //esconde a tela de Loading
+  esconderLoading();
+})();

@@ -58,37 +58,3 @@ p{
     font-weight: bold;
     color: var(--corPrincipal);
 }
-
-
-/* ---------- Animação de Carregamento ---------- */
-.tela-carregamento{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.icone-carregamento{
-    /* Decoração do Circulo */
-    border: 4px solid var(--corCinzaEscuro);
-    border-top-color: var(--corPrincipal);
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-
-    /* Animação: */
-    animation: is-rotating 1.5s infinite;
-}
-
-@keyframes is-rotating{
-    to{
-        transform: rotate(1turn);
-    }
-}

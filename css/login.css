@@ -75,9 +75,10 @@
     background-color: var(--corPrincipal);
     border: 1px solid var(--corPrincipal);
     border-radius: 1em;
+
+    transition: .5s ease;
 }
 #btn-logar:hover{
-    transition: .5s;
     cursor: pointer;
     color: var(--corPrincipal);
     background-color: var(--corBranco);
