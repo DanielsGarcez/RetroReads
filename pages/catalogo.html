@@ -9,6 +9,7 @@
     <script type="module" src="../scripts/headerHome.js"></script>
     <script type="module" src="../scripts/footer.js"></script>
     <script type="module" src="../scripts/catalogo.js"></script>
+    <script type="module" src="../scripts/func-checkbox.js"></script>
 
     <!-- Link de Styles -->
     <link rel="icon" type="image/png" href="../img/Logo-Page.png">
@@ -24,35 +25,62 @@
 
         <article class="container-catalogo">
 
-            <section class="filtro-catalogo">
+            <section id="filtro-catalogo">
                 <h3>Filtros</h3>
-
                 <aside>
-                <ul>
                     <h5>Categorias</h5>
                     <hr>
-                    <li><input type="checkbox"></li>
-                </ul>
-                <ul>
-                    <h5>Faixa de Preço</h5>
+                    <template id="checkbox-categoria-template">
+                        <label class="checkbox-categoria">
+                            <input type="checkbox">
+                            <span class="span-categoria"></span>
+                        </label>
+                    </template>
+                </aside>
+
+                <aside>
+                    <h5>Preço</h5>
                     <hr>
-                    <li><input type="checkbox"></li>
-                </ul>
-                <ul>
+                    <template class="checkbox-preco-template">
+                        <label class="checkbox-preco">
+                            <input type="checkbox">
+                            <span class="span-preco"></span>
+                        </label>
+                    </template>
+                </aside>
+
+                <aside>
                     <h5>Idioma</h5>
                     <hr>
-                    <li><input type="checkbox"></li>
-                </ul>
-                <ul>
+                    <template class="checkbox-idioma-template">
+                        <label class="checkbox-idioma">
+                            <input type="checkbox">
+                            <span class="span-idioma"></span>
+                        </label>
+                    </template>
+                </aside>
+
+                <aside>
                     <h5>Acabamento</h5>
                     <hr>
-                    <li><input type="checkbox"></li>
-                </ul>
-                <ul>
+                    <template class="checkbox-capa-template">
+                        <label class="checkbox-capa">
+                            <input type="checkbox">
+                            <span class="span-capa"></span>
+                        </label>
+                    </template>
+                </aside>
+
+                <aside>
                     <h5>Disponibilidade</h5>
                     <hr>
-                    <li><input type="checkbox"></li>
-                </ul>
+                    <template class="checkbox-reserva-template">
+                        <label class="checkbox-reserva">
+                            <input type="checkbox">
+                            <span class="span-reserva"></span>
+                        </label>
+                    </template>
+                </aside>
             </section>
 
             <hr>

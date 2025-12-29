@@ -20,16 +20,18 @@ h1{
 
 /* ---------- Filtro do Catalogo ---------- */
 
-.filtro-catalogo{
+#filtro-catalogo{
     display: flex;
     flex-direction: column;
 
     margin: auto 1em;
     margin-top: 1em;
     margin-bottom: 1em;
+
+    text-align: left;
 }
 
-.filtro-catalogo h3{
+#filtro-catalogo h3{
     padding: .3em 2em;
     margin-bottom: 1em;
     font-size: 1.5em;
@@ -39,7 +41,7 @@ h1{
     background-color: var(--corPrincipal);
 }
 
-.filtro-catalogo ul{
+#filtro-catalogo aside{
     display: flex;
     flex-direction: column;
 
@@ -47,28 +49,30 @@ h1{
     text-align: left;
 }
 
-.filtro-catalogo h5{
+#filtro-catalogo h5{
     font-size: 1.3em;
     font-weight: normal;
 }
 
-.filtro-catalogo hr{
+#filtro-catalogo hr{
     margin: .3em 0em;
-}
-
-.filtro-catalogo li{
-    font-weight: lighter;
-    padding-bottom: 1em;
-}
-
-.filtro-catalogo input{
-    font-size: 2em;
 }
 
 input[type="checkbox"] {
     accent-color: var(--corPrincipal);
     width: .5em;
     height: .5em;
+
+    font-size: 2em;
+
+    margin-right: .2em;
+
+    transition: .5s ease;
+}
+
+.span-categoria{
+    font-size: 1.2em;
+    font-weight: 300;
 }
 
 /* ---------- Lista de Livro do Catalogo ---------- */
