@@ -95,5 +95,5 @@ function renderItem(data, id) {
       //esconde a tela de Loading
       esconderLoading();
     });
-  }, 1000);
+  }, 100);
 })();

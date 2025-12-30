@@ -13,7 +13,8 @@ h3{
 }
 
 .tipos-planos{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, .6fr);
     gap: 3em;
     margin-bottom: 5em;
 
@@ -23,8 +24,8 @@ h3{
 .plano-x{
     display: flex;
     flex-direction: column;
-    width: 20%;
-    padding: 3%;
+    max-width: fit-content;
+    padding: 2em;
 
     box-shadow: var(--sombra);
     border: var(--borda);
@@ -40,18 +41,19 @@ h3{
 
 .plano-x h3{
     margin: 0em;
+    margin-top: 1em;
     text-align: center;
     
-    font-size: 2.5em;
+    font-size: 250%;
     font-weight: bold;
     color: var(--corPrincipal);
 }
 
 .plano-x h2{
     padding-top: 1em;
-    padding-bottom: .5em;
-
-    font-size: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 2.5em;
 }
 
 .plano-x p{
@@ -76,7 +78,7 @@ h3{
     background-position: 0 6px; /* ajusta o alinhamento vertical */
     background-size: 20px;      /* <-- tamanho do ícone (mude aqui) */
     padding-left: 28px;         /* espaço pro ícone */
-    margin: 6px 0;
+    margin: auto 0;
 }
 
 .btn-assinar{
@@ -95,4 +97,59 @@ h3{
     cursor: pointer;
     color: var(--corPrincipal);
     background-color: var(--corBranco);
+}
+
+@media (max-width: 975px){
+
+    h1{
+        padding-top: 0.5em;
+        font-family: var(--fonteEstilizada);
+        font-size: 2.5em;
+        color: var(--corPrincipal);
+    }
+
+    h3{
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-size: 1.3em;
+        font-weight: normal;
+    }
+
+    .tipos-planos{
+        gap: 1em;
+    }
+
+    .descricao-planos{
+        gap: .5em;
+    }
+
+    .plano-x h3{
+        margin: 0em;
+        margin-top: .5em;
+        text-align: center;
+        
+        font-size: 2em;
+        font-weight: bold;
+        color: var(--corPrincipal);
+    }
+
+    .plano-x h2{
+        padding-top: 1em;
+        padding-bottom: .5em;
+
+        font-size: 1.5em;
+    }
+
+    .plano-x p{
+        padding-bottom: 1.5em;
+        font-size: 1.1em;
+    }
+
+    .descricao-planos li{
+        font-size: .8em;
+    }
+
+    .btn-assinar{
+        font-size: 1em;
+    }
 }

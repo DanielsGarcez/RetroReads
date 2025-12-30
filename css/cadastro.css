@@ -22,7 +22,6 @@ h3{
 .container{
     display: flex;
     flex-direction: row;
-    align-items: center;
 
     box-shadow: var(--sombra);
     border: var(--borda);
@@ -76,7 +75,7 @@ h3{
 }
 
 .cadastrar input{
-    width: 70%;
+    width: 80%;
 
     padding: .7em;
     font-size: .9em;
@@ -87,16 +86,13 @@ h3{
 }
 
 .btn-ambos{
-    width: 60%;
+    width: 80%;
 
     padding: .5em;
     font-size: 1.3em;
     border-radius: 1em;
 
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 3em;
-    margin-right: 3em;
+    margin: 2em auto;
 }
 
 #btn-login{
@@ -247,4 +243,36 @@ h1{
     cursor: pointer;
     color: var(--corPrincipal);
     background-color: var(--corBranco);
+}
+
+@media (max-width: 975px){
+
+    h2{
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+
+    .main-cadastro{
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    .seccoes{
+        width: 100%;
+
+        display: flex;
+        padding: 2em;
+        padding-bottom: 1em;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tem-login h2{
+        font-size: 2em;
+    }
+
+    #btn-cadastro{
+        margin-top: .5em;
+        margin-bottom: 1em;
+    }
 }
