@@ -18,25 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputCapa = document.getElementById("capa-livro");
     const preview = document.getElementById("preview-capa");
 
-    inputCapa.addEventListener("change", () => {
-        const file = inputCapa.files[0];
+    inputCapa.addEventListener("input", () => {
+    const url = inputCapa.value.trim();
 
-        if (!file) {
-            preview.style.display = "none";
-            preview.src = "";
-            return;
-        }
+    if (!url) {
+        preview.src = "img/Mockup-Livro.png";
+        return;
+    }
 
-        if (!file.type.startsWith("image/")) {
-            alert("Selecione apenas imagens");
-            inputCapa.value = "";
-            preview.style.display = "none";
-            return;
-        }
-
-        preview.src = URL.createObjectURL(file);
-        preview.style.display = "block";
+    preview.src = url;
     });
+
+    // fallback se a URL quebrar
+    preview.onerror = () => {
+    preview.src = "img/Mockup-Livro.png";
+    };
+
+
 
     // Verifica se o usuário está logado
     let usuarioLogado = null;
@@ -90,18 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         console.log("Cadastro válido! Enviando dados...");
 
-
-        const input = document.getElementById('capa-livro');
-        const img = document.getElementById('preview-capa');
-
-        input.addEventListener('change', () => {
-        const file = input.files[0];
-            if (file) {
-                img.src = URL.createObjectURL(file);
-            }
-        });
-
-
         try{
             // Salva no Firebase em outra coleção
             const docRef = await addDoc(collection(db, "livros"),{
@@ -114,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 isbn: isbn,
                 idioma: idiomaLivro,
                 paginas: numPaginas,
-                valor: valorLivro,
+                valor: parseFloat(valorLivro),
 
                 criadoPor: {
                     uid: usuarioLogado.uid,

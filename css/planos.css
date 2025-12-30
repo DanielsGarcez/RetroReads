@@ -35,7 +35,7 @@ h3{
 
 .plano-x:hover{
     transform: translateY(-10px);
-    box-shadow: var(--sombraDestaque);
+    border: 1px solid var(--corPrincipal);
 }
 
 .plano-x h3{

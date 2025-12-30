@@ -202,12 +202,7 @@ h1{
     width: 100%;
 }
 
-input#capa-livro{
-    border: none;
-    background-color: var(--corBranco);
-    padding-top: 0em;
-    padding-bottom: 0em;
-}
+
 
 
 #preview-capa{

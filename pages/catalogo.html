@@ -9,7 +9,7 @@
     <script type="module" src="../scripts/headerHome.js"></script>
     <script type="module" src="../scripts/footer.js"></script>
     <script type="module" src="../scripts/catalogo.js"></script>
-    <script type="module" src="../scripts/func-checkbox.js"></script>
+    <script type="module" src="../scripts/funcoes-externas/checkbox-categorias.js"></script>
 
     <!-- Link de Styles -->
     <link rel="icon" type="image/png" href="../img/Logo-Page.png">
@@ -25,72 +25,48 @@
 
         <article class="container-catalogo">
 
-            <section id="filtro-catalogo">
+            <section class="filtro-catalogo">
                 <h3>Filtros</h3>
-                <aside>
-                    <h5>Categorias</h5>
-                    <hr>
-                    <template id="checkbox-categoria-template">
-                        <label class="checkbox-categoria">
-                            <input type="checkbox">
-                            <span class="span-categoria"></span>
-                        </label>
-                    </template>
-                </aside>
 
-                <aside>
-                    <h5>Preço</h5>
-                    <hr>
-                    <template class="checkbox-preco-template">
-                        <label class="checkbox-preco">
-                            <input type="checkbox">
-                            <span class="span-preco"></span>
-                        </label>
-                    </template>
-                </aside>
+                <h5>Categorias</h5>
+                <hr>
+                <aside id="filtro-genero"></aside>
 
-                <aside>
-                    <h5>Idioma</h5>
-                    <hr>
-                    <template class="checkbox-idioma-template">
-                        <label class="checkbox-idioma">
-                            <input type="checkbox">
-                            <span class="span-idioma"></span>
-                        </label>
-                    </template>
-                </aside>
+                <h5>Valor</h5>
+                <hr>
+                <aside id="filtro-valor"></aside>
 
-                <aside>
-                    <h5>Acabamento</h5>
-                    <hr>
-                    <template class="checkbox-capa-template">
-                        <label class="checkbox-capa">
-                            <input type="checkbox">
-                            <span class="span-capa"></span>
-                        </label>
-                    </template>
-                </aside>
+                <h5>Idioma</h5>
+                <hr>
+                <aside id="filtro-idioma"></aside>
 
-                <aside>
-                    <h5>Disponibilidade</h5>
-                    <hr>
-                    <template class="checkbox-reserva-template">
-                        <label class="checkbox-reserva">
-                            <input type="checkbox">
-                            <span class="span-reserva"></span>
-                        </label>
-                    </template>
-                </aside>
+                <h5>Acabamento</h5>
+                <hr>
+                <aside id="filtro-acabamento"></aside>
+                
+                <h5>Disponibilidade</h5>
+                <hr>
+                <aside id="filtro-disponibilidade"></aside>
+        
             </section>
+
+            <template id="checkbox-template">
+                <label class="checkbox-filtro">
+                    <input type="checkbox">
+                    <span></span>
+                </label>
+            </template>
 
             <hr>
             
+            <!---------- Área dos livros ---------->
+
             <section id="grid-catalogo">
                 <template id="card-template">
                     <article class="item-grid">
                         <img class="capa-livro" src="../img/Mockup-Livro.png" alt="capa-livro">
-                        <h2 class="margem-texto titulo-livro"></h2>
-                        <h4 class="margem-texto autor-livro"></h4>
+                        <h2 class="titulo-livro"></h2>
+                        <h4 class="autor-livro"></h4>
                         <button class="btn-detalhes-livro" onclick="window.location.href='detalhes-livro.html'">Detalhes</button>
                     </article>
                 </template>

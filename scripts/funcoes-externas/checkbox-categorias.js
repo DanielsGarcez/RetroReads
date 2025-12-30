@@ -1,23 +1,22 @@
-import { db } from './firebase.js';
+import { db } from '../firebase.js';
 import {
     doc,
     getDoc,
     collection,
     query,
     where,
-    orderBy,
     onSnapshot
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 const filtrosContainer = document.getElementById('filtro-catalogo');
-const templateCheckbox = document.getElementById('checkbox-categoria-template');
+const templateCheckbox = document.getElementById('checkbox-template');
 
 let reiniciarListener = null;
 
 function aplicarFiltros() {
   const categoriasSelecionadas = [
     //procura quais inputs estão marcados (checked)
-    ...document.querySelectorAll('#filtro-catalogo input:checked')
+    document.querySelectorAll('#filtro-catalogo input:checked')
 
     //pega o valor de cada Checkbox Marcada
   ].map(checkboxMarcada => checkboxMarcada.value);
@@ -55,6 +54,7 @@ function aplicarFiltros() {
 }
 
 
+
 // ---------- Funções Automáticas ----------
 async function carregarCategorias() {
     const ref = doc(db, 'categorias', 'generos');
@@ -72,7 +72,7 @@ async function carregarCategorias() {
         .forEach(([slug, nome])=>{
         
         const clone = templateCheckbox.content.cloneNode(true);
-
+            
         const checkbox = clone.querySelector('input');
         const span = clone.querySelector('.span-categoria');
 

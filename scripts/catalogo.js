@@ -31,12 +31,14 @@ async function carregarLoading() {
 function mostrarLoading() {
   const telaLoading = document.getElementById('sobrepor-carregamento');
   if (telaLoading) telaLoading.style.display = 'flex';
+  console.log("Abriu Loading")
 }
 
 // Função de esconder a Tela de Loading
 function esconderLoading() {
   const telaLoading = document.getElementById('sobrepor-carregamento');
   if (telaLoading) telaLoading.remove(); // remove do DOM
+  console.log("Fechou Loading")
 }
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
@@ -48,7 +50,17 @@ function renderItem(data, id) {
   const autor = clone.querySelector('.autor-livro');
 
   // Busaca no banco de dados e carega-os no grid
-  imagem.alt = data.titulo || 'Item';
+
+  if (data.capa && data.capa.trim() !== "") {
+    imagem.src = data.capa;
+  } else {
+    imagem.src = "img/Mockup-Livro.png";
+  }
+
+  imagem.onerror = () => {
+    imagem.src = "../img/Mockup-Livro.png";
+  };
+
   titulo.textContent = data.titulo || 'Sem título';
   autor.textContent = data.autor || 'Sem título';
 
@@ -66,19 +78,22 @@ function renderItem(data, id) {
   //mostra a tela de Loading
   mostrarLoading();
 
-  // Pega as informações do livro no banco de dados
-  const livrosRef = collection(db, "livros");
-  const q = query(livrosRef, orderBy("criadoEm", "desc"));
+  // Função que simula a tela de carregamento
+  setTimeout(function() {
+    // Pega as informações do livro no banco de dados
+    const livrosRef = collection(db, "livros");
+    const q = query(livrosRef, orderBy("criadoEm", "desc"));
 
-  onSnapshot(q, (snapshot) => {
-    grid.innerHTML = "";
+    onSnapshot(q, (snapshot) => {
+      grid.innerHTML = "";
 
-    snapshot.forEach((doc) => {
-      const item = renderItem(doc.data(), doc.id);
-      grid.appendChild(item);
+      snapshot.forEach((doc) => {
+        const item = renderItem(doc.data(), doc.id);
+        grid.appendChild(item);
+      });
+
+      //esconde a tela de Loading
+      esconderLoading();
     });
-  });
-
-  //esconde a tela de Loading
-  esconderLoading();
+  }, 1000);
 })();
