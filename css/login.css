@@ -83,13 +83,3 @@
     color: var(--corPrincipal);
     background-color: var(--corBranco);
 }
-
-@media (max-width: 975px){
-    .main-login{
-        margin: 3em auto;
-    }
-
-    .container h2{
-        padding-bottom: 1em;
-    }
-}
