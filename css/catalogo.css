@@ -134,26 +134,6 @@ input[type="checkbox"] {
     font-weight: normal;
 }
 
-/* ---------- Botão de Reserva do Livro ---------- */
-
-.btn-detalhes-livro{
-    padding: .3em;
-    font-size: 130%;
-
-    color: var(--corBranco);
-    background-color: var(--corPrincipal);
-    border: 1px solid var(--corPrincipal);
-    border-radius: 1em;
-
-    transition: .5s ease;
-}
-
-.btn-detalhes-livro:hover{
-    cursor: pointer;
-    color: var(--corPrincipal);
-    background-color: var(--corBranco);
-}
-
 /* ---------- RESPONSIVIDADE ---------- */
 
 @media (max-width: 975px){

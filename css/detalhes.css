@@ -1,19 +1,183 @@
-h1{
-    padding-top: .5em;
-    margin-bottom: .5em;
-
-    font-family: var(--fonteEstilizada);
-    font-size: 3em;
-    color: var(--corPrincipal);
-}
 
 .container-detalhes{
+    width: 60%;
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: center;
-    padding: 1em;
+    padding: 3rem;
 
     box-shadow: var(--sombra);
     border: var(--borda);
-    border-radius: 2em;
+    border-radius: 2rem;
+}
+
+.hr-divisor{
+    margin: 1rem 0rem;
+}
+
+.ambos-lados{
+    width: 50%;
+}
+
+/* ------------- Primaeira Parte ------------- */
+
+.parte1-detalhes{
+    display: flex;
+    flex-direction: row;
+}
+
+.parte1-esquerda{
+    display: flex;
+    flex-direction: column;
+}
+
+.parte1-esquerda img{
+    width: 16rem;
+
+    margin-bottom: 1rem;
+
+    border: var(--borda);
+    border-radius: 2rem;
+}
+
+.parte1-direita{
+    margin-left: 1.5rem;
+
+    text-align: left;
+}
+
+.parte1-direita h2, h3{
+    font-weight: 400;
+}
+
+.parte1-direita h2{
+    margin: .5rem 0rem;
+}
+
+.parte1-direita hr{
+    margin: .5em 0rem;
+}
+
+/* ------------- Segunda Parte ------------- */
+
+.parte2-detalhes{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.parte2-detalhes h2{
+    text-align: left;
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+#tabela-info{
+    font-size: 1rem;
+    border: var(--borda);
+    border-radius: 1rem;
+}
+
+.parte2-esquerda table{
+    display: flex;
+
+}
+
+
+
+.parte2-esquerda table th, td{
+    padding: .5rem 2rem;
+
+    background-color: var(--corCinzaEscuro);
+    font-weight: normal;
+}
+
+.parte2-esquerda table td{
+    background-color: var(--corCinzaClaro);
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.nome-autor{
+    border-radius: 1rem 0em 0rem 0rem;
+}
+
+#nome-autor{
+    border-radius: 0rem 1rem 0rem 0rem;
+}
+
+.tipo-capa{
+    border-radius: 0rem 0em 0rem 1rem;
+}
+
+#tipo-capa{
+    border-radius: 0rem 0rem 1rem 0rem;
+}
+
+.parte2-direita{
+    margin-left: auto;
+}
+
+.usuario-avaliar{
+    display: flex;
+    flex-direction: row;
+
+    text-align: left;
+}
+
+.usuario-avaliar img{
+    height: 5rem;
+    margin-right: 1rem;
+}
+
+.perfil-usuario{
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-usuario span, .perfil-usuario h4{
+    color: var(--corPrincipal);
+    font-weight: normal;
+}
+
+.perfil-usuario span{
+    font-size: 1.5rem;
+}
+
+.perfil-usuario h4, .perfil-usuario h3{
+    margin: 0rem .5rem;
+}
+
+.perfil-usuario h4{
+    margin-bottom: .5rem;
+}
+
+#btn-seguir, #btn-avaliar{
+    font-size: 1rem;
+}
+
+#form-avaliar{
+    display: flex;
+    flex-direction: column;
+}
+
+.area-estrelas{
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 1rem;
+}
+
+#comentario{
+    background-color: var(--corCinzaClaro);
+    border-radius: 1rem;
+    padding: .5rem;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+#btn-avaliar{
+    margin: auto 0rem;
 }

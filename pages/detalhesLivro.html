@@ -22,29 +22,91 @@
         <article class="container-detalhes">
             <section class="parte1-detalhes">
                 <aside class="parte1-esquerda">
-                    <img src="" alt="capa-livro">
-                    <button>Reservar</button>
+                    <img src="/img/Mockup-Livro.png" alt="capa-livro">
+                    <button class="btn-principal">Reservar</button>
                 </aside>
 
-                <aside class="parte2-direita">
+                <aside class="parte1-direita">
                     <h2>Titulo do Livro</h2>
                     <h3>Autor: <span>Nome do Autor</span></h3>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid beatae adipisci vitae, quidem corporis fugiat animi placeat. Harum ad voluptas ipsam eos esse optio quod quisquam, dolor laborum adipisci dignissimos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut obcaecati earum debitis consequuntur totam ratione dolore eaque id voluptatum nam, vero, quasi incidunt voluptatibus autem dolores atque eius molestiae eveniet.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                 </aside>
             </section>
 
-            <hr>
+            <hr class="hr-divisor">
 
             <section class="parte2-detalhes">
-                <aside class="parte2-esquerda">
-                    <table>
-                        
+                <aside class="ambos-lados parte2-esquerda">
+                    <h2>Detalhes do produto</h2>
+                    <table id="tabela-info">
+                        <tr>
+                            <th class="nome-autor">Autor</th>
+                            <td id="nome-autor">Nome do autor</td>
+                        </tr>
+
+                        <tr>
+                            <th>Ano</th>
+                            <td id="ano-lancamento">Ano de lançamento</td>
+                        </tr>
+
+                        <tr>
+                            <th>ISBN</th>
+                            <td id="num-isbn">Código único</td>
+                        </tr>
+
+                        <tr>
+                            <th>Idioma</th>
+                            <td id="idioma">Idioma do livro</td>
+                        </tr>
+
+                        <tr>
+                            <th>Páginas</th>
+                            <td id="num-paginas">Quantidade de páginas</td>
+                        </tr>
+
+                        <tr>
+                            <th class="tipo-capa">Capa</th>
+                            <td id="tipo-capa">Capa comum</td>
+                        </tr>
                     </table>
                 </aside>
 
-                <aside class="parte2-direita">
-                    
+                <aside class="ambos-lados parte2-direita">
+                    <section class="detalhes-produto">
+                        <h2>Anunciante do Produto</h2>
+                        <aside class="usuario-avaliar">
+
+                            <img src="/img/Icon-User.png" alt="Icon-User">
+
+                            <section class="perfil-usuario">
+                                <h3>por: <span>Anunciante</span></h3>
+                                <h4>Usuário PremiumReads</h4>
+                                <button id="btn-seguir" class="btn-principal">Seguir</button>
+                            </section>
+
+                        </aside>
+                    </section>
+
+                    <section class="avaliar-comentario">
+                        <form id="form-avaliar">
+                            <aside class="area-estrelas">
+                                <h4>Avalie esse usuário:</h4>
+                                <select id="estrelas">
+                                    <option value="">- ⭐</option>
+                                    <option value="">0⭐</option>
+                                    <option value="">1⭐</option>
+                                    <option value="">2⭐</option>
+                                    <option value="">3⭐</option>
+                                    <option value="">4⭐</option>
+                                    <option value="">5⭐</option>
+                                </select>
+                            </aside>
+                            <textarea id="comentario" placeholder="Escrever comentário..."></textarea>
+                            <button id="btn-avaliar" class="btn-principal">Enviar</button>
+                        </form>
+                    </section>
+
                 </aside>
             </section>
         </article>
