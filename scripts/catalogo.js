@@ -65,6 +65,8 @@ function renderItem(data, id) {
   autor.textContent = data.autor || 'Sem título';
 
   clone.querySelector('.item-grid').dataset.id = id;
+  console.log({ grid, template });
+
   return clone;
 }
 
@@ -72,7 +74,8 @@ function renderItem(data, id) {
 
 //---------- ÁREA DE INICIALIZAÇÃO ----------
 
-(async () =>{
+document.addEventListener("DOMContentLoaded", () => {
+  (async () =>{
   //espera carregar a função tela de loading
   await carregarLoading();
   //mostra a tela de Loading
@@ -96,4 +99,7 @@ function renderItem(data, id) {
       esconderLoading();
     });
   }, 1000);
-})();
+  })();
+
+});
+
