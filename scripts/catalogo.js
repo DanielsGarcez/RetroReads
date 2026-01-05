@@ -1,3 +1,5 @@
+//---------- ÁREA DE IMPORTAÇÕES ----------
+
 import { db } from './firebase.js';
 import {
   collection,
@@ -50,7 +52,6 @@ function renderItem(data, id) {
   const autor = clone.querySelector('.autor-livro');
 
   // Busaca no banco de dados e carega-os no grid
-
   if (data.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
   } else {
@@ -64,8 +65,13 @@ function renderItem(data, id) {
   titulo.textContent = data.titulo || 'Sem título';
   autor.textContent = data.autor || 'Sem título';
 
-  clone.querySelector('.item-grid').dataset.id = id;
+  clone.querySelector('.item-grid').dataset.id = id;  
   console.log({ grid, template });
+
+  const card = clone.querySelector('.item-grid');
+
+  card.dataset.id = id;
+  card.dataset.titulo = data.titulo || 'Sem título';
 
   return clone;
 }
@@ -83,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Função que simula a tela de carregamento
   setTimeout(function() {
+
     // Pega as informações do livro no banco de dados
     const livrosRef = collection(db, "livros");
     const q = query(livrosRef, orderBy("criadoEm", "desc"));
@@ -98,7 +105,27 @@ document.addEventListener("DOMContentLoaded", () => {
       //esconde a tela de Loading
       esconderLoading();
     });
-  }, 1000);
+
+
+    // Botão que abre a página de detalhes do livro clicado
+    grid.addEventListener("click", (event) =>{
+      const botao = event.target.closest(".btn-detalhes");
+      if (!botao) return;
+
+      const card = event.target.closest(".item-grid");
+      if (!card) return;
+
+      const livroNome = card.dataset.titulo;
+      const livroId = card.dataset.id;
+
+      if (livroId) {
+/*         window.location.href = `detalhes.html?id=${livroId}`; */
+        console.log("ID: ",livroId)
+        console.log("Título: ",livroNome)
+      }
+    });
+
+  }, 500);
   })();
 
 });

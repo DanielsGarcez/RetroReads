@@ -1,6 +1,6 @@
 
 .container-detalhes{
-    width: 60%;
+    width: 80%;
 
     display: flex;
     flex-direction: column;
@@ -13,7 +13,7 @@
 }
 
 .hr-divisor{
-    margin: 1rem 0rem;
+    margin: 2rem 0rem;
 }
 
 .ambos-lados{
@@ -52,11 +52,16 @@
 }
 
 .parte1-direita h2{
-    margin: .5rem 0rem;
+    margin: .3rem 0rem;
+    font-size: 2rem;
 }
 
 .parte1-direita hr{
     margin: .5em 0rem;
+}
+
+.parte1-direita p{
+    font-size: 1.3rem;
 }
 
 /* ------------- Segunda Parte ------------- */
@@ -75,20 +80,20 @@
 }
 
 #tabela-info{
+    display: flex;
+
     font-size: 1rem;
+
     border: var(--borda);
     border-radius: 1rem;
 }
 
-.parte2-esquerda table{
-    display: flex;
-
+.parte2-esquerda tbody{
+    width: 100%;
 }
 
-
-
 .parte2-esquerda table th, td{
-    padding: .5rem 2rem;
+    padding: .8rem 2rem;
 
     background-color: var(--corCinzaEscuro);
     font-weight: normal;
@@ -98,6 +103,8 @@
     background-color: var(--corCinzaClaro);
     text-align: left;
     padding-left: 1rem;
+
+    width: 100%;
 }
 
 .nome-autor{
@@ -166,18 +173,40 @@
 .area-estrelas{
     display: flex;
     flex-direction: row;
+    gap: 1rem;
 
     margin-top: 1rem;
 }
 
-#comentario{
+#estrelas{
     background-color: var(--corCinzaClaro);
+    border: var(--borda);
+    border-radius: 1em;
+    padding-left: 1em;
+}
+
+#comentario{
+    resize: none;
+
+    background-color: var(--corCinzaClaro);
+    border: var(--borda);
     border-radius: 1rem;
-    padding: .5rem;
+    
+    padding: .8rem;
+    padding-bottom: 3rem;
+    
     margin-top: .5rem;
     margin-bottom: 1rem;
 }
 
 #btn-avaliar{
     margin: auto 0rem;
+    width: 9rem;
+    align-self: flex-end;
+}
+
+@media screen and (min-width: 1200px){
+    .container-detalhes{
+        width: 60%;
+    }
 }
