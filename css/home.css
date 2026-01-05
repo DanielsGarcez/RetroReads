@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 3.5em;
+    margin-top: 3.5rem;
 
     color: var(--corPreto);
 }
@@ -12,32 +12,32 @@
 }
 
 .banner-2 h2{
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1{
     font-family: var(--fonteEstilizada);
-    font-size: 3.5em;
+    font-size: 3.5rem;
 }
 
 h3{
-    margin-top: 1em;
-    margin-bottom: 2em;
-    font-size: 1.5em;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
 }
 
 h2{
     font-family: var(--fonteEstilizada);
-    font-size: 2em;
+    font-size: 2rem;
 
     color: var(--corPrincipal);
 }
 
 p{
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    margin-left: 1em;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 .container-banner{

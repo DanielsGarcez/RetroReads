@@ -3,19 +3,19 @@
     flex-direction: row;
     align-items: center;
     
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 h2{
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: 2.3em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2.3rem;
     font-family: var(--fonteEstilizada);
 }
 
 h3{
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: lighter;
 }
 
@@ -26,7 +26,7 @@ h3{
 
     box-shadow: var(--sombra);
     border: var(--borda);
-    border-radius: 2em;
+    border-radius: 2rem;
     
     /* background estica para toda a caixa */
     align-items: stretch
@@ -36,8 +36,8 @@ h3{
     width: 100%;
 
     display: flex;
-    padding: 3em;
-    padding-bottom: 1em;
+    padding: 3rem;
+    padding-bottom: 1rem;
     justify-content: center;
     text-align: center;
 }
@@ -48,8 +48,8 @@ h3{
     display: flex;
     flex-direction: column;
     
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
 
     color: var(--corBranco);
     background-color: var(--corPrincipal);
@@ -58,13 +58,13 @@ h3{
 .cadastrar{
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
     
     width: 60%;
 }
 
 .cadastrar h2{
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: var(--corPrincipal);
 }
 
@@ -72,31 +72,31 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.3em;
+    gap: 1.3rem;
 }
 
 .cadastrar input{
     width: 70%;
 
-    padding: .7em;
-    font-size: .9em;
+    padding: .7rem;
+    font-size: .9rem;
 
     background-color: var(--corCinzaClaro);
     border: var(--borda);
-    border-radius: 2em;
+    border-radius: 2rem;
 }
 
 .btn-ambos{
     width: 60%;
 
-    padding: .5em;
-    font-size: 1.3em;
-    border-radius: 1em;
+    padding: .5rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
 
-    margin-top: 2em;
-    margin-bottom: 2em;
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 #btn-login{
@@ -138,7 +138,7 @@ h3{
 }
 
 h1{
-    font-size: 3em;
+    font-size: 3rem;
     margin-top: 3%;
     color: var(--corPrincipal);
     font-family: var(--fonteEstilizada);
@@ -148,7 +148,7 @@ h1{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
 
     padding-top: 4%;
     justify-content: center;
@@ -159,7 +159,7 @@ h1{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1em;
+    gap: 1rem;
 }
 
 .container-esquerdo{
@@ -167,7 +167,7 @@ h1{
     display: grid;
     align-items: center;
 
-    padding-left: 2.3em;
+    padding-left: 2.3rem;
 }
 
 .container-direito{
@@ -175,25 +175,25 @@ h1{
     display: grid;
     grid-template-columns: 1fr;
     
-    padding-left: 1em;
-    padding-right: 2.3em;
+    padding-left: 1rem;
+    padding-right: 2.3rem;
     justify-content: center;
     align-items: baseline;
 }
 
 .inserir-dados label{
     font-weight: bold;
-    margin-left: 0.5em;
-    margin-bottom: .3em;
+    margin-left: 0.5rem;
+    margin-bottom: .3rem;
 }
 
 .inserir-dados input, select{
-    font-size: 1em;
-    padding: .7em;
+    font-size: 1rem;
+    padding: .7rem;
 
     background-color: var(--corCinzaClaro);
     border: var(--borda);
-    border-radius: 2em;
+    border-radius: 2rem;
 }
 
 .inserir-dados{
@@ -204,21 +204,20 @@ h1{
 
 
 
-
 #preview-capa{
     width: 70%;
     align-self: center;
 
     margin-top: 5%;
     margin-bottom: 5%;
-    padding: 1em;
+    padding: 1rem;
 
     border: var(--borda);
-    border-radius: 2em;
+    border-radius: 2rem;
 }
 
 .hr-horizintal{
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 .container-button{
@@ -226,19 +225,19 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-items: center;
-    margin-top: 0em;
+    margin-top: 0rem;
 }
 
 #btn-cadastroLivro{
     width: 30%;
-    margin-top: 1em;
-    margin-bottom: 1.5em;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: var(--corBranco);
     background-color: var(--corPrincipal);
     border: 1px solid var(--corPrincipal);
-    border-radius: 2em;
+    border-radius: 2rem;
     
     transition: .5s ease;
 }

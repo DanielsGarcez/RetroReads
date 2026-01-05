@@ -30,7 +30,7 @@
 }
 
 #logo-escrito{
-    width: 13em;
+    width: 13rem;
 }
 
 #logo-escrito:hover{
@@ -47,20 +47,20 @@
     align-items: center;
 
     border: 1px solid var(--corCinzaEscuro);
-    border-radius: 2em;
+    border-radius: 2rem;
     background-color: var(--corCinzaClaro);
 }
 
 #barra-busca{
     display: flex;
     width: 100%;
-    padding: 0.5em 1em;
+    padding: 0.5em 1rem;
 
     border: 1px solid var(--corCinzaClaro);
-    border-radius: 2em;
+    border-radius: 2rem;
     background: none;
 
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 #barra-busca::placeholder{
@@ -82,9 +82,9 @@
 
     /* Borda */
     border: 1px solid var(--corPrincipal);
-    border-radius: 0em 2em 2em  0em;
+    border-radius: 0em 2em 2em  0rem;
 
-    font-size: 1em;
+    font-size: 1rem;
 
     transition: .5s ease;
 }
@@ -100,9 +100,9 @@
 .usuario{
     display: flex;
     width: auto;
-    gap: 1em;
+    gap: 1rem;
 
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -123,7 +123,7 @@
 .cadastro-link {
     /* Dimensionamento */
     display: inline-block;
-    padding: 0.5em 1.3em;
+    padding: 0.5em 1.3rem;
 
     /* Cores */
     background-color: var(--corPrincipal);
@@ -131,7 +131,7 @@
 
     /* Bordas */
     border: 1px solid var(--corPrincipal);
-    border-radius: 2em;
+    border-radius: 2rem;
 
     /* Estilos Texto */
     text-wrap: nowrap;
@@ -155,8 +155,8 @@
     width: 100%;
 
     /* Alinhamento */
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin-bottom: 10px;
 
     /* Decorativo */
@@ -179,7 +179,7 @@
 }
 
 #logo-r, #user-perfil{
-    height: 3em;
+    height: 3rem;
 }
 
 
@@ -194,7 +194,7 @@
     background-color: var(--corPrincipal);
     box-shadow: var(--sombra);
 
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 .lista-opcoes {
     display: flex;
@@ -208,9 +208,9 @@
 .opcoes a {
     color: var(--corBranco);
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: bold;
-    padding: .7em 2em;
+    padding: .7em 2rem;
 
     transition: .5s ease;
 }
@@ -230,8 +230,8 @@ hr{
 @media (min-width: 900px) {
     /* ---------- Responsividade HeaderHome ---------- */
     .alinhamento{
-        margin-right: 0em;
-        margin-left: 0em;
+        margin-right: 0rem;
+        margin-left: 0rem;
         gap: 10%;
     }
 
@@ -256,7 +256,7 @@ hr{
 
     #logo-mobile{
         display: flex;
-        width: 2em;
+        width: 2rem;
     }
 
     #logo-escrito{
@@ -269,7 +269,7 @@ hr{
     
     .perfil-mobile{
         display: flex;
-        width: 5em;
+        width: 5rem;
     }
 
     #perfil{

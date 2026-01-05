@@ -3,29 +3,29 @@
     flex-direction: row;
     align-items: center;
     
-    margin-top: 5em;
-    margin-bottom: 5em;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 3em;
-    padding: 3em;
+    margin-bottom: 3rem;
+    padding: 3rem;
 
     box-shadow: var(--sombra);
     border: var(--borda);
-    border-radius: 1em;
+    border-radius: 1rem;
 }
 
 .container h2{
     color: var(--corPrincipal);
-    padding-top: 0.5em;
-    padding-bottom: 2em;
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
 
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-family: var(--fonteEstilizada);
 }
 
@@ -34,23 +34,23 @@
     flex-direction: column;
     align-items: center;
 
-    gap: 1.3em;
+    gap: 1.3rem;
 }
 
 .container input{
-    width: 20em;
-    padding: 1em;
+    width: 20rem;
+    padding: 1rem;
 
-    font-size: 1em;
+    font-size: 1rem;
 
     background-color: var(--corCinzaClaro);
     border: var(--borda);
-    border-radius: 2em;
+    border-radius: 2rem;
 }
 
 .container p{
-    margin-top: 1.3em;
-    margin-bottom: 1em;
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
 }
 
 .container a{
@@ -64,17 +64,17 @@
 }
 
 #btn-logar{
-    margin-top: 2em;
-    padding: .5em;
-    padding-left: 4em;
-    padding-right: 4em;
+    margin-top: 2rem;
+    padding: .5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 
-    font-size: 1.3em;
+    font-size: 1.3rem;
 
     color: var(--corBranco);
     background-color: var(--corPrincipal);
     border: 1px solid var(--corPrincipal);
-    border-radius: 1em;
+    border-radius: 1rem;
 
     transition: .5s ease;
 }
