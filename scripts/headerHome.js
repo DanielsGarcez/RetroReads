@@ -1,7 +1,7 @@
 // Exporta o Header para todas as páginas
 async function carregarHeader() {
   try {
-    const resposta = await fetch("pages/fetch/HeaderHome.html");
+    const resposta = await fetch("/pages/fetch/HeaderHome.html");
     const conteudo = await resposta.text();
     document.body.insertAdjacentHTML("afterbegin", conteudo);
   } catch (erro) {
