@@ -18,7 +18,7 @@ const template = document.getElementById('card-template');
 // Funçãõ que carrega a tela de carregameto
 async function carregarLoading() {
   //espera o html carregar
-  const response = await fetch('/RetroReads/pages/fetch/TelaCarregamento.html');
+  const response = await fetch('fetch/TelaCarregamento.html');
   const html = await response.text();
 
   //cria um elemneto no html chamado 'section'
