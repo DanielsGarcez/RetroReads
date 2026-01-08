@@ -175,29 +175,26 @@ input[type="checkbox"] {
 
 
 @media screen and (max-width: 1050px) {
-    
-    #grid-catalogo {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        padding: 1rem 2rem;
-    }
-
     .container-catalogo{
         display: block;
         width: 100%;
-        min-width: 770px;
     }
 
     .container-catalogo hr{
         display: none;
     }
 
-    /* ---------- Filtro do Catalogo ---------- */
     .filtro-catalogo{
         display: none;
     }
 
+    #grid-catalogo {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 1rem 2rem;
+    }
+    
     /* ---------- Lista de Livro do Catalogo ---------- */
     
     .capa-livro{
@@ -209,6 +206,35 @@ input[type="checkbox"] {
 
     .titulo-livro, .autor-livro{
         font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    /* ---------- Responsividade HeaderHome ---------- */
+    .main-catalogo{
+        display: flex;
+        justify-content: center;
+
+        margin: auto;
+    }
+
+    .container-catalogo{
+        width: 100%;
+    }
+
+    #grid-catalogo, .capa-livro{
+        width: 100%;
+        gap: 1rem;
+    }
+
+    #grid-catalogo{
+        margin: auto;
+        padding: 0;
+    }
+
+    .titulo-livro, .autor-livro{
+        font-size: .8rem;
     }
 
 }
