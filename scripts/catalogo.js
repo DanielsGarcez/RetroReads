@@ -29,6 +29,12 @@ async function carregarLoading() {
   document.body.appendChild(container);
 }
 
+function capitalizarPalavras(str) {
+  return str.toLowerCase().replace('-',' ').split(' ').map(function(word) {
+    return (word.charAt(0).toUpperCase() + word.slice(1));
+  }).join(' ');
+}
+
 // Função de mostrar a Tela de Loading
 function mostrarLoading() {
   const telaLoading = document.getElementById('sobrepor-carregamento');
@@ -51,6 +57,14 @@ function renderItem(data, id) {
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
 
+  //mobile:
+  const autor2 = clone.querySelector('.autor-livro2');
+  const genero = clone.querySelector('.genero-livro');
+  const ano = clone.querySelector('.ano-livro');
+  const idioma = clone.querySelector('.idioma-livro');
+
+  const valor = clone.querySelector('.valor-livro');
+
   // Busaca no banco de dados e carega-os no grid
   if (data.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
@@ -61,9 +75,15 @@ function renderItem(data, id) {
   imagem.onerror = () => {
     imagem.src = "../img/Mockup-Livro.png";
   };
-
-  titulo.textContent = data.titulo || 'Sem título';
+  
+  titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
   autor.textContent = data.autor || 'Sem título';
+
+  //mobile:
+  autor2.textContent = capitalizarPalavras((data.autor || 'Sem título'));
+  genero.textContent = capitalizarPalavras((data.idioma || 'Sem título'));
+  idioma.textContent = capitalizarPalavras((data.genero || 'Sem título'));
+  ano.textContent = (data.ano || 'Sem título');
 
   clone.querySelector('.item-grid').dataset.id = id;  
   console.log({ grid, template });
