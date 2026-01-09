@@ -242,8 +242,15 @@ input[type="checkbox"] {
 
     .titulo-livro, .autor-livro{
         font-size: .8rem;
-        text-overflow: ellipsis;
-        line-clamp: 1;
     }
 
+    .titulo-livro {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;   /* limite de linhas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        line-height: 1.3;
+        height: calc(1.3em * 2); /* garante corte correto */
+    }
 }
