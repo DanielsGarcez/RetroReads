@@ -273,6 +273,7 @@ input[type="checkbox"] {
 @media (max-width: 600px){
     .main-catalogo{
         width: 100%;
+        min-width: 500px;
     }
 
 
