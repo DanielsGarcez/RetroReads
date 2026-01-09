@@ -212,3 +212,38 @@ input[type="checkbox"] {
     }
 
 }
+
+@media (max-width: 600px) {
+    /* ---------- Responsividade HeaderHome ---------- */
+    main{
+        width: 100%;
+    }
+
+    .main-catalogo{
+        display: flex;
+        justify-content: center;
+
+        margin: auto;
+    }
+
+    .container-catalogo{
+        width: 100%;
+    }
+
+    #grid-catalogo, .capa-livro{
+        width: 100%;
+        gap: 1rem;
+    }
+
+    #grid-catalogo{
+        margin: auto;
+        padding: 0;
+    }
+
+    .titulo-livro, .autor-livro{
+        font-size: .8rem;
+        text-overflow: ellipsis;
+        line-clamp: 1;
+    }
+
+}
