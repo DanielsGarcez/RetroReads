@@ -1,5 +1,3 @@
-
-
 .main-catalogo h1{
     padding-top: .5rem;
     margin-bottom: .5rem;
@@ -112,8 +110,6 @@ input[type="checkbox"] {
     box-shadow: var(--sombra);
     border: var(--borda);
     border-radius: 2rem;
-
-    transition: .5s ease;
 }
 
 .item-grid:hover{
@@ -121,23 +117,50 @@ input[type="checkbox"] {
     transform: translateY(-5px);
 }
 
-
-.titulo-livro{
+.titulo-livro {
     padding-top: 1rem;
     padding-bottom: .1rem;
     
     font-size: 120%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /* limite de linhas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    line-height: 1.3;
 }
 
 .autor-livro{
     padding-bottom: 1rem;
-    margin-bottom: auto;
 
     font-size: 1rem;
     font-weight: normal;
 }
 
-/* ---------- RESPONSIVIDADE ---------- */
+.btn-detalhes{
+    margin-top: auto;
+    width: 100%;
+}
+
+
+/* ---------- MOBILE OCULTO ---------- */
+.mobile-hr{
+    display: none;
+}
+
+.mobile-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;                 /* ocupa o espaço restante do card */
+}
+
+.mobile-detalhes{
+    display: none;
+}
+
+
+/* -------------------- RESPONSIVIDADE 1500px -------------------- */
 
 @media (max-width: 1500px){
     #grid-catalogo{
@@ -153,29 +176,10 @@ input[type="checkbox"] {
         max-width: calc(247px / 1.3) ;
         max-height: calc(357px / 1.3) ;
     }
-
-    .btn-detalhes{
-        font-size: 1rem;
-    }
-
-/*     .titulo-livro{
-        padding-top: 1em;
-        padding-bottom: .1em;
-        font-size: 1.1em;
-    }
-
-    .autor-livro{
-        padding-bottom: 1em;
-        margin-bottom: auto;
-
-        font-size: .9em;
-        font-weight: normal;
-    } */
 }
 
-
-@media screen and (max-width: 1050px) {
-    
+/* -------------------- RESPONSIVIDADE 1050px -------------------- */
+@media (max-width: 1050px) {
     #grid-catalogo {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -203,31 +207,54 @@ input[type="checkbox"] {
     .capa-livro{
         object-fit: cover;
         align-self: center;
-        max-width: calc(247px / 2) ;
-        max-height: calc(357px / 2) ;
+        max-width: calc(247px / 1.5) ;
+        max-height: calc(357px / 1.5) ;
     }
 
-    .titulo-livro, .autor-livro{
+    .titulo-livro{
         font-size: 1rem;
     }
 
+    .autor-livro{
+        font-size: .8rem;
+    }
+
+    .mobile-detalhes{
+        display: none;
+    }
+
+    .btn-detalhes{
+        font-size: 1rem;
+    }
 }
 
-@media (max-width: 600px) {
-    /* ---------- Responsividade HeaderHome ---------- */
-    main{
-        width: 100%;
+/* -------------------- RESPONSIVIDADE 850px -------------------- */
+@media (max-width: 850px) { /* TELA DE TABLET */
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
     }
 
     .main-catalogo{
         display: flex;
         justify-content: center;
-
-        margin: auto;
     }
 
     .container-catalogo{
+        display: block;
         width: 100%;
+    }
+
+    .container-catalogo .pc-hr{
+        display: none;
+    }
+
+    .filtro-catalogo{
+        display: none;
     }
 
     #grid-catalogo, .capa-livro{
@@ -239,10 +266,14 @@ input[type="checkbox"] {
         margin: auto;
         padding: 0;
     }
+}
 
-    .titulo-livro, .autor-livro{
-        font-size: .8rem;
+/* -------------------- RESPONSIVIDADE 600px -------------------- */
+@media (max-width: 600px){
+    .main-catalogo{
+        width: 100%;
     }
+
 
     .titulo-livro {
         display: -webkit-box;
@@ -252,5 +283,63 @@ input[type="checkbox"] {
 
         line-height: 1.3;
         height: calc(1.3em * 2); /* garante corte correto */
+    }
+    .container-catalogo{
+        border: none;
+        box-shadow: none;
+    }
+
+    #grid-catalogo{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0rem;
+    }
+
+    .item-grid{
+        display: flex;
+        flex-direction: row;
+
+        border: none;
+        box-shadow: none;
+    }
+
+    .item-grid:hover{
+        border: 0;
+        transform: translateY(0px);
+    }
+
+    .titulo-livro{
+        font-size: 1.4rem;
+    }
+
+/* ---------- Mostra no Mobile ---------- */
+    
+    .mobile-content{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        padding-left: 1rem;
+
+        text-align: left;
+    }
+
+    .mobile-detalhes{
+        display: flex;
+        flex-direction: column;
+        gap: .8rem;
+    }
+
+    .mobile-detalhes span{
+        font-weight: normal;
+    }
+
+    .mobile-hr{
+        display: flex;
+    }
+
+    /* ---------- Oculta no Mobile ---------- */
+    .autor-livro{
+        display: none;
     }
 }

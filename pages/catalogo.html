@@ -57,17 +57,29 @@
                 </label>
             </template>
 
-            <hr>
+            <hr class="pc-hr">
             
             <!---------- Área dos livros ---------->
 
             <section id="grid-catalogo">
                 <template id="card-template">
+                    <hr class="mobile-hr">
                     <article class="item-grid">
                         <img class="capa-livro" src="../img/Mockup-Livro.png" alt="capa-livro">
-                        <h2 class="titulo-livro"></h2>
-                        <h4 class="autor-livro"></h4>
-                        <button class="btn-principal btn-detalhes">Detalhes</button>
+
+                        <aside class="mobile-content">
+                            <h2 class="titulo-livro"></h2>
+                            <h4 class="autor-livro"></h4>
+
+                            <section class="mobile-detalhes">
+                                <h4>Autor: <span class="autor-livro2"></span></h4>
+                                <h4>Genero: <span class="genero-livro"></span></h4>
+                                <h4>Idioma: <span class="idioma-livro"></span></h4>
+                                <h4>Publicado em: <span class="ano-livro"></span></h4>
+                            </section>
+
+                            <button class="btn-principal btn-detalhes">Detalhes</button>
+                        </aside>
                     </article>
                 </template>
             </section>
