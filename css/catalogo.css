@@ -234,6 +234,7 @@ input[type="checkbox"] {
     * {
         scrollbar-width: none;
         -ms-overflow-style: none;
+        overflow-x: hidden;
     }
 
     *::-webkit-scrollbar {
@@ -272,14 +273,14 @@ input[type="checkbox"] {
 /* -------------------- RESPONSIVIDADE 600px -------------------- */
 @media (max-width: 600px){
     .main-catalogo{
-        width: 100%;
-        min-width: 500px;
+        min-width: 390px;
     }
 
 
     .titulo-livro {
         display: -webkit-box;
         -webkit-line-clamp: 2;   /* limite de linhas */
+        line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
 
@@ -300,6 +301,8 @@ input[type="checkbox"] {
     .item-grid{
         display: flex;
         flex-direction: row;
+        min-width: 390px;
+
 
         border: none;
         box-shadow: none;
