@@ -231,6 +231,7 @@ input[type="checkbox"] {
 
 /* -------------------- RESPONSIVIDADE 850px -------------------- */
 @media (max-width: 850px) { /* TELA DE TABLET */
+
     * {
         scrollbar-width: none;
         -ms-overflow-style: none;
@@ -239,9 +240,10 @@ input[type="checkbox"] {
 
     *::-webkit-scrollbar {
         display: none;
-    }
+    } 
 
     .main-catalogo{
+        width: 100%;
         display: flex;
         justify-content: center;
     }
@@ -249,6 +251,7 @@ input[type="checkbox"] {
     .container-catalogo{
         display: block;
         width: 100%;
+        border: 0;
     }
 
     .container-catalogo .pc-hr{
@@ -271,32 +274,52 @@ input[type="checkbox"] {
 }
 
 /* -------------------- RESPONSIVIDADE 600px -------------------- */
-@media (max-width: 600px){
+@media (max-width: 850px){
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overflow-x: hidden;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
     .main-catalogo{
         min-width: 390px;
-        width: 100vw;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
     }
 
-
-    .titulo-livro {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;   /* limite de linhas */
-        line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-
-        line-height: 1.3;
-        height: calc(1.3em * 2); /* garante corte correto */
-    }
     .container-catalogo{
+        display: flex;
+        width: 100%;
         border: none;
         box-shadow: none;
+    }
+
+    .container-catalogo .pc-hr{
+        display: none;
+    }
+
+    .filtro-catalogo{
+        display: none;
+    }
+
+    #grid-catalogo, .capa-livro{
+        width: 100%;
+        gap: 1rem;
     }
 
     #grid-catalogo{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 0rem;
+
+        margin: auto;
+        padding: 0;
     }
 
     .item-grid{
@@ -314,8 +337,16 @@ input[type="checkbox"] {
         transform: translateY(0px);
     }
 
-    .titulo-livro{
+    .titulo-livro {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;   /* limite de linhas */
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
         font-size: 1.4rem;
+        line-height: 1.3;
+        height: calc(1.3em * 2); /* garante corte correto */
     }
 
 /* ---------- Mostra no Mobile ---------- */
