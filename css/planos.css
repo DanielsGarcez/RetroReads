@@ -99,18 +99,55 @@ h3{
 }
 
 
+/* -------------------- RESPONSIVIDADE 1050px -------------------- */
+
+@media (max-width: 1050px) {
+    .main-planos{
+        max-width: 100vw;
+    }
+
+    .tipos-planos{
+        flex-direction: row;
+        margin: 0 1.5rem;
+    }
+
+    .plano-x{
+        width: 30%;
+    }
+
+    .plano-x h3{
+        font-size: 2rem;
+    }
+
+    .plano-x h2{
+        font-size: 1.5rem;
+    }
+
+    .plano-x p{
+        font-size: 1.1rem;
+    }
+
+    .plano-x li{
+        font-size: 1rem;
+    }
+
+    .descricao-planos li{
+       margin: 0; 
+    }
+}
+
+
+
 /* -------------------- RESPONSIVIDADE 850px -------------------- */
-
 @media (max-width: 850px){
-
 
     .tipos-planos{
         flex-direction: column;
     }
 
     .plano-x{
-        width: 30%;
-        padding: 3%;
+        width: 80vw;
+        padding: 2rem 2rem;
     }
 
     .plano-x h3{
