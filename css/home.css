@@ -58,3 +58,25 @@ p{
     font-weight: bold;
     color: var(--corPrincipal);
 }
+
+
+/* --------------- RESPONSIVIDADE TAMANHOS ---------------- */
+/* ----------------- 1500px 1050px 850px -------------------*/
+
+@media (max-width: 850px){
+    .banners{
+        font-size: 1.5rem;
+    }
+
+    .banners h1{
+        font-size: 2.5rem;
+    }
+
+    .banners h2{
+        font-size: 1.6rem;
+    }
+
+    .banners h3{
+        font-size: 1.4rem;
+    }
+}

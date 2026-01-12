@@ -72,7 +72,8 @@
 .btn-buscar {
     /* Dimensionando */
     display: flex;
-    padding: 10px 12px;
+    justify-content: center;
+    padding: .5rem 1rem;
 
     /* Cores */
     background-color: var(--corPrincipal);
@@ -83,8 +84,6 @@
     border-radius: 0em 2em 2em  0rem;
 
     font-size: 1rem;
-
-    transition: .5s ease;
 }
 
 .btn-buscar:hover{
@@ -222,6 +221,9 @@ hr{
     border-style: solid;
 }
 
+
+/* --------------- RESPONSIVIDADE TAMANHOS ---------------- */
+/* ----------------- 1500px 1050px 850px -------------------*/
 
 /* -------------------- Responsividade para Mobiles -------------------- */
 

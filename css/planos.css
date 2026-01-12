@@ -14,6 +14,7 @@ h3{
 
 .tipos-planos{
     display: flex;
+    flex-direction: row;
     gap: 3rem;
     margin-bottom: 5rem;
 
@@ -95,4 +96,32 @@ h3{
     cursor: pointer;
     color: var(--corPrincipal);
     background-color: var(--corBranco);
+}
+
+
+/* -------------------- RESPONSIVIDADE 850px -------------------- */
+
+@media (max-width: 850px){
+
+
+    .tipos-planos{
+        flex-direction: column;
+    }
+
+    .plano-x{
+        width: 30%;
+        padding: 3%;
+    }
+
+    .plano-x h3{
+        font-size: 2rem;
+    }
+
+    .plano-x h2{
+        font-size: 1.5rem;
+    }
+
+    .descricao-planos li{
+       margin: 0; 
+    }
 }

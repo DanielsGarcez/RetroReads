@@ -234,16 +234,6 @@ input[type="checkbox"] {
 
 /* -------------------- RESPONSIVIDADE 850px -------------------- */
 @media (max-width: 850px){
-    * {
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        overflow-x: hidden;
-    }
-
-    *::-webkit-scrollbar {
-        display: none;
-    }
-
     .main-catalogo{
         min-width: 390px;
         width: 100%;

@@ -91,6 +91,23 @@ main{
 }
 
 
+/* --------------- RESPONSIVIDADE ---------------- */
+
+@media (max-width: 850px){
+    * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        overflow-x: hidden;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+/* --------------- ANIMAÇÕES ---------------- */
+
 @keyframes is-rotating{
     to{
         transform: rotate(1turn);
