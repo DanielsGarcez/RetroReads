@@ -276,7 +276,9 @@ h1{
 
     .cadastrar h4{
         font-weight: normal;
+        align-self: center;
     }
+
     .link-a {
         display: flex;
     }
@@ -290,6 +292,10 @@ h1{
         margin-bottom: 2rem;
     }
 
+    .link-a:hover{
+        text-decoration: underline;
+    }
+
     .btn-ambos{
         width: 100%;
         margin-top: 1rem;
@@ -298,6 +304,10 @@ h1{
 }
 
 @media (max-width: 600px){
+    .main-cadastro{
+        width: 100%;
+    }
+    
     .seccoes{
         padding: 1rem;
     }
