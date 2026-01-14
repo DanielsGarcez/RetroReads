@@ -246,6 +246,10 @@ h1{
     background-color: var(--corBranco);
 }
 
+.link-a {
+    display: none;
+}
+
 /* -------------------- RESPONSIVIDADE 800px -------------------- */
 @media (max-width: 800px){
     .tem-login{
@@ -262,13 +266,43 @@ h1{
     }
 
     .cadastrar form{
-        width: 90%;
+        width: 100%;
         margin: auto;
     }
 
-    .link-a{
+    .cadastrar input{
+        width: 90%;
+    }
+
+    .cadastrar h4{
+        font-weight: normal;
+    }
+    .link-a {
+        display: flex;
+    }
+
+    .link-a a{
         color: var(--corPrincipal);
         text-decoration: none;
         font-weight: bold;
+        font-size: 1rem;
+
+        margin-bottom: 2rem;
+    }
+
+    .btn-ambos{
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px){
+    .seccoes{
+        padding: 1rem;
+    }
+
+    .container{
+        width: 80%;
     }
 }

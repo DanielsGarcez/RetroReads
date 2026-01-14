@@ -16,7 +16,7 @@
 
     box-shadow: var(--sombra);
     border: var(--borda);
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 
 .container h2{
@@ -38,7 +38,7 @@
 }
 
 .container input{
-    width: 20rem;
+    width: 20vw;
     padding: 1rem;
 
     font-size: 1rem;
@@ -95,7 +95,7 @@
     }
 
     .container input{
-        width: 80%;
+        width: 50vw;
         padding: .8rem;
         box-sizing: border-box;
     }
