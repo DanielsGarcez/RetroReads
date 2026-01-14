@@ -166,7 +166,6 @@ input[type="checkbox"] {
 
 
 /* -------------------- RESPONSIVIDADE 1500px -------------------- */
-
 @media (max-width: 1500px){
     #grid-catalogo{
         display: grid;
@@ -193,11 +192,10 @@ input[type="checkbox"] {
     }
 
     .container-catalogo{
-        display: block;
-        width: 100%;
+        display: flex;
     }
 
-    .container-catalogo hr{
+    .pc-hr{
         display: none;
     }
 
@@ -233,11 +231,10 @@ input[type="checkbox"] {
 }
 
 /* -------------------- RESPONSIVIDADE 850px -------------------- */
-@media (max-width: 850px){
+@media (max-width: 800px){
     .main-catalogo{
         min-width: 390px;
         width: 100%;
-
         display: flex;
         justify-content: center;
     }
@@ -267,7 +264,7 @@ input[type="checkbox"] {
         width: 100vw;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
+        gap: .5rem;
 
         margin: auto;
         padding: 0;
