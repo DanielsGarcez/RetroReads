@@ -146,6 +146,10 @@ input[type="checkbox"] {
 
 
 /* ---------- MOBILE OCULTO ---------- */
+.mobile-header{
+    display: none;
+}
+
 .mobile-hr{
     display: none;
 }
@@ -239,6 +243,10 @@ input[type="checkbox"] {
         justify-content: center;
     }
 
+    .main-catalogo h1{
+        font-size: 2.5rem;
+    }
+
     .container-catalogo{
         max-width: 100vw;
         display: flex;
@@ -329,5 +337,11 @@ input[type="checkbox"] {
     /* ---------- Oculta no Mobile ---------- */
     .autor-livro{
         display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .mobile-header{
+        display: flex;
     }
 }

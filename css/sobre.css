@@ -75,6 +75,7 @@ p{
 
     .banners h1{
         font-size: 2rem;
+        color: var(--corPrincipal);
     }
 
     .banners h2{

@@ -150,6 +150,9 @@ h3{
 
 /* -------------------- RESPONSIVIDADE 850px -------------------- */
 @media (max-width: 850px){
+    .main-planos h1{
+        font-size: 2.5rem;
+    }
 
     .tipos-planos{
         flex-direction: column;
