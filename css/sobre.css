@@ -64,6 +64,10 @@ p{
 /* ----------------- 1500px 1050px 850px -------------------*/
 
 @media (max-width: 850px){
+    .main-sobre{
+        width: 90%;
+    }
+
     .banners{
         font-size: 1.5rem;
     }
@@ -78,5 +82,9 @@ p{
 
     .banners h3{
         font-size: 1.4rem;
+    }
+
+    .banners img{
+        width: 100%;
     }
 }

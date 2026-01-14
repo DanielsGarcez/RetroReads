@@ -99,6 +99,16 @@ h3{
 }
 
 
+@media (max-width: 1500px){
+    .main-planos{
+        width: 90%;
+    }
+
+    .plano-x{
+        width: 100%;
+    }
+}
+
 /* -------------------- RESPONSIVIDADE 1050px -------------------- */
 
 @media (max-width: 1050px) {
@@ -143,15 +153,21 @@ h3{
 
     .tipos-planos{
         flex-direction: column;
+        margin-bottom: 0;
     }
 
     .plano-x{
-        width: 80vw;
+        width: 90vw;
         padding: 2rem 2rem;
+        box-sizing: border-box;
+    }
+
+    .plano-x:hover{
+        transform: translateY(0px);        
     }
 
     .plano-x h3{
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     .plano-x h2{
