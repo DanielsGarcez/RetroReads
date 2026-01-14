@@ -202,8 +202,6 @@ h1{
     width: 100%;
 }
 
-
-
 #preview-capa{
     width: 70%;
     align-self: center;
@@ -246,4 +244,31 @@ h1{
     cursor: pointer;
     color: var(--corPrincipal);
     background-color: var(--corBranco);
+}
+
+/* -------------------- RESPONSIVIDADE 800px -------------------- */
+@media (max-width: 800px){
+    .tem-login{
+        display: none;
+    }
+
+    .container{
+        width: 60%;
+    }
+
+    .cadastrar{
+        width: 100%;
+        padding-top: 3rem;
+    }
+
+    .cadastrar form{
+        width: 90%;
+        margin: auto;
+    }
+
+    .link-a{
+        color: var(--corPrincipal);
+        text-decoration: none;
+        font-weight: bold;
+    }
 }

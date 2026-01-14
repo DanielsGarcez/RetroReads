@@ -230,7 +230,7 @@ input[type="checkbox"] {
     }
 }
 
-/* -------------------- RESPONSIVIDADE 850px -------------------- */
+/* -------------------- RESPONSIVIDADE 800px -------------------- */
 @media (max-width: 800px){
     .main-catalogo{
         min-width: 390px;
@@ -247,7 +247,7 @@ input[type="checkbox"] {
         box-shadow: none;
     }
 
-    .container-catalogo .pc-hr{
+    .pc-hr{
         display: none;
     }
 
