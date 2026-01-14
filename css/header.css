@@ -1,4 +1,4 @@
-.header {
+.header-home {
     /* Dimensionamento */
     width: 100%;
 
@@ -286,4 +286,19 @@ hr{
         margin-right: 10%;
     }
 
+}
+
+/* -------------------- HeaderMobile -------------------- */
+@media (max-width: 600px){
+    .header-mobile{
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .btn-menu{
+        border: 0;
+        background-color: none;
+        color: var(--corPrincipal);
+    }
 }
