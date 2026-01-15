@@ -290,6 +290,10 @@ hr{
 
 /* -------------------- HeaderMobile -------------------- */
 @media (max-width: 600px){
+    .header-home{
+        display: none;
+    }
+
     .header-mobile{
         width: 100vw;
         display: flex;
@@ -302,3 +306,4 @@ hr{
         color: var(--corPrincipal);
     }
 }
+

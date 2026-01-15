@@ -3,7 +3,8 @@
     align-items: center;
 }
 
-img {
+.main-home img {
     width: 200px;
     height: auto;
 }
+
