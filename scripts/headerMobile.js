@@ -1,4 +1,13 @@
 // Exporta o HeaderMobile para todas as páginas
+
+window.revelarMenu = function (){
+  const menu = document.querySelector("#menuMobile");
+
+  if (!menu) return;
+  
+  menu.classList.toggle("revelarElemento");
+}
+
 async function carregarHeader() {
   try {
     const resposta = await fetch("/RetroReads/pages/fetch/HeaderMobile.html");
