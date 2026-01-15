@@ -1,5 +1,6 @@
 .header-home {
     /* Dimensionamento */
+    display: block;
     width: 100%;
 
     /* Alinhamento */
@@ -143,7 +144,10 @@
     color: var(--corPrincipal);
 }
 
-
+/* ---------- Oculta o HeaderMobile ---------- */
+.header-mobile{
+    display: none;
+}
 
 /* ---------- Header Simples ---------- */
 
@@ -175,8 +179,9 @@
     margin-right: 10%;
 }
 
-#logo-r, #user-perfil{
+.logo-r, .user-perfil{
     height: 3rem;
+    text-decoration: none;
 }
 
 
@@ -296,14 +301,27 @@ hr{
 
     .header-mobile{
         width: 100vw;
+        display: block;
+        box-shadow: var(--sombra);
+    }
+
+    .container-header-mobile{
+        width: 100%;
         display: flex;
         flex-direction: row;
+
+        justify-content: center;
+        gap: 80%;
+
+        padding: 1rem;
     }
 
     .btn-menu{
         border: 0;
-        background-color: none;
+        background-color: transparent;
         color: var(--corPrincipal);
+
+        font-size: 2rem;
     }
 }
 
