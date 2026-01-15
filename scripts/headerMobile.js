@@ -10,9 +10,12 @@ window.revelarMenu = function (){
       nav.classList.toggle("revelarElemento");
       btnIcon.innerHTML = "⨉";
     }
-    console.log("Ocultou o objeto")
-    nav.classList.toggle("ocultarElemento");
-    btnIcon.innerHTML = "☰";
+    if (nav.classList.contains('revelarElemento')){
+      console.log("Ocultou o objeto")
+      nav.classList.toggle("ocultarElemento");
+      btnIcon.innerHTML = "☰";
+
+    }return
 
   } return;
 }
