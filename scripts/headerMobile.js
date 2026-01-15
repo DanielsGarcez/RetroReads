@@ -2,12 +2,17 @@
 
 window.revelarMenu = function (){
   const nav = document.getElementById("nav-mobile");
+  const btnIcon = document.getElementById("btn-menu")
 
-  if (!nav){
+  if (nav){
     if (nav.classList.contains('ocultarElemento')){
+      console.log("Revelou o objeto")
       menu.classList.toggle("revelarElemento");
-    } 
+      btnIcon.innerHTML = "⨉";
+    }
+    console.log("Ocultou o objeto")
     menu.classList.toggle("ocultarElemento");
+    btnIcon.innerHTML = "☰";
 
   } return;
 }
