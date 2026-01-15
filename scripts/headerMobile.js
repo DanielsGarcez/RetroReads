@@ -7,11 +7,11 @@ window.revelarMenu = function (){
   if (nav){
     if (nav.classList.contains('ocultarElemento')){
       console.log("Revelou o objeto")
-      menu.classList.toggle("revelarElemento");
+      nav.classList.toggle("revelarElemento");
       btnIcon.innerHTML = "⨉";
     }
     console.log("Ocultou o objeto")
-    menu.classList.toggle("ocultarElemento");
+    nav.classList.toggle("ocultarElemento");
     btnIcon.innerHTML = "☰";
 
   } return;
