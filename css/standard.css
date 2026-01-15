@@ -45,6 +45,14 @@ main{
     background-color: var(--corBranco);
 }
 
+.revelarElemento{
+    display: block;
+}
+
+.ocultarElemento{
+    display: none;
+}
+
 .btn-principal{
     padding: .3em;
     font-size: 130%;

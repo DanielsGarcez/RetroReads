@@ -1,11 +1,15 @@
 // Exporta o HeaderMobile para todas as páginas
 
 window.revelarMenu = function (){
-  const menu = document.querySelector("#menuMobile");
+  const nav = document.getElementById("nav-mobile");
 
-  if (!menu) return;
-  
-  menu.classList.toggle("revelarElemento");
+  if (!nav){
+    if (nav.classList.contains('ocultarElemento')){
+      menu.classList.toggle("revelarElemento");
+    } 
+    menu.classList.toggle("ocultarElemento");
+
+  } return;
 }
 
 async function carregarHeader() {
