@@ -88,16 +88,17 @@ input[type="checkbox"] {
     flex-direction: row;
 }
 
-.btn-filtro{
+.texto-filtro{
     font-size: 1rem;
     text-align: left;
+    padding-right: 1rem;
 
     border: none;
     background: none;
     cursor: pointer;
 }
 
-.btn-filtro:hover{
+.texto-filtro:hover{
     color: var(--corPrincipal);
 }
 
