@@ -13,15 +13,6 @@ const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
 
 
-const templateCheckbox = document.getElementById("checkbox-template");
-
-const filtroGenero = document.getElementById("filtro-genero");
-const filtroIdioma = document.getElementById("filtro-idioma");
-const filtroValor = document.getElementById("filtro-valor");
-const filtroAcabamento = document.getElementById("filtro-acabamento");
-const filtroDisponibilidade = document.getElementById("filtro-disponibilidade");
-
-
 //---------- ÁREA DE FUNÇÕES ----------
 
 // Funçãõ que carrega a tela de carregameto
@@ -105,6 +96,7 @@ function renderItem(data, id) {
 
   return clone;
 }
+
 
 
 //---------- ÁREA DE INICIALIZAÇÃO ----------

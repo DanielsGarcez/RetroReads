@@ -97,15 +97,9 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
-.btn-filtro:hover{
-    color: var(--corPrincipal);
-}
-
 .seta-filtro{
     color: var(--corPrincipal);
     transform: rotate(90deg);
-    margin-left: auto;
-    cursor: pointer;
 }
 
 /* ---------- Lista de Livro do Catalogo ---------- */
