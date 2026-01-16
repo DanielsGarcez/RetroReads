@@ -29,32 +29,48 @@
             <section class="filtro-catalogo">
                 <h3>Filtros</h3>
 
-                <h5>Categorias</h5>
+                <section class="filtro-section">
+                    <button class="btn-filtro" id="btn-filtro-categorias">Categorias</button> 
+                    <h5 class="seta-filtro" id="seta-filtro-categorias">▶</h5>
+                </section>
                 <hr>
                 <aside id="filtro-genero"></aside>
 
-                <h5>Valor</h5>
+                <section class="filtro-section">
+                    <button class="btn-filtro" id="btn-filtro-valor">Valor</button>
+                    <h5 class="seta-filtro" id="seta-filtro-valor">▶</h5>
+                </section>
                 <hr>
                 <aside id="filtro-valor"></aside>
 
-                <h5>Idioma</h5>
+                <section class="filtro-section">
+                    <button class="btn-filtro" id="btn-filtro-idioma">Idioma</button>
+                    <h5 class="seta-filtro" id="seta-filtro-idioma">▶</h5>
+                </section>
                 <hr>
                 <aside id="filtro-idioma"></aside>
 
-                <h5>Acabamento</h5>
+                <section class="filtro-section">
+                    <button class="btn-filtro" id="btn-filtro-acabamento">Acabamento</button>
+                    <h5 class="seta-filtro" id="seta-filtro-acabamento">▶</h5>
+                </section>
                 <hr>
                 <aside id="filtro-acabamento"></aside>
                 
-                <h5>Disponibilidade</h5>
+                <section class="filtro-section">
+                    <button class="btn-filtro-disponibilidade" id="btn-filtro-disponibilidade">Disponibilidade</button>
+                    <h5 class="seta-filtro" id="seta-filtro-disponibilidade">▶</h5>
+                </section>
                 <hr>
                 <aside id="filtro-disponibilidade"></aside>
         
             </section>
 
+            <!-- TEMPLATE DE FILTRO CHECKBOX -->
             <template id="checkbox-template">
                 <label class="checkbox-filtro">
-                    <input type="checkbox">
-                    <span></span>
+                    <input class="input-checkbox" type="checkbox">
+                    <span class=".text-checkbox"></span>
                 </label>
             </template>
 

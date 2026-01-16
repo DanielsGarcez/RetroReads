@@ -83,6 +83,25 @@ input[type="checkbox"] {
     margin-bottom: 1rem;
 }
 
+.filtro-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-filtro{
+    font-size: 1rem;
+    text-align: left;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.seta-filtro{
+    color: var(--corPrincipal);
+    transform: rotate(90deg);
+}
+
 /* ---------- Lista de Livro do Catalogo ---------- */
 
 #grid-catalogo{

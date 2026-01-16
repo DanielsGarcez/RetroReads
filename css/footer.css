@@ -1,6 +1,7 @@
 .footer {
     /* Dimensionamento */
     width: 100%;
+    position: fixed;
 
     /* Alinhamento */
     padding-top: 25px;
@@ -92,7 +93,8 @@
 /* -------------------- Responsividade para Tablets -------------------- */
 
 @media (max-width: 900px) {
-    .footer-img{
+
+    .footer-logo-livro, .footer-logo-r{
         display: none;
     }
 

@@ -29,6 +29,7 @@ async function carregarLoading() {
   document.body.appendChild(container);
 }
 
+// Função que deixa as letras em maiúsculo
 function capitalizarPalavras(str) {
   return str.toLowerCase().replace('-',' ').split(' ').map(function(word) {
     return (word.charAt(0).toUpperCase() + word.slice(1));
