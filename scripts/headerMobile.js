@@ -1,22 +1,24 @@
 // Exporta o HeaderMobile para todas as páginas
 
-window.revelarMenu = function (){
+window.revelarMenu = function () {
   const nav = document.getElementById("nav-mobile");
-  const btnIcon = document.getElementById("btn-menu")
+  const btnIcon = document.getElementById("btn-menu");
 
-  if (nav){
-    if (nav.classList.contains('ocultarElemento')){
-      console.log("Revelou o objeto")
-      nav.classList.toggle("revelarElemento");
-      btnIcon.innerHTML = "⨉";
-    } 
-    else if (nav.classList.contains('revelarElemento')){
-      console.log("Ocultou o objeto")
-      nav.classList.toggle("ocultarElemento");
-      btnIcon.innerHTML = "☰";
-    }return
-  } return;
-}
+  if (!nav || !btnIcon) return;
+
+  if (nav.classList.contains("ocultarElemento")) {
+    nav.classList.remove("ocultarElemento");
+    nav.classList.add("revelarElemento");
+    btnIcon.innerHTML = "⨉";
+    console.log("Revelou o menu");
+  } else {
+    nav.classList.remove("revelarElemento");
+    nav.classList.add("ocultarElemento");
+    btnIcon.innerHTML = "☰";
+    console.log("Ocultou o menu");
+  }
+};
+
 
 async function carregarHeader() {
   try {
