@@ -322,7 +322,9 @@ hr{
         background-color: transparent;
         color: var(--corPrincipal);
 
+        transition: .5s ease;
         font-size: 2rem;
+        cursor: pointer;
     }
 
     #nav-mobile{
@@ -353,10 +355,13 @@ hr{
 
     .ocultarElemento{
         display: none;
+        transform: translateX(0);
     }
 
     .revelarElemento{
         display: flex;
+        transform: translateX(-100%);
+        transition: 0.3s;
     }
 }
 
