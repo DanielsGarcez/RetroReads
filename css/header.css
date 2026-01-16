@@ -301,8 +301,7 @@ hr{
 
     .header-mobile{
         width: 100vw;
-        display: block;
-        box-shadow: var(--sombra);
+        display: contents;
     }
 
     .container-header-mobile{
@@ -311,18 +310,21 @@ hr{
         flex-direction: row;
         gap: 80%;
 
+        position: relative;
+        z-index: 10000;
+
         padding: 1rem;
         justify-content: center;
 
         box-sizing: border-box;
+        box-shadow: var(--sombra);
     }
 
     #btn-menu{
         border: 0;
         background-color: transparent;
         color: var(--corPrincipal);
-
-        transition: .5s ease;
+        
         font-size: 2rem;
         cursor: pointer;
     }
@@ -335,6 +337,7 @@ hr{
         justify-self: end;
 
         padding: 0 2rem;
+        padding-top: 2rem;
 
         font-size: 2rem;
         box-sizing: border-box;
@@ -355,13 +358,11 @@ hr{
 
     .ocultarElemento{
         display: none;
-        transform: translateX(0);
+        position: fixed;
     }
 
     .revelarElemento{
         display: flex;
-        transform: translateX(-100%);
-        transition: 0.3s;
     }
 }
 
