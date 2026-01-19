@@ -209,7 +209,7 @@
     align-self: flex-end;
 }
 
-@media screen and (min-width: 1200px){
+@media (min-width: 1200px){
     .container-detalhes{
         width: 60%;
     }
@@ -231,12 +231,16 @@
 }
 
 @media (max-width: 900px){
-    .container-detalhes {
+    .main-detalhes{
         width: 90%;
+    }
+
+    .container-detalhes {
+        width: 100%;
 
         box-shadow: none;
         border: none;
-        border-radius: none;
+        border-radius: 0;
     }
 
     .parte1-detalhes{
@@ -261,12 +265,16 @@
 }
 
 @media (max-width: 600px){
+    .container-detalhes{
+        width: 100%;
+    }
+
     .parte1-esquerda img{
         width: 10rem;
     }
 
     .parte1-direita h2 {
-        font-size: 1.5;
+        font-size: 1.5rem;
     }
 
     .parte1-direita h3{
@@ -275,8 +283,12 @@
 
     .parte1-direita p{
         font-size: 1rem;
+
+        display: -webkit-box;
         -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
         line-clamp: 9;
+        overflow: hidden;
     }
 
     .btn-principal {
