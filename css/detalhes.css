@@ -66,6 +66,10 @@
 
 /* ------------- Segunda Parte ------------- */
 
+.hr-mobile{
+    display: none;
+}
+
 .parte2-detalhes{
     display: flex;
     flex-direction: row;
@@ -208,5 +212,74 @@
 @media screen and (min-width: 1200px){
     .container-detalhes{
         width: 60%;
+    }
+}
+
+@media (max-width: 900px){
+    .parte2-detalhes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parte2-direita {
+        align-items: center;
+    }
+
+    .ambos-lados {
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px){
+    .container-detalhes {
+        width: 90%;
+
+        box-shadow: none;
+        border: none;
+        border-radius: none;
+    }
+
+    .parte1-detalhes{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .parte1-esquerda img {
+        width: 15rem;
+    }
+    
+    .parte1-direita {
+        margin-left: 1rem;
+        text-align: left;
+        width: 50%;
+    }
+
+    .hr-mobile{
+        display: flex;
+    }
+
+}
+
+@media (max-width: 600px){
+    .parte1-esquerda img{
+        width: 10rem;
+    }
+
+    .parte1-direita h2 {
+        font-size: 1.5;
+    }
+
+    .parte1-direita h3{
+        font-size: 1rem;
+    }
+
+    .parte1-direita p{
+        font-size: 1rem;
+        -webkit-line-clamp: 9;
+        line-clamp: 9;
+    }
+
+    .btn-principal {
+        padding: .3em;  
     }
 }
