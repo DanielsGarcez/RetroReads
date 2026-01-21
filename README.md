@@ -1,4 +1,4 @@
-![Texto alternativo]([https://link-da-imagem.png](https://drive.google.com/file/d/1v7c_wVG1OeijH0ka0stBfPmbVyvo4_27/view?usp=sharing))
+![Texto alternativo]([https://link-da-imagem.png](https://drive.google.com/file/d/1v7c_wVG1OeijH0ka0stBfPmbVyvo4_27/view?usp=sharing)](https://camo.githubusercontent.com/bb3a55fcb82cca9127ab0944a571e6d604571789115a91b8608564718bac8094/68747470733a2f2f696d6775722e636f6d2f6f696f456446792e706e67))
 # RetroReads - Website
 
 # Sumário
