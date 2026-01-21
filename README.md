@@ -1,6 +1,5 @@
 ![Texto alternativo]([https://link-da-imagem.png](https://drive.google.com/file/d/1v7c_wVG1OeijH0ka0stBfPmbVyvo4_27/view?usp=sharing))
-### RetroReads - Website
----
+# RetroReads - Website
 
 # Sumário
 1. - [Sobre o projeto](#sobre)
@@ -28,6 +27,6 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
  - **Autenticação JWT:** O sistema é todo autenticado garantindo que apenas usuários cadastrados e com permissão possam acessar as funcionalidades que exigem uma autenticação, deixando o sistema seguro contra requisições mal intencionadas sem privilégios de acesso;
 
 
-### Preview do Site
+# Preview do Site
 ---
 [...]
