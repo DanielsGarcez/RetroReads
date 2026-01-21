@@ -20,6 +20,22 @@
 
 /* ---------- Filtro do Catalogo ---------- */
 
+.barra-ferramentas {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+
+    border: var(--borda);
+    border-radius: 2rem;
+    background-color: var(--corPrincipal);
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    padding: .7em 2rem;
+    margin-bottom: 2rem;
+}
+
 .filtro-catalogo{
     display: flex;
     flex-direction: column;
@@ -127,14 +143,13 @@ input[type="checkbox"] {
     border-radius: 1rem;
     align-self: center;
     
-    max-width: 247px;
-    max-height: 357px;
+    max-height: 257px;
 }
 
 .item-grid{
     display: flex;
     flex-direction: column;
-    max-height: 35rem;
+    max-height: 100%;
     padding: 1rem;
 
     box-shadow: var(--sombra);
