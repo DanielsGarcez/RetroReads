@@ -2,11 +2,11 @@
 # RetroReads - Website
 
 # Sumário
-1. - [Sobre o projeto](#sobre)
-2. - [Funcionalidades](#funcionalidades)
-3. - [Preview do site](#preview)
-4. - [Tecnologias usadas](#tecnologias)
-5. - [Autores](#autores)
+1. [Sobre o projeto](#sobre)
+2. [Funcionalidades](#funcionalidades)
+3. [Preview do site](#preview)
+4. [Tecnologias usadas](#tecnologias)
+5. [Autores](#autores)
 
 
 # Sobre o projeto
