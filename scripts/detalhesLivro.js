@@ -4,7 +4,7 @@ import {doc, getDoc} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-fi
 const parametros = new URLSearchParams(window.location.search);
 const livroId = parametros.get("id");
 
-async function dadosLivro() {
+async function dadosLivro(data) {
     const ref = doc(db, "livros", livroId);
     const snap = await getDoc(ref);
 
@@ -12,15 +12,17 @@ async function dadosLivro() {
 
     const livro = snap.data();
 
-    document.getElementById("capa").src = livro.capa;
-    document.getElementById("titulo").textContent = livro.titulo;
-    /* document.getElementById("descricao").textContent = livro.descricao; */
+    document.getElementById("capa-livro").src = livro.capa;
+    document.getElementById("titulo-livro").textContent = livro.titulo;
+    /* document.getElementById("descricao-livro").textContent = livro.descricao; */
+    /* document.getElementById("valor-livro").textContent = livro.valor; */
 
     document.getElementById("nome-autor").textContent = livro.autor;
     document.getElementById("ano-lancamento").textContent = livro.ano;
     document.getElementById("num-isbn").textContent = livro.isbn;
     document.getElementById("idioma").textContent = livro.idioma;
-    document.getElementById("num-pagina").textContent = livro.paginas;
+    document.getElementById("num-paginas").textContent = livro.paginas;
     document.getElementById("tipo-capa").textContent = livro.tipoCapa;
+    
 }
 dadosLivro();
