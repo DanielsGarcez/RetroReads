@@ -1,5 +1,5 @@
 // Funçãõ que carrega a tela de carregameto
-async function carregarLoading() {
+export async function carregarLoading() {
   //espera o html carregar
   const response = await fetch('/RetroReads/pages/fetch/TelaCarregamento.html');
   const html = await response.text();
@@ -13,21 +13,21 @@ async function carregarLoading() {
 }
 
 // Função que deixa as letras em maiúsculo
-function capitalizarPalavras(str) {
+export function capitalizarPalavras(str) {
   return str.toLowerCase().replace('-',' ').split(' ').map(function(word) {
     return (word.charAt(0).toUpperCase() + word.slice(1));
   }).join(' ');
 }
 
 // Função de mostrar a Tela de Loading
-function mostrarLoading() {
+export function mostrarLoading() {
   const telaLoading = document.getElementById('sobrepor-carregamento');
   if (telaLoading) telaLoading.style.display = 'flex';
   console.log("Abriu Loading")
 }
 
 // Função de esconder a Tela de Loading
-function esconderLoading() {
+export function esconderLoading() {
   const telaLoading = document.getElementById('sobrepor-carregamento');
   if (telaLoading) telaLoading.remove(); // remove do DOM
   console.log("Fechou Loading")
