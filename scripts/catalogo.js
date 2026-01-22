@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const livroId = card.dataset.id;
 
       if (livroId) {
-        window.location.href = `detalhes.html?id=${livroId}`; 
+        window.location.href = `/RetroReads/pages/detalhes.html?id=${livroId}`; 
         console.log("ID: ",livroId)
         console.log("Título: ",livroNome)
       }
