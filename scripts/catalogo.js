@@ -1,5 +1,4 @@
 //---------- ÁREA DE IMPORTAÇÕES ----------
-
 import { db } from './firebase.js';
 import {
   collection,
@@ -13,8 +12,8 @@ const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
 
 
-//---------- ÁREA DE FUNÇÕES ----------
 
+// -------------------- ÁREA DE FUNÇÕES --------------------
 // Funçãõ que carrega a tela de carregameto
 async function carregarLoading() {
   //espera o html carregar
@@ -66,6 +65,7 @@ function renderItem(data, id) {
 
   const valor = clone.querySelector('.valor-livro');
 
+
   // Busaca no banco de dados e carega-os no grid
   if (data.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
@@ -79,6 +79,7 @@ function renderItem(data, id) {
   
   titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
   autor.textContent = data.autor || 'Sem título';
+
 
   //mobile:
   autor2.textContent = capitalizarPalavras((data.autor || 'Sem título'));
@@ -122,7 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const item = renderItem(doc.data(), doc.id);
         grid.appendChild(item);
       });
-
       //esconde a tela de Loading
       esconderLoading();
     });
@@ -140,11 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const livroId = card.dataset.id;
 
       if (livroId) {
-/*         window.location.href = `detalhes.html?id=${livroId}`; */
+        window.location.href = `detalhes.html?id=${livroId}`; 
         console.log("ID: ",livroId)
         console.log("Título: ",livroNome)
       }
-    });
+      });
 
   }, 500);
   })();

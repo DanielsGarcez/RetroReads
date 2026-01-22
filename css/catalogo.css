@@ -41,7 +41,7 @@
     padding: .7em 1rem;
 }
 
-.barra-ferramentas input{
+.barra-ferramentas select{
     padding: 0.3rem;
     border: var(--borda);
     border-radius: 2rem;
@@ -144,7 +144,7 @@ input[type="checkbox"] {
 
 #grid-catalogo{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
 
     padding: 1rem;
