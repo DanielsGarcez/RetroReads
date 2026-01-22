@@ -23,4 +23,4 @@ async function dadosLivro() {
     document.getElementById("num-pagina").textContent = livro.paginas;
     document.getElementById("tipo-capa").textContent = livro.tipoCapa;
 }
-carregarLivro();
+dadosLivro();
