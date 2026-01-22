@@ -23,11 +23,11 @@
 .barra-ferramentas {
     display: flex;
     width: 100%;
+    gap: 1%;
     box-sizing: border-box;
 
     border: var(--borda);
     border-radius: 2rem;
-    background-color: var(--corPrincipal);
 
     font-size: 1.1rem;
     font-weight: bold;
