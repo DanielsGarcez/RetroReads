@@ -14,7 +14,7 @@ async function dadosLivro() {
 
     document.getElementById("capa").src = livro.capa;
     document.getElementById("titulo").textContent = livro.titulo;
-    document.getElementById("descricao").textContent = livro.descricao;
+    /* document.getElementById("descricao").textContent = livro.descricao; */
 
     document.getElementById("nome-autor").textContent = livro.autor;
     document.getElementById("ano-lancamento").textContent = livro.ano;
