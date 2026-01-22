@@ -1,6 +1,9 @@
+.main-catalogo{
+    gap: 1.5rem;
+}
+
 .main-catalogo h1{
     padding-top: .5rem;
-    margin-bottom: .5rem;
 
     font-family: var(--fonteEstilizada);
     font-size: 3rem;
@@ -23,17 +26,25 @@
 .barra-ferramentas {
     display: flex;
     width: 100%;
-    gap: 1%;
+    gap: 1.3rem;
+
     box-sizing: border-box;
+    box-shadow: var(--sombra);
 
     border: var(--borda);
     border-radius: 2rem;
+    
 
     font-size: 1.1rem;
     font-weight: bold;
 
-    padding: .7em 2rem;
-    margin-bottom: 2rem;
+    padding: .7em 1rem;
+}
+
+.barra-ferramentas input{
+    padding: 0.3rem;
+    border: var(--borda);
+    border-radius: 2rem;
 }
 
 .filtro-catalogo{
@@ -133,10 +144,10 @@ input[type="checkbox"] {
 
 #grid-catalogo{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
 
-    padding: 1rem 2rem;
+    padding: 1rem;
 }
 
 .capa-livro{
@@ -166,7 +177,7 @@ input[type="checkbox"] {
     padding-top: 1rem;
     padding-bottom: .1rem;
     
-    font-size: 120%;
+    font-size: 1.1rem;
 
     display: -webkit-box;
     line-clamp: 2;   /* limite de linhas */
@@ -187,6 +198,7 @@ input[type="checkbox"] {
 .btn-detalhes{
     margin-top: auto;
     width: 100%;
+    font-size: 1.1rem;
 }
 
 
