@@ -32,3 +32,5 @@ function esconderLoading() {
   if (telaLoading) telaLoading.remove(); // remove do DOM
   console.log("Fechou Loading")
 }
+
+
