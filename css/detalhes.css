@@ -267,6 +267,8 @@
 @media (max-width: 600px){
     .container-detalhes{
         width: 100%;
+        box-sizing: border-box;
+        padding: 0rem;
     }
 
     .parte1-esquerda img{

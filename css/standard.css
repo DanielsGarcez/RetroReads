@@ -35,6 +35,7 @@
 main{
     width: 80%;
     margin: auto;
+    margin-top: 1rem;
     margin-bottom: 5%;
 
     display: flex;

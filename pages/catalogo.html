@@ -25,120 +25,70 @@
     <main class="main-catalogo">
         <h1>Catálogo</h1>
 
-        <section class="barra-ferramentas">
-            <select id="genero-livro" name="generos">
-                <option value="">Todos os Gêneros</option>
-                <option value="aventura">Aventura</option>
-                <option value="autoajuda">Autoajuda</option>
-                <option value="biografia">Biografia</option>
-                <option value="ciencia">Ciência</option>
-                <option value="critica-literaria">Crítica Literária</option>
-                <option value="educacao">Educação</option>
-                <option value="ensaios">Ensaios</option>
-                <option value="fantasia">Fantasia</option>
-                <option value="ficcao-cientifica">Ficção Científica</option>
-                <option value="ficcao-juvenil">Ficção Juvenil</option>
-                <option value="gastronomia">Gastronomia</option>
-                <option value="graphic-novels">Graphic Novels</option>
-                <option value="historia">História</option>
-                <option value="historia-alternativa">História Alternativa</option>
-                <option value="literatura-infantil">Literatura Infantil</option>
-                <option value="livros-contos">Livros de Contos</option>
-                <option value="livros-ilustrados">Livros Ilustrados</option>
-                <option value="misterio-policial">Mistério/Policial</option>
-                <option value="negocios">Negócios</option>
-                <option value="pecas-teatro">Peças de Teatro</option>
-                <option value="poesia">Poesia</option>
-                <option value="quadrinhos">Quadrinhos</option>
-                <option value="religiao-espiritualidade">Religião e Espiritualidade</option>
-                <option value="romance">Romance</option>
-                <option value="terror">Terror</option>
-                <option value="viagem">Viagem</option>
-            </select>
+        <article class="dropdown">
+            <button id="btn-dropdown" class="btn-principal">Filtros</button>
 
-            <select id="idioma-livro" name="idiomas">
-                <option value="">Idioma:</option>
-                <option value="ptbr-idioma">Português(BR)</option>
-                <option value="ptbr-idioma">Português(PT)</option>
-                <option value="en-idioma">Inglês</option>
-                <option value="es-idioma">Espanhol</option>
-                <option value="it-idioma">Italiano</option>
-                <option value="fr-idioma">Francês</option>
-                <option value="de-idioma">Alemão</option>
-            </select>
+            <section class="barra-ferramentas dropdown-content">
+                <select id="genero-livro" name="generos">
+                    <option value="">Todos os Gêneros</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="autoajuda">Autoajuda</option>
+                    <option value="biografia">Biografia</option>
+                    <option value="ciencia">Ciência</option>
+                    <option value="critica-literaria">Crítica Literária</option>
+                    <option value="educacao">Educação</option>
+                    <option value="ensaios">Ensaios</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="ficcao-cientifica">Ficção Científica</option>
+                    <option value="ficcao-juvenil">Ficção Juvenil</option>
+                    <option value="gastronomia">Gastronomia</option>
+                    <option value="graphic-novels">Graphic Novels</option>
+                    <option value="historia">História</option>
+                    <option value="historia-alternativa">História Alternativa</option>
+                    <option value="literatura-infantil">Literatura Infantil</option>
+                    <option value="livros-contos">Livros de Contos</option>
+                    <option value="livros-ilustrados">Livros Ilustrados</option>
+                    <option value="misterio-policial">Mistério/Policial</option>
+                    <option value="negocios">Negócios</option>
+                    <option value="pecas-teatro">Peças de Teatro</option>
+                    <option value="poesia">Poesia</option>
+                    <option value="quadrinhos">Quadrinhos</option>
+                    <option value="religiao-espiritualidade">Religião e Espiritualidade</option>
+                    <option value="romance">Romance</option>
+                    <option value="terror">Terror</option>
+                    <option value="viagem">Viagem</option>
+                </select>
 
-            <select id="tipos-capa" name="tipos de capa">
-                <option value="">Acabamento:</option>
-                <option value="capa-comum">Capa Comum</option>
-                <option value="capa-dura">Capa Dura</option>
-            </select>
+                <select id="idioma-livro" name="idiomas">
+                    <option value="">Idioma:</option>
+                    <option value="ptbr-idioma">Português(BR)</option>
+                    <option value="ptbr-idioma">Português(PT)</option>
+                    <option value="en-idioma">Inglês</option>
+                    <option value="es-idioma">Espanhol</option>
+                    <option value="it-idioma">Italiano</option>
+                    <option value="fr-idioma">Francês</option>
+                    <option value="de-idioma">Alemão</option>
+                </select>
 
-            <select id="disponibilidade">
-                <option value="">Disponibilidade:</option>
-                <option value="Reservado">Reservado</option>
-                <option value="Livre">Livre</option>
-            </select>
-        </section>
+                <select id="tipos-capa" name="tipos de capa">
+                    <option value="">Acabamento:</option>
+                    <option value="capa-comum">Capa Comum</option>
+                    <option value="capa-dura">Capa Dura</option>
+                </select>
+
+                <select id="disponibilidade">
+                    <option value="">Disponibilidade:</option>
+                    <option value="Reservado">Reservado</option>
+                    <option value="Livre">Livre</option>
+                </select>
+            </section>
+        </article>
 
         <article class="container-catalogo">
-
-<!--        FILTRO ANTIGO 
-            <section class="filtro-catalogo">
-                <h3>Filtros</h3>
-
-                <button class="filtro-section">
-                    <h5 class="texto-filtro">Categorias</h5> 
-                    <h5 class="seta-filtro" id="seta-filtro-categorias">▶</h5>
-                </button>
-                <hr>
-                <aside id="filtro-genero"></aside>
-
-                <button class="filtro-section">
-                    <h5 class="texto-filtro">Valor</h5>
-                    <h5 class="seta-filtro" id="seta-filtro-valor">▶</h5>
-                </button>
-                <hr>
-                <aside id="filtro-valor"></aside>
-
-                <button class="filtro-section">
-                    <h5 class="texto-filtro">Idioma</h5>
-                    <h5 class="seta-filtro" id="seta-filtro-idioma">▶</h5>
-                </button>
-                <hr>
-                <aside id="filtro-idioma"></aside>
-
-                <button class="filtro-section">
-                    <h5 class="texto-filtro">Acabamento</h5>
-                    <h5 class="seta-filtro" id="seta-filtro-acabamento">▶</h5>
-                </button>
-                <hr>
-                <aside id="filtro-acabamento"></aside>
-                
-                <button class="filtro-section">
-                    <h5 class="texto-filtro">Disponibilidade</h5>
-                    <h5 class="seta-filtro" id="seta-filtro-disponibilidade">▶</h5>
-                </button>
-                <hr>
-                <aside id="filtro-disponibilidade"></aside>
-        
-            </section>
-
-            <hr class="pc-hr"> 
-
-            <!-- TEMPLATE DE FILTRO CHECKBOX -->
-            <template id="checkbox-template">
-                <label class="checkbox-filtro">
-                    <input class="input-checkbox" type="checkbox">
-                    <span class=".text-checkbox"></span>
-
-                </label>
-            </template> 
-
             <!---------- Área dos livros ---------->
-
             <section id="grid-catalogo">
                 <template id="card-template">
-                    <hr class="mobile-hr">
+                    
                     <article class="item-grid">
                         <img class="capa-livro" src="img/Mockup-Livro.png" alt="capa-livro">
 
@@ -156,6 +106,7 @@
                             <button class="btn-principal btn-detalhes">Detalhes</button>
                         </aside>
                     </article>
+                    <hr class="mobile-hr">
                 </template>
             </section>
         </article>
