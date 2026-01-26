@@ -4,8 +4,9 @@
 
 :root{
     /* Cores: */
+    --corPrincipalTransparente: #12945842;
     --corPrincipal: #129458;
-    --corSecundária: #1f4935;
+    --corSecundaria: #317554;
     --corBranco: #fff;
     --corCinzaEscuro:#666;
     --corCinzaMedio: #d3d3d3;
@@ -30,7 +31,7 @@
 
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--corPrincipal) var(--corCinzaEscuro);
+    scrollbar-color: var(--corPrincipal) var(--corCinzaClaro);
 }
 
 main{

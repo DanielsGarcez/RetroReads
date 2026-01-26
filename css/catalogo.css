@@ -179,6 +179,7 @@ input[type="checkbox"] {
     box-shadow: var(--sombra);
     border: var(--borda);
     border-radius: 2rem;
+    color: var(--corCinzaEscuro)
 }
 
 .item-grid:hover{
@@ -210,7 +211,7 @@ input[type="checkbox"] {
 }
 
 .btn-detalhes{
-    background-color: var(--corBranco);
+    background-color: var(--corPrincipalTransparente);
     color: var(--corPrincipal);
 
     margin-top: auto;
