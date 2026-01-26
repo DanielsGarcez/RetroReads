@@ -27,7 +27,7 @@
     width: 100%;
 }
 
-.btn-dropdown{
+#btn-dropdown{
     display: none;
 }
 
@@ -55,7 +55,7 @@
     border-radius: 2rem;
 
     font-weight: 500;
-    background-color: var(--corCinzaMedio);
+    background-color: var(--corCinzaClaro);
     color: var(--corCinzaEscuro);
 }
 
@@ -187,6 +187,7 @@ input[type="checkbox"] {
 }
 
 .titulo-livro {
+    color: var(--corPreto);
     padding-top: 1rem;
     padding-bottom: .1rem;
     
@@ -209,9 +210,17 @@ input[type="checkbox"] {
 }
 
 .btn-detalhes{
+    background-color: var(--corBranco);
+    color: var(--corPrincipal);
+
     margin-top: auto;
     width: 100%;
     font-size: 1.1rem;
+}
+
+.btn-detalhes:hover{
+    background-color: var(--corPrincipal);
+    color: var(--corBranco);
 }
 
 
