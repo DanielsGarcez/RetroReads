@@ -99,7 +99,7 @@
 .parte2-esquerda table th, td{
     padding: .8rem 2rem;
 
-    background-color: var(--corCinzaEscuro);
+    background-color: var(--corCinzaMedio);
     font-weight: normal;
 }
 

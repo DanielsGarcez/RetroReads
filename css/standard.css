@@ -7,11 +7,12 @@
     --corPrincipal: #129458;
     --corSecundária: #1f4935;
     --corBranco: #fff;
-    --corCinzaEscuro: #d3d3d3;
+    --corCinzaEscuro:#666;
+    --corCinzaMedio: #d3d3d3;
     --corCinzaClaro: #eee;
     --corPreto: #0E0F11;
 
-    --borda: 1px solid var(--corCinzaEscuro);
+    --borda: 1px solid var(--corCinzaMedio);
     --sombra:  0px 7px 7px rgba(0, 0, 0, 0.10);
     --sombraDestaque:  0px 7px 7px rgba(0, 0, 0, 0.50);
 

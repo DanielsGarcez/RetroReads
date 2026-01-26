@@ -23,6 +23,14 @@
 
 /* ---------- Filtro do Catalogo ---------- */
 
+.dropdown{
+    width: 100%;
+}
+
+.btn-dropdown{
+    display: none;
+}
+
 .barra-ferramentas {
     display: flex;
     width: 100%;
@@ -45,6 +53,10 @@
     padding: 0.3rem;
     border: var(--borda);
     border-radius: 2rem;
+
+    font-weight: 500;
+    background-color: var(--corCinzaMedio);
+    color: var(--corCinzaEscuro);
 }
 
 .filtro-catalogo{
@@ -151,6 +163,7 @@ input[type="checkbox"] {
 }
 
 .capa-livro{
+    border: var(--borda);
     border-radius: 1rem;
     align-self: center;
     
