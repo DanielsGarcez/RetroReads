@@ -44,10 +44,14 @@ function renderItem(data, id) {
   
   titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
   autor.textContent = data.autor || 'Sem título';
-  valor.textContent = data.valor || 'Sem título';
+
+  // Conversor para Reais
+  let valorReais = valor.toFixed(2);
+
+  valorReais.textContent = data.valor || 'Sem título';
 
 
-  //mobile:
+  //Só aparece no Mobile:
   autor2.textContent = capitalizarPalavras((data.autor || 'Sem título'));
   genero.textContent = capitalizarPalavras((data.idioma || 'Sem título'));
   idioma.textContent = capitalizarPalavras((data.genero || 'Sem título'));

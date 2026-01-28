@@ -190,14 +190,10 @@
 /* ---------- Barra de Navegação ---------- */
 
 .navbar{
-    display: inline-block;
-    width: 100%;
     padding: .7em 0px;
 
     background-color: var(--corPrincipal);
     box-shadow: var(--sombra);
-
-    margin-bottom: 1rem;
 }
 .lista-opcoes {
     display: flex;
