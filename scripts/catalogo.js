@@ -44,6 +44,7 @@ function renderItem(data, id) {
   
   titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
   autor.textContent = data.autor || 'Sem título';
+  valor.textContent = data.valor || 'Sem título';
 
 
   //mobile:
