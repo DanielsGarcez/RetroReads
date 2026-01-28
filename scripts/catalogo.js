@@ -28,7 +28,7 @@ function renderItem(data, id) {
   const ano = clone.querySelector('.ano-livro');
   const idioma = clone.querySelector('.idioma-livro');
 
-  const valor = clone.querySelector('.valor-livro');
+  const valor = clone.querySelector('.valor');
 
 
   // Busaca no banco de dados e carega-os no grid
