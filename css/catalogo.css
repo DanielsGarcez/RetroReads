@@ -68,6 +68,7 @@
 #btn-limpa-filtro{
     padding-right: 1rem;
     padding-left: 1rem;
+    margin-left: auto;
 }
 
 .filtro-catalogo{
@@ -167,7 +168,7 @@ input[type="checkbox"] {
 
 #grid-catalogo{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     gap: 1rem;
 
     padding: 1rem;
@@ -201,8 +202,8 @@ input[type="checkbox"] {
 
 .titulo-livro {
     color: var(--corPreto);
-    padding-top: 1rem;
-    padding-bottom: .1rem;
+    margin-top: 1rem;
+    margin-bottom: .1rem;
     
     font-size: 1rem;
 
@@ -216,7 +217,8 @@ input[type="checkbox"] {
 }
 
 .autor-livro{
-    padding-bottom: 1rem;
+    margin: auto;
+    margin-bottom: .5rem;
 
     font-size: 1rem;
     font-weight: normal;
@@ -224,12 +226,15 @@ input[type="checkbox"] {
 
 
 .valor-livro{
-    margin: 1rem 0rem;
+    margin: .5rem 0;
+    margin-top: auto;
+
     font-size: 1.3rem;
     font-weight: 600;
 }
 
 .valor{
+
     color: var(--corPrincipal);
 }
 
@@ -237,7 +242,6 @@ input[type="checkbox"] {
     background-color: var(--corPrincipalTransparente);
     color: var(--corPrincipal);
 
-    margin-top: auto;
     width: 100%;
     font-size: 1.1rem;
 }
@@ -277,14 +281,14 @@ input[type="checkbox"] {
 @media (max-width: 1980px){
     #grid-catalogo{
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(8, 1fr);
     }
 }
 
 /* -------------------- RESPONSIVIDADE 1500px -------------------- */
 @media (max-width: 1500px){
     #grid-catalogo{
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(7, 1fr);
     }
 
     .capa-livro{
@@ -301,14 +305,14 @@ input[type="checkbox"] {
 /* -------------------- RESPONSIVIDADE 1200px -------------------- */
 @media (max-width: 1200px){
     #grid-catalogo{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
 /* -------------------- RESPONSIVIDADE 1050px -------------------- */
 @media (max-width: 1080px) {
     #grid-catalogo {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .container-catalogo{
