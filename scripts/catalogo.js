@@ -46,7 +46,7 @@ function renderItem(data, id) {
   autor.textContent = data.autor || 'Sem título';
 
   // Conversor para Reais
-  let valorReais = valor.toFixed(2);
+  let valorReais = parseFloat(valor).toFixed(2);
 
   valorReais.textContent = data.valor || 'Sem título';
 
