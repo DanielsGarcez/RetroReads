@@ -71,6 +71,21 @@ function renderItem(data, id) {
 }
 
 
+// Carrega os gêneros no select
+async function carregarGeneros() {
+  const generoRef = doc(db, "categorias", "generos");
+  const resultadoSnap = await getDoc(generoRef);
+  const dadosGeneros = resultadoSnap.data();
+
+  select.innerHTML = `<option value="">Todos</option>`;
+
+  Object.entires(dadosGeneros).forEach(([key, value]) =>{
+    select.innerHTML += `
+      <option value="${key}">${value}</option>
+    `
+  })
+}
+
 
 //---------- ÁREA DE INICIALIZAÇÃO ----------
 
@@ -120,22 +135,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Título: ",livroNome)
       }
       });
-
-
-      // Carrega os gêneros no select
-      async function carregarGeneros() {
-        const generoRef = doc(db, "categorias", "generos");
-        const resultadoSnap = await getDoc(generoRef);
-        const dadosGeneros = resultadoSnap.data();
-
-        select.innerHTML = `<option value="">Todos</option>`;
-
-        Object.entires(dadosGeneros).forEach(([key, value]) =>{
-          select.innerHTML += `
-            <option value="${key}">${value}</option>
-          `
-        })
-      }
 
       // Filtro
       select.addEventListener("change", () =>{
