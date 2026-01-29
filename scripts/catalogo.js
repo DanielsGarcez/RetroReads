@@ -16,7 +16,7 @@ import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} f
 const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
 
-const select = document.getElementById("filtroGenero")
+const select = document.getElementById("genero-livro")
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
