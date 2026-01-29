@@ -4,13 +4,18 @@ import {
   collection,
   query,
   orderBy,
-  onSnapshot
+  onSnapshot,
+  getDoc,
+  where,
+  getDocs
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 
 // Variáveis de Template e Grid da área dos livros
 const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
+
+const select = document.getElementById("filtroGenero")
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
@@ -50,8 +55,8 @@ function renderItem(data, id) {
 
   //Só aparece no Mobile:
   autor2.textContent = capitalizarPalavras((data.autor || 'Sem autor'));
-  genero.textContent = capitalizarPalavras((data.idioma || 'Sem genero'));
-  idioma.textContent = capitalizarPalavras((data.genero || 'Sem idioma'));
+  genero.textContent = capitalizarPalavras((data.idioma || 'Sem idioma'));
+  idioma.textContent = capitalizarPalavras((data.genero || 'Sem genero'));
   ano.textContent = (data.ano || 'Sem data');
 
   clone.querySelector('.item-grid').dataset.id = id;  
@@ -73,17 +78,21 @@ document.addEventListener("DOMContentLoaded", () => {
   (async () =>{
   //espera carregar a função tela de loading
   await carregarLoading();
+
   //mostra a tela de Loading
   mostrarLoading();
+
+  //espera carreagar a função de filtros
+  await carregarGeneros();
 
   // Função que simula a tela de carregamento
   setTimeout(function() {
 
     // Pega as informações do livro no banco de dados
     const livrosRef = collection(db, "livros");
-    const q = query(livrosRef, orderBy("criadoEm", "desc"));
+    const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
-    onSnapshot(q, (snapshot) => {
+    onSnapshot(queryLivros, (snapshot) => {
       grid.innerHTML = "";
 
       snapshot.forEach((doc) => {
@@ -93,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
       //esconde a tela de Loading
       esconderLoading();
     });
-
 
     // Botão que abre a página de detalhes do livro clicado
     grid.addEventListener("click", (event) =>{
@@ -112,6 +120,52 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Título: ",livroNome)
       }
       });
+
+
+      // Carrega os gêneros no select
+      async function carregarGeneros() {
+        const generoRef = doc(db, "categorias", "generos");
+        const resultadoSnap = await getDoc(generoRef);
+        const dadosGeneros = resultadoSnap.data();
+
+        select.innerHTML = `<option value="">Todos</option>`;
+
+        Object.entires(dadosGeneros).forEach(([key, value]) =>{
+          select.innerHTML += `
+            <option value="${key}">${value}</option>
+          `
+        })
+      }
+
+      // Filtro
+      select.addEventListener("change", () =>{
+        filtrarLivros(select.value);
+      })
+
+      async function filtrarLivros(genero) { 
+        let queryFiltros;
+
+        if (genero){
+          queryFiltros = query(
+            collection(db, "livros"),
+            where("genero", "==", genero),
+            orderBy("criadoEm", "desc")
+          );
+        } else{
+          queryFiltros = query(
+            collection(db, "livros"),
+            orderBy("criadoEm", "desc")
+          )
+        }
+
+        const snapshot = await getDoc(queryFiltros);
+
+        grid.innerHTML = "";
+        snapshot.forEach(doc =>{
+          const item = renderItem(doc.data(), doc.id);
+          grid.appendChild(item);
+        })
+      }
 
   }, 500);
   })();
