@@ -81,7 +81,7 @@ async function carregarGeneros() {
 
   select.innerHTML = `<option value="">Todos</option>`;
 
-  Object.entires(dadosGeneros).forEach(([key, value]) =>{
+  Object.entries(dadosGeneros).forEach(([key, value]) =>{
     select.innerHTML += `
       <option value="${key}">${value}</option>
     `
