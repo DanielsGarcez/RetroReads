@@ -28,9 +28,6 @@ function renderItem(data, id) {
   const ano = clone.querySelector('.ano-livro');
   const idioma = clone.querySelector('.idioma-livro');
 
-  const valor = clone.querySelector('.valor');
-
-
   // Busaca no banco de dados e carega-os no grid
   if (data.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
@@ -43,19 +40,19 @@ function renderItem(data, id) {
   };
   
   titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
-  autor.textContent = data.autor || 'Sem título';
+  autor.textContent = data.autor || 'Sem autor';
 
   // Conversor para Reais
-  let valorReais = parseFloat(valor).toFixed(2);
+  let valorReais = parseFloat(data.valor).toFixed(2);
+  const valor = clone.querySelector('.valor');
 
-  valorReais.textContent = data.valor || 'Sem título';
-
+  valor.textContent = valorReais || 'Sem valor'
 
   //Só aparece no Mobile:
-  autor2.textContent = capitalizarPalavras((data.autor || 'Sem título'));
-  genero.textContent = capitalizarPalavras((data.idioma || 'Sem título'));
-  idioma.textContent = capitalizarPalavras((data.genero || 'Sem título'));
-  ano.textContent = (data.ano || 'Sem título');
+  autor2.textContent = capitalizarPalavras((data.autor || 'Sem autor'));
+  genero.textContent = capitalizarPalavras((data.idioma || 'Sem genero'));
+  idioma.textContent = capitalizarPalavras((data.genero || 'Sem idioma'));
+  ano.textContent = (data.ano || 'Sem data');
 
   clone.querySelector('.item-grid').dataset.id = id;  
   console.log({ grid, template });

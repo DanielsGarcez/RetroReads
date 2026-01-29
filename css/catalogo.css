@@ -65,12 +65,14 @@
 }
 
 #btn-limpa-filtro{
+    width: max-content;
+    
     padding-right: 1rem;
     padding-left: 1rem;
     margin-left: auto;
 }
 
-#btn-limpa-filtro{
+#btn-limpa-filtro:hover{
     color: var(--corPrincipal);
 }
 
