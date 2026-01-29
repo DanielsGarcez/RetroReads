@@ -7,7 +7,8 @@ import {
   onSnapshot,
   getDoc,
   where,
-  getDocs
+  getDocs,
+  doc
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 
@@ -71,6 +72,7 @@ function renderItem(data, id) {
 }
 
 
+
 // Carrega os gêneros no select
 async function carregarGeneros() {
   const generoRef = doc(db, "categorias", "generos");
@@ -85,6 +87,7 @@ async function carregarGeneros() {
     `
   })
 }
+
 
 
 //---------- ÁREA DE INICIALIZAÇÃO ----------
