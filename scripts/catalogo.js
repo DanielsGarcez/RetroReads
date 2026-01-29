@@ -16,7 +16,7 @@ import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} f
 const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
 
-const select = document.getElementById("genero-livro");
+let select;
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
@@ -96,6 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
   (async () =>{
   //espera carregar a função tela de loading
   await carregarLoading();
+  
+  //define o select
+  select = document.getElementById('genero-livro');
 
   //mostra a tela de Loading
   mostrarLoading();
