@@ -1,5 +1,6 @@
 
 # RetroReads - Website
+<img width="1586" height="617" alt="RetroReads White" src="https://github.com/user-attachments/assets/bcd83861-638b-44d9-9b05-55101160998b" />
 
 # Sumário
 1. [Sobre o projeto](#sobre)
