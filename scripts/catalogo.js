@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
           )
         }
 
-        const snapshot = await getDoc(queryFiltros);
+        const snapshot = await getDocs(queryFiltros);
 
         grid.innerHTML = "";
         snapshot.forEach(doc =>{
