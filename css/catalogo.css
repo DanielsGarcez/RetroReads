@@ -374,7 +374,21 @@ input[type="checkbox"] {
     }
 
     .barra-ferramentas{
+        display: flex;
+        flex-direction: column;
+
         border-radius: none;
+        gap: 1rem;
+    }
+
+    #btn-dropdown {
+        display: flex;
+        padding: 0.5rem 2rem;
+    }
+
+    #form-filtro{
+        border-radius: 0;
+        box-shadow: none;
     }
 
     .container-catalogo{
@@ -385,17 +399,12 @@ input[type="checkbox"] {
         box-shadow: none;
     }
 
+    .dropdown-content:target{
+        display: flex;
+    }
+
     .pc-hr{
         display: none;
-    }
-
-    .filtro-catalogo{
-        display: none;
-    }
-
-    .capa-livro{
-        width: 100%;
-        gap: 1rem;
     }
 
     #grid-catalogo{
@@ -405,10 +414,6 @@ input[type="checkbox"] {
 
         margin: auto;
         padding: 0;
-    }
-
-    .barra-ferramentas {
-        gap: 1rem;
     }
 
     .item-grid{
@@ -427,6 +432,11 @@ input[type="checkbox"] {
     .item-grid:hover{
         border: 0;
         transform: translateY(0px);
+    }
+
+    .capa-livro{
+        width: 100%;
+        gap: 1rem;
     }
 
     .titulo-livro {
