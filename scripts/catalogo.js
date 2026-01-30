@@ -16,7 +16,11 @@ import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} f
 const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
 
-let select;
+// Variáveis de Filtros
+const selectGenero = document.getElementById("filtro-genero");
+const selectIdioma = document.getElementById("filtro-idioma");
+const selectAcabamento = document.getElementById("filtro-acabamento");
+const selectDisponibilidade = document.getElementById("filtro-disponibilidade");
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
@@ -73,46 +77,26 @@ function renderItem(data, id) {
 
 
 
-// Carrega os gêneros no select
-async function carregarGeneros() {
-  const generoRef = doc(db, "categorias", "generos");
-  const resultadoSnap = await getDoc(generoRef);
-  const dadosGeneros = resultadoSnap.data();
-
-  select.innerHTML = `<option value="">Todos</option>`;
-
-  Object.entries(dadosGeneros).forEach(([key, value]) =>{
-    select.innerHTML += `
-      <option value="${key}">${value}</option>
-    `
-  })
-}
-
-
-
-//---------- ÁREA DE INICIALIZAÇÃO ----------
+// -------------------- ÁREA DE INICIALIZAÇÃO --------------------
 
 document.addEventListener("DOMContentLoaded", () => {
   (async () =>{
-  //espera carregar a função tela de loading
+  // espera carregar a função tela de loading
   await carregarLoading();
-  
-  //define o select
-  select = document.getElementById('genero-livro');
-
-  //mostra a tela de Loading
+  // mostra a tela de Loading
   mostrarLoading();
 
-  //espera carreagar a função de filtros
-  await carregarGeneros();
+  // ------------------------------------------------------------
 
-  // Função que simula a tela de carregamento
+  // função que simula a tela de carregamento
   setTimeout(function() {
 
-    // Pega as informações do livro no banco de dados
+    // pega as informações do livro no banco de dados
     const livrosRef = collection(db, "livros");
     const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
+    // --------------------------------------------------------------------------------
+    // carrega os cards com os dados dos livros
     onSnapshot(queryLivros, (snapshot) => {
       grid.innerHTML = "";
 
@@ -124,7 +108,37 @@ document.addEventListener("DOMContentLoaded", () => {
       esconderLoading();
     });
 
-    // Botão que abre a página de detalhes do livro clicado
+    // --------------------------------------------------------------------------------
+    [selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade].forEach(select => {
+      select.addEventListener("change", aplicarFiltros);
+    });
+
+    async function aplicarFiltros() {
+      const genero = selectGenero.value;
+      const idioma = selectIdioma.value;
+      const acabamento = selectAcabamento.value;
+      const disponibilidade = selectDisponibilidade.value;
+
+      let filtros = [];
+
+      if (genero) filtros.push(where("genero", "==", genero));
+      if (idioma) filtros.push(where("idioma", "==", idioma));
+      if (acabamento) filtros.push(where("acabamento", "==", acabamento));
+      if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
+
+      const q = query(
+        collection(db, "livros"),
+        ...filtros,
+        orderBy("criadoEm", "desc")
+      );
+
+      const snapshot = await getDocs(q);
+      renderizar(snapshot);
+    }
+
+    // --------------------------------------------------------------------------------
+
+    // botão que abre a página de detalhes do livro clicado
     grid.addEventListener("click", (event) =>{
       const botao = event.target.closest(".btn-detalhes");
       if (!botao) return;
@@ -140,37 +154,37 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("ID: ",livroId)
         console.log("Título: ",livroNome)
       }
-      });
+    });
 
-      // Filtro
-      select.addEventListener("change", () =>{
-        filtrarLivros(select.value);
-      })
+    // Filtra os livros baseado no valor do select 
+/*     select.addEventListener("change", () =>{
+      filtrarLivros(select.value);
+    })
 
-      async function filtrarLivros(genero) { 
-        let queryFiltros;
+    async function filtrarLivros(genero) { 
+      let queryFiltros;
 
-        if (genero){
-          queryFiltros = query(
-            collection(db, "livros"),
-            where("genero", "==", genero),
-            orderBy("criadoEm", "desc")
-          );
-        } else{
-          queryFiltros = query(
-            collection(db, "livros"),
-            orderBy("criadoEm", "desc")
-          )
-        }
-
-        const snapshot = await getDocs(queryFiltros);
-
-        grid.innerHTML = "";
-        snapshot.forEach(doc =>{
-          const item = renderItem(doc.data(), doc.id);
-          grid.appendChild(item);
-        })
+      if (genero){
+        queryFiltros = query(
+          collection(db, "livros"),
+          where("genero", "==", genero),
+          orderBy("genero", "desc")
+        );
+      } else{
+        queryFiltros = query(
+          collection(db, "livros"),
+          orderBy("genero", "desc")
+        )
       }
+
+      const snapshot = await getDocs(queryFiltros);
+
+      grid.innerHTML = "";
+      snapshot.forEach(doc =>{
+        const item = renderItem(doc.data(), doc.id);
+        grid.appendChild(item);
+      }) 
+    }*/
 
   }, 500);
   })();

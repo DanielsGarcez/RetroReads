@@ -101,9 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 idioma: idiomaLivro,
                 paginas: numPaginas,
                 valor: parseFloat(valorLivro),
+                disponibiliadade: Boolean(true),
 
                 criadoPor: {
                     uid: usuarioLogado.uid,
+                    //name: nomeusuário.name,
                     email: usuarioLogado.email
                 },
 
