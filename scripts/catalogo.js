@@ -77,7 +77,7 @@ function renderItem(data, id) {
 }
 
 // Função que renderiza os cards do grid
-function renderizar(){
+function renderizar(snapshot){
   grid.innerHTML = "";
 
   snapshot.forEach((doc) => {
@@ -104,9 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizar(snapshotInicial);
 
   // ------------------------------------------------------------
+
+
   // função que simula a tela de carregamento
   setTimeout(function() {
-
 
   // --------------------------------------------------------------------------------
     [selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade].forEach(select => {

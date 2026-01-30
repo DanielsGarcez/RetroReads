@@ -382,8 +382,11 @@ input[type="checkbox"] {
     }
 
     #btn-dropdown {
-        display: flex;
+        display: inline-flex;
         padding: 0.5rem 2rem;
+
+        text-align: center;
+        text-decoration: none;
     }
 
     #form-filtro{
@@ -399,7 +402,7 @@ input[type="checkbox"] {
         box-shadow: none;
     }
 
-    .dropdown-content:target{
+    #dropdown-content:target{
         display: flex;
     }
 
