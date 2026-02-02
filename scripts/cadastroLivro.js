@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 tipoCapa: tipoCapa,
                 paginas: numPaginas,
                 valor: parseFloat(valorLivro),
-                disponibilidade: disponibilidade,
+                disponibilidade: 'Disponivel',
 
                 criadoPor: {
                     uid: usuarioLogado.uid,

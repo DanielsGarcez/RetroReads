@@ -157,9 +157,8 @@
     width: 100%;
 
     /* Alinhamento */
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin-bottom: 10px;
+    padding: .5rem 0rem;
+    margin-bottom: 2rem;
 
     /* Decorativo */
     background-color: var(--corBranco);

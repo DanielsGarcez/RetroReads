@@ -130,7 +130,7 @@ h3{
 /* ---------- CADASTRO LIVRO ---------- */
 
 .main-cadastroLivro .container{
-    margin-top: 3%;
+    margin-top: 2rem;
 }
 
 .largura{
@@ -139,7 +139,6 @@ h3{
 
 h1{
     font-size: 3rem;
-    margin-top: 3%;
     color: var(--corPrincipal);
     font-family: var(--fonteEstilizada);
 }
