@@ -217,6 +217,9 @@
 
 /* -------------------- RESPONSIVIDADE 1200px -------------------- */
 @media (max-width: 1200px){
+    .main-catalogo {
+        width: 90vw;
+    }
     #grid-catalogo{
         box-sizing: border-box;
         grid-template-columns: repeat(6, 1fr);
@@ -225,9 +228,7 @@
 
 /* -------------------- RESPONSIVIDADE 1050px -------------------- */
 @media (max-width: 1080px) {
-    .main-catalogo {
-        width: 90vw;
-    }
+
     #grid-catalogo {
         box-sizing: border-box;
         grid-template-columns: repeat(5, 1fr);
@@ -257,7 +258,7 @@
     }
 
     .titulo-livro{
-        font-size: 1rem;
+        font-size: .9rem;
     }
 
     .autor-livro{
@@ -289,26 +290,10 @@
     .barra-ferramentas{
         display: flex;
         flex-direction: column;
+        gap: .5rem;
 
         border-radius: none;
         gap: 1rem;
-    }
-
-    #btn-dropdown {
-        display: inline-flex;
-        padding: 0.5rem 2rem;
-
-        text-align: center;
-        text-decoration: none;
-    }
-
-    #btn-dropdown:hover{
-        border-radius: 1rem 1rem 0rem 0rem;
-    }
-
-    #form-filtro{
-        border-radius: 0;
-        box-shadow: none;
     }
 
     .container-catalogo{
@@ -319,40 +304,14 @@
         box-shadow: none;
     }
 
-    #dropdown-content:target{
-        display: flex;
-    }
-
-    .pc-hr{
-        display: none;
-    }
-
     #grid-catalogo{
         box-sizing: border-box;
         width: 100vw;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: .5rem;
 
         margin: auto;
         padding: 0;
-    }
-
-    .item-grid{
-        max-width: 100vw;
-
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin: 0 1rem;
-
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .item-grid:hover{
-        border: 0;
-        transform: translateY(0px);
     }
 
     .capa-livro{
@@ -369,13 +328,63 @@
 
         padding: 0rem;
 
-        font-size: 1.4rem;
+        font-size: 1rem;
+        text-align: center;
         line-height: 1.3;
         height: calc(1.3em * 2); /* garante corte correto */
     }
+}
+
+
 
 /* ---------- Mostra no Mobile ---------- */
+@media (max-width: 600px){
+    .mobile-header{
+        display: flex;
+        box-sizing: content-box;
+    }
+
+    .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+
+    #dropup-content {
+        display: none;
+        position: absolute;
+        bottom: 50px;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    #dropdown-content:target{
+        display: flex;
+    }
+
+    .pc-hr{
+        display: none;
+    }
+
+    #form-filtro{
+        border-radius: 0;
+        box-shadow: none;
+    }
     
+
+    #btn-dropdown {
+        display: inline-flex;
+        padding: 0.5rem 2rem;
+
+        text-align: center;
+        text-decoration: none;
+    }
+
+    #btn-dropdown:hover{
+        border-radius: 1rem 1rem 0rem 0rem;
+    }
+
     .mobile-content{
         display: flex;
         flex-direction: column;
@@ -398,33 +407,29 @@
         display: flex;
     }
 
+
+    .item-grid{
+        max-width: 100vw;
+
+        gap: 1rem;
+        margin: 0 1rem;
+
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .item-grid:hover{
+        border: 0;
+        transform: translateY(0px);
+    }
+
+
+
     /* ---------- Oculta no Mobile ---------- */
     .autor-livro{
         display: none;
     }
-}
-
-@media (max-width: 600px){
-    .mobile-header{
-        display: flex;
-        box-sizing: content-box;
-    }
-
-    .dropdown{
-        position: relative;
-        display: inline-block;
-    }
-
-    #dropup-content {
-        display: none;
-        position: absolute;
-        bottom: 50px;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
     .barra-ferramentas{
         display: none;
     }

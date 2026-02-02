@@ -1,5 +1,6 @@
 import { db } from "./firebase.js";
 import {doc, getDoc} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import {carregarLoading, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 
 const parametros = new URLSearchParams(window.location.search);
 const livroId = parametros.get("id");
@@ -23,6 +24,13 @@ async function dadosLivro(data) {
     document.getElementById("idioma").textContent = livro.idioma;
     document.getElementById("num-paginas").textContent = livro.paginas;
     document.getElementById("tipo-capa").textContent = livro.tipoCapa;
-    
 }
+
+
+carregarLoading();
+
+mostrarLoading();
+
 dadosLivro();
+
+esconderLoading();
