@@ -18,7 +18,7 @@
 
     box-shadow: var(--sombra);
     border: var(--borda);
-    border-radius: 2rem;
+    border-radius: 2.7rem;
 }
 
 /* ---------- Filtro do Catalogo ---------- */
@@ -75,106 +75,12 @@
 #btn-limpa-filtro:hover{
     color: var(--corPrincipal);
 }
-
-.filtro-catalogo{
-    display: flex;
-    flex-direction: column;
-
-    margin: auto 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-
-    text-align: left;
-}
-
-.filtro-catalogo h3{
-    padding: .3rem 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-
-    border-radius: .3rem;
-    color: var(--corBranco);
-    background-color: var(--corPrincipal);
-}
-
-.filtro-catalogo aside{
-    display: flex;
-    flex-direction: column;
-
-    list-style: none;
-    text-align: left;
-}
-
-.filtro-catalogo h5{
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-.filtro-catalogo h3{
-    text-align: center;
-}
-
-.filtro-catalogo hr{
-    margin: .3rem 0rem;
-}
-
-input[type="checkbox"] {
-    accent-color: var(--corPrincipal);
-
-    width: .5rem;
-    height: .5rem;
-    margin-right: .2rem;
-
-    font-size: 2rem;
-
-    transition: .5s ease;
-}
-
-.span-categoria{
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-#filtro-catalogo{
-    margin-bottom: 1rem;
-}
-
-.filtro-section{
-    display: flex;
-    flex-direction: row;
-
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.filtro-section:hover{
-    color: var(--corPrincipal);
-}
-
-.texto-filtro{
-    font-size: 1rem;
-    text-align: left;
-    padding-right: 1rem;
-
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.seta-filtro{
-    color: var(--corPrincipal);
-    transform: rotate(90deg);
-    margin-left: auto;
-    cursor: pointer;
-}
-
 /* ---------- Lista de Livro do Catalogo ---------- */
 
 #grid-catalogo{
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    gap: 1rem;
+    gap: .5rem;
 
     padding: 1rem;
 }
@@ -285,14 +191,16 @@ input[type="checkbox"] {
 /* -------------------- RESPONSIVIDADE 1980px -------------------- */
 @media (max-width: 1980px){
     #grid-catalogo{
+        box-sizing: border-box;
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(7, 1fr);
     }
 }
 
 /* -------------------- RESPONSIVIDADE 1500px -------------------- */
 @media (max-width: 1500px){
     #grid-catalogo{
+        box-sizing: border-box;
         grid-template-columns: repeat(7, 1fr);
     }
 
@@ -310,6 +218,7 @@ input[type="checkbox"] {
 /* -------------------- RESPONSIVIDADE 1200px -------------------- */
 @media (max-width: 1200px){
     #grid-catalogo{
+        box-sizing: border-box;
         grid-template-columns: repeat(6, 1fr);
     }
 }
@@ -317,6 +226,7 @@ input[type="checkbox"] {
 /* -------------------- RESPONSIVIDADE 1050px -------------------- */
 @media (max-width: 1080px) {
     #grid-catalogo {
+        box-sizing: border-box;
         grid-template-columns: repeat(5, 1fr);
     }
 
@@ -411,6 +321,7 @@ input[type="checkbox"] {
     }
 
     #grid-catalogo{
+        box-sizing: border-box;
         width: 100vw;
         grid-template-columns: repeat(1, 1fr);
         gap: .5rem;

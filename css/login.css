@@ -12,8 +12,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
-    padding: 3rem;
-    padding-top: 5rem;
+    padding: 3rem 2rem;
 
     box-shadow: var(--sombra);
     border: var(--borda);
