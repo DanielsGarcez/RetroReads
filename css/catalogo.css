@@ -225,6 +225,9 @@
 
 /* -------------------- RESPONSIVIDADE 1050px -------------------- */
 @media (max-width: 1080px) {
+    .main-catalogo {
+        width: 90vw;
+    }
     #grid-catalogo {
         box-sizing: border-box;
         grid-template-columns: repeat(5, 1fr);
@@ -297,6 +300,10 @@
 
         text-align: center;
         text-decoration: none;
+    }
+
+    #btn-dropdown:hover{
+        border-radius: 1rem 1rem 0rem 0rem;
     }
 
     #form-filtro{
@@ -408,7 +415,7 @@
         display: inline-block;
     }
 
-    .dropup-content {
+    #dropup-content {
         display: none;
         position: absolute;
         bottom: 50px;

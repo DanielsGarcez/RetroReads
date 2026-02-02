@@ -237,20 +237,16 @@ h1{
     width: 30%;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+    padding: .5rem;
 
     font-size: 1.5rem;
-    color: var(--corBranco);
-    background-color: var(--corPrincipal);
-    border: 1px solid var(--corPrincipal);
     border-radius: 2rem;
-    
-    transition: .5s ease;
 }
 
 #btn-cadastroLivro:hover{
     cursor: pointer;
-    color: var(--corPrincipal);
-    background-color: var(--corBranco);
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
 }
 
 .link-a {

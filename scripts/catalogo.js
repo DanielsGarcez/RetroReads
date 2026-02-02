@@ -78,8 +78,6 @@ function renderItem(data, id) {
 
 // Função que renderiza os cards do grid
 function renderizar(snapshot){
-  //mostra a tela de Loading
-  mostrarLoading();
 
   grid.innerHTML = "";
 
@@ -130,8 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (idioma) filtros.push(where("idioma", "==", idioma));
       if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
       if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
-      console.log(acabamento)
-      console.log(disponibilidade)
 
       const queryFiltros = query(
         collection(db, "livros"),
