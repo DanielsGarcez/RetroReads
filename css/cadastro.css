@@ -171,14 +171,19 @@ h1{
 }
 
 .container-direito{
-    width: 60%;
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     
     padding-left: 1rem;
     padding-right: 2.3rem;
-    justify-content: center;
-    align-items: baseline;
+}
+
+.inserir-dados{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .inserir-dados label{
@@ -187,19 +192,22 @@ h1{
     margin-bottom: .3rem;
 }
 
-.inserir-dados input, select{
+.inserir-dados input, select, textarea{
     font-size: 1rem;
-    padding: .7rem;
+    padding: .5rem;
+    padding-left: .7rem;
 
     background-color: var(--corCinzaClaro);
     border: var(--borda);
     border-radius: 2rem;
 }
 
-.inserir-dados{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+#descricao-livro{
+    resize: none;
+    height: 10rem;
+
+    padding: .7rem;
+    border-radius: 1.5rem;
 }
 
 #preview-capa{

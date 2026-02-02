@@ -51,6 +51,11 @@
                             <input id="autor-livro" type="text">
                         </section>
 
+                        <section class="inserir-dados">
+                            <label>Descrição:</label>
+                            <textarea name="descrição" id="descricao-livro"></textarea>
+                        </section>
+
                         <aside class="container-duplo">
                             <section class="inserir-dados">
                                 <label>Gênero:</label>
@@ -90,24 +95,25 @@
                             </section>
                         </aside>
                     
-                        <section class="inserir-dados">
-                            <label>ISBN (Código Único)</label>
-                            <input id="ISBN" type="number">
-                        </section>
-                    
-                        <section class="inserir-dados">
-                            <label>Idioma:</label>
-                            <select id="idioma-livro" name="idiomas">
-                                <option value=""></option>
-                                <option value="Português(BR)">Português(BR)</option>
-                                <option value="Português(PT)">Português(PT)</option>
-                                <option value="Inglês">Inglês</option>
-                                <option value="Espanhol">Espanhol</option>
-                                <option value="Italiano">Italiano</option>
-                                <option value="Francês">Francês</option>
-                                <option value="Alemão">Alemão</option>
-                            </select>
-                        </section>
+                        <aside class="container-duplo">
+                            <section class="inserir-dados">
+                                <label>ISBN (Código Único)</label>
+                                <input id="ISBN" type="number">
+                            </section>
+                            <section class="inserir-dados">
+                                <label>Idioma:</label>
+                                <select id="idioma-livro" name="idiomas">
+                                    <option value=""></option>
+                                    <option value="Português(BR)">Português(BR)</option>
+                                    <option value="Português(PT)">Português(PT)</option>
+                                    <option value="Inglês">Inglês</option>
+                                    <option value="Espanhol">Espanhol</option>
+                                    <option value="Italiano">Italiano</option>
+                                    <option value="Francês">Francês</option>
+                                    <option value="Alemão">Alemão</option>
+                                </select>
+                            </section>
+                        </aside>
 
                         <aside class="container-duplo">
                             <section class="inserir-dados alinhamento-vertical-baixo">
@@ -122,12 +128,13 @@
                                 <label>Quantidade de Páginas:</label>
                                 <input id="paginas-livro" placeholder="N° Páginas" type="number">
                             </section>
-                        </aside>
+                        
 
-                        <section class="inserir-dados">
-                            <label>Valor (R$):</label>
-                            <input id="valor-livro" placeholder="Ex: 12.50" type="te">
-                        </section>
+                            <section class="inserir-dados">
+                                <label>Valor (R$):</label>
+                                <input id="valor-livro" placeholder="Ex: 12.50" type="te">
+                            </section>
+                        </aside>
                     </aside>
                 </section>
 

@@ -78,6 +78,9 @@ function renderItem(data, id) {
 
 // Função que renderiza os cards do grid
 function renderizar(snapshot){
+  //mostra a tela de Loading
+  mostrarLoading();
+
   grid.innerHTML = "";
 
   snapshot.forEach((doc) => {
@@ -110,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(function() {
 
   // --------------------------------------------------------------------------------
+  // função que filtra as categorias
     [selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade].forEach(select => {
       select.addEventListener("change", aplicarFiltros);
     });
@@ -124,8 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (genero) filtros.push(where("genero", "==", genero));
       if (idioma) filtros.push(where("idioma", "==", idioma));
-      if (acabamento) filtros.push(where("acabamento", "==", acabamento));
+      if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
       if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
+      console.log(acabamento)
+      console.log(disponibilidade)
 
       const queryFiltros = query(
         collection(db, "livros"),

@@ -54,27 +54,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Pega os IDs do formulário "form-cadastroLivro":
         const capaLivro = document.getElementById("capa-livro").value;
-        const tipoCapa = document.getElementById("tipos-capa").value;
+
         const tituloLivro = document.getElementById("titulo-livro").value;
         const autorLivro = document.getElementById("autor-livro").value;
+        const descricaoLivro = document.getElementById("descricao-livro").value;
+
         const generoLivro = document.getElementById("genero-livro").value;
         const anoLivro = document.getElementById("ano-livro").value;
         const isbn = document.getElementById("ISBN").value;
         const idiomaLivro = document.getElementById("idioma-livro").value;
+        const tipoCapa = document.getElementById("tipos-capa").value;
         const numPaginas = document.getElementById("paginas-livro").value;
         const valorLivro = document.getElementById("valor-livro").value;
 
         // Validação dos campos do Formulário:
         if(
-            !capaLivro  ||
-            !tipoCapa   ||
-            !tituloLivro||
-            !autorLivro ||
-            !generoLivro||
-            !anoLivro   ||
-            !isbn       ||
-            !idiomaLivro||
-            !numPaginas ||
+            !capaLivro      ||
+            !descricaoLivro ||
+            !tituloLivro    ||
+            !autorLivro     ||
+            !generoLivro    ||
+            !anoLivro       ||
+            !isbn           ||
+            !idiomaLivro    ||
+            !tipoCapa       ||
+            !numPaginas     ||
             !valorLivro
         ){
             alert("Por favor, preencha todos os campos.");
@@ -92,16 +96,19 @@ document.addEventListener("DOMContentLoaded", () => {
             // Salva no Firebase em outra coleção
             const docRef = await addDoc(collection(db, "livros"),{
                 capa: capaLivro,
-                tipoCapa: tipoCapa,
+                
                 titulo: tituloLivro,
                 autor: autorLivro,
+                descricao: descricaoLivro,
+
                 genero: generoLivro,
                 ano: anoLivro,
                 isbn: isbn,
                 idioma: idiomaLivro,
+                tipoCapa: tipoCapa,
                 paginas: numPaginas,
                 valor: parseFloat(valorLivro),
-                disponibiliadade: Boolean(true),
+                disponibilidade: disponibilidade,
 
                 criadoPor: {
                     uid: usuarioLogado.uid,
