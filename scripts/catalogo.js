@@ -98,7 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnDropdown = document.getElementById('btn-dropdown');
   const dropdownContent = document.getElementById('dropdown-content');
 
-  btnDropdown.addEventListener('click', () => {
+  btnDropdown.addEventListener('click', (e) => {
+      e.stopPropagation();
       dropdownContent.classList.toggle('ativo');
   });
 
