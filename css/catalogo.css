@@ -301,7 +301,8 @@
         display: flex;
 
         border: none;
-        box-shadow: 0;
+        box-shadow: none;
+        margin-bottom: 1rem;
     }
 
     #grid-catalogo{
@@ -355,8 +356,6 @@
 
     #dropdown-content form{
         display: flex;
-        position: absolute;
-        bottom: 50px;
         background-color: #f1f1f1;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
