@@ -235,6 +235,11 @@
         box-sizing: border-box;
     }
 
+    .barra-ferramentas {
+        display: flex;
+        width: 100%;
+        gap: 0.5rem;
+    }
     .pc-hr{
         display: none;
     }
@@ -329,20 +334,27 @@
         height: calc(1.3em * 2); /* garante corte correto */
     }
 
-    #btn-dropdown {
+
+    /* Botão do Filtro */
+    #dropdown-content:hover .dropdown-content{
+        display: flex;
+    }
+
+    #btn-dropdown{
+        cursor: pointer;
+
         display: inline-flex;
-        padding: 0.5rem 2rem;
+        padding: 0.3rem 1.5rem;
+
+        margin-left: .0rem;
+        border-radius: .8rem .8rem 0rem 0rem;
 
         text-align: center;
         text-decoration: none;
     }
 
-    #btn-dropdown:hover{
-        border-radius: 1rem 1rem 0rem 0rem;
-    }
-
-    #dropdown-content {
-        display: none;
+    #dropdown-content form{
+        display: flex;
         position: absolute;
         bottom: 50px;
         background-color: #f1f1f1;
@@ -351,7 +363,12 @@
         z-index: 1;
     }
 
-    #dropdown-content:hover .dropdown-content{
+    .dropdown:hover .dropdown-content {
+        display: flex; 
+    }
+    
+
+    .mobile-hr{
         display: flex;
     }
 }
@@ -368,6 +385,10 @@
     .dropdown{
         position: relative;
         display: inline-block;
+    }
+
+    #grid-catalogo{
+        grid-template-columns: repeat(3, 1fr);
     }
 
 }
