@@ -102,6 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
       dropdownContent.classList.toggle('ativo');
   });
 
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.dropdown')) {
+        dropdownContent.classList.remove('ativo');
+    }
+  });
+
 
   // função que simula a tela de carregamento
   setTimeout(function() {

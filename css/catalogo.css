@@ -27,6 +27,10 @@
     display: none;
 }
 
+#dropdown-content{
+    width: 80vw;
+}
+
 .barra-ferramentas {
     display: flex;
     width: 100%;
@@ -215,6 +219,10 @@
     #grid-catalogo{
         box-sizing: border-box;
         grid-template-columns: repeat(5, 1fr);
+    }
+
+    #dropdown-content{
+        width: 90vw;
     }
 }
 
