@@ -100,15 +100,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnDropdown.addEventListener('click', (e) => {
       e.stopPropagation();
-      dropdownContent.classList.toggle('ativo');
+      
+      if (dropdownContent.style.display === 'inline-flex') {
+          dropdownContent.style.display = 'none';
+          console.log('Fechou o Filtro');
+      } else {
+          dropdownContent.style.display = 'inline-flex';
+          console.log('Abriu o Filtro');
+      }
   });
 
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.dropdown')) {
-        dropdownContent.classList.remove('ativo');
+        dropdownContent.style.display = 'none';
+        console.log('Fechou o Filtro');
     }
   });
-
 
   // função que simula a tela de carregamento
   setTimeout(function() {
