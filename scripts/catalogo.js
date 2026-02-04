@@ -93,6 +93,14 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizar(snapshotInicial);
 
   // ------------------------------------------------------------
+  
+  // Botão Mobile que abre o filtro
+  const btnDropdown = document.getElementById('btn-dropdown');
+  const dropdownContent = document.getElementById('dropdown-content');
+
+  btnDropdown.addEventListener('click', () => {
+      dropdownContent.classList.toggle('ativo');
+  });
 
 
   // função que simula a tela de carregamento

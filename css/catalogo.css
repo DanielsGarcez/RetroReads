@@ -281,10 +281,12 @@
         width: 100vw;
         display: flex;
         justify-content: center;
+        gap: 0;
     }
 
     .main-catalogo h1{
         font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     .barra-ferramentas{
@@ -355,11 +357,11 @@
         text-decoration: none;  
     }
 
-    #dropdown-content{
+    #dropdown-content {
         display: none;
     }
 
-    #dropdown:hover + #dropdown-content{
+    #dropdown-content.ativo {
         display: flex;
     }
 
@@ -381,8 +383,12 @@
         display: flex;
     }
 
+    .item-grid{
+        padding: .5rem;
+        border-radius: 1.5rem;
+    }
+
     .item-grid:hover {
-        border:none;
         transform: translateY(0px);
     }
 }
