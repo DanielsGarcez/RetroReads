@@ -23,10 +23,6 @@
 
 /* ---------- Filtro do Catalogo ---------- */
 
-.dropdown{
-    width: 100%;
-}
-
 #btn-dropdown{
     display: none;
 }
@@ -365,9 +361,7 @@
         display: flex;
     }
 
-    #dropdown-content form{
-        z-index: 1;
-
+    #form-filtro{
         padding: 1.5rem 1rem;
 
         border: none;
@@ -400,13 +394,21 @@
         box-sizing: content-box;
     }
 
-    .dropdown{
-        position: relative;
-        display: inline-block;
-    }
-
     #grid-catalogo{
         grid-template-columns: repeat(3, 1fr);
     } 
 
+    .titulo-livro {
+        color: var(--corPreto);
+        margin-top: .5rem;
+        height: calc(1.3em * 2);
+    }
+
+    .autor-livro {
+        display: none;
+    }
+
+    .valor-livro {
+        margin-top: .5rem;
+    }
 }
