@@ -342,7 +342,7 @@
         position: absolute;
     }
 
-    #dropdown-content:hover .dropdown-content{
+    #dropdown:hover #dropdown-content{
         display: flex;
     }
 
@@ -352,7 +352,7 @@
         display: inline-flex;
         padding: 0.3rem 1.5rem;
 
-        margin-left: .0rem;
+        margin-left: .5rem;
         border-radius: .8rem .8rem 0rem 0rem;
 
         text-align: center;
