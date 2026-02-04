@@ -25,12 +25,5 @@ async function dadosLivro(data) {
     document.getElementById("num-paginas").textContent = livro.paginas;
     document.getElementById("tipo-capa").textContent = livro.tipoCapa;
 }
-
-
-carregarLoading();
-
-mostrarLoading();
-
 dadosLivro();
 
-esconderLoading();

@@ -29,7 +29,7 @@ export function mostrarLoading() {
 // Função de esconder a Tela de Loading
 export function esconderLoading() {
   const telaLoading = document.getElementById('sobrepor-carregamento');
-  if (telaLoading) telaLoading.style.display = 'none';
+  if (telaLoading) telaLoading.remove(); // remove do DOM
   console.log("Fechou Loading")
 }
 

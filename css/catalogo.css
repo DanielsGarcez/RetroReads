@@ -335,28 +335,28 @@
         height: calc(1.3em * 2); /* garante corte correto */
     }
 
-
     /* Botão do Filtro */
     #dropdown-content{
         display: none;
         position: absolute;
     }
 
-    #dropdown:hover #dropdown-content{
-        display: flex;
-    }
-
     #btn-dropdown{
         cursor: pointer;
 
         display: inline-flex;
-        padding: 0.3rem 1.5rem;
+        padding: 0.3rem 2rem;
 
-        margin-left: .5rem;
+        margin-left: 1rem;
         border-radius: .8rem .8rem 0rem 0rem;
 
+        font-size: 1.3rem;
         text-align: center;
-        text-decoration: none;
+        text-decoration: none;  
+    }
+
+    #btn-dropdown:hover, #dropdown-content{
+        display: flex;
     }
 
     #dropdown-content form{
@@ -370,9 +370,12 @@
     .mobile-hr{
         display: flex;
     }
+
+    .item-grid:hover {
+        border:none;
+        transform: translateY(0px);
+    }
 }
-
-
 
 /* ---------- Mostra no Mobile ---------- */
 @media (max-width: 600px){
@@ -388,6 +391,6 @@
 
     #grid-catalogo{
         grid-template-columns: repeat(3, 1fr);
-    }
+    } 
 
 }
