@@ -276,7 +276,7 @@
 /* -------------------- RESPONSIVIDADE 800px -------------------- */
 @media (max-width: 800px){
     .main-catalogo{
-        width: 95vw;
+        width: 100vw;
         display: flex;
         justify-content: center;
     }
@@ -286,7 +286,7 @@
     }
 
     .barra-ferramentas{
-        display: flex;
+        display: none;
         flex-direction: column;
         gap: 1rem;
 
@@ -299,7 +299,7 @@
         display: flex;
 
         border: none;
-        box-shadow: none;
+        box-shadow: 0;
     }
 
     #grid-catalogo{
@@ -344,7 +344,7 @@
         border-radius: 1rem 1rem 0rem 0rem;
     }
 
-    #dropup-content {
+    #dropdown-content {
         display: none;
         position: absolute;
         bottom: 50px;
