@@ -33,12 +33,6 @@ function renderItem(data, id) {
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
 
-  //mobile:
-  const autor2 = clone.querySelector('.autor-livro2');
-  const genero = clone.querySelector('.genero-livro');
-  const ano = clone.querySelector('.ano-livro');
-  const idioma = clone.querySelector('.idioma-livro');
-
   // Busaca no banco de dados e carega-os no grid
   if (data.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
@@ -58,12 +52,6 @@ function renderItem(data, id) {
   const valor = clone.querySelector('.valor');
 
   valor.textContent = valorReais || 'Sem valor'
-
-  //Só aparece no Mobile:
-  autor2.textContent = capitalizarPalavras((data.autor || 'Sem autor'));
-  idioma.textContent = capitalizarPalavras((data.idioma || 'Sem idioma'));
-  genero.textContent = capitalizarPalavras((data.genero || 'Sem genero'));
-  ano.textContent = (data.ano || 'Sem data');
 
   clone.querySelector('.item-grid').dataset.id = id;  
   console.log({ grid, template });
