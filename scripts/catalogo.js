@@ -99,6 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdownContent = document.getElementById('dropdown-content');
   const hrEsquerdo = document.getElementById('hr-left');
 
+  if (window.innerWidth > 800) {
+    btnDropdown.remove();
+  }
+
   btnDropdown.addEventListener('click', (e) => {
       e.stopPropagation();
       
@@ -122,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log('Fechou o Filtro');
     }
   });
+
 
   // função que simula a tela de carregamento
   setTimeout(function() {
