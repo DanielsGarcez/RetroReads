@@ -1,3 +1,7 @@
+.mobile{
+    display: none;
+}
+
 .main-catalogo{
     width: 80vw;
     gap: 1.5rem;
@@ -281,6 +285,10 @@
 
 /* -------------------- RESPONSIVIDADE 800px -------------------- */
 @media (max-width: 800px){
+    .mobile{
+        display: flex;
+    }
+
     .main-catalogo{
         width: 100vw;
         display: flex;
@@ -305,6 +313,10 @@
         font-size: 1rem;
     }
 
+    .filtro-mobile{
+        display: flex;
+    }
+
     .filtro-mobile hr{
         align-self: end;
         width: 100%;
@@ -316,7 +328,6 @@
         cursor: pointer;
 
         display: inline-flex;
-        margin: 0rem 1rem;
         padding: 0.3rem 2rem;
 
         border-top-width: 1px;
@@ -329,6 +340,11 @@
         min-width: fit-content;
     }
 
+    .btn-dropdown-ativo{
+        color: var(--corCinzaMedio);
+        background-color: var(--corBranco);
+    }
+
     .ativo {
         display: flex;
     }
@@ -337,7 +353,6 @@
         padding: 1.5rem 1rem;
 
         border: none;
-        border-top: var(--borda);
         border-radius: 0;
     }
 

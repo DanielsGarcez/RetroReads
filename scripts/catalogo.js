@@ -97,21 +97,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Botão Mobile que abre o filtro
   const btnDropdown = document.getElementById('btn-dropdown');
   const dropdownContent = document.getElementById('dropdown-content');
+  const hrEsquerdo = document.getElementById('hr-left');
 
   btnDropdown.addEventListener('click', (e) => {
       e.stopPropagation();
       
       if (dropdownContent.style.display === 'inline-flex') {
           dropdownContent.style.display = 'none';
+          btnDropdown.classList.toggle("btn-dropdown-ativo");
           console.log('Fechou o Filtro');
       } else {
           dropdownContent.style.display = 'inline-flex';
+          hrEsquerdo.style.width = '10%';
+          btnDropdown.classList.toggle("btn-dropdown-ativo");
           console.log('Abriu o Filtro');
       }
   });
 
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.dropdown')) {
+        dropdownContent.style.display = 'none';
         dropdownContent.style.display = 'none';
         console.log('Fechou o Filtro');
     }
