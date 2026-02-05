@@ -123,8 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log('Fechou o Filtro');
       }
     });
-  } else{
-    btnDropdown.remove();
   }
 
   // função que simula a tela de carregamento
