@@ -179,5 +179,13 @@ h3{
 
     .descricao-planos li{
        margin: 0; 
+       padding-top: .3rem;
+    }
+}
+
+@media (max-width: 600px){
+    .descricao-planos li {
+        padding: .2rem 1.6rem;
+        padding-top: .3rem;
     }
 }

@@ -341,13 +341,16 @@
     }
 
     #btn-dropdown:hover, .btn-dropdown-ativo{
-        color: var(--corCinzaEscuro);
         background-color: var(--corBranco);
         border-color: var(--corCinzaMedio);
     }
 
     .ativo {
         display: flex;
+    }
+
+    #dropdown-content{
+        width: 100vw;
     }
 
     #form-filtro{
