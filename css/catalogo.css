@@ -340,9 +340,10 @@
         min-width: fit-content;
     }
 
-    .btn-dropdown-ativo{
-        color: var(--corCinzaMedio);
+    #btn-dropdown:hover, .btn-dropdown-ativo{
+        color: var(--corCinzaEscuro);
         background-color: var(--corBranco);
+        border-color: var(--corCinzaMedio);
     }
 
     .ativo {
@@ -384,6 +385,10 @@
     .capa-livro{
         width: 100%;
         gap: 1rem;
+
+        align-self: center;
+        min-width: calc(140px / 2);
+        max-height: calc(200px / 2);
     }
 
     .titulo-livro {

@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!e.target.closest('.dropdown')) {
         dropdownContent.style.display = 'none';
         dropdownContent.style.display = 'none';
+        btnDropdown.classList.toggle("btn-dropdown-ativo");
         console.log('Fechou o Filtro');
     }
   });
