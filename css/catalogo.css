@@ -29,6 +29,7 @@
 
 #btn-dropdown{
     display: none;
+    pointer-events: none;
 }
 
 #dropdown-content{
@@ -328,6 +329,8 @@
         cursor: pointer;
 
         display: inline-flex;
+        pointer-events: all;
+        
         padding: 0.3rem 2rem;
 
         border-top-width: 1px;
@@ -350,6 +353,7 @@
     }
 
     #dropdown-content{
+        display: none;
         width: 100vw;
     }
 
@@ -358,6 +362,10 @@
 
         border: none;
         border-radius: 0;
+    }
+
+    .hr-left{
+        width: 10%;
     }
 
     #btn-limpa-filtro{
