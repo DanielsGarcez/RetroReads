@@ -33,36 +33,37 @@ function renderItem(data, id) {
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
 
-  // Busaca no banco de dados e carega-os no grid
+  const btnDetalhes = clone.querySelector('.btn-detalhes');
+  const itemGrid = clone.querySelector('.item-grid');
+
+  // busca a imagem
   if (data.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
   } else {
     imagem.src = "img/Mockup-Livro.png";
   }
 
-  imagem.onerror = () => {
-    imagem.src = "../img/Mockup-Livro.png";
-  };
-  
   titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
   autor.textContent = data.autor || 'Sem autor';
 
-  // Conversor para Reais
+  // converte o valor
   let valorReais = parseFloat(data.valor).toFixed(2);
-  const valor = clone.querySelector('.valor');
+  clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
 
-  valor.textContent = valorReais || 'Sem valor'
+  // altera conteudo do item
+  itemGrid.dataset.id = id;
+  itemGrid.dataset.titulo = data.titulo || 'Sem título';
 
-  clone.querySelector('.item-grid').dataset.id = id;  
-  console.log({ grid, template });
-
-  const card = clone.querySelector('.item-grid');
-
-  card.dataset.id = id;
-  card.dataset.titulo = data.titulo || 'Sem título';
+  // desativa item
+  if (data.disponibilidade === 'reservado') {
+    btnDetalhes.classList.add("btn-desativado");
+    btnDetalhes.textContent = "Reservado";
+    itemGrid.classList.add("desativado");
+  }
 
   return clone;
 }
+
 
 // Função que renderiza os cards do grid
 function renderizar(snapshot){
@@ -93,41 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizar(snapshotInicial);
 
   // ------------------------------------------------------------
-  
-  // Botão Mobile que abre o filtro
-  const btnDropdown = document.getElementById('btn-dropdown');
-  const dropdownContent = document.getElementById('dropdown-content');
-
-  btnDropdown.addEventListener('click', (e) => {
-    e.stopPropagation();
-
-    const aberto = dropdownContent.style.display === 'inline-flex';
-
-    if (aberto) {
-      fecharDropdown();
-    } else {
-      abrirDropdown();
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.dropdown')) {
-      fecharDropdown();
-    }
-  });
-
-  function abrirDropdown() {
-    dropdownContent.style.display = 'inline-flex';
-    btnDropdown.classList.add("btn-dropdown-ativo");
-    console.log('Abriu o Filtro');
-  }
-
-  function fecharDropdown() {
-    dropdownContent.style.display = 'none';
-    btnDropdown.classList.remove("btn-dropdown-ativo");
-    console.log('Fechou o Filtro');
-  }
-
 
   // função que simula a tela de carregamento
   setTimeout(function() {
@@ -162,34 +128,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --------------------------------------------------------------------------------
-    async function desativar(data) {
-      // Desativação de Botões
-      const btnDetalhes = document.getElementById('btn-detalhes')
-      const itemGrid = document.querySelector('.item-grid')
-
-      const reserva = data.disponibilidade;
-
-      // Desabilita botão de Detalhes
-      if (reserva === 'reservado'){
-        btnDetalhes.classList.add("btn-desativado")
-        btnDetalhes.textContent = "Reservado";
-
-        itemGrid.classList.add("desativado");
-
-        console.log('Livro Desativado');
-      }
-    }
-    desativar()
 
     // --------------------------------------------------------------------------------
 
     // botão que abre a página de detalhes do livro clicado
     grid.addEventListener("click", (event) =>{
       const botao = event.target.closest(".btn-detalhes");
-      if (!botao) return;
+      if (!botao) return; // evita crash (boas práticas)
 
       const card = event.target.closest(".item-grid");
-      if (!card) return;
+      if (!card) return; // evita crash (boas práticas)
 
       const livroNome = card.dataset.titulo;
       const livroId = card.dataset.id;
