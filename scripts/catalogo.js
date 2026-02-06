@@ -99,27 +99,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const dropdownContent = document.getElementById('dropdown-content');
 
   btnDropdown.addEventListener('click', (e) => {
-      e.stopPropagation();
-      
-      if (dropdownContent.style.display === 'inline-flex') {
-          dropdownContent.style.display = 'none';
-          btnDropdown.classList.toggle("btn-dropdown-ativo");
-          console.log('Fechou o Filtro');
-      } else {
-          dropdownContent.style.display = 'inline-flex';
-          btnDropdown.classList.toggle("btn-dropdown-ativo");
-          console.log('Abriu o Filtro');
-      }
+    e.stopPropagation();
+
+    const aberto = dropdownContent.style.display === 'inline-flex';
+
+    if (aberto) {
+      fecharDropdown();
+    } else {
+      abrirDropdown();
+    }
   });
 
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.dropdown')) {
-        dropdownContent.style.display = 'none';
-        dropdownContent.style.display = 'none';
-        btnDropdown.classList.toggle("btn-dropdown-ativo");
-        console.log('Fechou o Filtro');
+      fecharDropdown();
     }
   });
+
+  function abrirDropdown() {
+    dropdownContent.style.display = 'inline-flex';
+    btnDropdown.classList.add("btn-dropdown-ativo");
+    console.log('Abriu o Filtro');
+  }
+
+  function fecharDropdown() {
+    dropdownContent.style.display = 'none';
+    btnDropdown.classList.remove("btn-dropdown-ativo");
+    console.log('Fechou o Filtro');
+  }
+
 
   // função que simula a tela de carregamento
   setTimeout(function() {
@@ -154,6 +162,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --------------------------------------------------------------------------------
+    async function desativar(data) {
+      // Desativação de Botões
+      const btnDetalhes = document.getElementById('btn-detalhes')
+      const itemGrid = document.querySelector('.item-grid')
+
+      const reserva = data.disponibilidade;
+
+      // Desabilita botão de Detalhes
+      if (reserva === 'reservado'){
+        btnDetalhes.classList.add("btn-desativado")
+        btnDetalhes.textContent = "Reservado";
+
+        itemGrid.classList.add("desativado");
+
+        console.log('Livro Desativado');
+      }
+    }
+    desativar()
+
+    // --------------------------------------------------------------------------------
 
     // botão que abre a página de detalhes do livro clicado
     grid.addEventListener("click", (event) =>{
@@ -165,21 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const livroNome = card.dataset.titulo;
       const livroId = card.dataset.id;
-
-      // Desativação de Botões
-      const btnDetalhes = document.getElementById('btn-detalhes')
-      const itemGrid = document.querySelector('.item-grid')
-
-      // Desabilita botão de Detalhes
-      if (disponibilidade == 'reservado'){
-        btnDetalhes.classList.toggle("btn-desativado")
-        btnDetalhes.textContent = "Reservado";
-        
-        itemGrid.classList.toggle("desativado");
-
-        console.log('Livro Desativado');
-      }
-
 
       if (livroId) {
         window.location.href = `/RetroReads/pages/detalhesLivro.html?id=${livroId}`; 
