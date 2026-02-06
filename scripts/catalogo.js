@@ -166,6 +166,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const livroNome = card.dataset.titulo;
       const livroId = card.dataset.id;
 
+      // Desativação de Botões
+      const btnDetalhes = document.getElementById('btn-detalhes')
+      const itemGrid = document.querySelector('.item-grid')
+
+      // Desabilita botão de Detalhes
+      if (disponibilidade == 'reservado'){
+        btnDetalhes.classList.toggle("btn-desativado")
+        btnDetalhes.textContent = "Reservado";
+        
+        itemGrid.classList.toggle("desativado");
+
+        console.log('Livro Desativado');
+      }
+
+
       if (livroId) {
         window.location.href = `/RetroReads/pages/detalhesLivro.html?id=${livroId}`; 
         console.log("ID: ",livroId)

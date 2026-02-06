@@ -4,9 +4,7 @@
     width: 100%;
 
     /* Alinhamento */
-    padding-top: 25px;
     text-align: center;
-    margin-bottom: 10px;
 
     /* Decorativo */
     background-color: var(--corBranco);
@@ -25,7 +23,8 @@
     margin-right: 5%;
     margin-left: 5%;
 
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 #logo-escrito{
@@ -109,8 +108,6 @@
     text-decoration: none;
     color: var(--Preto);
     align-content: center;
-
-    transition: .5s ease;
 }
 
 .login-link:hover {
@@ -135,8 +132,6 @@
     /* Estilos Texto */
     text-wrap: nowrap;
     text-decoration: none;
-
-    transition: .5s ease;
 }
 
 .cadastro-link:hover {
@@ -189,7 +184,7 @@
 /* ---------- Barra de Navegação ---------- */
 
 .navbar{
-    padding: .7em 0px;
+    padding: .5em 0px;
 
     background-color: var(--corPrincipal);
     box-shadow: var(--sombra);
@@ -208,9 +203,7 @@
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
-    padding: .7em 2rem;
-
-    transition: .5s ease;
+    padding: .5em 2rem;
 }
 .opcoes a:hover {
     color: var(--corPrincipal);

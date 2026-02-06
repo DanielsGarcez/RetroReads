@@ -21,7 +21,7 @@
 
 .container h2{
     color: var(--corPrincipal);
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     padding-bottom: 2rem;
 
     text-align: center;
@@ -39,7 +39,7 @@
 
 .container input{
     width: 15vw;
-    padding: 1rem;
+    padding: .5rem;
 
     font-size: 1rem;
 

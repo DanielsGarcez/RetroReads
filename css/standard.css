@@ -54,10 +54,9 @@ main{
 
     color: var(--corBranco);
     background-color: var(--corPrincipal);
+
     border: 1px solid var(--corPrincipal);
     border-radius: 1em;
-
-    transition: .5s ease;
 }
 
 .btn-principal:hover{
@@ -67,10 +66,11 @@ main{
 }
 
 .btn-secundario{
-    background-color: var(--corPrincipalTransparente);
-    color: var(--corPrincipal);
-
+    padding: .3em;
     font-size: 1rem;
+
+    color: var(--corPrincipal);
+    background-color: var(--corPrincipalTransparente);
 
     border: 1px solid var(--corPrincipal);
     border-radius: 1em;
@@ -80,6 +80,19 @@ main{
     cursor: pointer;
     color: var(--corBranco);
     background-color: var(--corPrincipal);
+}
+
+.btn-desativado{
+    pointer-events: none;
+    background-color: var(--corCinzaMedio);
+    color: var(--corCinzaEscuro);
+    border-color: var(--corCinzaEscuro);
+}
+
+.desativado{
+    pointer-events: none;
+    filter: grayscale(90%);
+    background-color: var(--corCinzaClaro);
 }
 
 /* ---------- Animação de Carregamento ---------- */

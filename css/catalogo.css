@@ -115,6 +115,21 @@
     transform: translateY(-5px);
 }
 
+
+/* Item Desativado */
+.item-grid-desativado{
+    pointer-events: none;
+    background-color: var(--corCinzaClaro);
+}
+
+.item-grid-desativado > .capa-livro{
+    filter: grayscale(60%);
+}
+
+.item-grid-desativado > .valor{
+    color: var(--corCinzaEscuro);
+}
+
 .titulo-livro {
     color: var(--corPreto);
     margin-top: 1rem;
@@ -149,23 +164,18 @@
 }
 
 .valor{
-
     color: var(--corPrincipal);
 }
 
-.btn-detalhes{
-    background-color: var(--corPrincipalTransparente);
-    color: var(--corPrincipal);
-
+#btn-detalhes{
     width: 100%;
     font-size: 1rem;
 }
 
-.btn-detalhes:hover{
+#btn-detalhes:hover{
     background-color: var(--corPrincipal);
     color: var(--corBranco);
 }
-
 
 /* ---------- MOBILE OCULTO ---------- */
 .mobile-header{
@@ -330,7 +340,7 @@
 
         display: inline-flex;
         pointer-events: all;
-        
+
         padding: 0.3rem 2rem;
 
         border-top-width: 1px;
@@ -343,7 +353,7 @@
         min-width: fit-content;
     }
 
-    #btn-dropdown:hover, .btn-dropdown-ativo{
+    .btn-dropdown-ativo{
         background-color: var(--corBranco);
         border-color: var(--corCinzaMedio);
     }

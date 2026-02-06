@@ -87,8 +87,6 @@ h3{
 }
 
 .btn-ambos{
-    width: 60%;
-
     padding: .5rem;
     font-size: 1.3rem;
     border-radius: 1rem;
@@ -117,8 +115,9 @@ h3{
     background-color: var(--corPrincipal);
     border: 1px solid var(--corPrincipal);
 
-    transition: .5s ease;
+    padding: .5rem 3rem;
 }
+
 #btn-cadastro:hover{
     cursor: pointer;
     color: var(--corPrincipal);
