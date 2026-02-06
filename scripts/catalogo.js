@@ -50,6 +50,10 @@ function renderItem(data, id) {
   let valorReais = parseFloat(data.valor).toFixed(2);
   clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
 
+  // altera conteudo do item
+  itemGrid.dataset.id = id;
+  itemGrid.dataset.titulo = data.titulo || 'Sem título';
+
   // desativa item
   if (data.disponibilidade === 'Reservado') {
     btnDetalhes.classList.add("btn-desativado");
