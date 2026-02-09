@@ -409,7 +409,7 @@
 
         align-self: center;
         min-width: calc(140px / 2);
-        max-height: calc(200px / 2);
+        height: calc(130px);
     }
 
     .titulo-livro {

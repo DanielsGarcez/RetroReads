@@ -55,7 +55,7 @@ function renderItem(data, id) {
   itemGrid.dataset.titulo = data.titulo || 'Sem título';
 
   // desativa item
-  if (data.disponibilidade === 'Reservado') {
+  if (data.disponibilidade == 'Reservado') {
     btnDetalhes.classList.add("btn-desativado");
     btnDetalhes.textContent = "Reservado";
     itemGrid.classList.add("desativado");
