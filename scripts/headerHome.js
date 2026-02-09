@@ -13,29 +13,38 @@ async function carregarHeader() {
 }
 carregarHeader();
 
+// solicita o html do headerHome
+fetch("/RetroReads/components/headerHome.html")
+  // recebe o "r" (conteudo bruto) e converte em conteúdo de txt(string)
+  .then(r => r.text())
+  // Conteúdo já convertido
+  .then(html => {
+    // 
+    const header = document.querySelector(".header-home")
+    if (!header) return; // segurança
+    header.innerHTML = html;
+
+    iniciarHeader(); // só agora o DOM existe
+  });
+
+
 
 // verificação de autenticação
-window.addEventListener("DOMContentLoaded", () =>{
-  const mensagem = document.getElementById("mensagem-login")
+function iniciarHeader() {
+  const mensagem = document.getElementById("mensagem-login");
 
   onAuthStateChanged(auth, (user) => {
-    console.log("onAuthStateChanged:", user);
-
-    if (!mensagem) return
+    if (!mensagem) return;
 
     if (user) {
-    mensagem.textContent = `Logado com: ${user.email}`;
-    mensagem.style.color = "green";
-    }
-    else{
+      mensagem.textContent = `Logado com: ${user.email}`;
+      mensagem.style.color = "green";
+    } else {
       mensagem.textContent = "Não foi encontrado usuário";
       mensagem.style.color = "red";
     }
   });
-})
-
-
-
+}
 
 /* 
   Testes de endereçamento no github pages
