@@ -17,14 +17,20 @@ carregarHeader();
 // verificação de autenticação
 window.addEventListener("DOMContentLoaded", () =>{
   const mensagem = document.getElementById("mensagem-login")
-    // monitorar estado de autenticação
+
   onAuthStateChanged(auth, (user) => {
-      console.log("onAuthStateChanged:", user);
-      if (user) {
-      mensagem.textContent = `Logado com: ${user.email}`;
-      mensagem.style.color = "green";
-      }
-      return
+    console.log("onAuthStateChanged:", user);
+
+    if (!mensagem) return
+
+    if (user) {
+    mensagem.textContent = `Logado com: ${user.email}`;
+    mensagem.style.color = "green";
+    }
+    else{
+      mensagem.textContent = "Não foi encontrado usuário";
+      mensagem.style.color = "red";
+    }
   });
 })
 

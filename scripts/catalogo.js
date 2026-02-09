@@ -60,10 +60,9 @@ function renderItem(data, id) {
     btnDetalhes.classList.add("btn-desativado");
     btnDetalhes.textContent = "Reservado";
     itemGrid.classList.add("desativado");
-    console.log("Aterados: ",itemGrid);
-    console.log("Título: ",livroNome);
-  }
 
+    console.log("Desativados: ",itemGrid);
+  }
   return clone;
 }
 
