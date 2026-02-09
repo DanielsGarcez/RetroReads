@@ -167,12 +167,12 @@
     color: var(--corPrincipal);
 }
 
-#btn-detalhes{
+.btn-detalhes{
     width: 100%;
     font-size: 1rem;
 }
 
-#btn-detalhes:hover{
+.btn-detalhes:hover{
     background-color: var(--corPrincipal);
     color: var(--corBranco);
 }
@@ -287,10 +287,6 @@
 
     .mobile-detalhes{
         display: none;
-    }
-
-    .btn-detalhes{
-        font-size: 1rem;
     }
 }
 

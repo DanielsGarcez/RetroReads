@@ -51,19 +51,28 @@ function renderItem(data, id) {
   let valorReais = parseFloat(data.valor).toFixed(2);
   clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
 
-  // altera conteudo do item
-  itemGrid.dataset.id = id;
-  itemGrid.dataset.titulo = data.titulo || 'Sem título';
+//-----------------------------------------------------------------------
 
-  // desativa item
-  if (data.disponibilidade == 'Reservado') {
-    btnDetalhes.classList.add("btn-desativado");
-    btnDetalhes.textContent = "Reservado";
-    itemGrid.classList.add("desativado");
-    console.log("Aterados: ",itemGrid)
-    console.log("Botões: ",btnDetalhes)
-  }
+  // pra cada um dos itens
+  dados.forEach(data => {
 
+    const itemGrid = document.createElement("section");
+    itemGrid.classList.add("item-grid");
+
+    itemGrid.innerHTML = `
+      <button class="btn-secundario btn-detalhes">Detalhes</button>
+    `;
+
+    const btnDetalhes = itemGrid.querySelector(".btn-detalhes");
+
+    // desativa só este item
+    if (data.disponibilidade === 'Reservado') {
+      btnDetalhes.classList.add("btn-desativado");
+      btnDetalhes.textContent = "Reservado";
+      itemGrid.classList.add("desativado");
+    }
+  });
+  
   return clone;
 }
 
