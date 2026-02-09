@@ -36,13 +36,14 @@ function renderItem(data, id) {
   const btnDetalhes = clone.querySelector('#btn-detalhes');
   const itemGrid = clone.querySelector('.item-grid');
 
-  // busca a imagem
+  // busca a imagem no firestore
   if (data.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
   } else {
     imagem.src = "img/Mockup-Livro.png";
   }
 
+  // define o texto de titulo e autor pego no firestore
   titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
   autor.textContent = data.autor || 'Sem autor';
 
@@ -59,6 +60,8 @@ function renderItem(data, id) {
     btnDetalhes.classList.add("btn-desativado");
     btnDetalhes.textContent = "Reservado";
     itemGrid.classList.add("desativado");
+    console.log("Aterados: ",itemGrid)
+    console.log("Botões: ",btnDetalhes)
   }
 
   return clone;

@@ -1,3 +1,6 @@
+import { auth } from "./firebase.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
 // Exporta o Header para todas as páginas
 async function carregarHeader() {
   try {
@@ -8,9 +11,10 @@ async function carregarHeader() {
     console.error("Erro ao carregar o header:", erro);
   }
 }
-
 carregarHeader();
 
+
+// verificação de autenticação
 window.addEventListener("DOMContentLoaded", () =>{
   const mensagem = document.getElementById("mensagem-login")
     // opcional: monitorar estado de autenticação
