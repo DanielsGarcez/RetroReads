@@ -17,13 +17,14 @@ carregarHeader();
 // verificação de autenticação
 window.addEventListener("DOMContentLoaded", () =>{
   const mensagem = document.getElementById("mensagem-login")
-    // opcional: monitorar estado de autenticação
+    // monitorar estado de autenticação
   onAuthStateChanged(auth, (user) => {
       console.log("onAuthStateChanged:", user);
       if (user) {
       mensagem.textContent = `Logado com: ${user.email}`;
       mensagem.style.color = "green";
       }
+      return
   });
 })
 
