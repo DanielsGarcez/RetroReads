@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Login ok: ", userCredencial);
 
             // Abre essa página após efetuar o login
-            window.location.href = "../index.html"
+            window.location.href = "./pages/perfilUser.html"
 
         } catch (error){
             if (error.code == "auth/user-not-found"){
