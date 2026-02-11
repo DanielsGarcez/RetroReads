@@ -10,27 +10,7 @@ async function carregarHeader() {
   } catch (erro) {
     console.error("Erro ao carregar o header:", erro);
   }
-}
-carregarHeader();
 
-// solicita o html do headerHome
-fetch("/RetroReads/components/headerHome.html")
-  // recebe o "r" (conteudo bruto) e converte em conteúdo de txt(string)
-  .then(r => r.text())
-  // Conteúdo já convertido
-  .then(html => {
-    // 
-    const header = document.querySelector(".header-home")
-    if (!header) return; // segurança
-    header.innerHTML = html;
-
-    iniciarHeader(); // só agora o DOM existe
-  });
-
-
-
-// verificação de autenticação
-function iniciarHeader() {
   const mensagem = document.getElementById("mensagem-login");
 
   onAuthStateChanged(auth, (user) => {
@@ -45,6 +25,7 @@ function iniciarHeader() {
     }
   });
 }
+carregarHeader();
 
 /* 
   Testes de endereçamento no github pages
