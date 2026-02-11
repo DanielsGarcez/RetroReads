@@ -1,0 +1,61 @@
+.container-perfil-user{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.menu-perfil-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-secoes{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.hr-vertical{
+    transform: rotate(90deg);
+}
+
+/* -------------------- Área de Dados -------------------- */
+.dadosmutaveis{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-edit{
+    display: flex;
+    flex-direction: column;
+
+    border: var(--borda);
+    border-radius: 2rem;
+    box-shadow: var(--sombra);
+}
+
+.dados-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+}
+
+.dados-grid > label{
+    color: var(--corCinzaEscuro);
+}
+
+.dados-grid-item{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dados-grid > input{
+    border: var(--borda);
+    border-radius: 2rem;
+    box-shadow: var(--sombra);
+
+    background-color: var(--corCinzaClaro);
+    color: var(--corCinzaEscuro);
+}

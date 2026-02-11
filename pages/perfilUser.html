@@ -10,7 +10,6 @@
     <script type="module" src="./scripts/headerSimples.js"></script>
     <script type="module" src="./scripts/headerMobile.js"></script>
     <script type="module" src="./scripts/footer.js"></script>
-    <script type="module" src="./scripts/loginUser.js"></script>
 
     <!-- Link de Styles -->
     <link rel="icon" type="image/png" href="./img/Logo-Page.png">
@@ -29,36 +28,56 @@
                     <h3 id="plano-usuario"></h3>
                 </section>
                 <section class="menu-secoes">
+                    <hr>
                     <a href="">Dados Pessoais</a>
+                    <hr>
                     <a href="">Estante Virtual</a>
+                    <hr>
                     <a href="">Suas Reservas</a>
+                    <hr>
                     <a href="">Seus Anuncios</a>
+                    <hr>
                 </section>
             </aside>
+
+            <hr class="hr-vertical">
+
             <section class="dados-mutaveis">
                 <h2>Dados Pessoais</h2>
                 <section class="info-edit">
                     <form id="form-dados-user">
-                        <aside class="dados-colunas">
-                            <label id="dados-user-nome">Nome:</label>
-                            <input type="text">
+                        <aside class="dados-grid">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-nome">Nome:</label>
+                                <input type="text">
+                            </section>
                             
-                            <label id="dados-user-email">Email:</label>
-                            <input type="email">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-email">Email:</label>
+                                <input type="email">
+                            </section>
 
-                            <label id="dados-user-cpf">CPF:</label>
-                            <input type="number">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-cpf">CPF:</label>
+                                <input type="number">
+                            </section>
                             
                             <!-- colunas -->
 
-                            <label id="dados-user-nasc">Data de Nascimento:</label>
-                            <input type="date">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-nasc">Data de Nascimento:</label>
+                                <input type="date">
+                            </section>
                             
-                            <label id="dados-user-telefone">Telefone:</label>
-                            <input type="tel">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-telefone">Telefone:</label>
+                                <input type="tel">
+                            </section>
 
-                            <label id="dados-user-assinatura">Assinatura:</label>
-                            <input type="text">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-assinatura">Assinatura:</label>
+                                <input type="text">
+                            </section>
                         </aside>
 
                         <aside class="barra-destaque">
@@ -72,26 +91,38 @@
                 <h2>Endereço</h2>
                 <section class="info-edit">
                     <form id="form-endereco-user">
-                        <aside class="dados-colunas">
-                            <label id="dados-user-logardouro">Logradouro:</label>
-                            <input type="text">
+                        <aside class="dados-grid">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-logardouro">Logradouro:</label>
+                                <input type="text">
+                            </section>
                             
-                            <label id="dados-user-num">Número:</label>
-                            <input type="number">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-num">Número:</label>
+                                <input type="number">
+                            </section>
 
-                            <label id="dados-user-cpf">Complemento:</label>
-                            <input type="text">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-cpf">Complemento:</label>
+                                <input type="text">
+                            </section>
 
                             <!-- colunas -->
 
-                            <label id="dados-user-estado">Estado:</label>
-                            <input type="text">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-estado">Estado:</label>
+                                <input type="text">
+                            </section>
                             
-                            <label id="dados-user-cidade">Cidade:</label>
-                            <input type="text">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-cidade">Cidade:</label>
+                                <input type="text">
+                            </section>
 
-                            <label id="dados-user-cep">CEP:</label>
-                            <input type="number">
+                            <section class="dados-grid-item">
+                                <label id="dados-user-cep">CEP:</label>
+                                <input type="number">
+                            </section>
                         </aside>
 
                         <aside class="barra-destaque">
