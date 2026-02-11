@@ -89,12 +89,21 @@ main{
     border-color: var(--corCinzaEscuro);
 }
 
-.desativado{
+.conteudo-desativado{
     pointer-events: none;
     filter: grayscale(90%);
     background-color: var(--corCinzaClaro);
 }
 
+.conteudo-oculto{
+    pointer-events: none;
+    display: none;
+}
+
+.conteudo-revelado{
+    pointer-events: all;
+    display: flex;
+}
 /* ---------- Animação de Carregamento ---------- */
 .tela-carregamento{
     position: fixed;

@@ -59,7 +59,7 @@ function renderItem(data, id) {
   if (data.disponibilidade == 'Reservado') {
     btnDetalhes.classList.add("btn-desativado");
     btnDetalhes.textContent = "Reservado";
-    itemGrid.classList.add("desativado");
+    itemGrid.classList.add("conteudo-desativado");
 
     console.log("Desativados: ",itemGrid);
   }

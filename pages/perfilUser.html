@@ -21,8 +21,85 @@
 </head>
 <body>
     <main class="main-peril-user">
-        <article class="container">
+        <article class="container-perfil-user">
+            <aside class="menu-perfil-user">
+                <section class="area-usuário">
+                    <img src="/RetroReads/img/Icon-User.png" alt="Icon-User">
+                    <h3 id="nome-usuario"></h3>
+                    <h3 id="plano-usuario"></h3>
+                </section>
+                <section class="menu-secoes">
+                    <a href="">Dados Pessoais</a>
+                    <a href="">Estante Virtual</a>
+                    <a href="">Suas Reservas</a>
+                    <a href="">Seus Anuncios</a>
+                </section>
+            </aside>
+            <section class="dados-mutaveis">
+                <h2>Dados Pessoais</h2>
+                <section class="info-edit">
+                    <form id="form-dados-user">
+                        <aside class="dados-colunas">
+                            <label id="dados-user-nome">Nome:</label>
+                            <input type="text">
+                            
+                            <label id="dados-user-email">Email:</label>
+                            <input type="email">
 
+                            <label id="dados-user-cpf">CPF:</label>
+                            <input type="number">
+                            
+                            <!-- colunas -->
+
+                            <label id="dados-user-nasc">Data de Nascimento:</label>
+                            <input type="date">
+                            
+                            <label id="dados-user-telefone">Telefone:</label>
+                            <input type="tel">
+
+                            <label id="dados-user-assinatura">Assinatura:</label>
+                            <input type="text">
+                        </aside>
+
+                        <aside class="barra-destaque">
+                            <button id="editar-dados"></button>
+                        </aside>
+                    </form>
+                </section>
+
+
+
+                <h2>Endereço</h2>
+                <section class="info-edit">
+                    <form id="form-endereco-user">
+                        <aside class="dados-colunas">
+                            <label id="dados-user-logardouro">Logradouro:</label>
+                            <input type="text">
+                            
+                            <label id="dados-user-num">Número:</label>
+                            <input type="number">
+
+                            <label id="dados-user-cpf">Complemento:</label>
+                            <input type="text">
+
+                            <!-- colunas -->
+
+                            <label id="dados-user-estado">Estado:</label>
+                            <input type="text">
+                            
+                            <label id="dados-user-cidade">Cidade:</label>
+                            <input type="text">
+
+                            <label id="dados-user-cep">CEP:</label>
+                            <input type="number">
+                        </aside>
+
+                        <aside class="barra-destaque">
+                            <button id="editar-dados"></button>
+                        </aside>
+                    </form>
+                </section>
+            </section>
         </article>
     </main>
 </body>
