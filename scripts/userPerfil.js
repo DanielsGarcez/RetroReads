@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("user-nome").textContent  = usuario.nome;
             document.getElementById("user-plano").textContent  = usuario.plano;
 
-            document.getElementById("dados-user-nome").textContent  = usuario.nome;
-            document.getElementById("dados-user-email").textContent  = usuario.email;
-            document.getElementById("dados-user-cpf").textContent  = usuario.documento;
+            document.getElementById("dados-user-nome").placeholder  = usuario.nome;
+            document.getElementById("dados-user-email").placeholder  = usuario.email;
+            document.getElementById("dados-user-cpf").placeholder  = usuario.documento;
         }
     dadosUsuario()
 

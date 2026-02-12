@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Credencial encontrada: ", userCredencial);
 
             // Abre essa página após efetuar o login
-            window.location.href = `/RetroReads/pages/detalhesLivro.html?id=${userId}`
+            window.location.href = `/RetroReads/pages/perfilUser.html?id=${userId}`
             console.log("Redirecionou:", userId);
 
         } catch (error){
