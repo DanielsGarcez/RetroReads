@@ -4,7 +4,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth
 import { getStorage } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-storage.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAzQrm0ppeImY2JOueHKSiQOYl7P_NMgcY",
+    apiKey: "MYAPIKEY",
     authDomain: "retroreads-556a0.firebaseapp.com",
     projectId: "retroreads-556a0",
     storageBucket: "retroreads-556a0.firebasestorage.app",
