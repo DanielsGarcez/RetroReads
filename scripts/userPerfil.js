@@ -1,31 +1,52 @@
 import { db } from './firebase.js';
 import {doc, getDoc} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { auth } from "./firebase.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 const parametros = new URLSearchParams(window.location.search);
 const usuarioId = parametros.get("id");
 
 document.addEventListener("DOMContentLoaded", () =>{
 
-    // Função que insere os dados do banco nos inputs
-    async function dadosUsuario(data) {
-        const ref = doc(db, "usuarios", usuarioId)
-        const snap = await getDoc(ref);
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+        console.log(`Logado como: ${user.email}.`);
 
-        if (!snap.exists()){
-            alert("Usuário não encontrado");
-            return;
+        
+        if (!usuarioId) {
+        alert("ID do usuário não encontrado na URL.");
+        return;
         }
 
-        const usuario = snap.data();
+        async function dadosUsuario() {
+            const ref = doc(db, "usuarios", usuarioId)
+            const snap = await getDoc(ref);
 
-        document.getElementById("user-nome").textContent  = usuario.nome;
-        document.getElementById("user-plano").textContent  = usuario.plano;
+            if (!snap.exists()){
+                alert("Usuário não encontrado");
+                return;
+            }
 
-        document.getElementById("dados-user-nome").textContent  = usuario.nome;
-        document.getElementById("dados-user-email").textContent  = usuario.email;
-        document.getElementById("dados-user-cpf").textContent  = usuario.documento;
-    }
+            const usuario = snap.data();
+
+            document.getElementById("user-nome").textContent  = usuario.nome;
+            document.getElementById("user-plano").textContent  = usuario.plano;
+
+            document.getElementById("dados-user-nome").textContent  = usuario.nome;
+            document.getElementById("dados-user-email").textContent  = usuario.email;
+            document.getElementById("dados-user-cpf").textContent  = usuario.documento;
+        }
     dadosUsuario()
+
+    } else {
+        console.log("Usuário não encontrado")
+        alert("Usuário não logado... Efetue o login.")
+        return
+    }
+});
+
+    // Função que insere os dados do banco nos inputs
+
 
 
 /*     const formUser = getElementById("form-dados-user");

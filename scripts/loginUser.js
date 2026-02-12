@@ -46,8 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
             );
             console.log("Login ok: ", userCredencial);
 
+            // define o endereçamento da pagina por id de usuário
+            const userId = userCredencial.user.uid;
+            if (!userId) {
+                alert("UID do usuário inválido.");
+                return;
+            }
+            console.log("Credencial encontrada: ", userCredencial);
+
             // Abre essa página após efetuar o login
-            window.location.href = "./pages/perfilUser.html"
+            window.location.href = `/RetroReads/pages/detalhesLivro.html?id=${userId}`
+            console.log("Redirecionou:", userId);
 
         } catch (error){
             if (error.code == "auth/user-not-found"){
