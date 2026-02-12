@@ -6,7 +6,6 @@ console.log("loginUser.js carregado");
 // Espera o DOM carregar 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-login-user");
-
     if (!form){
         console.error("Formulário não encontrado");
         return;

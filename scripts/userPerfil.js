@@ -5,22 +5,57 @@ const parametros = new URLSearchParams(window.location.search);
 const usuarioId = parametros.get("id");
 
 document.addEventListener("DOMContentLoaded", () =>{
+
+    // Função que insere os dados do banco nos inputs
     async function dadosUsuario(data) {
         const ref = doc(db, "usuarios", usuarioId)
         const snap = await getDoc(ref);
 
-        if (!snap.exists()) return 
-        alert("Usuário não encontrado");
+        if (!snap.exists()){
+            alert("Usuário não encontrado");
+            return;
+        }
 
         const usuario = snap.data();
 
+        document.getElementById("user-nome").textContent  = usuario.nome;
+        document.getElementById("user-plano").textContent  = usuario.plano;
 
-        document.getElementById("user-nome").src = usuario.nome;
-        document.getElementById("user-plano").src = usuario.plano;
-
-        document.getElementById("dados-user-nome").src = usuario.nome;
-        document.getElementById("dados-user-email").src = usuario.email;
-        document.getElementById("dados-user-cpf").src = usuario.documento;
+        document.getElementById("dados-user-nome").textContent  = usuario.nome;
+        document.getElementById("dados-user-email").textContent  = usuario.email;
+        document.getElementById("dados-user-cpf").textContent  = usuario.documento;
     }
     dadosUsuario()
+
+
+/*     const formUser = getElementById("form-dados-user");
+
+    if (!form){
+        console.error("Formulário não encontrado");
+        return;
+    }
+
+    formUser.addEventListener("click", async(e) =>{
+        e.perventDefault();
+
+        const btnEditar = document.getElementById("btn-editar-dados")
+        if (!btnEditar) return;
+
+        const btnSalvar = document.getElementById("btn-salvar-dados")
+        const btnCancelar = document.getElementById("btn-cancelar-dados")
+
+
+        if (btnEditar){
+
+            // alterações nos botões
+            btnEditar.classList.add("conteudo-oculto")
+            btnSalvar.classList.add("conteudo-revelado")
+            btnCancelar.classList.add("conteudo-revelado")
+
+            
+
+            console.log("Entrou no modo edição")
+        }
+
+    }) */
 })

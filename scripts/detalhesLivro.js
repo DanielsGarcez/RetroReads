@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", () =>{
         const ref = doc(db, "livros", livroId);
         const snap = await getDoc(ref);
 
-        if (!snap.exists()) return alert("Livro não encontrado");
+        if (!snap.exists()){
+            alert("Livro não encontrado");
+            return;
+        }
 
         const livro = snap.data();
 
