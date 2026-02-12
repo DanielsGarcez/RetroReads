@@ -4,23 +4,55 @@
     gap: 1rem;
 }
 
+/* -------------------- Menu do Usuário -------------------- */
+
 .menu-perfil-user{
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    margin-right: 0;
+}
+
+.area-usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.area-usuario > img{
+    margin-bottom: 1rem;
+}
+
+#nome-usuário{
+    color: var(--corCinzaEscuro);
+    font-weight: 700;
+}
+
+#plano-usuario{
+    color: var(--corPrincipal);
+    font-weight: 400;
 }
 
 .menu-secoes{
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    width: 10rem;
 }
 
-.hr-vertical{
-    transform: rotate(90deg);
+.menu-secoes > a{
+    text-decoration: none;
+    color: var(--corCinzaEscuro);
+    padding: 0.5rem 1rem;
+}
+
+.menu-secoes > a:hover{
+    color: var(--corPrincipal);
+    border-left: 4px solid var(--corPrincipal);
 }
 
 /* -------------------- Área de Dados -------------------- */
-.dadosmutaveis{
+.dados-mutaveis{
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -38,11 +70,9 @@
 .dados-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: .5rem;
-}
-
-.dados-grid > label{
-    color: var(--corCinzaEscuro);
+    gap: 2rem;
+    column-gap: 5rem;
+    padding: 3rem;
 }
 
 .dados-grid-item{
@@ -51,7 +81,11 @@
     gap: 1rem;
 }
 
-.dados-grid > input{
+.dados-grid-item > label{
+    color: var(--corCinzaEscuro);
+}
+
+.dados-grid-item > input{
     border: var(--borda);
     border-radius: 2rem;
     box-shadow: var(--sombra);
@@ -59,3 +93,5 @@
     background-color: var(--corCinzaClaro);
     color: var(--corCinzaEscuro);
 }
+
+
