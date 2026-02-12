@@ -29,5 +29,6 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
 
 
 # Preview
----
+<img src="https://i.pinimg.com/originals/eb/1b/27/eb1b27863813653543914d222ceb9cd0.gif" alt="Carregando...">
+
 [...]
