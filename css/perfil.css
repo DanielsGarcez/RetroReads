@@ -49,6 +49,7 @@
 .menu-secoes > a:hover{
     color: var(--corPrincipal);
     border-left: 4px solid var(--corPrincipal);
+    transition: .1s;
 }
 
 /* -------------------- Área de Dados -------------------- */
@@ -56,6 +57,11 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.dados-mutaveis > h2{
+    margin-left: .5rem;
+    font-weight: 400;
 }
 
 .info-edit{
@@ -78,11 +84,12 @@
 .dados-grid-item{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .5rem;
 }
 
 .dados-grid-item > label{
     color: var(--corCinzaEscuro);
+    padding-left: .3rem;
 }
 
 .dados-grid-item > input{
@@ -92,6 +99,25 @@
 
     background-color: var(--corCinzaClaro);
     color: var(--corCinzaEscuro);
+
+    font-size: 1rem;
+    padding: .5rem 1rem;
 }
 
+.barra-destaque{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+}
 
+.hr-horizontal{
+    border: 1px solid;
+    margin: 0rem 1.5rem;
+}
+
+#editar-dados{
+    width: 20%;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
+}
