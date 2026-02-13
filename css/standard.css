@@ -95,7 +95,7 @@ main{
     border-radius: 1em;
 }
 
-.btn-secundario:hover{
+.btn-vermelho:hover{
     cursor: pointer;
     color: var(--corBranco);
     background-color: var(--corVermelhoPrincipal);

@@ -39,19 +39,18 @@ document.addEventListener("DOMContentLoaded", () =>{
         }
     dadosUsuario()
 
-    } else {
-        console.log("Usuário não encontrado")
-        alert("Usuário não logado... Efetue o login.")
-        
-        window.location.href = "/RetroReads/pages/login.html";
-    }
-});
+        } else {
+            console.log("Usuário não encontrado")
+            alert("Usuário não logado... Efetue o login.")
+            
+            window.location.href = "/RetroReads/pages/login.html";
+        }
+    });
+
+
 
     // Função que insere os dados do banco nos inputs
-
-
-
-/*     const formUser = getElementById("form-dados-user");
+    const formUser = getElementById("form-dados-user");
 
     if (!form){
         console.error("Formulário não encontrado");
@@ -80,5 +79,5 @@ document.addEventListener("DOMContentLoaded", () =>{
             console.log("Entrou no modo edição")
         }
 
-    }) */
+    })
 })

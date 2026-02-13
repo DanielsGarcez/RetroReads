@@ -59,8 +59,8 @@
 /* -------------------- Área de Dados -------------------- */
 .dados-mutaveis{
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 5rem;
     margin-left: 10%;
     margin-top: 2rem;
 }
@@ -119,21 +119,19 @@
 
 .barra-destaque{
     display: flex;
-    flex-direction: column;
-    align-items: end;
+    flex-direction: row;
+    gap: 2rem;
+
+    justify-content: end;
+    padding-right: 3rem;
 }
 
 .btn-editar{
     width: 20%;
     margin-bottom: 2rem;
-    margin-right: 3rem;
     padding: .5rem 1rem;
 }
 
 .btn-modo-editar{
     display: none;
-}
-
-#btn-cancelar-endereco, #btn-cancelar-dados{
-    background-color: var(--corVermelhoSecundario);
 }
