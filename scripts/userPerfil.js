@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("dados-user-nome").placeholder  = usuario.nome;
             document.getElementById("dados-user-email").placeholder  = usuario.email;
             document.getElementById("dados-user-cpf").placeholder  = usuario.documento;
+            document.getElementById("dados-user-assinatura").placeholder  = usuario.plano;
         }
     dadosUsuario()
 

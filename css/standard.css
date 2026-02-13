@@ -7,8 +7,8 @@
     --corPrincipalTransparente: #12945842;
     --corPrincipal: #129458;
     --corSecundaria: #317554;
-    --corVermelhoPrincipal: #941212;
-    --corVermelhoSecundario: #753131;
+    --corVermelhoPrincipal: #a31a1a;
+    --corVermelhoTransparente: #f09595;
     --corBranco: #fff;
     --corCinzaEscuro:#666;
     --corCinzaMedio: #d3d3d3;
@@ -82,6 +82,23 @@ main{
     cursor: pointer;
     color: var(--corBranco);
     background-color: var(--corPrincipal);
+}
+
+.btn-vermelho{
+    padding: .3em;
+    font-size: 1rem;
+
+    color: var(--corVermelhoPrincipal);
+    background-color: var(--corVermelhoTransparente);
+
+    border: 1px solid var(--corVermelhoPrincipal);
+    border-radius: 1em;
+}
+
+.btn-secundario:hover{
+    cursor: pointer;
+    color: var(--corBranco);
+    background-color: var(--corVermelhoPrincipal);
 }
 
 .btn-desativado{

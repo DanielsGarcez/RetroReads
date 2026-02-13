@@ -30,17 +30,18 @@
 #user-nome{
     color: var(--corCinzaEscuro);
     font-weight: 700;
+    font-size: 1.3rem;
 }
 
 #user-plano{
     color: var(--corPrincipal);
     font-weight: 400;
+    font-size: 1rem;
 }
 
 .menu-secoes{
     display: flex;
     flex-direction: column;
-    width: 10rem;
 }
 
 .menu-secoes > a{
@@ -60,23 +61,27 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top: 2rem;
-}
-
-.dados-mutaveis > h2{
-    color: var(--corCinzaEscuro);
-    margin-left: .5rem;
-    font-weight: 400;
 }
 
 .info-edit{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 
     border: var(--borda);
     border-radius: 2rem;
     box-shadow: var(--sombra);
+}
+
+.info-edit > h2{
+    color: var(--corCinzaEscuro);
+    margin-left: .5rem;
+    font-weight: 400;
+    padding: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
 }
 
 .dados-grid{
@@ -84,7 +89,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     column-gap: 5rem;
-    padding: 3rem;
+    padding: 2.5rem;
+    padding-top: 2rem;
 }
 
 .dados-grid-item{
@@ -119,7 +125,7 @@
 
 .btn-editar{
     width: 20%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     margin-right: 3rem;
     padding: .5rem 1rem;
 }
