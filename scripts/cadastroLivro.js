@@ -26,7 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    preview.src = url;
+    if (isSafeImageUrl(url)) {
+        preview.src = url;
+    } else {
+        // URL inválida ou esquema não permitido: usar imagem padrão
+        preview.src = "img/Mockup-Livro.png";
+    }
     });
 
     // fallback se a URL quebrar
@@ -165,4 +170,16 @@ function validarISBN(isbn) {
   }
 
   return false;
+}
+
+function isSafeImageUrl(url) {
+  try {
+    const parsed = new URL(url, window.location.origin);
+    const protocol = parsed.protocol.toLowerCase();
+    // Permitir apenas http e https
+    return protocol === "http:" || protocol === "https:";
+  } catch (e) {
+    // URL inválida
+    return false;
+  }
 }
