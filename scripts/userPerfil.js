@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 
     // Função que insere os dados do banco nos inputs
-    const formUser = getElementById("form-dados-user");
+    const formUser = document.getElementById("form-dados-user");
 
     if (!form){
         console.error("Formulário não encontrado");

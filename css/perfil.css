@@ -3,8 +3,6 @@
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
-
-    width: 80%;
 }
 
 /* -------------------- Menu do Usuário -------------------- */
@@ -60,8 +58,8 @@
 .dados-mutaveis{
     display: flex;
     flex-direction: row;
-    gap: 5rem;
-    margin-left: 10%;
+    gap: 2rem;
+    margin-left: 2rem;
     margin-top: 2rem;
 }
 
