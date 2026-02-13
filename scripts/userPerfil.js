@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     } else {
         console.log("Usuário não encontrado")
         alert("Usuário não logado... Efetue o login.")
-        return
+        
+        window.location.href = "/RetroReads/pages/login.html";
     }
 });
 
