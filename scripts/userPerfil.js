@@ -38,41 +38,29 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("dados-user-assinatura").placeholder  = usuario.plano;
         }
         dadosUsuario()
+
+        
     });
 
 })
 
-// -------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
 
 document.getElementById("form-dados-user").addEventListener("submit", (e) => {
     e.preventDefault();
-    const formUser = document.getElementById("form-dados-user");
 
-    // Função que insere os dados do banco nos inputs
-    if (!formUser){
-        console.error("Formulário não encontrado");
-        return;
-    }
+    const btnEditar = document.getElementById("btn-editar-dados");
+    const btnSalvar = document.getElementById("btn-salvar-dados");
+    const btnCancelar = document.getElementById("btn-cancelar-dados");
+    const areaInputs = document.querySelector(".dados-input");
 
-    const btnEditar = document.getElementById("btn-editar-dados")
-    if (!btnEditar) return;
+    // alternar botões
+    btnEditar.classList.add("conteudo-oculto");
+    btnSalvar.classList.add("conteudo-revelado");
+    btnCancelar.classList.add("conteudo-revelado");
 
-    const btnSalvar = document.getElementById("btn-salvar-dados")
-    const btnCancelar = document.getElementById("btn-cancelar-dados")
+    // liberar edição
+    areaInputs.style.pointerEvents = 'auto';
 
-    const areaInputs = document.querySelector(".dados-input")
-
-
-    if (btnEditar){
-        // alterações nos botões
-        btnEditar.classList.add("conteudo-oculto")
-        btnSalvar.classList.add("conteudo-revelado")
-        btnCancelar.classList.add("conteudo-revelado")
-        console.log("Apareceu os botões: SALVAR e CANCELAR")
-        console.log("Ocultou o botão: EDITAR")
-
-        areaInputs.style.pointerEvents = 'none';
-        console.log("Entrou no modo edição")
-    }
-
+    console.log("Modo edição ativado");
 });
