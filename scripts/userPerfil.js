@@ -45,38 +45,37 @@ document.addEventListener("DOMContentLoaded", () =>{
             
             window.location.href = "/RetroReads/pages/login.html";
         }
+    });
 
 
-        // Função que insere os dados do banco nos inputs
-        const formUser = document.getElementById("form-dados-user");
 
-        if (!formUser){
-            console.error("Formulário não encontrado");
-            return;
+    // -------------------------------------------------------------------------
+    // Função que insere os dados do banco nos inputs
+    const formUser = document.getElementById("form-dados-user");
+
+    if (!formUser){
+        console.error("Formulário não encontrado");
+        return;
+    }
+
+    formUser.addEventListener("click", async(e) =>{
+        e.perventDefault();
+
+        const btnEditar = document.getElementById("btn-editar-dados")
+        if (!btnEditar) return;
+
+        const btnSalvar = document.getElementById("btn-salvar-dados")
+        const btnCancelar = document.getElementById("btn-cancelar-dados")
+
+
+        if (btnEditar){
+            // alterações nos botões
+            btnEditar.classList.add("conteudo-oculto")
+            btnSalvar.classList.add("conteudo-revelado")
+            btnCancelar.classList.add("conteudo-revelado")
+
+            console.log("Entrou no modo edição")
         }
 
-        formUser.addEventListener("click", async(e) =>{
-            e.perventDefault();
-
-            const btnEditar = document.getElementById("btn-editar-dados")
-            if (!btnEditar) return;
-
-            const btnSalvar = document.getElementById("btn-salvar-dados")
-            const btnCancelar = document.getElementById("btn-cancelar-dados")
-
-
-            if (btnEditar){
-
-                // alterações nos botões
-                btnEditar.classList.add("conteudo-oculto")
-                btnSalvar.classList.add("conteudo-revelado")
-                btnCancelar.classList.add("conteudo-revelado")
-
-                
-
-                console.log("Entrou no modo edição")
-            }
-
-        })
-    });
+    })
 })
