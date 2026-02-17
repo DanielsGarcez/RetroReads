@@ -46,21 +46,18 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 // ------------------------------------------------------------------------------------
 
-document.getElementById("form-dados-user").addEventListener("submit", (e) => {
-    e.preventDefault();
+const btnEditar = document.getElementById("btn-editar-dados");
 
-    const btnEditar = document.getElementById("btn-editar-dados");
+btnEditar.addEventListener("click", () => {
+    console.log("Botão Editar clicado");
     const btnSalvar = document.getElementById("btn-salvar-dados");
     const btnCancelar = document.getElementById("btn-cancelar-dados");
     const areaInputs = document.querySelector(".dados-input");
 
-    // alternar botões
     btnEditar.classList.add("conteudo-oculto");
-    btnSalvar.classList.add("conteudo-revelado");
-    btnCancelar.classList.add("conteudo-revelado");
+    btnSalvar.classList.remove("conteudo-oculto");
+    btnCancelar.classList.remove("conteudo-oculto");
 
-    // liberar edição
     areaInputs.style.pointerEvents = 'auto';
-
     console.log("Modo edição ativado");
 });
