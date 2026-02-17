@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
-        console.log(`Logado como: ${user.email}.`);
-
+            console.log(`Logado como: ${user.email}.`);
+        }
         
-        if (!usuarioId) {
-        alert("ID do usuário não encontrado na URL.");
-        return;
+        if (!user) {
+            alert("ID do usuário não encontrado na URL.");
+            window.location.href = "/RetroReads/pages/login.html";
         }
 
         async function dadosUsuario() {
@@ -38,44 +38,35 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("dados-user-assinatura").placeholder  = usuario.plano;
         }
         dadosUsuario()
-
-        } else {
-            console.log("Usuário não encontrado")
-            alert("Usuário não logado... Efetue o login.")
-            
-            window.location.href = "/RetroReads/pages/login.html";
-        }
     });
+// -------------------------------------------------------------------------
+})
+
+// Função que insere os dados do banco nos inputs
+const formUser = document.getElementById("form-dados-user");
+
+if (!formUser){
+    console.error("Formulário não encontrado");
+    return;
+}
+
+formUser.addEventListener("click", async(e) =>{
+    e.perventDefault();
+
+    const btnEditar = document.getElementById("btn-editar-dados")
+    if (!btnEditar) return;
+
+    const btnSalvar = document.getElementById("btn-salvar-dados")
+    const btnCancelar = document.getElementById("btn-cancelar-dados")
 
 
+    if (btnEditar){
+        // alterações nos botões
+        btnEditar.classList.add("conteudo-oculto")
+        btnSalvar.classList.add("conteudo-revelado")
+        btnCancelar.classList.add("conteudo-revelado")
 
-    // -------------------------------------------------------------------------
-    // Função que insere os dados do banco nos inputs
-    const formUser = document.getElementById("form-dados-user");
-
-    if (!formUser){
-        console.error("Formulário não encontrado");
-        return;
+        console.log("Entrou no modo edição")
     }
 
-    formUser.addEventListener("click", async(e) =>{
-        e.perventDefault();
-
-        const btnEditar = document.getElementById("btn-editar-dados")
-        if (!btnEditar) return;
-
-        const btnSalvar = document.getElementById("btn-salvar-dados")
-        const btnCancelar = document.getElementById("btn-cancelar-dados")
-
-
-        if (btnEditar){
-            // alterações nos botões
-            btnEditar.classList.add("conteudo-oculto")
-            btnSalvar.classList.add("conteudo-revelado")
-            btnCancelar.classList.add("conteudo-revelado")
-
-            console.log("Entrou no modo edição")
-        }
-
-    })
 })
