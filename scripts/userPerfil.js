@@ -47,17 +47,19 @@ const formUser = document.getElementById("form-dados-user");
 
 if (!formUser){
     console.error("Formulário não encontrado");
-    return;
+/*     return; */
 }
 
 formUser.addEventListener("click", async(e) =>{
     e.perventDefault();
 
     const btnEditar = document.getElementById("btn-editar-dados")
-    if (!btnEditar) return;
+    /* if (!btnEditar) return; */
 
     const btnSalvar = document.getElementById("btn-salvar-dados")
     const btnCancelar = document.getElementById("btn-cancelar-dados")
+
+    const areaInputs = document.querySelector(".dados-input")
 
 
     if (btnEditar){
@@ -65,6 +67,10 @@ formUser.addEventListener("click", async(e) =>{
         btnEditar.classList.add("conteudo-oculto")
         btnSalvar.classList.add("conteudo-revelado")
         btnCancelar.classList.add("conteudo-revelado")
+        console.log("Apareceu os botões: SALVAR e CANCELAR")
+        console.log("Ocultou o botão: EDITAR")
+
+        areaInputs.style.pointerEvents = 'none';
 
         console.log("Entrou no modo edição")
     }

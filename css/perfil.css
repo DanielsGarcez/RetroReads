@@ -102,7 +102,7 @@
     padding-left: .3rem;
 }
 
-.dados-grid-item > input{
+.dados-input{
     border: var(--borda);
     border-radius: 2rem;
     box-shadow: var(--sombra);
