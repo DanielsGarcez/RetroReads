@@ -1,3 +1,6 @@
+import { auth } from './firebase.js';
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+
 // Exporta o Header para todas as páginas
 async function carregarHeader() {
   try {
@@ -8,5 +11,21 @@ async function carregarHeader() {
     console.error("Erro ao carregar o header:", erro);
   }
 }
-
 carregarHeader();
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  onAuthStateChanged(auth, (user) => {
+    const iconPerfil = document.querySelector(".user-perfil");
+
+    if (user) {
+      console.log(`Logado como: ${user.email}.`);
+      iconPerfil.href = `/RetroReads/pages/perfilUser.html?id=${user.uid}`;
+
+    } else {
+      console.log("Usuário não logado.");
+      iconPerfil.href = "/RetroReads/pages/login.html";
+    }
+  });
+
+});

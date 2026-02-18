@@ -40,17 +40,20 @@
 .menu-secoes{
     display: flex;
     flex-direction: column;
+    width: 12rem;
 }
 
 .menu-secoes > a{
     text-decoration: none;
     color: var(--corCinzaEscuro);
     padding: 0.5rem 1rem;
+
+    font-size: 1.3rem;
 }
 
 .menu-secoes > a:hover{
     color: var(--corPrincipal);
-    border-left: 4px solid var(--corPrincipal);
+    border-left: 5px solid var(--corPrincipal);
     transition: .1s;
 }
 
@@ -128,8 +131,20 @@
     width: 20%;
     margin-bottom: 2rem;
     padding: .5rem 1rem;
+    justify-content: center;
 }
 
-.btn-modo-editar{
-    display: none;
+
+/* Desabilitar edição do CPF */
+#dados-user-cpf{
+    pointer-events: none;
+    color: var(--corCinzaMedio);
+    background-color: var(--corCinzaClaro);
+}
+
+/* Desabilitar edição da Assinatura */
+#dados-user-assinatura{
+    pointer-events: none;
+    color: var(--corCinzaMedio);
+    background-color: var(--corCinzaClaro);
 }

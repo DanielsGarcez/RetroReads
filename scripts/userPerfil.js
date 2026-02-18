@@ -1,6 +1,5 @@
-import { db } from './firebase.js';
-import {doc, getDoc} from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-import { auth } from "./firebase.js";
+import { db, auth } from './firebase.js';
+import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 const parametros = new URLSearchParams(window.location.search);
@@ -58,6 +57,6 @@ btnEditar.addEventListener("click", () => {
     btnSalvar.classList.remove("conteudo-oculto");
     btnCancelar.classList.remove("conteudo-oculto");
 
-    areaInputs.style.pointerEvents = 'auto';
+    areaInputs.classList.remove("input-desativado");
     console.log("Modo edição ativado");
 });

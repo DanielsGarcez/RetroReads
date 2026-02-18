@@ -108,6 +108,12 @@ main{
     border-color: var(--corCinzaEscuro);
 }
 
+.input-desativado{
+    pointer-events: none;
+    color: var(--corCinzaMedio);
+    background-color: var(--corCinzaClaro);
+}
+
 .conteudo-desativado{
     pointer-events: none;
     filter: grayscale(90%);
