@@ -57,14 +57,16 @@ btnEditar.addEventListener("click", () => {
     btnCancelar.classList.remove("conteudo-oculto");
 
     areaInputs.classList.remove("input-desativado");
-    areaInputs.classList.remove("input-desativado");
     console.log("Modo de edição ativado");
 });
 
 btnCancelar.addEventListener("click", () => {
     console.log("Botão de Cancelar clicado");
 
+    document.querySelector('.dados-input').value = ''
+
     btnEditar.classList.remove("conteudo-oculto");
     btnSalvar.classList.add("conteudo-oculto");
     btnCancelar.classList.add("conteudo-oculto");
+    areaInputs.classList.add("input-desativado");
 });

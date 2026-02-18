@@ -135,6 +135,10 @@
     justify-content: center;
 }
 
+.aba-ativa{
+    color: var(--corPrincipal);
+}
+
 /* ----------------- Dados inalteráveis ----------------- */
 
 /* Desabilitar edição do CPF */
