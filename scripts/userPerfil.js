@@ -37,26 +37,34 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("dados-user-assinatura").placeholder  = usuario.plano;
         }
         dadosUsuario()
-
-        
     });
-
 })
 
 // ------------------------------------------------------------------------------------
 
 const btnEditar = document.getElementById("btn-editar-dados");
 
+const btnSalvar = document.getElementById("btn-salvar-dados");
+const btnCancelar = document.getElementById("btn-cancelar-dados");
+
+const areaInputs = document.querySelector(".dados-input");
+
 btnEditar.addEventListener("click", () => {
     console.log("Botão Editar clicado");
-    const btnSalvar = document.getElementById("btn-salvar-dados");
-    const btnCancelar = document.getElementById("btn-cancelar-dados");
-    const areaInputs = document.querySelector(".dados-input");
-
+   
     btnEditar.classList.add("conteudo-oculto");
     btnSalvar.classList.remove("conteudo-oculto");
     btnCancelar.classList.remove("conteudo-oculto");
 
     areaInputs.classList.remove("input-desativado");
-    console.log("Modo edição ativado");
+    areaInputs.classList.remove("input-desativado");
+    console.log("Modo de edição ativado");
+});
+
+btnCancelar.addEventListener("click", () => {
+    console.log("Botão de Cancelar clicado");
+
+    btnEditar.classList.remove("conteudo-oculto");
+    btnSalvar.classList.add("conteudo-oculto");
+    btnCancelar.classList.add("conteudo-oculto");
 });

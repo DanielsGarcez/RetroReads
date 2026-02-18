@@ -44,11 +44,13 @@
 }
 
 .menu-secoes > a{
+    font-size: 1.3rem;
     text-decoration: none;
+
     color: var(--corCinzaEscuro);
     padding: 0.5rem 1rem;
 
-    font-size: 1.3rem;
+    cursor: pointer;
 }
 
 .menu-secoes > a:hover{
@@ -115,7 +117,6 @@
 
     font-size: 1rem;
     padding: .5rem 1rem;
-    pointer-events: none;
 }
 
 .barra-destaque{
@@ -134,6 +135,7 @@
     justify-content: center;
 }
 
+/* ----------------- Dados inalteráveis ----------------- */
 
 /* Desabilitar edição do CPF */
 #dados-user-cpf{
@@ -144,6 +146,13 @@
 
 /* Desabilitar edição da Assinatura */
 #dados-user-assinatura{
+    pointer-events: none;
+    color: var(--corCinzaMedio);
+    background-color: var(--corCinzaClaro);
+}
+
+/* Desabilitar edição do Email */
+#dados-user-email{
     pointer-events: none;
     color: var(--corCinzaMedio);
     background-color: var(--corCinzaClaro);
