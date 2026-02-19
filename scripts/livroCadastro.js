@@ -6,7 +6,7 @@ import { onAuthStateChanged } from
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("form-cadastroLivro");
+    const form = document.getElementById("form-livroCadastro");
 
     // Verifica se há formulário
     if (!form){
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", async (e) =>{
         e.preventDefault();
 
-        // Pega os IDs do formulário "form-cadastroLivro":
+        // Pega os IDs do formulário "form-livroCadastro":
         const capaLivro = document.getElementById("capa-livro").value;
 
         const tituloLivro = document.getElementById("titulo-livro").value;

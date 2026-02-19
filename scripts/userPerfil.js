@@ -34,8 +34,6 @@ function modoEdicaoDesativar(){
     dadosInput.forEach(input => {
         input.classList.add("input-desativado");
     });
-
-    window.location.reload()
     console.log("Modo de edição desativado");
 }
 

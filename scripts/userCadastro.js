@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     form.addEventListener("submit", async (e) =>{
         e.preventDefault();
 
-        // Pega os IDs do formulário "form-cadastroUser":
+        // Pega os IDs do formulário "form-userCadastro":
         const nomeUser = document.getElementById("nome-user").value;
         const documentoUser = document.getElementById("documento-user").value;
         const emailUser = document.getElementById("email-user").value;

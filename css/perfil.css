@@ -111,7 +111,7 @@ main{
     padding-left: .3rem;
 }
 
-.dados-input{
+.dados-input, .dados-endereco{
     border: var(--borda);
     border-radius: 2rem;
     box-shadow: var(--sombra);
@@ -149,10 +149,6 @@ main{
     pointer-events: none;
     color: var(--corCinzaMedio);
     background-color: var(--corCinzaClaro);
-}
-
-#dados-user-cpf::placeholder {
-    color: var(--corCinzaMedio);
 }
 
 /* Desabilitar edição da Assinatura */

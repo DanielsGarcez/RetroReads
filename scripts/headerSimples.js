@@ -13,22 +13,19 @@ async function carregarHeader() {
 }
 carregarHeader();
 
-const linkPerfilUser = document.getElementById("header-simples-user");
+const btnUserPerfil = document.getElementById("header-simples-user");
 
-document.addEventListener("DOMContentLoaded", () => {
+btnUserPerfil.addEventListener("click", (e) => {
+  onAuthStateChanged(auth, (user) => {
+    const iconPerfil = document.querySelector(".user-perfil");
 
-  linkPerfilUser.addEventListener("click", (e) => {
-    onAuthStateChanged(auth, (user) => {
-      const iconPerfil = document.querySelector(".user-perfil");
+    if (user) {
+      console.log(`HeaderSimples: Logado como: ${user.email}.`);
+      iconPerfil.href = `/RetroReads/pages/userPerfil.html?id=${user.uid}`;
 
-      if (user) {
-        console.log(`HeaderSimples: Logado como: ${user.email}.`);
-        iconPerfil.href = `/RetroReads/pages/userPerfil.html?id=${user.uid}`;
-
-      } else {
-        console.log("Usuário não logado.");
-        iconPerfil.href = "/RetroReads/pages/login.html";
-      }
-    });
+    } else {
+      console.log("Usuário não logado.");
+      iconPerfil.href = "/RetroReads/pages/login.html";
+    }
   });
 });
