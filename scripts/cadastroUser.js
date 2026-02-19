@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () =>{
         const senhaUserConfirmar = document.getElementById("senha-user-confirmar").value;
 
         // Validação dos campos do Formulário:
-        console.log("if - validação de campos")
         if (
             !nomeUser       ||
             !documentoUser  ||
@@ -34,21 +33,18 @@ document.addEventListener("DOMContentLoaded", () =>{
         }
 
         // Validação de Email
-        console.log("if - validação de emails")
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailUser)) {
             alert("E-mail inválido.");
             return;
         }
 
         // Validação de senha
-        console.log("if - validação de senha")
         if (senhaUser.length < 6) {
             alert("A senha deve ter pelo menos 6 caracteres.");
             return;
         }
 
         // Confirmação de senha
-        console.log("if - confirmação de senhas")
         if (senhaUser.trim()  !=  senhaUserConfirmar.trim()){
             alert("As senhas não correspondem. Os campos devem ter a mesma senha!")
             return;
@@ -62,9 +58,6 @@ document.addEventListener("DOMContentLoaded", () =>{
                 emailUser,
                 senhaUser
             );
-
-            // DEBUG OBRIGATÓRIO (remova depois)
-            console.log("userCredential:", userCredential);
 
             if (!userCredential || !userCredential.user) {
                 alert("Firebase não retornou o usuário.");
@@ -91,8 +84,6 @@ document.addEventListener("DOMContentLoaded", () =>{
             e.target.reset();
 
             } catch (error) {
-                console.error("Erro ao cadastrar:", error);
-
                 if (error.code === "auth/email-already-in-use") {
                     alert("Este e-mail já está em uso.");
                 } else {

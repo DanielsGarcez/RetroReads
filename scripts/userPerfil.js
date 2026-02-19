@@ -1,5 +1,5 @@
 import { db, auth } from './firebase.js';
-import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { doc, getDoc, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 const parametros = new URLSearchParams(window.location.search);
@@ -38,34 +38,82 @@ document.addEventListener("DOMContentLoaded", () =>{
         }
         dadosUsuario()
     });
-})
 
-// ------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------
 
-const btnEditar = document.getElementById("btn-editar-dados");
+    const btnEditar = document.getElementById("btn-editar-dados");
 
-const btnSalvar = document.getElementById("btn-salvar-dados");
-const btnCancelar = document.getElementById("btn-cancelar-dados");
+    const btnCancelar = document.getElementById("btn-cancelar-dados");
+    const btnSalvar = document.getElementById("btn-salvar-dados");
 
-const dadosInput = document.querySelector(".dados-input");
+    const dadosInput = document.querySelectorAll(".dados-input");
+    const formDados = document.getElementById("form-dados-user");
 
-btnEditar.addEventListener("click", () => {
+    if (!formDados){
+        console.error("Formulário não encontrado");
+        return;
+    }
 
-    btnEditar.classList.add("conteudo-oculto");
-    btnSalvar.classList.remove("conteudo-oculto");
-    btnCancelar.classList.remove("conteudo-oculto");
+    btnEditar.addEventListener("click", () => {
 
-    dadosInput.classList.remove("input-desativado");
-    console.log("Modo de edição ativado");
+        btnEditar.classList.add("conteudo-oculto");
+        btnSalvar.classList.remove("conteudo-oculto");
+        btnCancelar.classList.remove("conteudo-oculto");
+
+        dadosInput.classList.remove("input-desativado");
+        console.log("Modo de edição ativado");
+    });
+
+    btnCancelar.addEventListener("click", () => {
+        
+        btnEditar.classList.remove("conteudo-oculto");
+        btnSalvar.classList.add("conteudo-oculto");
+        btnCancelar.classList.add("conteudo-oculto");
+        dadosInput.classList.add("input-desativado");
+
+        window.location.reload()
+        console.log("Ação cancelada");
+    });
+
+    formDados.addEventListener("submit", async (e) =>{
+        e.preventDefault();
+
+        // Pega os IDs do formulário "form-dados-user":
+        const nomeUser = document.getElementById("dados-user-nome").value;
+        const nascUser = document.getElementById("dados-user-nasc").value;
+        const telUser = document.getElementById("dados-user-tel").value;
+
+        // Validação dos campos do Formulário:
+        if (
+            !nomeUser  ||
+            !nascUser  ||
+            !telUser
+        ){  
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        try{
+            // Salva no Firebase na coleção
+            const docRef = await addDoc(collection(db, "usuarios"),{
+                nome: nomeUser,
+                nascimento: nascUser,
+                telefone: telUser
+            });
+
+            btnEditar.classList.remove("conteudo-oculto");
+            btnSalvar.classList.add("conteudo-oculto");
+            btnCancelar.classList.add("conteudo-oculto");
+            dadosInput.classList.add("input-desativado");
+
+            alert("Dados alterados com sucesso!")
+            console.log("Alterou o documento com o ID: ", docRef.id);
+            e.target.reset();
+
+        } catch (erro){
+            alert("Erro ao alterar dados")
+        }
+
+    });
 });
 
-btnCancelar.addEventListener("click", () => {
-    
-    btnEditar.classList.remove("conteudo-oculto");
-    btnSalvar.classList.add("conteudo-oculto");
-    btnCancelar.classList.add("conteudo-oculto");
-    dadosInput.classList.add("input-desativado");
-
-    window.location.href = "/perfilUser.html?id=" + usuarioId;
-    console.log("Ação cancelada");
-});

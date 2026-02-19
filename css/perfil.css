@@ -125,7 +125,7 @@
     gap: 2rem;
 
     justify-content: end;
-    margin-right: 1.5rem;
+    margin-right: 2.5rem;
 }
 
 .btn-editar{
@@ -148,6 +148,10 @@
     background-color: var(--corCinzaClaro);
 }
 
+#dados-user-cpf::placeholder {
+    color: var(--corCinzaMedio);
+}
+
 /* Desabilitar edição da Assinatura */
 #dados-user-assinatura{
     pointer-events: none;
@@ -161,6 +165,7 @@
     color: var(--corCinzaMedio);
     background-color: var(--corCinzaClaro);
 }
+
 
 /* ----------------- RESPONSIVIDADE ----------------- */
 
@@ -180,7 +185,7 @@
     }
 
     .dados-mutaveis{
-        margin-left: 1rem;
+        margin-left: .5rem;
     }
 
     .dados-grid{
