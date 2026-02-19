@@ -15,7 +15,7 @@ carregarHeader();
 
 const btnUserPerfil = document.getElementById("header-simples-user");
 
-btnUserPerfil.addEventListener("click", (e) => {
+btnUserPerfil.addEventListener("click", () => {
   onAuthStateChanged(auth, (user) => {
     const iconPerfil = document.querySelector(".user-perfil");
 
