@@ -75,7 +75,10 @@ document.addEventListener("DOMContentLoaded", () =>{
         dadosUsuario()
     });
 
-    // ------------------------------------------------------------------------------------
+    // -------------------------------------------------------------------------
+
+    btnEditar.addEventListener("click", modoEdicaoAtivar);
+    btnCancelar.addEventListener("click", modoEdicaoDesativar);
 
     if (!formDados){
         console.error("Formulário não encontrado");
