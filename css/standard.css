@@ -76,6 +76,7 @@ main{
 
     border: 1px solid var(--corPrincipal);
     border-radius: 1em;
+    box-shadow: var(--sombra);
 }
 
 .btn-secundario:hover{
@@ -93,6 +94,7 @@ main{
 
     border: 1px solid var(--corVermelhoPrincipal);
     border-radius: 1em;
+    box-shadow: var(--sombra);
 }
 
 .btn-vermelho:hover{

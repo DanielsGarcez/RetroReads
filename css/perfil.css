@@ -125,14 +125,14 @@
     gap: 2rem;
 
     justify-content: end;
-    padding-right: 3rem;
+    margin-right: 1.5rem;
 }
 
 .btn-editar{
-    width: 20%;
-    margin-bottom: 2rem;
+    width: 25%;
     padding: .5rem 1rem;
-    justify-content: center;
+
+    margin-bottom: 2rem;
 }
 
 .aba-ativa{
@@ -160,4 +160,54 @@
     pointer-events: none;
     color: var(--corCinzaMedio);
     background-color: var(--corCinzaClaro);
+}
+
+/* ----------------- RESPONSIVIDADE ----------------- */
+
+@media (max-width: 1080px) {
+    .dados-mutaveis{
+        flex-direction: column;
+    }
+
+    .menu-perfil-user {
+        width: unset;
+    }
+}
+
+@media (max-width: 800px) {
+    .container-perfil-user{
+        gap: 1rem;
+    }
+
+    .dados-mutaveis{
+        margin-left: 1rem;
+    }
+
+    .dados-grid{
+        column-gap: 2rem;
+    }
+
+    .dados-grid-item {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-perfil-user {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-secoes {
+        pointer-events: none;
+        display: none;
+    }
+
+    .dados-mutaveis {
+        margin: 0rem;
+    }
+
+    .info-edit{
+        border-radius: 0rem;
+    }
 }
