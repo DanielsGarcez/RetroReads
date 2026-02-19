@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         // Pega os IDs do formulário "form-dados-user":
         const nomeUser = document.getElementById("dados-user-nome").value;
         const nascUser = document.getElementById("dados-user-nasc").value;
-        const telUser = document.getElementById("dados-user-tel").value;
+        const telUser = document.getElementById("dados-user-telefone").value;
 
         // Validação dos campos do Formulário:
         if (
