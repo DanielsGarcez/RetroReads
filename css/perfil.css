@@ -111,8 +111,7 @@
     border: var(--borda);
     border-radius: 2rem;
     box-shadow: var(--sombra);
-
-    background-color: var(--corCinzaClaro);
+    
     color: var(--corCinzaEscuro);
 
     font-size: 1rem;

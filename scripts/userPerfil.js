@@ -5,6 +5,42 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/fi
 const parametros = new URLSearchParams(window.location.search);
 const usuarioId = parametros.get("id");
 
+const btnEditar = document.getElementById("btn-editar-dados");
+
+const btnCancelar = document.getElementById("btn-cancelar-dados");
+const btnSalvar = document.getElementById("btn-salvar-dados");
+
+const dadosInput = document.querySelectorAll(".dados-input");
+const formDados = document.getElementById("form-dados-user");
+
+// ------------------ Funções ------------------
+
+function modoEdicaoAtivar(){
+    btnEditar.classList.add("conteudo-oculto");
+    btnSalvar.classList.remove("conteudo-oculto");
+    btnCancelar.classList.remove("conteudo-oculto");
+
+    dadosInput.forEach(input => {
+        input.classList.remove("input-desativado");
+    });
+    console.log("Modo de edição ativado");
+}
+
+function modoEdicaoDesativar(){
+    btnEditar.classList.remove("conteudo-oculto");
+    btnSalvar.classList.add("conteudo-oculto");
+    btnCancelar.classList.add("conteudo-oculto");
+
+    dadosInput.forEach(input => {
+        input.classList.add("input-desativado");
+    });
+
+    window.location.reload()
+    console.log("Modo de edição desativado");
+}
+
+// ------------------ Ativações ------------------
+
 document.addEventListener("DOMContentLoaded", () =>{
 
     onAuthStateChanged(auth, (user) => {
@@ -41,39 +77,10 @@ document.addEventListener("DOMContentLoaded", () =>{
 
     // ------------------------------------------------------------------------------------
 
-    const btnEditar = document.getElementById("btn-editar-dados");
-
-    const btnCancelar = document.getElementById("btn-cancelar-dados");
-    const btnSalvar = document.getElementById("btn-salvar-dados");
-
-    const dadosInput = document.querySelectorAll(".dados-input");
-    const formDados = document.getElementById("form-dados-user");
-
     if (!formDados){
         console.error("Formulário não encontrado");
         return;
     }
-
-    btnEditar.addEventListener("click", () => {
-
-        btnEditar.classList.add("conteudo-oculto");
-        btnSalvar.classList.remove("conteudo-oculto");
-        btnCancelar.classList.remove("conteudo-oculto");
-
-        dadosInput.classList.remove("input-desativado");
-        console.log("Modo de edição ativado");
-    });
-
-    btnCancelar.addEventListener("click", () => {
-        
-        btnEditar.classList.remove("conteudo-oculto");
-        btnSalvar.classList.add("conteudo-oculto");
-        btnCancelar.classList.add("conteudo-oculto");
-        dadosInput.classList.add("input-desativado");
-
-        window.location.reload()
-        console.log("Ação cancelada");
-    });
 
     formDados.addEventListener("submit", async (e) =>{
         e.preventDefault();

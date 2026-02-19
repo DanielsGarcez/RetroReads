@@ -84,11 +84,25 @@
                         </aside>
 
                         <aside class="barra-destaque">
-                            <button id="btn-salvar-dados" class="btn-secundario btn-editar conteudo-oculto" type="submit">Salvar</button>
+                            <button 
+                                id="btn-salvar-dados" 
+                                class="btn-secundario btn-editar conteudo-oculto"
+                                type="submit">Salvar
+                            </button>
 
-                            <button id="btn-cancelar-dados" class="btn-vermelho btn-editar conteudo-oculto" type="button">Cancelar</button>
+                            <button 
+                                onclick="modoEdicaoDesativar()" 
+                                id="btn-cancelar-dados" 
+                                class="btn-vermelho btn-editar conteudo-oculto" 
+                                type="button">Cancelar
+                            </button>
 
-                            <button id="btn-editar-dados" class="btn-secundario btn-editar" type="button">Editar</button>
+                            <button 
+                                onclick="modoEdicaoAtivar()" 
+                                id="btn-editar-dados" 
+                                class="btn-secundario btn-editar" 
+                                type="button">Editar
+                            </button>
                         </aside>
                     </form>
                 </section>
@@ -106,12 +120,12 @@
                             
                             <section class="dados-grid-item">
                                 <label>Número:</label>
-                                <input class="dados-input" id="dados-user-num" type="number">
+                                <input class="dados-input" id="dados-user-numero" type="number">
                             </section>
 
                             <section class="dados-grid-item">
                                 <label>Complemento:</label>
-                                <input class="dados-input" id="dados-user-cpf" type="text">
+                                <input class="dados-input" id="dados-user-complemento" type="text">
                             </section>
 
                             <!-- colunas -->
