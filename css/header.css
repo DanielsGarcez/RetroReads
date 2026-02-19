@@ -313,6 +313,8 @@ hr{
     }
 
     #btn-menu{
+        width: 30px;
+        
         border: 0;
         background-color: transparent;
         color: var(--corPrincipal);

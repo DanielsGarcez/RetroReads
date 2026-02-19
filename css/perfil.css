@@ -193,21 +193,44 @@
 }
 
 @media (max-width: 600px) {
-    .container-perfil-user {
+    .container-perfil-user{
         flex-direction: column;
         align-items: center;
     }
 
-    .menu-secoes {
+    .menu-secoes{
         pointer-events: none;
         display: none;
     }
 
-    .dados-mutaveis {
+    .dados-mutaveis{
         margin: 0rem;
+        gap: 5rem;
+    }
+
+    .dados-grid{
+        width: 80vw;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .barra-destaque{
+        gap: 5rem;
+        justify-content: center;
+        margin-right: 1.5rem;
+    }
+
+    .btn-editar {
+        width: 30%;
     }
 
     .info-edit{
+        width: 100vw;
         border-radius: 0rem;
+        align-items: center;
+    }
+
+    .info-edit > h2 {
+        margin-left: 0rem;
     }
 }

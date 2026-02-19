@@ -66,6 +66,6 @@ btnCancelar.addEventListener("click", () => {
     btnCancelar.classList.add("conteudo-oculto");
     dadosInput.classList.add("input-desativado");
 
-    window.location.href = "#";
+    window.location.href = "/perfilUser.html?id=" + usuarioId;
     console.log("Ação cancelada");
 });
