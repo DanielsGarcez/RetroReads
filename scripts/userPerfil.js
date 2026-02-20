@@ -116,13 +116,13 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("dados-user-assinatura").placeholder  = usuario.plano || " ";
 
             //ENDEREÇO DO USUÁRIO
-            document.getElementById("endereco-user-logradouro").placeholder  = usuario.logradouro || " ";
-            document.getElementById("endereco-user-numero").placeholder  = usuario.numero || " ";
-            document.getElementById("endereco-user-complemento").placeholder  = usuario.complemento || " ";
+            document.getElementById("endereco-user-logradouro").placeholder  = usuario.endereco.logradouro || " ";
+            document.getElementById("endereco-user-numero").placeholder  = usuario.endereco.numero || " ";
+            document.getElementById("endereco-user-complemento").placeholder  = usuario.endereco.complemento || " ";
 
-            document.getElementById("endereco-user-estado").placeholder  = usuario.estado || " ";
-            document.getElementById("endereco-user-cidade").placeholder  = usuario.cidade || " ";
-            document.getElementById("endereco-user-cep").placeholder  = usuario.cep || " ";
+            document.getElementById("endereco-user-estado").placeholder  = usuario.endereco.estado || " ";
+            document.getElementById("endereco-user-cidade").placeholder  = usuario.endereco.cidade || " ";
+            document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
         }
         dadosUsuario()
     });
