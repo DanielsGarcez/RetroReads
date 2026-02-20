@@ -107,28 +107,28 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("user-plano").textContent  = usuario.plano;
 
             // DADOS DO USUÁRIO
-            document.getElementById("dados-user-nome").placeholder  = usuario.nome;
-            document.getElementById("dados-user-email").placeholder  = usuario.email;
-            document.getElementById("dados-user-nasc").placeholder  = usuario.nascimento;
+            document.getElementById("dados-user-nome").placeholder  = usuario.nome || " ";
+            document.getElementById("dados-user-email").placeholder  = usuario.email || " ";
+            document.getElementById("dados-user-nasc").placeholder  = usuario.nascimento || " ";
             
-            document.getElementById("dados-user-cpf").placeholder  = usuario.documento;
-            document.getElementById("dados-user-telefone").placeholder  = usuario.telefone;
-            document.getElementById("dados-user-assinatura").placeholder  = usuario.plano;
+            document.getElementById("dados-user-cpf").placeholder  = usuario.documento || " ";
+            document.getElementById("dados-user-telefone").placeholder  = usuario.telefone || " ";
+            document.getElementById("dados-user-assinatura").placeholder  = usuario.plano || " ";
 
             //ENDEREÇO DO USUÁRIO
-            document.getElementById("endereco-user-logradouro").placeholder  = usuario.logradouro;
-            document.getElementById("endereco-user-numero").placeholder  = usuario.numero;
-            document.getElementById("endereco-user-complemento").placeholder  = usuario.complemento;
+            document.getElementById("endereco-user-logradouro").placeholder  = usuario.logradouro || " ";
+            document.getElementById("endereco-user-numero").placeholder  = usuario.numero || " ";
+            document.getElementById("endereco-user-complemento").placeholder  = usuario.complemento || " ";
 
-            document.getElementById("endereco-user-estado").placeholder  = usuario.estado;
-            document.getElementById("endereco-user-cidade").placeholder  = usuario.cidade;
-            document.getElementById("endereco-user-cep").placeholder  = usuario.cep;
+            document.getElementById("endereco-user-estado").placeholder  = usuario.estado || " ";
+            document.getElementById("endereco-user-cidade").placeholder  = usuario.cidade || " ";
+            document.getElementById("endereco-user-cep").placeholder  = usuario.cep || " ";
         }
         dadosUsuario()
     });
 
 
-    
+
     // ------------------ Ativações Dados ------------------
 
     btnEditarDados.addEventListener("click", ativarModoEdicaoDados);
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         try{
             // Salva no Firebase na coleção
-            const docRef = await updateDoc(doc(db, "usuarios", usuarioId),{
+            await updateDoc(doc(db, "usuarios", usuarioId),{
                 nome: nomeUser,
                 nascimento: nascUser,
                 telefone: telUser
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             });
 
             alert("Dados alterados com sucesso!")
-            console.log("Alterou o documento com o ID: ", docRef.id);
+            console.log("Alterou o documento com o ID: ", usuarioId);
             e.target.reset();
 
         } catch (erro){
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 
         try{
             // Salva no Firebase na coleção
-            const docRef = await updateDoc(doc(db, "usuarios", usuarioId),{
+            await updateDoc(doc(db, "usuarios", usuarioId),{
                 endereco: {
                     logradouro: logradouroUser,
                     numero: numeroUser,
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             });
 
             alert("Dados alterados com sucesso!")
-            console.log("Alterou o documento com o ID: ", docRef.id);
+            console.log("Alterou o documento com o ID: ", usuarioId);
             e.target.reset();
 
         } catch (erro){
