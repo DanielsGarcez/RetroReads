@@ -14,6 +14,8 @@ const btnSalvarDados = document.getElementById("btn-salvar-dados");
 const inputDados = document.querySelectorAll(".dados-input");
 const formDados = document.getElementById("form-dados-user");
 
+
+
 // ------------------ Variáveis Endereços ------------------
 const btnEditarEndereco = document.getElementById("btn-editar-endereco");
 
@@ -37,7 +39,7 @@ function ativarModoEdicaoDados(){
     console.log("Modo de edição ativado");
 }
 
-function desativarModoEdicaoEndereco(){
+function desativarModoEdicaoDados(){
     btnEditarDados.classList.remove("conteudo-oculto");
     btnSalvarDados.classList.add("conteudo-oculto");
     btnCancelarDados.classList.add("conteudo-oculto");
@@ -47,6 +49,9 @@ function desativarModoEdicaoEndereco(){
     });
     console.log("Modo de edição desativado");
 }
+
+
+
 
 // ------------------ Funções Endereços ------------------
 
@@ -122,10 +127,12 @@ document.addEventListener("DOMContentLoaded", () =>{
         dadosUsuario()
     });
 
+
+    
     // ------------------ Ativações Dados ------------------
 
     btnEditarDados.addEventListener("click", ativarModoEdicaoDados);
-    btnCancelarDados.addEventListener("click", desativarModoEdicaoEndereco);
+    btnCancelarDados.addEventListener("click", desativarModoEdicaoDados);
 
     if (!formDados){
         console.error("Formulário não encontrado");
@@ -175,6 +182,9 @@ document.addEventListener("DOMContentLoaded", () =>{
         }
 
     });
+
+
+
 
     // ------------------ Ativações Endereços ------------------
 
