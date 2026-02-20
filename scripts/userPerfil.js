@@ -37,7 +37,7 @@ function ativarModoEdicaoDados(){
     console.log("Modo de edição ativado");
 }
 
-function modoEdicaoDesativar(){
+function desativarModoEdicaoEndereco(){
     btnEditarDados.classList.remove("conteudo-oculto");
     btnSalvarDados.classList.add("conteudo-oculto");
     btnCancelarDados.classList.add("conteudo-oculto");
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     // ------------------ Ativações Dados ------------------
 
     btnEditarDados.addEventListener("click", ativarModoEdicaoDados);
-    btnCancelarDados.addEventListener("click", modoEdicaoDesativar);
+    btnCancelarDados.addEventListener("click", desativarModoEdicaoEndereco);
 
     if (!formDados){
         console.error("Formulário não encontrado");
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     // ------------------ Ativações Endereços ------------------
 
     btnEditarEndereco.addEventListener("click", ativarModoEdicaoEndereco);
-    btnCancelarEndereco.addEventListener("click", modoEdicaoDesativar);
+    btnCancelarEndereco.addEventListener("click", modoEdicaoDesativarEndereco);
 
     if (!formEndereco){
         console.error("Formulário de endereço não encontrado");
@@ -193,6 +193,7 @@ document.addEventListener("DOMContentLoaded", () =>{
         const logradouroUser = document.getElementById("endereco-user-logradouro").value;
         const numeroUser = document.getElementById("endereco-user-numero").value;
         const complementoUser = document.getElementById("endereco-user-complemento").value;
+        
         const estadoUser = document.getElementById("endereco-user-estado").value;
         const cidadeUser = document.getElementById("endereco-user-cidade").value;
         const cepUser = document.getElementById("endereco-user-cep").value;

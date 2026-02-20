@@ -111,7 +111,7 @@ main{
     padding-left: .3rem;
 }
 
-.dados-input, .dados-endereco{
+.dados-input, .endereco-input{
     border: var(--borda);
     border-radius: 2rem;
     box-shadow: var(--sombra);
