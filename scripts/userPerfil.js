@@ -5,33 +5,68 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/fi
 const parametros = new URLSearchParams(window.location.search);
 const usuarioId = parametros.get("id");
 
-const btnEditar = document.getElementById("btn-editar-dados");
+// ------------------ Variáveis Dados ------------------
+const btnEditarDados = document.getElementById("btn-editar-dados");
 
-const btnCancelar = document.getElementById("btn-cancelar-dados");
-const btnSalvar = document.getElementById("btn-salvar-dados");
+const btnCancelarDados = document.getElementById("btn-cancelar-dados");
+const btnSalvarDados = document.getElementById("btn-salvar-dados");
 
-const dadosInput = document.querySelectorAll(".dados-input");
+const inputDados = document.querySelectorAll(".dados-input");
 const formDados = document.getElementById("form-dados-user");
 
-// ------------------ Funções ------------------
+// ------------------ Variáveis Endereços ------------------
+const btnEditarEndereco = document.getElementById("btn-editar-endereco");
 
-function modoEdicaoAtivar(){
-    btnEditar.classList.add("conteudo-oculto");
-    btnSalvar.classList.remove("conteudo-oculto");
-    btnCancelar.classList.remove("conteudo-oculto");
+const btnCancelarEndereco = document.getElementById("btn-cancelar-endereco");
+const btnSalvarEndereco = document.getElementById("btn-salvar-endereco");
 
-    dadosInput.forEach(input => {
+const inputEndereco = document.querySelectorAll(".endereco-input");
+const formEndereco = document.getElementById("form-endereco-user");
+
+
+// ------------------ Funções Dados ------------------
+
+function ativarModoEdicaoDados(){
+    btnEditarDados.classList.add("conteudo-oculto");
+    btnSalvarDados.classList.remove("conteudo-oculto");
+    btnCancelarDados.classList.remove("conteudo-oculto");
+
+    inputDados.forEach(input => {
         input.classList.remove("input-desativado");
     });
     console.log("Modo de edição ativado");
 }
 
 function modoEdicaoDesativar(){
-    btnEditar.classList.remove("conteudo-oculto");
-    btnSalvar.classList.add("conteudo-oculto");
-    btnCancelar.classList.add("conteudo-oculto");
+    btnEditarDados.classList.remove("conteudo-oculto");
+    btnSalvarDados.classList.add("conteudo-oculto");
+    btnCancelarDados.classList.add("conteudo-oculto");
 
-    dadosInput.forEach(input => {
+    inputDados.forEach(input => {
+        input.classList.add("input-desativado");
+    });
+    console.log("Modo de edição desativado");
+}
+
+// ------------------ Funções Endereços ------------------
+
+function ativarModoEdicaoEndereco(){
+    btnEditarEndereco.classList.add("conteudo-oculto");
+    btnSalvarEndereco.classList.remove("conteudo-oculto");
+    btnCancelarEndereco.classList.remove("conteudo-oculto");
+
+    inputEndereco.forEach(input => {
+        input.classList.remove("input-desativado");
+    });
+    console.log("Modo de edição ativado");
+}
+
+function modoEdicaoDesativarEndereco(){
+    btnEditarEndereco.classList.remove("conteudo-oculto");
+    btnSalvarEndereco.classList.add("conteudo-oculto");
+    btnCancelarEndereco.classList.add("conteudo-oculto");
+
+    inputEndereco.forEach(input => {
         input.classList.add("input-desativado");
     });
     console.log("Modo de edição desativado");
@@ -62,21 +97,35 @@ document.addEventListener("DOMContentLoaded", () =>{
 
             const usuario = snap.data();
 
+            // MENU LATERAL
             document.getElementById("user-nome").textContent  = usuario.nome;
             document.getElementById("user-plano").textContent  = usuario.plano;
 
+            // DADOS DO USUÁRIO
             document.getElementById("dados-user-nome").placeholder  = usuario.nome;
             document.getElementById("dados-user-email").placeholder  = usuario.email;
+            document.getElementById("dados-user-nasc").placeholder  = usuario.nascimento;
+            
             document.getElementById("dados-user-cpf").placeholder  = usuario.documento;
+            document.getElementById("dados-user-telefone").placeholder  = usuario.telefone;
             document.getElementById("dados-user-assinatura").placeholder  = usuario.plano;
+
+            //ENDEREÇO DO USUÁRIO
+            document.getElementById("endereco-user-logradouro").placeholder  = usuario.logradouro;
+            document.getElementById("endereco-user-numero").placeholder  = usuario.numero;
+            document.getElementById("endereco-user-complemento").placeholder  = usuario.complemento;
+
+            document.getElementById("endereco-user-estado").placeholder  = usuario.estado;
+            document.getElementById("endereco-user-cidade").placeholder  = usuario.cidade;
+            document.getElementById("endereco-user-cep").placeholder  = usuario.cep;
         }
         dadosUsuario()
     });
 
-    // -------------------------------------------------------------------------
+    // ------------------ Ativações Dados ------------------
 
-    btnEditar.addEventListener("click", modoEdicaoAtivar);
-    btnCancelar.addEventListener("click", modoEdicaoDesativar);
+    btnEditarDados.addEventListener("click", ativarModoEdicaoDados);
+    btnCancelarDados.addEventListener("click", modoEdicaoDesativar);
 
     if (!formDados){
         console.error("Formulário não encontrado");
@@ -109,11 +158,76 @@ document.addEventListener("DOMContentLoaded", () =>{
                 telefone: telUser
             });
 
-            btnEditar.classList.remove("conteudo-oculto");
-            btnSalvar.classList.add("conteudo-oculto");
-            btnCancelar.classList.add("conteudo-oculto");
-            
-            dadosInput.forEach(input => {
+            btnEditarDados.classList.remove("conteudo-oculto");
+            btnSalvarDados.classList.add("conteudo-oculto");
+            btnCancelarDados.classList.add("conteudo-oculto");
+
+            inputDados.forEach(input => {
+                input.classList.add("input-desativado");
+            });
+
+            alert("Dados alterados com sucesso!")
+            console.log("Alterou o documento com o ID: ", docRef.id);
+            e.target.reset();
+
+        } catch (erro){
+            alert("Erro ao alterar dados")
+        }
+
+    });
+
+    // ------------------ Ativações Endereços ------------------
+
+    btnEditarEndereco.addEventListener("click", ativarModoEdicaoEndereco);
+    btnCancelarEndereco.addEventListener("click", modoEdicaoDesativar);
+
+    if (!formEndereco){
+        console.error("Formulário de endereço não encontrado");
+        return;
+    }
+
+    formEndereco.addEventListener("submit", async (e) =>{
+        e.preventDefault();
+
+        // Pega os IDs do formulário "form-endereco-user":
+        const logradouroUser = document.getElementById("endereco-user-logradouro").value;
+        const numeroUser = document.getElementById("endereco-user-numero").value;
+        const complementoUser = document.getElementById("endereco-user-complemento").value;
+        const estadoUser = document.getElementById("endereco-user-estado").value;
+        const cidadeUser = document.getElementById("endereco-user-cidade").value;
+        const cepUser = document.getElementById("endereco-user-cep").value;
+
+        // Validação dos campos do Formulário:
+        if (
+            !logradouroUser  ||
+            !numeroUser  ||
+            !complementoUser  ||
+            !estadoUser  ||
+            !cidadeUser  ||
+            !cepUser
+        ){  
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        try{
+            // Salva no Firebase na coleção
+            const docRef = await updateDoc(doc(db, "usuarios", usuarioId),{
+                endereco: {
+                    logradouro: logradouroUser,
+                    numero: numeroUser,
+                    complemento: complementoUser,
+                    estado: estadoUser,
+                    cidade: cidadeUser,
+                    cep: cepUser
+                }
+            });
+
+            btnEditarEndereco.classList.remove("conteudo-oculto");
+            btnSalvarEndereco.classList.add("conteudo-oculto");
+            btnCancelarEndereco.classList.add("conteudo-oculto");
+
+            inputEndereco.forEach(input => {
                 input.classList.add("input-desativado");
             });
 
