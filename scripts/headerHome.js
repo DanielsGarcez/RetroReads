@@ -11,6 +11,8 @@ async function carregarHeader() {
     console.error("Erro ao carregar o header:", erro);
   }
 
+
+  // Verifica Login
   const mensagem = document.getElementById("mensagem-login");
   const fazerLogin = document.querySelector("usuario")
   const userLogado = document.querySelector("perfil-mobile")
@@ -22,8 +24,10 @@ async function carregarHeader() {
       console.log(`Logado como: ${user.email}.`);
       fazerLogin.classList.add("conteudo-oculto")
       userLogado.classList.add("conteudo-revelado")
+      
       /* mensagem.textContent = `Logado com: ${user.email}`;
       mensagem.style.color = "green"; */
+
     } else {
       console.log("Usuário não logado... Faça o login.")
       fazerLogin.classList.add("conteudo-revelado")

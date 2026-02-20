@@ -1,5 +1,5 @@
 import { db, auth } from './firebase.js';
-import { doc, getDoc, collection, updateDoc  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { doc, getDoc, updateDoc  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 const parametros = new URLSearchParams(window.location.search);
@@ -24,6 +24,7 @@ const btnSalvarEndereco = document.getElementById("btn-salvar-endereco");
 
 const inputEndereco = document.querySelectorAll(".endereco-input");
 const formEndereco = document.getElementById("form-endereco-user");
+
 
 
 // ------------------ Funções Dados ------------------

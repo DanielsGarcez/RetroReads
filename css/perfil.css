@@ -64,7 +64,7 @@ main{
 }
 
 /* -------------------- Área de Dados -------------------- */
-.dados-mutaveis{
+.section-principal{
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -169,7 +169,7 @@ main{
 /* ----------------- RESPONSIVIDADE ----------------- */
 
 @media (max-width: 1080px) {
-    .dados-mutaveis{
+    .section-principal{
         flex-direction: column;
     }
 
@@ -183,7 +183,7 @@ main{
         gap: 1rem;
     }
 
-    .dados-mutaveis{
+    .section-principal{
         margin-left: .5rem;
     }
 
@@ -207,7 +207,7 @@ main{
         display: none;
     }
 
-    .dados-mutaveis{
+    .section-principal{
         margin: 0rem;
         gap: 5rem;
     }

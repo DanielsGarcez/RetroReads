@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Perfil</title>
+    <base href="/RetroReads/">
+    
+    <!-- Link de Scripts -->
+    <script type="module" src="./scripts/headerSimples.js"></script>
+    <script type="module" src="./scripts/headerMobile.js"></script>
+    <script type="module" src="./scripts/footer.js"></script>
+    <script type="module" src="./scripts/userMenu.js"></script>
+    <script type="module" src="./scripts/userEstante.js"></script>
+
+    <!-- Link de Styles -->
+    <link rel="icon" type="image/png" href="./img/Logo-Page.png">
+    <link rel="stylesheet" href="./css/standard.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <link rel="stylesheet" href="./css/catalogo.css">
+
+</head>
+<body>
+    <main class="main-peril-user">
+        <article class="container-perfil-user">
+
+            <aside class="menu-perfil-user">
+            </aside>
+
+            <hr>
+
+            <section class="section-principal">
+
+                <article class="dropdown">
+                    <section class="filtro-mobile">
+                        <hr id="hr-left" class="mobile">
+                        <button id="btn-dropdown" class="btn-secundario">Filtros</button>
+                        <hr id="hr-right" class="mobile">
+                    </section>
+
+                    <section id="dropdown-content">
+                        <form id="form-filtro" class="barra-ferramentas">
+
+                            <select class="barra-ferramentas-input" id="filtro-genero" name="generos">
+                                <option value="">Todos os Gêneros</option>
+                                <option value="aventura">Aventura</option>
+                                <option value="autoajuda">Autoajuda</option>
+                                <option value="biografia">Biografia</option>
+                                <option value="ciencia">Ciência</option>
+                                <option value="critica-literaria">Crítica Literária</option>
+                                <option value="educacao">Educação</option>
+                                <option value="ensaios">Ensaios</option>
+                                <option value="fantasia">Fantasia</option>
+                                <option value="ficcao-cientifica">Ficção Científica</option>
+                                <option value="ficcao-juvenil">Ficção Juvenil</option>
+                                <option value="gastronomia">Gastronomia</option>
+                                <option value="graphic-novels">Graphic Novels</option>
+                                <option value="historia">História</option>
+                                <option value="historia-alternativa">História Alternativa</option>
+                                <option value="literatura-infantil">Literatura Infantil</option>
+                                <option value="livros-contos">Livros de Contos</option>
+                                <option value="livros-ilustrados">Livros Ilustrados</option>
+                                <option value="misterio-policial">Mistério/Policial</option>
+                                <option value="negocios">Negócios</option>
+                                <option value="pecas-teatro">Peças de Teatro</option>
+                                <option value="poesia">Poesia</option>
+                                <option value="quadrinhos">Quadrinhos</option>
+                                <option value="religiao-espiritualidade">Religião e Espiritualidade</option>
+                                <option value="romance">Romance</option>
+                                <option value="terror">Terror</option>
+                                <option value="viagem">Viagem</option>
+                            </select>
+
+                            <select class="barra-ferramentas-input" id="filtro-idioma" name="idiomas">
+                                <option value="">Idioma</option>
+                                <option value="Português(BR)">Português(BR)</option>
+                                <option value="Português(PT)">Português(PT)</option>
+                                <option value="Inglês">Inglês</option>
+                                <option value="Espanhol">Espanhol</option>
+                                <option value="Italiano">Italiano</option>
+                                <option value="Francês">Francês</option>
+                                <option value="Alemão">Alemão</option>
+                            </select>
+
+                            <select class="barra-ferramentas-input" id="filtro-acabamento" name="tipos de capa">
+                                <option value="">Acabamento</option>
+                                <option value="Capa Comum">Capa Comum</option>
+                                <option value="Capa Dura">Capa Dura</option>
+                            </select>
+
+                            <select class="barra-ferramentas-input" id="filtro-disponibilidade">
+                                <option value="">Disponibilidade</option>
+                                <option value="Reservado">Reservado</option>
+                                <option value="Disponivel">Disponível</option>
+                            </select>
+
+                            <button id="btn-limpa-filtro" class="barra-ferramentas-input">Limpar Filtro</button>
+                        </form>
+                    </section>
+                </article>
+
+                <article class="container-catalogo">
+                    <!---------- Área dos livros ---------->
+                    <section id="grid-catalogo">
+                        <template id="card-template">
+                            
+                            <article class="item-grid">
+                                <img class="capa-livro" src="img/Mockup-Livro.png" alt="capa-livro">
+
+                                <aside class="mobile-content">
+                                    <h2 class="titulo-livro"></h2>
+                                    <h4 class="autor-livro"></h4>
+                                    <p class="valor-livro">R$<span class="valor"></span></p>
+
+                                    <button class="btn-secundario btn-detalhes">Detalhes</button>
+                                </aside>
+                            </article>
+                        </template>
+                    </section>
+                </article>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
