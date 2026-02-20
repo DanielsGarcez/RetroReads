@@ -13,9 +13,10 @@ async function carregarHeader() {
 }
 carregarHeader();
 
-const btnUserPerfil = document.getElementById("header-simples-user");
-
 document.addEventListener("DOMContentLoaded", () => {
+
+  const btnUserPerfil = document.getElementById("header-simples-user");
+
   btnUserPerfil.addEventListener("click", () => {
     onAuthStateChanged(auth, (user) => {
       const iconPerfil = document.querySelector(".user-perfil");
