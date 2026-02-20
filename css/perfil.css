@@ -47,7 +47,7 @@ main{
     width: 12rem;
 }
 
-.menu-secoes > a{
+.menu-secoes > .btn-secao{
     font-size: 1.3rem;
     text-decoration: none;
 
@@ -57,7 +57,7 @@ main{
     cursor: pointer;
 }
 
-.menu-secoes > a:hover{
+.menu-secoes > .btn-secao:hover{
     color: var(--corPrincipal);
     border-left: 5px solid var(--corPrincipal);
     transition: .1s;
