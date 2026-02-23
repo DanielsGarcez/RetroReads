@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     
     const userId = new URLSearchParams(window.location.search).get("id");
 
-    const abaDadosPessoais = document.getElementById("#aba-dados-pessoais");
-    const abaEstanteVirtual = document.getElementById("#aba-estante-virtual");
-    const abaLivrosReservados = document.getElementById("#aba-suas-reservas");
-    const abaLivrosAnunciados = document.getElementById("#aba-seus-anuncios");
+    const abaDadosPessoais = document.getElementById("aba-dados-pessoais");
+    const abaEstanteVirtual = document.getElementById("aba-estante-virtual");
+    const abaLivrosReservados = document.getElementById("aba-suas-reservas");
+    const abaLivrosAnunciados = document.getElementById("aba-seus-anuncios");
 
     onAuthStateChanged(auth, (user) => {
         if (!userId) {
