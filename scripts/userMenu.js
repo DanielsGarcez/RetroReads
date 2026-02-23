@@ -16,7 +16,9 @@ async function carregarMenu() {
 }
 carregarMenu();
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", async () =>{
+
+    await carregarMenu();
     
     const userId = new URLSearchParams(window.location.search).get("id");
 

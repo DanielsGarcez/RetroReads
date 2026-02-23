@@ -71,8 +71,9 @@ main{
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    margin-left: 2rem;
-    margin-top: 2rem;
+    
+    margin: 2rem;
+    margin-bottom: 10rem;
 }
 
 .info-edit{
