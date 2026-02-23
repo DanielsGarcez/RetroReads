@@ -69,7 +69,7 @@ function renderItem(data, id) {
 
 // Função que renderiza os cards do grid
 function renderizar(snapshot){
-
+  
   grid.innerHTML = "";
 
   snapshot.forEach((doc) => {
