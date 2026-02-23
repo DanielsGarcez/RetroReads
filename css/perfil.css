@@ -50,7 +50,10 @@ main{
 .menu-secoes > .btn-secao{
     font-size: 1.3rem;
     text-decoration: none;
-
+    text-align: start;
+    
+    background: none;
+    border: none;
     color: var(--corCinzaEscuro);
     padding: 0.5rem 1rem;
 

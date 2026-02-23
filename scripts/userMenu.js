@@ -39,15 +39,15 @@ document.addEventListener("DOMContentLoaded", () =>{
         });
 
         abaEstanteVirtual.addEventListener("click", () => {
-            window.location.href = `/RetroReads/pages/userEstanteVirtual.html?id=${userId}`;
+            window.location.href = `/RetroReads/pages/userEstante.html?id=${userId}`;
         });
 
         abaLivrosReservados.addEventListener("click", () => {
-            window.location.href = `/RetroReads/pages/userLivrosReservados.html?id=${userId}`;
+            window.location.href = `/RetroReads/pages/userReservados.html?id=${userId}`;
         });
 
         abaLivrosAnunciados.addEventListener("click", () => {
-            window.location.href = `/RetroReads/pages/userLivrosAnunciados.html?id=${userId}`;
+            window.location.href = `/RetroReads/pages/userAnunciados.html?id=${userId}`;
         });
 
     });
