@@ -367,6 +367,8 @@
 
     #btn-limpa-filtro{
         font-size: 1rem;
+        padding-right: .8rem;
+        padding-left: .8rem;
     }
 
     .container-catalogo{
