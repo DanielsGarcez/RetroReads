@@ -49,7 +49,7 @@ function renderItem(data, id) {
     return clone;
 }
 
-renderItem();
+renderizar();
 
 esconderLoading();
 
