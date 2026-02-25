@@ -9,3 +9,8 @@
 #dropdown-content {
     width: auto;
 }
+
+#btn-adicionar-livro, #mostrar-filtro-estante {
+    padding: .3rem 1rem;
+}
+

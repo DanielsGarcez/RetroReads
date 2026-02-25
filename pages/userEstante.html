@@ -44,7 +44,11 @@
                     <section id="dropdown-content">
                         <form id="form-filtro" class="barra-ferramentas">
 
-                            <button onclick="location.href='/RetroReads/pages/livroCadastro.html'" class="btn-secundario" type="button">Adicionar Livro</button>
+                            <button 
+                            onclick="location.href='/RetroReads/pages/livroCadastro.html'"
+                            id="btn-adicionar-livro" 
+                            class="btn-secundario" 
+                            type="button">Adicionar Livro</button>
 
                             <button id="btn-limpa-filtro" class="barra-ferramentas-input" type="button">Mostrar Filtros</button>
 
@@ -67,7 +71,9 @@
                                     <h4 class="autor-livro"></h4>
                                     <p class="valor-livro">R$<span class="valor"></span></p>
 
-                                    <button class="btn-secundario btn-detalhes">Detalhes</button>
+                                    <button 
+                                    id="mostrar-filtro-estante"
+                                    class="btn-secundario btn-detalhes">Detalhes</button>
                                 </aside>
                             </article>
                         </template>
