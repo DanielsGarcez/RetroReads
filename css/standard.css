@@ -67,7 +67,7 @@ main{
 }
 
 .btn-secundario{
-    padding: .3em;
+    padding: .5rem 1rem;
     font-size: 1rem;
 
     color: var(--corPrincipal);

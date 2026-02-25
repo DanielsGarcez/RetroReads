@@ -44,60 +44,12 @@
                     <section id="dropdown-content">
                         <form id="form-filtro" class="barra-ferramentas">
 
-                            <select class="barra-ferramentas-input" id="filtro-genero" name="generos">
-                                <option value="">Todos os Gêneros</option>
-                                <option value="aventura">Aventura</option>
-                                <option value="autoajuda">Autoajuda</option>
-                                <option value="biografia">Biografia</option>
-                                <option value="ciencia">Ciência</option>
-                                <option value="critica-literaria">Crítica Literária</option>
-                                <option value="educacao">Educação</option>
-                                <option value="ensaios">Ensaios</option>
-                                <option value="fantasia">Fantasia</option>
-                                <option value="ficcao-cientifica">Ficção Científica</option>
-                                <option value="ficcao-juvenil">Ficção Juvenil</option>
-                                <option value="gastronomia">Gastronomia</option>
-                                <option value="graphic-novels">Graphic Novels</option>
-                                <option value="historia">História</option>
-                                <option value="historia-alternativa">História Alternativa</option>
-                                <option value="literatura-infantil">Literatura Infantil</option>
-                                <option value="livros-contos">Livros de Contos</option>
-                                <option value="livros-ilustrados">Livros Ilustrados</option>
-                                <option value="misterio-policial">Mistério/Policial</option>
-                                <option value="negocios">Negócios</option>
-                                <option value="pecas-teatro">Peças de Teatro</option>
-                                <option value="poesia">Poesia</option>
-                                <option value="quadrinhos">Quadrinhos</option>
-                                <option value="religiao-espiritualidade">Religião e Espiritualidade</option>
-                                <option value="romance">Romance</option>
-                                <option value="terror">Terror</option>
-                                <option value="viagem">Viagem</option>
-                            </select>
+                            <button onclick="location.href='/RetroReads/pages/livroCadastro.html'" class="btn-secundario" type="button">Adicionar Livro</button>
 
-                            <select class="barra-ferramentas-input" id="filtro-idioma" name="idiomas">
-                                <option value="">Idioma</option>
-                                <option value="Português(BR)">Português(BR)</option>
-                                <option value="Português(PT)">Português(PT)</option>
-                                <option value="Inglês">Inglês</option>
-                                <option value="Espanhol">Espanhol</option>
-                                <option value="Italiano">Italiano</option>
-                                <option value="Francês">Francês</option>
-                                <option value="Alemão">Alemão</option>
-                            </select>
+                            <button id="btn-limpa-filtro" class="barra-ferramentas-input" type="button">Mostrar Filtros</button>
 
-                            <select class="barra-ferramentas-input" id="filtro-acabamento" name="tipos de capa">
-                                <option value="">Acabamento</option>
-                                <option value="Capa Comum">Capa Comum</option>
-                                <option value="Capa Dura">Capa Dura</option>
-                            </select>
+                            <search aria-placeholder="Bucar por nome"></search>
 
-                            <select class="barra-ferramentas-input" id="filtro-disponibilidade">
-                                <option value="">Disponibilidade</option>
-                                <option value="Reservado">Reservado</option>
-                                <option value="Disponivel">Disponível</option>
-                            </select>
-
-                            <button id="btn-limpa-filtro" class="barra-ferramentas-input">Limpar Filtro</button>
                         </form>
                     </section>
                 </article>
