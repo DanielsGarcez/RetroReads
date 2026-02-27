@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             window.location.href = "/RetroReads/pages/login.html";
         }
 
-        async function dadosUsuario() {
+        async function dadosMenuUser() {
             const ref = doc(db, "usuarios", usuarioId)
             const snap = await getDoc(ref);
 
@@ -106,6 +106,21 @@ document.addEventListener("DOMContentLoaded", () =>{
             // MENU LATERAL
             document.getElementById("user-nome").textContent  = usuario.nome;
             document.getElementById("user-plano").textContent  = usuario.plano;
+        }
+        dadosMenuUser()
+        
+
+
+        async function dadosUsuario() {
+            const ref = doc(db, "usuarios", usuarioId)
+            const snap = await getDoc(ref);
+
+            if (!snap.exists()){
+                alert("Usuário não encontrado");
+                return;
+            }
+
+            const usuario = snap.data();
 
             // DADOS DO USUÁRIO
             document.getElementById("dados-user-nome").placeholder  = usuario.nome || " ";
