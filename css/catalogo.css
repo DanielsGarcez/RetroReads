@@ -159,8 +159,10 @@
 }
 
 .btn-detalhes{
-    width: 100%;
+    width: 95%;
     font-size: 1rem;
+    padding: .3rem;
+    align-self: anchor-center;
 }
 
 .btn-detalhes:hover{

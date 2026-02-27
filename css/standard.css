@@ -69,6 +69,7 @@ main{
 .btn-secundario{
     padding: .5rem 1rem;
     font-size: 1rem;
+    font-weight: 450;
 
     color: var(--corPrincipal);
     background-color: var(--corPrincipalTransparente);

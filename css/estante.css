@@ -1,5 +1,6 @@
 .section-principal {
     flex-direction: column;
+    width: 60%;
 }
 
 .menu-perfil-user {
@@ -10,11 +11,24 @@
     width: auto;
 }
 
+#barra-busca-estante{
+    padding: .3rem .5rem;
+    margin-left: auto;
+}
+
 #btn-adicionar-livro, #mostrar-filtro-estante {
     padding: .3rem 1rem;
     box-shadow: none;
+
+    cursor: text;
 }
 
 #btn-mostrar-filtro {
     border-radius: 50%;
+    margin-left: auto;
+}
+
+#grid-catalogo {
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 1.5rem;
 }

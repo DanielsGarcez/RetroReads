@@ -18,6 +18,7 @@ const template = document.getElementById('card-template');
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem("userId")));
+                                    // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
 carregarMenu();
 
