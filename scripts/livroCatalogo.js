@@ -27,7 +27,6 @@ const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
-carregarMenu();
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {

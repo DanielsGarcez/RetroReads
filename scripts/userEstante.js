@@ -28,7 +28,6 @@ function renderItem(data, id) {
     const titulo = clone.querySelector('.titulo-livro');
     const autor = clone.querySelector('.autor-livro');
 
-    const btnDetalhes = clone.querySelector('.btn-detalhes');
     const itemGrid = clone.querySelector('.item-grid');
 
       // busca a imagem no firestore

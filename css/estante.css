@@ -15,3 +15,6 @@
     box-shadow: none;
 }
 
+#btn-mostrar-filtro {
+    border-radius: 50%;
+}
