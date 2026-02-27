@@ -22,8 +22,6 @@ const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem("userId")));
                                     // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
-carregarMenu();
-
 function renderItem(data, id) {
     const clone = template.content.cloneNode(true);
 
@@ -71,8 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("ID do usuário não encontrado na URL.");
         window.location.href = "/RetroReads/pages/login.html";
     }
-
-    dadosMenuUser();
 
     (async () =>{
       // espera carregar a função tela de loading

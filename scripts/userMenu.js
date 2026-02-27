@@ -20,8 +20,25 @@ carregarMenu();
 
 document.addEventListener("DOMContentLoaded", async () =>{
 
+    async function dadosMenuUser() {
+        const ref = doc(db, "usuarios", usuarioId)
+        const snap = await getDoc(ref);
+
+        if (!snap.exists()){
+            alert("Usuário não encontrado");
+            return;
+        }
+
+        const usuario = snap.data();
+
+        // MENU LATERAL
+        document.getElementById("user-nome").textContent  = usuario.nome;
+        document.getElementById("user-plano").textContent  = usuario.plano;
+    }
+    dadosMenuUser()
+
     await carregarMenu();
-    
+
     const userId = new URLSearchParams(window.location.search).get("id");
 
     const abaDadosPessoais = document.getElementById("aba-dados-pessoais");
