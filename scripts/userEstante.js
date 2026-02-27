@@ -7,7 +7,9 @@ import {
   where
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
+
 import { renderizar } from "./livroCatalogo.js";
+import { carregarMenu } from "/RetroReads/scripts/userMenu.js";
 
 // Variáveis de Template e Grid da área dos livros
 const grid = document.getElementById('grid-estante');
@@ -16,6 +18,8 @@ const template = document.getElementById('card-template');
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem("userId")));
+
+carregarMenu();
 
 function renderItem(data, id) {
     const clone = template.content.cloneNode(true);

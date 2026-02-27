@@ -9,6 +9,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 
+export { renderizar } from "./livroCatalogo.js";
+
 // Variáveis de Template e Grid da área dos livros
 const grid = document.getElementById('grid-catalogo');
 const template = document.getElementById('card-template');
@@ -24,6 +26,8 @@ const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
+
+carregarMenu();
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {
