@@ -16,6 +16,8 @@
 }
 
 #barra-busca-estante{
+    box-shadow: var(--sombra);
+
     padding: .3rem .5rem;
     margin-left: auto;
     
