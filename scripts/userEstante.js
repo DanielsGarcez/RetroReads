@@ -10,8 +10,7 @@ import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} f
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 import { renderizar } from "/RetroReads/scripts/livroCatalogo.js";
-import { carregarMenu } from "/RetroReads/scripts/userMenu.js";
-import { dadosMenuUser } from "/RetroReads/scripts/userMenu.js";
+import { dadosMenuUser, carregarMenu } from "/RetroReads/scripts/userMenu.js";
 
 // Variáveis de Template e Grid da área dos livros
 const grid = document.getElementById('grid-estante');

@@ -25,10 +25,12 @@
 
 #btn-adicionar-livro, #mostrar-filtro-estante {
     padding: .3rem 1.3rem;
-    box-shadow: none;
+    box-shadow: var(--sombra);
 }
 
 #btn-mostrar-filtro {
+    box-shadow: var(--sombra);
+
     border-radius: 50%;
     margin-left: auto;
 
