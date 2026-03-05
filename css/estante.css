@@ -72,6 +72,7 @@
 
 .hr-vertical {
     height: 100%;
+    color: var(--corPrincipal);
 }
 
 #btn-mostrar-filtro {
