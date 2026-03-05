@@ -29,10 +29,21 @@
     box-shadow: var(--sombra);
 }
 
+#btn-adicionar-livro {
+    gap: .3rem;
+}
+
 .container-btn-img{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 1.4rem;
+    height: 1.3rem;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .icon-img-config {
@@ -43,8 +54,24 @@
     border-radius: 100%;
 }
 
-#img-mais:hover {
-    background-image: image('/RetroReads/img/Icon-Mais-Verde.png');
+#icon-btn-mais {
+    background-image: url('/RetroReads/img/Icon-Mais-Verde.png');
+}
+
+#icon-btn-mais:hover {
+    background-image: url('/RetroReads/img/Icon-Mais-Branco.png');
+}
+
+#icon-btn-filtro {
+    background-image: url('/RetroReads/img/Icon-Filtro-Cinza.png');
+}
+
+#icon-btn-filtro:hover {
+    background-image: url('/RetroReads/img/Icon-Filtro-Verde.png');
+}
+
+.hr-vertical {
+    height: 100%;
 }
 
 #btn-mostrar-filtro {
@@ -59,10 +86,6 @@
 
     width: 1.8rem;
     height: 1.8rem;
-}
-
-#img-filtro-estante:hover {
-    background-image: image('/RetroReads/img/Icon-Funil-Verde.png');
 }
 
 #grid-catalogo {
