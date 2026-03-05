@@ -29,13 +29,13 @@
     box-shadow: var(--sombra);
 }
 
-.conteiner-btn-adicionar{
+.container-btn-img{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#img-mais {
+.icon-img-config {
     width: 120%;
     height: 120%;
 
@@ -59,14 +59,6 @@
 
     width: 1.8rem;
     height: 1.8rem;
-}
-
-#img-filtro-estante {
-    width: 120%;
-    height: 120%;
-
-    margin-top: 10%;
-    border-radius: 100%;
 }
 
 #img-filtro-estante:hover {
