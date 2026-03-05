@@ -54,27 +54,6 @@
     border-radius: 100%;
 }
 
-#icon-btn-mais {
-    background-image: url('/RetroReads/img/Icon-Mais-Verde.png');
-}
-
-#icon-btn-mais:hover {
-    background-image: url('/RetroReads/img/Icon-Mais-Branco.png');
-}
-
-#icon-btn-filtro {
-    background-image: url('/RetroReads/img/Icon-Filtro-Cinza.png');
-}
-
-#icon-btn-filtro:hover {
-    background-image: url('/RetroReads/img/Icon-Filtro-Verde.png');
-}
-
-.hr-vertical {
-    height: 100%;
-    color: var(--corPrincipal);
-}
-
 #btn-mostrar-filtro {
     display: flex;
     align-items: center;
