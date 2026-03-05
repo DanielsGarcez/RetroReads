@@ -19,7 +19,6 @@
     box-shadow: var(--sombra);
 
     padding: .3rem .5rem;
-    margin-left: auto;
     
     padding-left: .5rem;
     cursor: text;
@@ -30,25 +29,52 @@
     box-shadow: var(--sombra);
 }
 
+.conteiner-btn-adicionar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img-mais {
+    width: 120%;
+    height: 120%;
+
+    margin-top: 10%;
+    border-radius: 100%;
+}
+
+#img-mais:hover {
+    background-image: image('/RetroReads/img/Icon-Mais-Verde.png');
+}
+
 #btn-mostrar-filtro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     box-shadow: var(--sombra);
 
     border-radius: 50%;
     margin-left: auto;
 
-    width: 1rem;
-    height: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 #img-filtro-estante {
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
 
-    margin-top: 5%;
+    margin-top: 10%;
     border-radius: 100%;
+}
+
+#img-filtro-estante:hover {
+    background-image: image('/RetroReads/img/Icon-Funil-Verde.png');
 }
 
 #grid-catalogo {
     grid-template-columns: repeat(6, 1fr);
     row-gap: 1.5rem;
 }
+
