@@ -11,6 +11,10 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/fi
 
 import { renderizar } from "/RetroReads/scripts/livroCatalogo.js";
 
+const janelaAddContainer = document.querySelector("#janela-add-container");
+const btnAdicionar = document.getElementById("btn-adicionar-livro");
+const btnFechar = document.getElementById("btn-fechar-janela");
+
 // Variáveis de Template e Grid da área dos livros
 const grid = document.getElementById('grid-estante');
 const template = document.getElementById('card-template');
@@ -51,9 +55,15 @@ function renderItem(data, id) {
     return clone;
 }
 
-renderizar();
-
 esconderLoading();
+
+btnAdicionar.addEventListener("click", () => {
+    janelaAddContainer.style.display = "block";
+});
+
+btnFechar.addEventListener("click", () => {
+    janelaAddContainer.style.display = "none";
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 
