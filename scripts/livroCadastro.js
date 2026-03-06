@@ -1,15 +1,18 @@
 import { db } from "./firebase.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { auth } from "./firebase.js";
-import { onAuthStateChanged } from 
-  "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
+const btnAbrirJanela = document.getElementById("btn-adicionar-livro");
 
-document.addEventListener("DOMContentLoaded", () => {
+btnAbrirJanela.addEventListener("click", () => {
+    
+    document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-livroCadastro");
 
     // Verifica se há formulário
     if (!form){
+        alert("Formulário não encontrado");
         console.error("Formulário não encontrado");
         return;
     }
@@ -128,41 +131,43 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Erro ao cadastrar livro")
         }
 
+        });
     });
+
+    function validarISBN(isbn) {
+    // Remove hífens e espaços
+    const limpo = isbn.replace(/[-\s]/g, '');
+
+    // Apenas números
+    if (!/^\d+$/.test(limpo)) return false;
+
+    // Deve ter 10 ou 13 dígitos
+    if (limpo.length !== 10 && limpo.length !== 13) return false;
+
+    // Não permitir números repetidos (ex: 1111111111)
+    if (/^(\d)\1+$/.test(limpo)) return false;
+
+    // ISBN-10
+    if (limpo.length === 10) {
+        let soma = 0;
+        for (let i = 0; i < 9; i++) {
+        soma += (10 - i) * parseInt(limpo[i]);
+        }
+        const digito = (11 - (soma % 11)) % 11;
+        return digito === parseInt(limpo[9]);
+    }
+
+    // ISBN-13
+    if (limpo.length === 13) {
+        let soma = 0;
+        for (let i = 0; i < 12; i++) {
+        soma += parseInt(limpo[i]) * (i % 2 === 0 ? 1 : 3);
+        }
+        const digito = (10 - (soma % 10)) % 10;
+        return digito === parseInt(limpo[12]);
+    }
+
+    return false;
+    }
+
 });
-
-function validarISBN(isbn) {
-  // Remove hífens e espaços
-  const limpo = isbn.replace(/[-\s]/g, '');
-
-  // Apenas números
-  if (!/^\d+$/.test(limpo)) return false;
-
-  // Deve ter 10 ou 13 dígitos
-  if (limpo.length !== 10 && limpo.length !== 13) return false;
-
-  // Não permitir números repetidos (ex: 1111111111)
-  if (/^(\d)\1+$/.test(limpo)) return false;
-
-  // ISBN-10
-  if (limpo.length === 10) {
-    let soma = 0;
-    for (let i = 0; i < 9; i++) {
-      soma += (10 - i) * parseInt(limpo[i]);
-    }
-    const digito = (11 - (soma % 11)) % 11;
-    return digito === parseInt(limpo[9]);
-  }
-
-  // ISBN-13
-  if (limpo.length === 13) {
-    let soma = 0;
-    for (let i = 0; i < 12; i++) {
-      soma += parseInt(limpo[i]) * (i % 2 === 0 ? 1 : 3);
-    }
-    const digito = (10 - (soma % 10)) % 10;
-    return digito === parseInt(limpo[12]);
-  }
-
-  return false;
-}

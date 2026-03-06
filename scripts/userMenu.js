@@ -22,7 +22,7 @@ carregarMenu();
 document.addEventListener("DOMContentLoaded", async () =>{
 
     async function dadosMenuUser() {
-        const ref = doc(db, "usuarios", localStorage.getItem("userId"))
+        const ref = doc(db, "usuarios", "nome");
         const snap = await getDoc(ref);
 
         if (!snap.exists()){

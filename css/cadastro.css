@@ -7,14 +7,14 @@
     margin-bottom: 5rem;
 }
 
-h2{
+.main-cadastro h2{
     padding-top: 1rem;
     padding-bottom: 1rem;
     font-size: 2.3rem;
     font-family: var(--fonteEstilizada);
 }
 
-h3{
+.main-cadastro h3{
     font-size: 1.5rem;
     font-weight: lighter;
 }
@@ -225,7 +225,7 @@ h3{
     height: 10rem;
 
     padding: .7rem;
-    border-radius: 1.5rem;
+    border-radius: 1.3rem;
 }
 
 #preview-capa{

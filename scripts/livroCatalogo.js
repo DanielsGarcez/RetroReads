@@ -70,19 +70,7 @@ function renderItem(data, id) {
 }
 
 
-// Função que renderiza os cards do grid
-function renderizar(snapshot){
-  
-  grid.innerHTML = "";
 
-  snapshot.forEach((doc) => {
-    const item = renderItem(doc.data(), doc.id);
-    grid.appendChild(item);
-  });
-
-  //esconde a tela de Loading
-  esconderLoading();
-}
 
 
 // -------------------- ÁREA DE INICIALIZAÇÃO --------------------
