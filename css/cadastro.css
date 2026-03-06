@@ -132,14 +132,26 @@ h3{
     margin-top: 2rem;
 }
 
-.largura{
+.janela-add-livro{
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--corBranco);
 }
 
-h1{
-    font-size: 3rem;
+.janela-add-livro h1{
+    font-size: 2rem;
     color: var(--corPrincipal);
     font-family: var(--fonteEstilizada);
+}
+
+.btn-fechar-janela{
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 #form-livroCadastro{

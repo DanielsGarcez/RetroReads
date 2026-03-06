@@ -1,3 +1,15 @@
+#janela-add-container{
+    position: absolute;
+    z-index: 1000;
+    top: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .section-principal {
     flex-direction: column;
     width: 60%;
@@ -72,11 +84,3 @@
     row-gap: 1.5rem;
 }
 
-
-
-
-
-
-#janela-add-container{
-    background-color: aqua;
-}
