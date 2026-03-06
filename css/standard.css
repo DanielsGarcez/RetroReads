@@ -23,6 +23,11 @@
     --fonteEstilizada: 'IBM Plex Mono';
 }
 
+::selection{
+    color: var(--corBranco);
+    background-color: var(--corPrincipal);
+}
+
 *{
     margin: 0;
     padding: 0;

@@ -47,11 +47,10 @@
 }
 
 .icon-img-config {
-    width: 120%;
-    height: 120%;
+    width: 90%;
+    height: 90%;
 
     margin-top: 10%;
-    border-radius: 100%;
 }
 
 #btn-mostrar-filtro {
