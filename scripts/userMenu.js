@@ -19,10 +19,31 @@ async function carregarMenu() {
 }
 carregarMenu();
 
-document.addEventListener("DOMContentLoaded", async () =>{
+document.addEventListener("DOMContentLoaded", async () => {
 
-    async function dadosMenuUser() {
-        const ref = doc(db, "usuarios", "nome");
+    await carregarMenu();
+
+    const userId = new URLSearchParams(window.location.search).get("id");
+
+    if (!userId) {
+        alert("ID do usuário não encontrado.");
+        window.location.href = "/RetroReads/pages/login.html";
+        return;
+    }
+
+    const abaDadosPessoais = document.getElementById("aba-dados-pessoais");
+    const abaEstanteVirtual = document.getElementById("aba-estante-virtual");
+    const abaLivrosReservados = document.getElementById("aba-suas-reservas");
+    const abaLivrosAnunciados = document.getElementById("aba-seus-anuncios");
+
+    onAuthStateChanged(auth, async (user) => {
+
+        if (!user) {
+            window.location.href = "/RetroReads/pages/login.html";
+            return;
+        }
+
+        const ref = doc(db, "usuarios", userId);
         const snap = await getDoc(ref);
 
         if (!snap.exists()){
@@ -32,32 +53,9 @@ document.addEventListener("DOMContentLoaded", async () =>{
 
         const usuario = snap.data();
 
-        // MENU LATERAL
-        document.getElementById("user-nome").textContent  = usuario.nome;
-        document.getElementById("user-plano").textContent  = usuario.plano;
-    }
-    dadosMenuUser()
+        document.getElementById("user-nome").textContent = usuario.nome;
+        document.getElementById("user-plano").textContent = usuario.plano;
 
-    await carregarMenu();
-
-    const userId = new URLSearchParams(window.location.search).get("id");
-
-    const abaDadosPessoais = document.getElementById("aba-dados-pessoais");
-    const abaEstanteVirtual = document.getElementById("aba-estante-virtual");
-    const abaLivrosReservados = document.getElementById("aba-suas-reservas");
-    const abaLivrosAnunciados = document.getElementById("aba-seus-anuncios");
-
-    onAuthStateChanged(auth, (user) => {
-        if (!userId) {
-            alert("ID do usuário não encontrado na URL.");
-            window.location.href = "/RetroReads/pages/login.html";
-        }
-        
-        if (!userId) {
-            alert("UID do usuário inválido.");
-            return;
-        }
-        
         abaDadosPessoais.addEventListener("click", () => {
             window.location.href = `/RetroReads/pages/userPerfil.html?id=${userId}`;
         });
