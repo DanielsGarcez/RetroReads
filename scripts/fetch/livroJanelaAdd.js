@@ -1,4 +1,4 @@
-// Exporta o Menu para a página de perfil do usuário
+/* // Exporta o Menu para a página de perfil do usuário
 async function carregarJanelaAdd() {
 
   const btnAdicionar = document.getElementById("btn-adicionar-livro");
@@ -32,4 +32,4 @@ async function carregarJanelaAdd() {
   });
 }
 
-carregarJanelaAdd();
+carregarJanelaAdd(); */
