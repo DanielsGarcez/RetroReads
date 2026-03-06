@@ -2,8 +2,7 @@
     position: absolute;
     z-index: 1000;
     top: 10%;
-
-    display: none;
+    
     align-items: center;
     justify-content: center;
 }

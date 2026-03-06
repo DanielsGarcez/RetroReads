@@ -55,18 +55,16 @@ esconderLoading();
 
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
 const janelaAddContainer = document.querySelector("#janela-add-container");
+const btnAdicionar = document.getElementById("btn-adicionar-livro");
+const btnFechar = document.getElementById("btn-fechar-janela");
 
-if (janelaAddContainer.style.display === "none") {
-  const btnAdicionar = document.getElementById("btn-adicionar-livro");
-  btnAdicionar.addEventListener("click", () => {
-      janelaAddContainer.style.display = "block";
-  });
-} else {
-  const btnFechar = document.getElementById("btn-fechar-janela");
-  btnFechar.addEventListener("click", () => {
-      janelaAddContainer.style.display = "none";
-  });
-}
+btnAdicionar.addEventListener("click", () => {
+    janelaAddContainer.classList.remove("conteudo-oculto");
+});
+
+btnFechar.addEventListener("click", () => {
+    janelaAddContainer.classList.add("conteudo-oculto");
+});
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
