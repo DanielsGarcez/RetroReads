@@ -6,7 +6,6 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/fi
 const btnAbrirJanela = document.getElementById("btn-adicionar-livro");
 
 btnAbrirJanela.addEventListener("click", () => {
-    
     document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form-livroCadastro");
 

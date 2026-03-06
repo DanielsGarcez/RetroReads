@@ -1,7 +1,7 @@
 #janela-add-container{
     position: absolute;
     z-index: 1000;
-    top: 15%;
+    top: 10%;
 
     display: none;
     align-items: center;

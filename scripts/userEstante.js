@@ -56,15 +56,17 @@ esconderLoading();
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
 const janelaAddContainer = document.querySelector("#janela-add-container");
 
-const btnAdicionar = document.getElementById("btn-adicionar-livro");
-btnAdicionar.addEventListener("click", () => {
-    janelaAddContainer.style.display = "block";
-});
-
-const btnFechar = document.getElementById("btn-fechar-janela");
-btnFechar.addEventListener("click", () => {
-    janelaAddContainer.style.display = "none";
-});
+if (janelaAddContainer == style.display == "none") {
+  const btnAdicionar = document.getElementById("btn-adicionar-livro");
+  btnAdicionar.addEventListener("click", () => {
+      janelaAddContainer.style.display = "block";
+  });
+} else {
+  const btnFechar = document.getElementById("btn-fechar-janela");
+  btnFechar.addEventListener("click", () => {
+      janelaAddContainer.style.display = "none";
+  });
+}
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
