@@ -56,7 +56,7 @@ esconderLoading();
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
 const janelaAddContainer = document.querySelector("#janela-add-container");
 
-if (janelaAddContainer == style.display == "none") {
+if (janelaAddContainer.style.display === "none") {
   const btnAdicionar = document.getElementById("btn-adicionar-livro");
   btnAdicionar.addEventListener("click", () => {
       janelaAddContainer.style.display = "block";
