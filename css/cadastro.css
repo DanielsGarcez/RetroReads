@@ -133,7 +133,6 @@ h3{
 }
 
 .janela-add-livro{
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,6 +151,16 @@ h3{
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: 1.3rem;
+    margin-right: 1.3rem;
+}
+
+.btn-fechar-janela img{
+    width: 100%;
+    height: 100%;
 }
 
 #form-livroCadastro{
@@ -160,7 +169,7 @@ h3{
     flex-direction: column;
     gap: 1rem;
 
-    padding-top: 4%;
+    padding-top: 1rem;
     justify-content: center;
 }
 
@@ -175,7 +184,6 @@ h3{
 .container-esquerdo{
     width: 40%;
     display: grid;
-    align-items: center;
 
     padding-left: 2.3rem;
 }
@@ -221,8 +229,9 @@ h3{
 }
 
 #preview-capa{
-    width: 70%;
+    width: 80%;
     align-self: center;
+    justify-content: baseline;
 
     margin-top: 5%;
     margin-bottom: 5%;
@@ -230,6 +239,10 @@ h3{
 
     border: var(--borda);
     border-radius: 2rem;
+}
+
+#valor-livro{
+    width: 80%;
 }
 
 .hr-horizintal{
@@ -250,7 +263,7 @@ h3{
     margin-bottom: 1.5rem;
     padding: .5rem;
 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: 2rem;
 }
 
