@@ -51,8 +51,6 @@ function renderItem(data, id) {
     return clone;
 }
 
-esconderLoading();
-
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
 const janelaAddContainer = document.querySelector("#janela-add-container");
 const btnAdicionar = document.getElementById("btn-adicionar-livro");

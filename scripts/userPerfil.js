@@ -1,6 +1,7 @@
 import { db, auth } from './firebase.js';
 import { doc, getDoc, updateDoc  } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import {carregarLoading, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 
 const parametros = new URLSearchParams(window.location.search);
 const usuarioId = parametros.get("id");
@@ -28,6 +29,7 @@ const formEndereco = document.getElementById("form-endereco-user");
 
 
 // ------------------ Funções Dados ------------------
+carregarLoading();
 
 function ativarModoEdicaoDados(){
     btnEditarDados.classList.add("conteudo-oculto");
@@ -81,6 +83,7 @@ function modoEdicaoDesativarEndereco(){
 // ------------------ Ativações ------------------
 
 document.addEventListener("DOMContentLoaded", () =>{
+    mostrarLoading();
 
     onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -122,6 +125,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
         }
         dadosUsuario()
+
+        esconderLoading();
     });
 
 
