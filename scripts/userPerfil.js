@@ -81,10 +81,9 @@ function modoEdicaoDesativarEndereco(){
 }
 
 // ------------------ Ativações ------------------
+mostrarLoading();
 
 document.addEventListener("DOMContentLoaded", () =>{
-    mostrarLoading();
-
     onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log(`Logado como: ${user.email}.`);
@@ -125,10 +124,9 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
         }
         dadosUsuario()
-
-        esconderLoading();
     });
-
+    
+    esconderLoading();
 
 
     // ------------------ Ativações Dados ------------------
