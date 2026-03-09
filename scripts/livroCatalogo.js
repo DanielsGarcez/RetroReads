@@ -26,6 +26,8 @@ const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
 // Variáveis para as funções renderItem() e desativarItem()
+const clone = template.content.cloneNode(true);
+
 const btnDetalhes = clone.querySelector('.btn-detalhes');
 const itemGrid = clone.querySelector('.item-grid');
 
@@ -34,8 +36,6 @@ const itemGrid = clone.querySelector('.item-grid');
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {
-  const clone = template.content.cloneNode(true);
-
   const imagem = clone.querySelector('.capa-livro');
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');

@@ -1,4 +1,4 @@
-.header-home, header-simples{
+.header-home, .header-simples{
 
     position: fixed;
 
@@ -41,6 +41,11 @@
 
 .perfil-mobile, .logo-container{
     display: none;
+}
+
+.perfil-mobile{
+    width: 3rem;
+    height: 3rem;
 }
 
 .busca{

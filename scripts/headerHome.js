@@ -11,18 +11,17 @@ async function carregarHeader() {
     console.error("Erro ao carregar o header:", erro);
   }
 
-
   // Verifica Login
   const mensagem = document.getElementById("mensagem-login");
-  const fazerLogin = document.querySelector("usuario")
-  const userLogado = document.querySelector("perfil-mobile")
+  const loginCadastro = document.querySelector(".usuario")
+  const userLogado = document.querySelector(".perfil-mobile")
 
   onAuthStateChanged(auth, (user) => {
     if (!mensagem) return;
 
     if (user) {
       console.log(`Logado como: ${user.email}.`);
-      fazerLogin.classList.add("conteudo-oculto")
+      loginCadastro.classList.add("conteudo-oculto")
       userLogado.classList.add("conteudo-revelado")
       
       /* mensagem.textContent = `Logado com: ${user.email}`;
@@ -30,7 +29,7 @@ async function carregarHeader() {
 
     } else {
       console.log("Usuário não logado... Faça o login.")
-      fazerLogin.classList.add("conteudo-revelado")
+      loginCadastro.classList.add("conteudo-revelado")
       userLogado.classList.add("conteudo-oculto")
 
       /* mensagem.textContent = "Não foi encontrado usuário";
