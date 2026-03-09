@@ -25,6 +25,10 @@ const selectDisponibilidade = document.getElementById("filtro-disponibilidade");
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
+// Variáveis para as funções renderItem() e desativarItem()
+const btnDetalhes = clone.querySelector('.btn-detalhes');
+const itemGrid = clone.querySelector('.item-grid');
+
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
 
@@ -35,9 +39,6 @@ function renderItem(data, id) {
   const imagem = clone.querySelector('.capa-livro');
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
-
-  const btnDetalhes = clone.querySelector('.btn-detalhes');
-  const itemGrid = clone.querySelector('.item-grid');
 
   // busca a imagem no firestore
   if (data.capa && data.capa.trim() !== "") {
@@ -58,17 +59,21 @@ function renderItem(data, id) {
   itemGrid.dataset.id = id;
   itemGrid.dataset.titulo = data.titulo || 'Sem título';
 
-  // desativa item
-  if (data.disponibilidade == 'Reservado') {
-    btnDetalhes.classList.add("btn-desativado");
-    btnDetalhes.textContent = "Reservado";
-    itemGrid.classList.add("conteudo-desativado");
 
-    console.log("Desativados: ",itemGrid);
-  }
   return clone;
 }
 
+function desativarItem(){
+    // desativa item
+    if (data.disponibilidade == 'Reservado') {
+      btnDetalhes.classList.add("btn-desativado");
+      btnDetalhes.textContent = "Reservado";
+      itemGrid.classList.add("conteudo-desativado");
+
+      console.log("Desativados: ",itemGrid);
+    }
+}
+desativarItem();
 
 // Função que renderiza os cards do grid
 function renderizar(snapshot){
