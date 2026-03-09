@@ -2,9 +2,10 @@
 import { db, auth } from './firebase.js';
 import {
   collection,
-  getDocs,
   query,
-  where
+  orderBy,
+  where,
+  getDocs
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
@@ -19,7 +20,7 @@ const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem(
 await carregarLoading();
 mostrarLoading();
 
-renderItem();
+renderItem(doc.data(), doc.id);
 
 esconderLoading();
 
@@ -63,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // --------------------------------------------------------------------------------
 
       // função que filtra as categorias
-        [selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade].forEach(select => {
+/*         [selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade].forEach(select => {
           select.addEventListener("change", aplicarFiltros);
         });
 
@@ -89,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
           const snapshot = await getDocs(queryFiltros);
           renderizar(snapshot);
-        }
+        } */
     });
   });
 });
