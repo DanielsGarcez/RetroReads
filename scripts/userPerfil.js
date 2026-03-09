@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             
             document.getElementById("dados-user-cpf").placeholder  = usuario.documento || " ";
             document.getElementById("dados-user-telefone").placeholder  = usuario.telefone || " ";
-            document.getElementById("dados-user-assinatura").placeholder  = usuario.plano || " ";
+            document.getElementById("dados-user-assinatura").placeholder  = "Usuário " + usuario.plano || " ";
 
             //ENDEREÇO DO USUÁRIO
             document.getElementById("endereco-user-logradouro").placeholder  = usuario.endereco.logradouro || " ";

@@ -5,6 +5,7 @@
 .main-catalogo{
     width: 80vw;
     gap: 1.5rem;
+    margin-top: 8%;
 }
 
 .main-catalogo h1{
@@ -68,7 +69,10 @@
     cursor: pointer;
 }
 
-
+#btn-limpa-filtro {
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
 
 /* ---------- Lista de Livro do Catalogo ---------- */
 

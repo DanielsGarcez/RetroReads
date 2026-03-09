@@ -19,6 +19,9 @@ const template = document.getElementById('card-template');
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem("userId")));
                                     // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
+// espera carregar a função tela de loading
+await carregarLoading();
+mostrarLoading();
 
 function renderItem(data, id) {
     const clone = template.content.cloneNode(true);
@@ -51,6 +54,8 @@ function renderItem(data, id) {
     return clone;
 }
 
+esconderLoading();
+
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
 const janelaAddContainer = document.querySelector("#janela-add-container");
 const btnAdicionar = document.getElementById("btn-adicionar-livro");
@@ -79,10 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     (async () =>{
-      // espera carregar a função tela de loading
-      await carregarLoading();
-      // mostra a tela de Loading
-      mostrarLoading();
       
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);

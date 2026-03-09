@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const usuario = snap.data();
 
         document.getElementById("user-nome").textContent = usuario.nome;
-        document.getElementById("user-plano").textContent = usuario.plano;
+        document.getElementById("user-plano").textContent = "Usuário " + usuario.plano;
 
         abaDadosPessoais.addEventListener("click", () => {
             window.location.href = `/RetroReads/pages/userPerfil.html?id=${userId}`;
