@@ -9,11 +9,7 @@ import {
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-import { renderizar } from "/RetroReads/scripts/livroCatalogo.js";
-
-// Variáveis de Template e Grid da área dos livros
-const grid = document.getElementById('grid-estante');
-const template = document.getElementById('card-template');
+import { renderizar, renderItem } from "/RetroReads/scripts/livroCatalogo.js";
 
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
@@ -23,36 +19,7 @@ const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem(
 await carregarLoading();
 mostrarLoading();
 
-function renderItem(data, id) {
-    const clone = template.content.cloneNode(true);
-
-    const imagem = clone.querySelector('.capa-livro');
-    const titulo = clone.querySelector('.titulo-livro');
-    const autor = clone.querySelector('.autor-livro');
-
-    const itemGrid = clone.querySelector('.item-grid');
-
-      // busca a imagem no firestore
-    if (data.capa && data.capa.trim() !== "") {
-        imagem.src = data.capa;
-    } else {
-        imagem.src = "img/Mockup-Livro.png";
-    }
-
-    // define o texto de titulo e autor pego no firestore
-    titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
-    autor.textContent = data.autor || 'Sem autor';
-
-    // converte o valor
-    let valorReais = parseFloat(data.valor).toFixed(2);
-    clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
-
-    // altera conteudo do item
-    itemGrid.dataset.id = id;
-    itemGrid.dataset.titulo = data.titulo || 'Sem título';
-
-    return clone;
-}
+renderItem(data, id);
 
 esconderLoading();
 
