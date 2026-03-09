@@ -9,7 +9,7 @@ import {
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-import { renderizar, renderItem } from "/RetroReads/scripts/livroCatalogo.js";
+import { renderizar, renderItem, aplicarFiltros } from "/RetroReads/scripts/livroCatalogo.js";
 
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
@@ -19,7 +19,7 @@ const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem(
 await carregarLoading();
 mostrarLoading();
 
-renderItem(data, id);
+renderItem();
 
 esconderLoading();
 
@@ -60,11 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const snapshotInicial = await getDocs(queryLivros);
       renderizar(snapshotInicial);
 
-      // ------------------------------------------------------------
-
-      // função que simula a tela de carregamento
-      setTimeout(function() {
-
       // --------------------------------------------------------------------------------
 
       // função que filtra as categorias
@@ -72,32 +67,29 @@ document.addEventListener("DOMContentLoaded", () => {
           select.addEventListener("change", aplicarFiltros);
         });
 
-        async function aplicarFiltros() {
+        aplicarFiltros();
+/*         async function aplicarFiltros() {
           const genero = selectGenero.value;
           const idioma = selectIdioma.value;
           const acabamento = selectAcabamento.value;
           const disponibilidade = selectDisponibilidade.value;
-
+    
           let filtros = [];
-
+    
           if (genero) filtros.push(where("genero", "==", genero));
           if (idioma) filtros.push(where("idioma", "==", idioma));
           if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
           if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
-
+    
           const queryFiltros = query(
             collection(db, "livros"),
             ...filtros,
             orderBy("criadoEm", "desc")
           );
-
+    
           const snapshot = await getDocs(queryFiltros);
           renderizar(snapshot);
-        }
-
-        // --------------------------------------------------------------------------------
-
-      }, 500);
-    })();
+        } */
+    });
   });
 });
