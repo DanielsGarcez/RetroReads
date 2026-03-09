@@ -21,16 +21,16 @@ async function carregarHeader() {
 
     if (user) {
       console.log(`Logado como: ${user.email}.`);
-      loginCadastro.classList.add("conteudo-oculto")
-      userLogado.classList.add("conteudo-revelado")
+      loginCadastro.style.display = "none";
+      userLogado.style.display = "block";
       
       /* mensagem.textContent = `Logado com: ${user.email}`;
       mensagem.style.color = "green"; */
 
     } else {
       console.log("Usuário não logado... Faça o login.")
-      loginCadastro.classList.add("conteudo-revelado")
-      userLogado.classList.add("conteudo-oculto")
+        loginCadastro.style.display = "block";
+        userLogado.style.display = "none";
 
       /* mensagem.textContent = "Não foi encontrado usuário";
       mensagem.style.color = "red"; */

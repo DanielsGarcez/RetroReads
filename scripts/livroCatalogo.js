@@ -63,7 +63,7 @@ function renderItem(data, id) {
   return clone;
 }
 
-function desativarItem(){
+function desativarItem(data){
     // desativa item
     if (data.disponibilidade == 'Reservado') {
       btnDetalhes.classList.add("btn-desativado");
