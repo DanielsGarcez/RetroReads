@@ -85,19 +85,9 @@ h3{
     margin-top: auto;
     font-size: 1.3rem;
 
-    color: var(--corBranco);
-    background-color: var(--corPrincipal);
-    border: 1px solid var(--corPrincipal);
-    border-radius: 1rem;
+    border-radius: 2rem;
     transition: .5s ease;
 }
-
-.btn-assinar:hover{
-    cursor: pointer;
-    color: var(--corPrincipal);
-    background-color: var(--corBranco);
-}
-
 
 @media (max-width: 1500px){
     .main-planos{

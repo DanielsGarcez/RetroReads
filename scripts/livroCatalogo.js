@@ -25,17 +25,31 @@ const selectDisponibilidade = document.getElementById("filtro-disponibilidade");
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
-// Variáveis para as funções renderItem() e desativarItem()
-const clone = template.content.cloneNode(true);
-
-const btnDetalhes = clone.querySelector('.btn-detalhes');
-const itemGrid = clone.querySelector('.item-grid');
-
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
+// Função que desativa o card do livro caso ele esteja reservado
+function desativarItem(data, btnDetalhes, itemGrid){
+
+  if (!data) return;
+
+  if (data.disponibilidade === "Reservado") {
+    btnDetalhes.classList.add("btn-desativado");
+    btnDetalhes.textContent = "Reservado";
+    itemGrid.classList.add("conteudo-desativado");
+
+    console.log("Desativado:", itemGrid);
+  }
+
+}
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {
+  // Variáveis
+  const clone = template.content.cloneNode(true);
+
+  const btnDetalhes = clone.querySelector('.btn-detalhes');
+  const itemGrid = clone.querySelector('.item-grid');
+
   const imagem = clone.querySelector('.capa-livro');
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
@@ -59,21 +73,12 @@ function renderItem(data, id) {
   itemGrid.dataset.id = id;
   itemGrid.dataset.titulo = data.titulo || 'Sem título';
 
+  // chamada da função que desativa o card caso o livro esteja reservado
+  desativarItem(data, btnDetalhes, itemGrid);
 
   return clone;
 }
 
-function desativarItem(data){
-    // desativa item
-    if (data.disponibilidade == 'Reservado') {
-      btnDetalhes.classList.add("btn-desativado");
-      btnDetalhes.textContent = "Reservado";
-      itemGrid.classList.add("conteudo-desativado");
-
-      console.log("Desativados: ",itemGrid);
-    }
-}
-desativarItem();
 
 // Função que renderiza os cards do grid
 function renderizar(snapshot){

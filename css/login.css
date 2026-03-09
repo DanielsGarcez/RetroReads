@@ -11,6 +11,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    margin-top: 5%;
     margin-bottom: 3rem;
     padding: 3rem 2rem;
 
@@ -65,21 +67,11 @@
 
 #btn-logar{
     margin-top: 2rem;
-    padding: .5rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding: .4rem 4rem;
 
     font-size: 1.3rem;
 
-    color: var(--corBranco);
-    background-color: var(--corPrincipal);
-    border: var(--borda);
     border-radius: 2rem;
-}
-#btn-logar:hover{
-    cursor: pointer;
-    color: var(--corPrincipal);
-    background-color: var(--corBranco);
 }
 
 
