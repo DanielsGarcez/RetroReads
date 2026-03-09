@@ -7,6 +7,24 @@
     justify-content: center;
 }
 
+#btn-fechar-janela{
+    align-self: end;
+    background: none;
+    border: none;
+
+    width: 2rem;
+    height: 2rem;
+
+    margin-right: 1.8rem;
+    margin-top: 1.8rem;
+
+    cursor: pointer;
+}
+
+#btn-fechar-janela img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
 
 .section-principal {
