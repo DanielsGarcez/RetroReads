@@ -9,7 +9,7 @@ import {
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-import { renderizar, renderItem, aplicarFiltros } from "/RetroReads/scripts/livroCatalogo.js";
+import { renderizar, renderItem } from "/RetroReads/scripts/livroCatalogo.js";
 
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
           select.addEventListener("change", aplicarFiltros);
         });
 
-        aplicarFiltros();
-/*         async function aplicarFiltros() {
+
+        async function aplicarFiltros() {
           const genero = selectGenero.value;
           const idioma = selectIdioma.value;
           const acabamento = selectAcabamento.value;
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
           const snapshot = await getDocs(queryFiltros);
           renderizar(snapshot);
-        } */
+        }
     });
   });
 });
