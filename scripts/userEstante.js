@@ -63,10 +63,14 @@ const btnFechar = document.getElementById("btn-fechar-janela");
 
 btnAdicionar.addEventListener("click", () => {
     janelaAddContainer.classList.remove("conteudo-oculto");
+    document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--cor-fundo-escuro');
+    document.body.style.overflow = "hidden";
 });
 
 btnFechar.addEventListener("click", () => {
     janelaAddContainer.classList.add("conteudo-oculto");
+    document.body.style.backgroundColor = "transparent";
+    document.body.style.overflow = "auto";
 });
 // ------------------------------------------------------------------------
 
