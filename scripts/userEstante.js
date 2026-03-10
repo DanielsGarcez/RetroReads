@@ -21,7 +21,7 @@ const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem(
 await carregarLoading();
 mostrarLoading();
 
-renderItem(doc.data(), doc.id);
+renderItem(doc.data, doc.id);
 
 esconderLoading();
 
