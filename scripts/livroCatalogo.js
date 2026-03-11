@@ -62,16 +62,16 @@ function renderItem(data, id) {
   }
 
   // define o texto de titulo e autor pego no firestore
-  titulo.textContent = capitalizarPalavras(data.titulo || 'Sem título');
-  autor.textContent = data.autor || 'Sem autor';
+  titulo.textContent = capitalizarPalavras(data?.titulo || 'Sem título');
+  autor.textContent = data?.autor || 'Sem autor';
 
   // converte o valor
-  let valorReais = parseFloat(data.valor).toFixed(2);
+  let valorReais = parseFloat(data?.valor).toFixed(2);
   clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
 
   // altera conteudo do item
   itemGrid.dataset.id = id;
-  itemGrid.dataset.titulo = data.titulo || 'Sem título';
+  itemGrid.dataset.titulo = data?.titulo || 'Sem título';
 
   // chamada da função que desativa o card caso o livro esteja reservado
   desativarItem(data, btnDetalhes, itemGrid);
