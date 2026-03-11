@@ -55,7 +55,7 @@ function renderItem(data, id) {
   const autor = clone.querySelector('.autor-livro');
 
   // busca a imagem no firestore
-  if (data.capa && data.capa.trim() !== "") {
+  if (data?.capa && data.capa.trim() !== "") {
     imagem.src = data.capa;
   } else {
     imagem.src = "img/Mockup-Livro.png";
@@ -115,8 +115,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --------------------------------------------------------------------------------
   // função que filtra as categorias
-    [selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade].forEach(select => {
-      select.addEventListener("change", aplicarFiltros);
+    const filtros = [
+      selectGenero,
+      selectIdioma,
+      selectAcabamento,
+      selectDisponibilidade
+    ];
+
+    filtros.forEach(select => {
+      if (select) {
+        select.addEventListener("change", aplicarFiltros);
+      }
     });
 
     async function aplicarFiltros() {

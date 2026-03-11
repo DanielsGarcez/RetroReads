@@ -3,12 +3,11 @@ import { db, auth } from './firebase.js';
 import {
   collection,
   query,
-  orderBy,
   where,
   getDocs,
   doc
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
+import {carregarLoading, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 import { renderizar, renderItem } from "/RetroReads/scripts/livroCatalogo.js";

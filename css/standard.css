@@ -54,6 +54,17 @@ main{
     background-color: var(--corBranco);
 }
 
+.dados-input{
+    border: var(--borda);
+    border-radius: 2rem;
+    box-shadow: var(--sombra);
+
+    color: var(--corCinzaEscuro);
+    font-size: 1rem;
+    
+    padding: .5rem 1rem;
+}
+
 .btn-principal{
     padding: .3em;
     font-size: 130%;
