@@ -210,7 +210,7 @@
     margin-bottom: .3rem;
 }
 
-.inserir-dados input, select, textarea{
+.inserir-dados input,.inserir-dados select, .inserir-dados textarea{
     font-size: 1rem;
     padding: .5rem;
     padding-left: .7rem;

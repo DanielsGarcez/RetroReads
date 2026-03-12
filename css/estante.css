@@ -44,8 +44,9 @@ main{
     width: auto;
 }
 
-.barra-ferramentas {
+#form-filtro {
     gap: .8rem;
+    justify-content: end;
 }
 
 #barra-busca-estante{
@@ -59,14 +60,16 @@ main{
 
 .filtros-estante {
     font-size: .9rem;
+    font-weight: 400;
 }
 
-#btn-adicionar-livro, #mostrar-filtro-estante {
+#btn-adicionar-livro, #btn-editar-estante {
     padding: .3rem 1.3rem;
 }
 
 #btn-adicionar-livro {
-    gap: .3rem;
+    box-shadow: var(--sombra);
+    margin-right: auto;
 }
 
 .container-btn-img{

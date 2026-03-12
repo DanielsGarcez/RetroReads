@@ -24,11 +24,11 @@ const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estan
 const selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
-function renderItemEstante(data, id) {
+function renderItem(data, id) {
   // Variáveis
   const clone = template.content.cloneNode(true);
 
-  const btnDetalhes = clone.querySelector('.btn-detalhes');
+  const btnEditarLivro = clone.querySelector('.btn-detalhes');
   const itemGrid = clone.querySelector('.item-grid');
 
   const imagem = clone.querySelector('.capa-livro');
