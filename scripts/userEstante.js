@@ -58,7 +58,7 @@ function renderItemEstante(data, id) {
 }
 
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
-const janelaAddContainer = document.querySelector("#janela-add-container");
+const janelaAddContainer = document.getElementById("janela-add-container");
 const btnAdicionar = document.getElementById("btn-adicionar-livro");
 const btnFechar = document.getElementById("btn-fechar-janela");
 
@@ -108,11 +108,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       filtros.forEach(select => {
         if (select) {
-          select.addEventListener("change", aplicarFiltros);
+          select.addEventListener("change", aplicarFiltrosEstante);
         }
       });
 
-      async function aplicarFiltros() {
+      async function aplicarFiltrosEstante() {
         const genero = selectGeneroEstante.value;
         const idioma = selectIdiomaEstante.value;
         const acabamento = selectAcabamentoEstante.value;

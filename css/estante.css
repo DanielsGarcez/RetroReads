@@ -45,7 +45,7 @@ main{
 }
 
 .barra-ferramentas {
-    gap: .5rem;
+    gap: .8rem;
 }
 
 #barra-busca-estante{
@@ -57,9 +57,12 @@ main{
     cursor: text;
 }
 
+.filtros-estante {
+    font-size: .9rem;
+}
+
 #btn-adicionar-livro, #mostrar-filtro-estante {
     padding: .3rem 1.3rem;
-    box-shadow: var(--sombra);
 }
 
 #btn-adicionar-livro {
