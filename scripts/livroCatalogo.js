@@ -109,11 +109,9 @@ document.addEventListener("DOMContentLoaded", () => {
   renderizar(snapshotInicial);
 
   // ------------------------------------------------------------
-
   // função que simula a tela de carregamento
   setTimeout(function() {
-
-  // --------------------------------------------------------------------------------
+  // ------------------------------------------------------------
   // função que filtra as categorias
     const filtros = [
       selectGenero,

@@ -3,26 +3,59 @@ import { db, auth } from './firebase.js';
 import {
   collection,
   query,
+  orderBy,
   where,
-  getDocs,
-  doc
+  getDocs
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {carregarLoading, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-import { renderizar, renderItem } from "/RetroReads/scripts/livroCatalogo.js";
+import { renderizar } from "/RetroReads/scripts/livroCatalogo.js";
 
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem("userId")));
-                                    // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
-// espera carregar a função tela de loading
-await carregarLoading();
-mostrarLoading();
+// Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
-renderItem(doc.data, doc.id);
+// Variáveis de Filtros
+const selectGeneroEstante = document.getElementById("filtro-genero-estante");
+const selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
+const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
+const selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
 
-esconderLoading();
+// Função que renderiza os Cards do Grid com informações do banco de dados
+function renderItemEstante(data, id) {
+  // Variáveis
+  const clone = template.content.cloneNode(true);
+
+  const btnDetalhes = clone.querySelector('.btn-detalhes');
+  const itemGrid = clone.querySelector('.item-grid');
+
+  const imagem = clone.querySelector('.capa-livro');
+  const titulo = clone.querySelector('.titulo-livro');
+  const autor = clone.querySelector('.autor-livro');
+
+  // busca a imagem no firestore
+  if (data?.capa && data.capa.trim() !== "") {
+    imagem.src = data.capa;
+  } else {
+    imagem.src = "img/Mockup-Livro.png";
+  }
+
+  // define o texto de titulo e autor pego no firestore
+  titulo.textContent = capitalizarPalavras(data?.titulo || 'Sem título');
+  autor.textContent = data?.autor || 'Sem autor';
+
+  // converte o valor
+  let valorReais = parseFloat(data?.valor).toFixed(2);
+  clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
+
+  // altera conteudo do item
+  itemGrid.dataset.id = id;
+  itemGrid.dataset.titulo = data?.titulo || 'Sem título';
+
+  return clone;
+}
 
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
 const janelaAddContainer = document.querySelector("#janela-add-container");
@@ -40,6 +73,7 @@ btnFechar.addEventListener("click", () => {
     document.body.style.backgroundColor = "transparent";
     document.body.style.overflow = "auto";
 });
+
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -56,41 +90,51 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     (async () =>{
-      
+      // espera carregar a função tela de loading
+      await carregarLoading();
+      // mostra a tela de Loading
+      mostrarLoading();
+
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);
       renderizar(snapshotInicial);
 
-      // --------------------------------------------------------------------------------
+      const filtros = [
+        selectGeneroEstante,
+        selectIdiomaEstante,
+        selectAcabamentoEstante,
+        selectDisponibilidadeEstante
+      ];
 
-      // função que filtra as categorias
-/*         [selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade].forEach(select => {
+      filtros.forEach(select => {
+        if (select) {
           select.addEventListener("change", aplicarFiltros);
-        });
+        }
+      });
 
+      async function aplicarFiltros() {
+        const genero = selectGeneroEstante.value;
+        const idioma = selectIdiomaEstante.value;
+        const acabamento = selectAcabamentoEstante.value;
+        const disponibilidade = selectDisponibilidadeEstante.value;
 
-        async function aplicarFiltros() {
-          const genero = selectGenero.value;
-          const idioma = selectIdioma.value;
-          const acabamento = selectAcabamento.value;
-          const disponibilidade = selectDisponibilidade.value;
-    
-          let filtros = [];
-    
-          if (genero) filtros.push(where("genero", "==", genero));
-          if (idioma) filtros.push(where("idioma", "==", idioma));
-          if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
-          if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
-    
-          const queryFiltros = query(
-            collection(db, "livros"),
-            ...filtros,
-            orderBy("criadoEm", "desc")
-          );
-    
-          const snapshot = await getDocs(queryFiltros);
-          renderizar(snapshot);
-        } */
+        let filtros = [];
+
+        if (genero) filtros.push(where("genero", "==", genero));
+        if (idioma) filtros.push(where("idioma", "==", idioma));
+        if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
+        if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
+
+        const queryFiltros = query(
+          collection(db, "livros"),
+          ...filtros,
+          orderBy("criadoEm", "desc")
+        );
+
+        const snapshot = await getDocs(queryFiltros);
+        renderizar(snapshot);
+      }
+      // --------------------------------------------------------------------------------
     });
   });
 });
