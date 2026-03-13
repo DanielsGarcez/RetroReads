@@ -31,4 +31,26 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
 # Preview
 <img src="https://i.pinimg.com/originals/eb/1b/27/eb1b27863813653543914d222ceb9cd0.gif" alt="Carregando...">
 
+
+# Tecnologias 
+    <img 
+      height="80px"
+      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+    />
+  <img 
+    height="80px"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  />
+  <img 
+    height="80px" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+  />
+  <img 
+    height="80px" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+  />
+  <img 
+    height="80px" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+  />
 [...]
