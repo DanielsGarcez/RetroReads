@@ -33,13 +33,14 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
 
 
 # Tecnologias 
-    <img 
-      height="80px"
-      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-    />
+    
   <img 
     height="80px"
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+  />
+    <img 
+    height="80px"
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
   />
   <img 
     height="80px" 
@@ -53,4 +54,4 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
     height="80px" 
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
   />
-[...]
+
