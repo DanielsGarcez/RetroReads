@@ -32,7 +32,7 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
 <img src="https://i.pinimg.com/originals/eb/1b/27/eb1b27863813653543914d222ceb9cd0.gif" alt="Carregando...">
 
 
-# Tecnologias Usadas
+# Tecnologias
     
   <img 
     height="80px"
@@ -55,3 +55,15 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
   />
 
+# Autores:
+Apesar do projeto inicial tenhas sido feito em grupo, tomei a iniciativa de desenvolver do zero para aperfeiçoar minhas habilidades.
+
+Grupo de Desenvolvimento do projeto inicial:
+- Daniel Garcêz
+- Felipe Cabral
+- Lucas Motta
+- Lucas Quinalia
+- Mariana Escobar
+
+Desenvolvedor do Projeto Atual:
+- Daniel Garcêz
