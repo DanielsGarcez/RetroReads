@@ -30,13 +30,13 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
 
 # Preview
 
-### Catalogo
+### PC - Catalogo
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0d4e7984-a260-4082-b325-9b9fdcfc8b9e" />
 
-### Estante do Usuário
+### PC - Estante do Usuário
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/360745a4-a443-4d03-925d-a427a3433796" />
 
-### Planos de Assinatura
+### PC - Planos de Assinatura
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/466155b2-b051-4ee2-b312-faf617b4182e" />
 
 
