@@ -67,11 +67,11 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
 Apesar do projeto inicial tenhas sido feito em grupo, tomei a iniciativa de desenvolver do zero para aperfeiçoar minhas habilidades.
 
 Grupo de Desenvolvimento do projeto inicial:
-- Daniel Garcêz
-- Felipe Cabral
-- Lucas Motta
-- Lucas Quinalia
-- Mariana Escobar
+- [Daniel Garcêz](https://github.com/DanielsGarcez)
+- [Felipe Cabral](https://github.com/felipecabralsr)
+- [Lucas Motta](https://github.com/Motta360)
+- [Lucas Quinalia](https://github.com/LucasQuinalia)
+- [Mariana Escobar](https://github.com/mariescbr)
 
 Desenvolvedor do Projeto Atual:
-- Daniel Garcêz
+- [Daniel Garcêz](https://github.com/DanielsGarcez)
