@@ -29,7 +29,10 @@ Ao integrar diferentes tipos de usuários, o CSCO promove um ambiente colaborati
 
 
 # Preview
-<img src="https://i.pinimg.com/originals/eb/1b/27/eb1b27863813653543914d222ceb9cd0.gif" alt="Carregando...">
+
+## Catalogo
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/360745a4-a443-4d03-925d-a427a3433796" />
+
 
 
 # Tecnologias
