@@ -15,7 +15,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 2rem;
+
     width: 15%;
 }
 
@@ -23,6 +23,8 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-bottom: 2.5rem;
 }
 
 .area-usuario > img{
@@ -66,7 +68,7 @@ main{
     transition: .1s;
 }
 
-/* -------------------- Área de Dados -------------------- */
+/* ------------------- Área de Dados ------------------- */
 .section-principal{
     display: flex;
     flex-direction: row;
@@ -203,8 +205,47 @@ main{
         align-items: center;
     }
 
+    .menu-perfil-user{
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        gap: 0rem;
+    }
+
     .menu-secoes{
-        pointer-events: none;
+        pointer-events: auto;
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+
+        width: 100%;
+    }
+
+    .menu-secoes > .btn-secao{
+        width: 50%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .btn-secao{
+        color: var(--corPrincipal);
+        background-color: var(--corPrincipalTransparente);
+
+        border: var(--borda);
+        border-color: var(--corPrincipal);
+        border-radius: 1rem 1rem 0rem 0rem;
+        border-bottom: 0rem;
+    }
+
+    .btn-secao:hover{
+        color: var(--corBranco);
+        background-color: var(--corPrincipal);
+        border-left: 1rem;
+    }
+
+    .hr-secoes{
         display: none;
     }
 
@@ -231,8 +272,10 @@ main{
 
     .info-edit{
         width: 100vw;
-        border-radius: 0rem;
         align-items: center;
+
+        border: none;
+        border-radius: 0rem;
     }
 
     .info-edit > h2 {

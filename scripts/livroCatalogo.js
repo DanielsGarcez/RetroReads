@@ -25,29 +25,31 @@ const selectDisponibilidade = document.getElementById("filtro-disponibilidade");
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
-// -------------------- ÁREA DE FUNÇÕES --------------------
-
-// Botão de dropdown dos filtros
+// Variáveis do Dropdown dos filtros
 const btnFiltros = document.getElementById("btn-dropdown");
 const filtrosContent = document.getElementById("dropdown-content");
 const hrMobile = document.querySelectorAll(".hr-mobile");
 
-if (!filtrosContent || !btnFiltros) return;
+// -------------------- ÁREA DE FUNÇÕES --------------------
 
-if (filtrosContent.classList.contains("conteudo-oculto")) {
-  btnFiltros.addEventListener("click", () => {
-    filtrosContent.classList.remove("conteudo-oculto");
-    btnFiltros.classList.add("btn-dropdown-ativo");
-    hrMobile.forEach(hr => hr.classList.remove("conteudo-oculto"));
-  });} else {
+// Função do botão de dropdown dos filtros
+window.revelarFiltros = function () {
+  if (!filtrosContent || !btnFiltros) return;
 
-  btnFiltros.addEventListener("click", () => {
-    filtrosContent.classList.remove("conteudo-oculto");
-    btnFiltros.classList.add("btn-dropdown-ativo");
-    hrMobile.forEach(hr => hr.classList.remove("conteudo-oculto"));
-  });
+  if (filtrosContent.classList.contains("conteudo-oculto")) {
+    btnFiltros.addEventListener("click", () => {
+      filtrosContent.classList.remove("conteudo-oculto");
+      btnFiltros.classList.add("btn-dropdown-ativo");
+      hrMobile.forEach(hr => hr.classList.remove("conteudo-oculto"));
+    });} else {
+
+    btnFiltros.addEventListener("click", () => {
+      filtrosContent.classList.remove("conteudo-oculto");
+      btnFiltros.classList.add("btn-dropdown-ativo");
+      hrMobile.forEach(hr => hr.classList.remove("conteudo-oculto"));
+    });
+  }
 }
-
 
 
 // Função que desativa o card do livro caso ele esteja reservado
