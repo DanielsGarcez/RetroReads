@@ -111,3 +111,21 @@ main{
     row-gap: 1.5rem;
 }
 
+.teste-edit {
+    display: none;
+
+    color: var(--corCinzaEscuro);
+    background-color: var(--corBranco);
+    border: 1.5px solid var(--corCinzaEscuro);
+    border-radius: 50%;
+
+    width: 2rem;
+    height: 2rem;
+
+    align-self: flex-end;
+    position: absolute;
+
+    margin-right: .8rem;
+    margin-top: .8rem;
+}
+
