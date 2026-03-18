@@ -9,13 +9,17 @@ window.revelarMenu = function () {
   if (nav.classList.contains("ocultarElemento")) {
     nav.classList.remove("ocultarElemento");
     console.log("removeu o nav");
+
     nav.classList.add("revelarElemento");
     console.log("adicionou o nav");
+
     btnIcon.innerHTML = "⨉";
     console.log("Revelou o menu");
+    
   } else {
     nav.classList.remove("revelarElemento");
     nav.classList.add("ocultarElemento");
+
     btnIcon.innerHTML = "☰";
     console.log("Ocultou o menu");
   }

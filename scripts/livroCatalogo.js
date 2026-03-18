@@ -27,6 +27,29 @@ const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
+// Botão de dropdown dos filtros
+const btnFiltros = document.getElementById("btn-dropdown");
+const filtrosContent = document.getElementById("dropdown-content");
+const hrMobile = document.querySelectorAll(".hr-mobile");
+
+if (!filtrosContent || !btnFiltros) return;
+
+if (filtrosContent.classList.contains("conteudo-oculto")) {
+  btnFiltros.addEventListener("click", () => {
+    filtrosContent.classList.remove("conteudo-oculto");
+    btnFiltros.classList.add("btn-dropdown-ativo");
+    hrMobile.forEach(hr => hr.classList.remove("conteudo-oculto"));
+  });} else {
+
+  btnFiltros.addEventListener("click", () => {
+    filtrosContent.classList.remove("conteudo-oculto");
+    btnFiltros.classList.add("btn-dropdown-ativo");
+    hrMobile.forEach(hr => hr.classList.remove("conteudo-oculto"));
+  });
+}
+
+
+
 // Função que desativa o card do livro caso ele esteja reservado
 function desativarItem(data, btnDetalhes, itemGrid){
 
@@ -39,7 +62,6 @@ function desativarItem(data, btnDetalhes, itemGrid){
 
     console.log("Desativado:", itemGrid);
   }
-
 }
 
 // Função que renderiza os Cards do Grid com informações do banco de dados

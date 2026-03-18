@@ -147,6 +147,7 @@ h3{
     .tipos-planos{
         flex-direction: column;
         margin-bottom: 0;
+        padding-bottom: 1rem;
     }
 
     .plano-x{
@@ -174,6 +175,10 @@ h3{
 }
 
 @media (max-width: 600px){
+    .main-planos{
+        margin-top: 2rem;
+    }
+
     .descricao-planos li {
         padding: .2rem 1.6rem;
         padding-top: .3rem;
