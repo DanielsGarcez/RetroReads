@@ -219,14 +219,13 @@ main{
 
         display: flex;
         flex-direction: row;
-        gap: .5rem;
 
         width: 100vw;
         justify-content: center;
     }
 
     .menu-secoes > .btn-secao{
-        width: 30%;
+        width: 100%;
         text-align: center;
         font-size: 1rem;
 
@@ -240,13 +239,28 @@ main{
         border: var(--borda);
         border-color: var(--corPrincipal);
         border-radius: 1rem 1rem 0rem 0rem;
-        border-bottom: 0rem;
+        border-bottom: 2px solid var(--corPrincipal);
     }
 
     .btn-secao:hover{
         color: var(--corBranco);
         background-color: var(--corPrincipal);
-        border-left: 1rem;
+
+        border: 1px solid var(--corPrincipal);
+        border-bottom-width: 2px;
+    }
+
+/*      color: var(--corPrincipal);
+        background-color: var(--corBranco);
+        border: 1px solid var(--corPrincipal);
+        border-bottom-width: 2px;
+        border-bottom-color: var(--corBranco); */
+
+    .hr-perfil-menu {
+        width: 15%;
+        margin-top: auto;
+
+        color: var(--corPrincipal);
     }
 
     .hr-perfil-mobile{
@@ -264,7 +278,7 @@ main{
 
     .section-principal{
         margin: 0rem;
-        gap: 3rem;
+        gap: 1rem;
         width: 100%;
     }
 
@@ -294,13 +308,11 @@ main{
 
     .info-edit{
         width: 100vw;
-        align-items: center;
 
         border: none;
         border-radius: 0rem;
-        box-shadow: none;
 
-        margin-bottom: 1rem;
+        margin: 1rem 0rem;
     }
 
     .info-edit > h2 {

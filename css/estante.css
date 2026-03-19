@@ -70,6 +70,16 @@ main{
 #btn-adicionar-livro {
     box-shadow: var(--sombra);
     margin-right: auto;
+
+    padding-bottom: .4rem;
+}
+
+.span-btn-adicionar-texto{
+    font-size: 1rem;
+}
+
+.span-btn-adicionar-icon{
+    display: none;
 }
 
 .container-btn-img{
@@ -138,5 +148,18 @@ main{
     #grid-catalogo {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 1.5rem;
+    }
+
+    #dropdown-content {
+        display: none;
+    }
+
+    .span-btn-adicionar-texto{
+        font-size: 1rem;
+        display: none;
+    }
+
+    .span-btn-adicionar-icon{
+        display: block;
     }
 }
