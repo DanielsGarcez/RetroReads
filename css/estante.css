@@ -107,9 +107,10 @@ main{
 }
 
 #grid-catalogo {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     row-gap: 1.5rem;
 }
+
 
 .teste-edit {
     display: none;
@@ -129,3 +130,13 @@ main{
     margin-top: .8rem;
 }
 
+@media (max-width: 600px){
+    .section-principal {
+        width: 100%;
+    }
+
+    #grid-catalogo {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 1.5rem;
+    }
+}

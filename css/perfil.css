@@ -216,17 +216,21 @@ main{
 
     .menu-secoes{
         pointer-events: auto;
+
         display: flex;
         flex-direction: row;
         gap: .5rem;
 
-        width: 100%;
+        width: 100vw;
+        justify-content: center;
     }
 
     .menu-secoes > .btn-secao{
-        width: 50%;
+        width: 30%;
         text-align: center;
         font-size: 1rem;
+
+        padding: .6rem 1rem;
     }
 
     .btn-secao{
@@ -245,20 +249,37 @@ main{
         border-left: 1rem;
     }
 
+    .hr-perfil-mobile{
+        display: block;
+
+        width: 90%;
+
+        align-self: center;
+        margin-top: .3rem;
+    }
+
     .hr-secoes{
         display: none;
     }
 
     .section-principal{
         margin: 0rem;
-        gap: 5rem;
+        gap: 3rem;
         width: 100%;
     }
 
     .dados-grid{
-        width: 80vw;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: .5rem;
+        column-gap: 2rem;
+
+        padding: 0rem;
+        margin: 2rem;
+    }
+
+    .dados-grid-item {
+        width: 100%;
     }
 
     .barra-destaque{
@@ -277,9 +298,13 @@ main{
 
         border: none;
         border-radius: 0rem;
+        box-shadow: none;
+
+        margin-bottom: 1rem;
     }
 
     .info-edit > h2 {
-        margin-left: 0rem;
+        margin-left: 2rem;
+        padding: 0rem;
     }
 }
