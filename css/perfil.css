@@ -56,6 +56,7 @@ main{
     
     background: none;
     border: none;
+
     color: var(--corCinzaEscuro);
     padding: 0.5rem 1rem;
 
@@ -63,7 +64,7 @@ main{
 }
 
 .btn-secao:hover{
-    color: var(--corBranco);
+    color: var(--corPrincipal);
     border-left: 5px solid var(--corPrincipal);
     transition: .1s;
 }
@@ -231,7 +232,7 @@ main{
 
         padding: .6rem 1rem;
     }
-
+    
     .btn-secao{
         color: var(--corPrincipal);
         background-color: var(--corPrincipalTransparente);
