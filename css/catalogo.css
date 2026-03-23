@@ -361,6 +361,8 @@
 
         border-bottom: 1px solid var(--corCinzaMedio);
         margin-bottom: 1px;
+
+        width: 100%;
     }
 
     .btn-dropdown-ativo{
