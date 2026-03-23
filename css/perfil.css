@@ -7,6 +7,8 @@ main{
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
+
+    margin: 0px 5%;
 }
 
 /* -------------------- Menu do Usuário -------------------- */
@@ -146,6 +148,10 @@ main{
     color: var(--corPrincipal);
 }
 
+.icons-perfil-menu-mobile{
+    display: none;
+}
+
 /* ----------------- Dados inalteráveis ----------------- */
 
 /* Desabilitar edição do CPF */
@@ -172,6 +178,12 @@ main{
 
 /* ----------------- RESPONSIVIDADE ----------------- */
 
+@media (max-width: 1500px) {
+    .container-perfil-user{
+        margin: 0px 10%;
+    }
+}
+
 @media (max-width: 1080px) {
     .section-principal{
         flex-direction: column;
@@ -183,24 +195,6 @@ main{
 }
 
 @media (max-width: 800px) {
-    .container-perfil-user{
-        gap: 1rem;
-    }
-
-    .section-principal{
-        margin-left: .5rem;
-    }
-
-    .dados-grid{
-        column-gap: 2rem;
-    }
-
-    .dados-grid-item {
-        padding-bottom: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
     .container-perfil-user{
         flex-direction: column;
         align-items: center;
@@ -277,6 +271,10 @@ main{
         display: none;
     }
 
+    .icons-perfil-menu-mobile{
+        display: block;
+    }
+
     .section-principal{
         margin: 0rem;
         gap: 1rem;
@@ -320,6 +318,7 @@ main{
         margin-left: 2rem;
         padding: 0rem;
     }
+
 }
 
 @media (max-width: 350px){
