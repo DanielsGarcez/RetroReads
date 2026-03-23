@@ -117,6 +117,8 @@ main{
 .dados-grid-item > label{
     color: var(--corCinzaEscuro);
     padding-left: .3rem;
+
+    inline-size: max-content;
 }
 
 .dados-input, .endereco-input{
@@ -150,6 +152,10 @@ main{
 
 .icons-perfil-menu-mobile{
     display: none;
+}
+
+.textos-perfil-menu{
+    display: block;
 }
 
 /* ----------------- Dados inalteráveis ----------------- */
@@ -271,9 +277,14 @@ main{
         display: none;
     }
 
+    .textos-perfil-menu{
+        display: none;
+    }
+
     .icons-perfil-menu-mobile{
         display: block;
     }
+    
 
     .section-principal{
         margin: 0rem;
@@ -295,6 +306,10 @@ main{
         width: 100%;
     }
 
+    .dados-input, .endereco-input{
+        margin-bottom: 1rem;
+    }
+
     .barra-destaque{
         gap: 5rem;
         justify-content: center;
@@ -303,6 +318,7 @@ main{
 
     .btn-editar {
         width: 30%;
+        margin-top: 1rem;
     }
 
     .info-edit{
