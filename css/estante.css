@@ -207,10 +207,15 @@ main{
         right: 0;
         z-index: 1000;
 
-        background-color: var(--corPrincipal);
-        box-shadow: var(--sombra);
+        width: 3rem;
+        height: 3rem;
 
-        padding: 2rem;
+        background-color: var(--corPrincipal);
+        border-radius: 50%;
+        box-shadow: var(--sombra);
+        box-sizing: content-box;
+
+        padding: .5rem;
         margin: 1rem;
     }
 
@@ -219,8 +224,10 @@ main{
     }
 
     .span-btn-adicionar-icon{
-        width: 100%;
         background-image: url(../img/Icon-Adicionar-Livro-Cinza.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .span-btn-adicionar-icon:hover{
