@@ -200,5 +200,35 @@ main{
     .item-grid {
         padding-top: 0rem;
     }
+
+    #btn-adicionar-livro{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 1000;
+
+        background-color: var(--corPrincipal);
+        box-shadow: var(--sombra);
+
+        padding: 2rem;
+        margin: 1rem;
+    }
+
+    #btn-adicionar-livro:hover{
+        background-color: var(--corBranco);
+    }
+
+    .span-btn-adicionar-icon{
+        width: 100%;
+        background-image: url(../img/Icon-Adicionar-Livro-Cinza.png);
+    }
+
+    .span-btn-adicionar-icon:hover{
+        background-image: url(../img/Icon-Adicionar-Livro-Verde.png);
+    }
+
+    .span-btn-adicionar-livro{
+        display: none;
+    }
 }
 

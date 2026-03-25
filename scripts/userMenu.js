@@ -60,27 +60,30 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // ------------ Funções dos botões do menu  ------------
         abaDadosPessoais.addEventListener("click", () => {
-            window.location.href = `/RetroReads/pages/userPerfil.html?id=${userId}`;
-
             abaDadosPessoais.classList.add("btn-menu-ativo");
             abaEstanteVirtual.classList.remove("btn-menu-ativo");
             abaLivrosReservas.classList.remove("btn-menu-ativo");
+
+            window.location.href = `/RetroReads/pages/userPerfil.html?id=${userId}`;
+
         });
 
         abaEstanteVirtual.addEventListener("click", () => {
-            window.location.href = `/RetroReads/pages/userEstante.html?id=${userId}`;
-
             abaDadosPessoais.classList.remove("btn-menu-ativo");
             abaEstanteVirtual.classList.add("btn-menu-ativo");
             abaLivrosReservas.classList.remove("btn-menu-ativo");
+
+            window.location.href = `/RetroReads/pages/userEstante.html?id=${userId}`;
+
         });
 
         abaLivrosReservas.addEventListener("click", () => {
-            window.location.href = `/RetroReads/pages/userReservas.html?id=${userId}`;
-
             abaDadosPessoais.classList.remove("btn-menu-ativo");
             abaEstanteVirtual.classList.remove("btn-menu-ativo");
             abaLivrosReservas.classList.add("btn-menu-ativo");
+
+            window.location.href = `/RetroReads/pages/userReservas.html?id=${userId}`;
+
         });
         /* 
         abaLivrosAnunciados.addEventListener("click", () => {
