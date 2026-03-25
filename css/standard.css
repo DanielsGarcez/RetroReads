@@ -121,12 +121,6 @@ main{
 }
 
 /* ---------- Ativar e Desativar Conteúdo ---------- */
-
-.btn-menu-ativo{
-    border-bottom: 2px solid var(--corBranco);
-    background-color: var(--corBranco);
-}
-
 .btn-desativado{
     pointer-events: none;
     background-color: var(--corCinzaMedio);

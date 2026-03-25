@@ -251,11 +251,10 @@ main{
         border-bottom-width: 2px;
     }
 
-/*      color: var(--corPrincipal);
+    .btn-menu-ativo, .btn-menu-ativo:hover{
         background-color: var(--corBranco);
-        border: 1px solid var(--corPrincipal);
-        border-bottom-width: 2px;
-        border-bottom-color: var(--corBranco); */
+        border-bottom: 2px solid var(--corBranco);
+    }
 
     .hr-perfil-menu {
         width: 15%;
