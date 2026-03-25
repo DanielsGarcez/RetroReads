@@ -65,6 +65,7 @@ main{
     padding: .5rem 1rem;
 }
 
+/* ---------- Botões ---------- */
 .btn-principal{
     padding: .3em;
     font-size: 130%;
@@ -119,6 +120,13 @@ main{
     background-color: var(--corVermelhoPrincipal);
 }
 
+/* ---------- Ativar e Desativar Conteúdo ---------- */
+
+.btn-menu-ativo{
+    border-bottom: 2px solid var(--corBranco);
+    background-color: var(--corBranco);
+}
+
 .btn-desativado{
     pointer-events: none;
     background-color: var(--corCinzaMedio);
@@ -138,6 +146,7 @@ main{
     background-color: var(--corCinzaClaro);
 }
 
+/* ---------- Relever e Ocultar Conteúdo ---------- */
 .conteudo-oculto{
     pointer-events: none;
     display: none;

@@ -183,6 +183,11 @@ main{
         display: none;
     }
 
+    .btn-desativado {
+        padding: .3rem 0rem;
+        font-size: .8rem;
+    }
+
     .span-btn-adicionar-texto{
         font-size: 1rem;
         display: none;

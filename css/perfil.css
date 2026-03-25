@@ -345,4 +345,8 @@ main{
         align-items: center;
         margin-bottom: 2.5rem;
     }
+
+    #dados-user-email {
+        font-size: .9rem;
+    }
 }
