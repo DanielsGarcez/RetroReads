@@ -39,7 +39,7 @@ function ativarModoEdicaoDados(){
     btnCancelarDados.classList.remove("conteudo-oculto");
 
     inputDados.forEach(input => {
-        input.classList.remove("input-desativado");
+        input.classList.remove("input-desativado");        
     });
     inputDateText.type = 'date';
 
@@ -54,11 +54,8 @@ function desativarModoEdicaoDados(){
     inputDados.forEach(input => {
         input.classList.add("input-desativado");
     });
-
-    inputDateText.addEventListener('input', function(){
-        inputDateText.type = 'text';
-        inputDateText.value = inputDateText.value.replace('-','/')
-    })
+    inputDateText.type = 'text';
+    inputDateText.value = inputDateText.value.replace('-','/')
 
     console.log("Modo de edição desativado");
 }
@@ -135,7 +132,10 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
         }
         dadosUsuario()
-        esconderLoading(); 
+
+        
+
+        esconderLoading();
     });
 
 
