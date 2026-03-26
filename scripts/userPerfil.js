@@ -29,6 +29,10 @@ const inputEndereco = document.querySelectorAll(".endereco-input");
 const formEndereco = document.getElementById("form-endereco-user");
 
 
+// ------------------ Variáveis das abas de menu ------------------
+const abaDadosPessoais = document.getElementById("aba-dados-pessoais");
+const abaEstanteVirtual = document.getElementById("aba-estante-virtual");
+const abaLivrosReservas = document.getElementById("aba-suas-reservas");
 
 // ------------------ Funções Dados ------------------
 carregarLoading();
@@ -57,7 +61,7 @@ function desativarModoEdicaoDados(){
 
     inputDateText.addEventListener('input', function(){
         inputDateText.type = 'text';
-        inputDateText.value = inputDateText.value.replace('-','/')
+        inputDateText.value.replace('-','/')
     })
 
     console.log("Modo de edição desativado");
@@ -133,6 +137,11 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-estado").placeholder  = usuario.endereco.estado || " ";
             document.getElementById("endereco-user-cidade").placeholder  = usuario.endereco.cidade || " ";
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
+
+            abaDadosPessoais.classList.add("btn-menu-ativo");
+            abaEstanteVirtual.classList.remove("btn-menu-ativo");
+            abaLivrosReservas.classList.remove("btn-menu-ativo");
+
         }
         dadosUsuario()
         esconderLoading(); 
