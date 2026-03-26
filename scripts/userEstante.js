@@ -23,6 +23,9 @@ const selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
 const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
 const selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
 
+
+
+
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {
   // Variáveis

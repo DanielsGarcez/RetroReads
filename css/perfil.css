@@ -206,6 +206,8 @@ main{
     .container-perfil-user{
         flex-direction: column;
         align-items: center;
+
+        gap: .3rem;
     }
 
     .menu-perfil-user{
@@ -215,6 +217,8 @@ main{
         flex-wrap: wrap;
         align-content: center;
         gap: 0rem;
+
+        margin-right: 0rem;
     }
 
     .menu-secoes{
@@ -291,7 +295,15 @@ main{
     .section-principal{
         margin: 0rem;
         gap: 1rem;
+        width: 100vw;
+    }
+
+    #form-dados-user, #form-endereco-user{
         width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .dados-grid{
@@ -301,7 +313,9 @@ main{
         column-gap: 2rem;
 
         padding: 0rem;
-        margin: 2rem;
+        margin-top: 2rem;
+
+        width: 85vw;
     }
 
     .dados-grid-item {
@@ -313,14 +327,18 @@ main{
     }
 
     .barra-destaque{
-        gap: 5rem;
+        gap: 2rem;
         justify-content: center;
-        margin-right: 1.5rem;
+        margin-right: auto;
     }
 
     .btn-editar {
-        width: 30%;
+        width: unset;
         margin-top: 1rem;
+
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 2rem;
     }
 
     .info-edit{

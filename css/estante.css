@@ -185,7 +185,7 @@ main{
     }
 
     #dropdown-content {
-        display: 100%;
+        width: 100%;
     }
 
     .span-btn-adicionar-texto{
@@ -201,10 +201,10 @@ main{
         position: fixed;
         bottom: 0;
         right: 0;
-        z-index: 1000;
+        z-index: 100;
 
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
 
         background-color: var(--corPrincipal);
         border-radius: 50%;
@@ -220,10 +220,12 @@ main{
     }
 
     .span-btn-adicionar-icon{
-        background-image: url(../img/Icon-Adicionar-Livro-Cinza.png);
+        background-image: url(../img/Icon-Adicionar-Livro-Branco.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+
+        height: 100%;
     }
 
     .span-btn-adicionar-icon:hover{

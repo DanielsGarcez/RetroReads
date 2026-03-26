@@ -340,6 +340,26 @@
     }
 
     .container{
-        width: 80%;
+        width: 100vw;
+        border-radius: 0rem;
+    }
+
+    .container-duplo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-esquerdo, .container-direito {
+        width: 90%;
+        padding: 0;
+    }
+
+    #valor-livro {
+        width: unset;
+    }
+
+    #btn-livroCadastro{
+        width: unset;
+        padding: .5rem 2rem;
     }
 }
