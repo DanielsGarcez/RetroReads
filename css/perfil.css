@@ -334,10 +334,13 @@ main{
 
     .btn-editar {
         width: unset;
+        
         margin-top: 1rem;
+        margin-right: 0;
 
         padding-left: 2rem;
         padding-right: 2rem;
+
         border-radius: 2rem;
     }
 
