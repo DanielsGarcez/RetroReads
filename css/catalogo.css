@@ -395,6 +395,8 @@
         font-size: 1rem;
         padding-right: .8rem;
         padding-left: .8rem;
+
+        margin-left: auto;
     }
 
     .container-catalogo{

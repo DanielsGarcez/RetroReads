@@ -76,7 +76,7 @@ main{
 
 #btn-editar-estante{
     padding: .3rem 0rem;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 .span-btn-adicionar-texto{
@@ -185,7 +185,7 @@ main{
     }
 
     #dropdown-content {
-        display: none;
+        display: 100%;
     }
 
     .span-btn-adicionar-texto{
@@ -195,10 +195,6 @@ main{
 
     .span-btn-adicionar-icon{
         display: block;
-    }
-
-    .item-grid {
-        padding-top: 0rem;
     }
 
     #btn-adicionar-livro{
@@ -236,6 +232,10 @@ main{
 
     .span-btn-adicionar-livro{
         display: none;
+    }
+
+    #btn-editar-estante {
+        font-size: .8rem;
     }
 }
 

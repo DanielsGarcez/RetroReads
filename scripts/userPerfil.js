@@ -15,6 +15,8 @@ const btnSalvarDados = document.getElementById("btn-salvar-dados");
 const inputDados = document.querySelectorAll(".dados-input");
 const formDados = document.getElementById("form-dados-user");
 
+const inputDateText = document.getElementById("dados-user-nasc")
+
 
 
 // ------------------ Variáveis Endereços ------------------
@@ -39,6 +41,8 @@ function ativarModoEdicaoDados(){
     inputDados.forEach(input => {
         input.classList.remove("input-desativado");
     });
+    inputDateText.type = 'date';
+
     console.log("Modo de edição ativado");
 }
 
@@ -50,6 +54,12 @@ function desativarModoEdicaoDados(){
     inputDados.forEach(input => {
         input.classList.add("input-desativado");
     });
+
+    inputDateText.addEventListener('input', function(){
+        inputDateText.type = 'text';
+        inputDateText.value = inputDateText.value.replace('-','/')
+    })
+
     console.log("Modo de edição desativado");
 }
 
