@@ -307,7 +307,8 @@ main{
     }
 
     .dados-grid{
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
 
         gap: .5rem;
         column-gap: 2rem;
@@ -329,7 +330,6 @@ main{
     .barra-destaque{
         gap: 2rem;
         justify-content: center;
-        margin-right: auto;
     }
 
     .btn-editar {
