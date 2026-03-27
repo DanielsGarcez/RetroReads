@@ -22,10 +22,6 @@ const selectGeneroEstante = document.getElementById("filtro-genero-estante");
 const selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
 const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
 const selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
-//--------------------------------------------------------------------------------------------
-// espera carregar a função tela de loading
-await carregarLoading();
-
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItem(data, id) {
@@ -81,9 +77,6 @@ btnFechar.addEventListener("click", () => {
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
-  mostrarLoading();
-
-  document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo")
 
   onAuthStateChanged(auth, (user) => {
 
@@ -96,7 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "/RetroReads/pages/login.html";
     }
 
+    document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
+
     (async () =>{
+      // espera carregar a função tela de loading
+      await carregarLoading();
+      // mostra a tela de Loading
+      mostrarLoading();
+
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);
       renderizar(snapshotInicial);

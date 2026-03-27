@@ -91,8 +91,6 @@ function modoEdicaoDesativarEndereco(){
 document.addEventListener("DOMContentLoaded", () =>{
     mostrarLoading();
 
-    document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo")
-
     onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log(`Logado como: ${user.email}.`);
@@ -133,6 +131,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
         }
         dadosUsuario()
+
+        document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo");
 
         esconderLoading();
     });
