@@ -76,6 +76,20 @@ btnFechar.addEventListener("click", () => {
     document.body.style.overflow = "auto";
 });
 
+
+
+// ---------------------- BOTÃO FILTRO ----------------------
+btnMostrarFiltro.addEventListener("click", () => {
+  const formFiltro = document.getElementById("form-filtro")
+
+  if (formFiltro.classList.contains("conteudo-oculto-mobile")){
+    formFiltro.classList.remove("conteudo-oculto-mobile");
+  }
+  else{
+    formFiltro.classList.add("conteudo-oculto-mobile");
+  }
+});
+
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -98,19 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
       await carregarLoading();
       // mostra a tela de Loading
       mostrarLoading();
-
-
-      // Botão que mostra ou oculta os filtros
-      btnMostrarFiltro.addEventListener("click", () => {
-        const formFiltro = document.getElementById("form-filtro")
-
-        if (formFiltro.classList.contains("conteudo-oculto-mobile")){
-          formFiltro.classList.remove("conteudo-oculto-mobile");
-        }
-        else{
-          formFiltro.classList.add("conteudo-oculto-mobile");
-        }
-      });
 
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);
