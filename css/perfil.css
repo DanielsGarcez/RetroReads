@@ -334,7 +334,7 @@ main{
 
     .btn-editar {
         width: unset;
-        
+
         margin-top: 1rem;
         margin-right: 0;
 
@@ -350,7 +350,7 @@ main{
         border: none;
         border-radius: 0rem;
 
-        margin: 1rem 0rem;
+        margin: 2rem 0rem;
     }
 
     .info-edit > h2 {

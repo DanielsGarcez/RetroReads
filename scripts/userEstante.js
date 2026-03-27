@@ -24,6 +24,10 @@ const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estan
 const selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
 
 
+// Variáveis dos botões do menu
+const btnMenuDados = document.getElementById("aba-dados-pessoais");
+const btnMenuEstante = document.getElementById("aba-estante-virtual");
+const btnMenuReservas = document.getElementById("aba-suas-reservas");
 
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
@@ -97,6 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
       await carregarLoading();
       // mostra a tela de Loading
       mostrarLoading();
+
+      btnMenuEstante.addEventListener("click", () => {
+        btnMenuDados.classList.remove("btn-menu-ativo")
+        btnMenuEstante.classList.add("btn-menu-ativo")
+        btnMenuReservas.classList.remove("btn-menu-ativo")
+      });
 
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);

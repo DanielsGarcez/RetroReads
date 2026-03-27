@@ -28,7 +28,10 @@ const btnSalvarEndereco = document.getElementById("btn-salvar-endereco");
 const inputEndereco = document.querySelectorAll(".endereco-input");
 const formEndereco = document.getElementById("form-endereco-user");
 
-
+// Variáveis dos botões do menu
+const btnMenuDados = document.getElementById("aba-dados-pessoais");
+const btnMenuEstante = document.getElementById("aba-estante-virtual");
+const btnMenuReservas = document.getElementById("aba-suas-reservas");
 
 // ------------------ Funções Dados ------------------
 carregarLoading();
@@ -111,6 +114,12 @@ document.addEventListener("DOMContentLoaded", () =>{
                 return;
             }
 
+            btnMenuEstante.addEventListener("click", () => {
+                btnMenuDados.classList.add("btn-menu-ativo")
+                btnMenuEstante.classList.remove("btn-menu-ativo")
+                btnMenuReservas.classList.remove("btn-menu-ativo")
+            });
+
             const usuario = snap.data();
 
             // DADOS DO USUÁRIO
@@ -132,8 +141,6 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
         }
         dadosUsuario()
-
-        
 
         esconderLoading();
     });

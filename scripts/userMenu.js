@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // ------------ Funções dos botões do menu  ------------
         abaDadosPessoais.addEventListener("click", () => {
             window.location.href = `/RetroReads/pages/userPerfil.html?id=${userId}`;
-
+            
         });
 
         abaEstanteVirtual.addEventListener("click", () => {
