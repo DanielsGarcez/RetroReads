@@ -102,16 +102,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Botão que mostra ou oculta os filtros
       btnMostrarFiltro.addEventListener("click", () => {
-        const filtroItens = document.querySelectorAll(".filtro-item")
+        const formFiltro = document.getElementById("form-filtro")
 
-        filtroItens.forEach(filtroItens => {
-          if(filtroItens.classList.contains("conteudo-oculto-mobile")){
-            filtroItens.classList.remove("conteudo-oculto-mobile");
-          }
-          else{
-            filtroItens.classList.add("conteudo-oculto-mobile");
-          };
-        });
+        if (formFiltro.classList.contains("conteudo-oculto-mobile")){
+          formFiltro.classList.remove("conteudo-oculto-mobile");
+        }
+        else{
+          formFiltro.classList.add("conteudo-oculto-mobile");
+        }
       });
 
       // carrega o snapshot inical
