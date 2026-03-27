@@ -238,13 +238,18 @@ main{
         background-color: var(--corBranco);
     }
 
-    .span-btn-adicionar-icon{
-        background-image: url(../img/Icon-Adicionar-Livro-Branco.png);
+    .span-btn-adicionar-icon, .span-btn-filtro-icon{
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
 
         height: 100%;
+        width: 100%;
+    }
+
+    /* BOTÃO DE ADICIONAR */
+    .span-btn-adicionar-icon{
+        background-image: url(../img/Icon-Adicionar-Livro-Branco.png);
     }
 
     .span-btn-adicionar-icon:hover{
@@ -253,6 +258,15 @@ main{
 
     .span-btn-adicionar-livro{
         display: none;
+    }
+
+    /* BOTÃO DE FILTRO */
+    .span-btn-filtro-icon{
+        background-image: url(./img/Icon-Filtro-Cinza.png);
+    }
+
+    .span-btn-filtro-livro{
+        background-image: url(./img/Icon-Filtro-Verde.png);
     }
 
     #form-filtro {

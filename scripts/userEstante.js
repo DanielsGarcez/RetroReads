@@ -19,6 +19,7 @@ const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem(
 
 // Variáveis de Filtros
 const btnMostrarFiltro = document.getElementById("btn-mostrar-filtro");
+const btnMostrarFiltroIcon = document.getElementById("span-btn-filtro-livro")
 
 const selectGeneroEstante = document.getElementById("filtro-genero-estante");
 const selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
@@ -84,9 +85,13 @@ btnMostrarFiltro.addEventListener("click", () => {
 
   if (formFiltro.classList.contains("conteudo-oculto-mobile")){
     formFiltro.classList.remove("conteudo-oculto-mobile");
+
+    btnMostrarFiltroIcon.style.backgroundImage = "url('../img/Icon-Filtro-Cinza-X.png')"
   }
   else{
     formFiltro.classList.add("conteudo-oculto-mobile");
+
+    btnMostrarFiltroIcon.style.backgroundImage = "url('../img/Icon-Filtro-Cinza.png')"
   }
 });
 
