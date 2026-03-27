@@ -28,11 +28,6 @@ const btnSalvarEndereco = document.getElementById("btn-salvar-endereco");
 const inputEndereco = document.querySelectorAll(".endereco-input");
 const formEndereco = document.getElementById("form-endereco-user");
 
-// Variáveis dos botões do menu
-const btnMenuDados = document.getElementById("aba-dados-pessoais");
-const btnMenuEstante = document.getElementById("aba-estante-virtual");
-const btnMenuReservas = document.getElementById("aba-suas-reservas");
-
 // ------------------ Funções Dados ------------------
 carregarLoading();
 
@@ -95,6 +90,9 @@ function modoEdicaoDesativarEndereco(){
 
 document.addEventListener("DOMContentLoaded", () =>{
     mostrarLoading();
+
+    document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo")
+
     onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log(`Logado como: ${user.email}.`);
@@ -113,12 +111,6 @@ document.addEventListener("DOMContentLoaded", () =>{
                 alert("Usuário não encontrado");
                 return;
             }
-
-            btnMenuEstante.addEventListener("click", () => {
-                btnMenuDados.classList.add("btn-menu-ativo")
-                btnMenuEstante.classList.remove("btn-menu-ativo")
-                btnMenuReservas.classList.remove("btn-menu-ativo")
-            });
 
             const usuario = snap.data();
 

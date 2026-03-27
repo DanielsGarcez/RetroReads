@@ -22,12 +22,9 @@ const selectGeneroEstante = document.getElementById("filtro-genero-estante");
 const selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
 const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
 const selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
-
-
-// Variáveis dos botões do menu
-const btnMenuDados = document.getElementById("aba-dados-pessoais");
-const btnMenuEstante = document.getElementById("aba-estante-virtual");
-const btnMenuReservas = document.getElementById("aba-suas-reservas");
+//--------------------------------------------------------------------------------------------
+// espera carregar a função tela de loading
+await carregarLoading();
 
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
@@ -84,6 +81,9 @@ btnFechar.addEventListener("click", () => {
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
+  mostrarLoading();
+
+  document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo")
 
   onAuthStateChanged(auth, (user) => {
 
@@ -97,17 +97,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     (async () =>{
-      // espera carregar a função tela de loading
-      await carregarLoading();
-      // mostra a tela de Loading
-      mostrarLoading();
-
-      btnMenuEstante.addEventListener("click", () => {
-        btnMenuDados.classList.remove("btn-menu-ativo")
-        btnMenuEstante.classList.add("btn-menu-ativo")
-        btnMenuReservas.classList.remove("btn-menu-ativo")
-      });
-
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);
       renderizar(snapshotInicial);
