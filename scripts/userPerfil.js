@@ -53,7 +53,7 @@ function desativarModoEdicaoDados(){
         input.classList.add("input-desativado");
     });
     inputDateText.type = 'text';
-    inputDateText.value = inputDateText.value.replace('-','/')
+    inputDateText.value = inputDateText.value.replace(/-/m,'/');
 
     console.log("Modo de edição desativado");
 }
@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () =>{
             window.location.href = "/RetroReads/pages/login.html";
         }
 
+        document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo");
+
         async function dadosUsuario() {
             const ref = doc(db, "usuarios", usuarioId)
             const snap = await getDoc(ref);
@@ -130,9 +132,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-cidade").placeholder  = usuario.endereco.cidade || " ";
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
         }
-        dadosUsuario()
-
-        document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo");
+        dadosUsuario();
 
         esconderLoading();
     });

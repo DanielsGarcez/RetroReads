@@ -18,6 +18,8 @@ const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem(
 // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
 // Variáveis de Filtros
+const btnMostrarFiltro = document.getElementById("btn-mostrar-filtro");
+
 const selectGeneroEstante = document.getElementById("filtro-genero-estante");
 const selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
 const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
@@ -96,6 +98,15 @@ document.addEventListener("DOMContentLoaded", () => {
       await carregarLoading();
       // mostra a tela de Loading
       mostrarLoading();
+
+      
+
+      // Botão que mostra ou oculta os filtros
+      btnMostrarFiltro.addEventListener("click", () => {
+        document.querySelectorAll(".filtro-item").forEach(filtroItens => {
+          filtroItens.classList.toggle("conteudo-oculto-mobile");
+        });
+      });
 
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);

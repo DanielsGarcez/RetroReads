@@ -58,11 +58,6 @@ main{
     cursor: text;
 }
 
-.filtros-estante {
-    font-size: .9rem;
-    font-weight: 400;
-}
-
 #btn-adicionar-livro, #btn-editar-estante {
     padding: .3rem 1.3rem;
 }
@@ -170,6 +165,11 @@ main{
     }
 
     #btn-mostrar-filtro {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -182,6 +182,9 @@ main{
         width: 2.5rem;
         height: 2.5rem;
         padding: .5rem;
+
+        margin-right: 1.5rem;
+        margin-bottom: 5rem;
     }
 
     .icon-img-config{
@@ -196,6 +199,11 @@ main{
 
     #dropdown-content {
         width: 100%;
+    }
+
+    .conteudo-oculto-mobile {
+        pointer-events: none;
+        display: none;
     }
 
     .span-btn-adicionar-texto{
@@ -222,7 +230,8 @@ main{
         box-sizing: content-box;
 
         padding: .5rem;
-        margin: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
     }
 
     #btn-adicionar-livro:hover{

@@ -23,20 +23,18 @@ btnAbrirJanela.addEventListener("click", () => {
     inputCapa.addEventListener("input", () => {
     const url = inputCapa.value.trim();
 
-    if (!url) {
-        preview.src = "img/Mockup-Livro.png";
-        return;
-    }
+        if (!url) {
+            preview.src = "img/Mockup-Livro.png";
+            return;
+        }
 
-    preview.src = url;
+        preview.src = url;
     });
 
     // fallback se a URL quebrar
     preview.onerror = () => {
-    preview.src = "img/Mockup-Livro.png";
+        preview.src = "img/Mockup-Livro.png";
     };
-
-
 
     // Verifica se o usuário está logado
     let usuarioLogado = null;
