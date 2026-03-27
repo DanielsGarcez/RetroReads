@@ -99,12 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
       // mostra a tela de Loading
       mostrarLoading();
 
-      
 
       // Botão que mostra ou oculta os filtros
       btnMostrarFiltro.addEventListener("click", () => {
-        document.querySelectorAll(".filtro-item").forEach(filtroItens => {
-          filtroItens.classList.toggle("conteudo-oculto-mobile");
+        const filtroItens = document.querySelectorAll(".filtro-item")
+
+        filtroItens.forEach(filtroItens => {
+          if(filtroItens.classList.contains("conteudo-oculto-mobile")){
+            filtroItens.classList.remove("conteudo-oculto-mobile");
+          }
+          else{
+            filtroItens.classList.add("conteudo-oculto-mobile");
+          };
         });
       });
 

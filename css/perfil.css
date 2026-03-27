@@ -294,7 +294,7 @@ main{
 
     .section-principal{
         margin: 0rem;
-        gap: 1rem;
+        gap: 0rem;
         width: 100vw;
     }
 

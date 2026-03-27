@@ -255,6 +255,11 @@ main{
         display: none;
     }
 
+    #form-filtro {
+        padding-top: 1rem;
+        padding-bottom: 2rem;   
+    }
+
     #btn-editar-estante {
         font-size: .8rem;
     }
