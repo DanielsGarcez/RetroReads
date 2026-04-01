@@ -372,7 +372,7 @@
 
     .btn-dropdown-ativo{
         background-color: var(--corBranco);
-        border-color: var(--corCinzaMedio);
+        border-bottom-color: var(--corBranco);
     }
 
     .ativo {

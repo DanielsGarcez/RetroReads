@@ -38,8 +38,12 @@ btnFiltros.addEventListener("click", () => {
 
   if (formFiltro.classList.contains("conteudo-oculto-mobile")){
     formFiltro.classList.remove("conteudo-oculto-mobile");
+    btnFiltros.classList.add("btn-dropdown-ativo");
+
   } else {
     formFiltro.classList.add("conteudo-oculto-mobile");
+    btnFiltros.classList.remove("btn-dropdown-ativo");
+
   }
 });
 
