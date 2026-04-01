@@ -300,6 +300,11 @@
         display: flex;
     }
 
+    .conteudo-oculto-mobile {
+        pointer-events: none;
+        display: none;
+    }
+
     .main-catalogo{
         width: 100vw;
         display: flex;
@@ -334,6 +339,7 @@
     }
 
     .filtro-mobile hr{
+        display: block;
         align-self: end;
         width: 100%;
 
@@ -353,15 +359,13 @@
         padding: 0.3rem 2rem;
 
         box-shadow: none;
+        border-bottom: 2px solid var(--corPrincipal);
         border-radius: .8rem .8rem 0rem 0rem;
 
         font-size: 1.5rem;
         text-align: center;
         text-decoration: none;
         max-width: fit-content;
-
-        border-bottom: 1px solid var(--corPrincipal);
-        margin-bottom: 1px;
 
         width: 100%;
     }

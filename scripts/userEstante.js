@@ -87,8 +87,7 @@ btnMostrarFiltro.addEventListener("click", () => {
     formFiltro.classList.remove("conteudo-oculto-mobile");
 
     btnMostrarFiltroIcon.style.backgroundImage = "url('../img/Icon-Filtro-Cinza-X.png')"
-  }
-  else{
+  } else{
     formFiltro.classList.add("conteudo-oculto-mobile");
 
     btnMostrarFiltroIcon.style.backgroundImage = "url('../img/Icon-Filtro-Cinza.png')"
