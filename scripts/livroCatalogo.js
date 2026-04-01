@@ -165,7 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const queryFiltros = query(
         collection(db, "livros"),
-        where("userId", "==", localStorage.getItem("userId")),
         ...filtros,
         orderBy("criadoEm", "desc")
       );

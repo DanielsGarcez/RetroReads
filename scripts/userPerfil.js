@@ -17,13 +17,6 @@ const formDados = document.getElementById("form-dados-user");
 
 const inputDateText = document.getElementById("dados-user-nasc")
 
-if (inputDateText.value) {
-  inputDateText.value = inputDateText.value
-    .split('-')
-    .reverse()
-    .join('/');
-}
-
 // ------------------ Variáveis Endereços ------------------
 const btnEditarEndereco = document.getElementById("btn-editar-endereco");
 
@@ -146,6 +139,13 @@ document.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("endereco-user-estado").placeholder  = usuario.endereco.estado || " ";
             document.getElementById("endereco-user-cidade").placeholder  = usuario.endereco.cidade || " ";
             document.getElementById("endereco-user-cep").placeholder  = usuario.endereco.cep || " ";
+
+            if (inputDateText.value) {
+                inputDateText.value = inputDateText.value
+                .split('-')
+                .reverse()
+                .join('/');
+            }
         }
         dadosUsuario();
 
