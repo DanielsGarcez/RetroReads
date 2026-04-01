@@ -17,8 +17,6 @@ const formDados = document.getElementById("form-dados-user");
 
 const inputDateText = document.getElementById("dados-user-nasc")
 
-
-
 // ------------------ Variáveis Endereços ------------------
 const btnEditarEndereco = document.getElementById("btn-editar-endereco");
 
@@ -96,10 +94,10 @@ document.addEventListener("DOMContentLoaded", () =>{
             console.log(`Logado como: ${user.email}.`);
         }
         
-        if (!user) {
+/*         if (!user) {
             alert("ID do usuário não encontrado na URL.");
             window.location.href = "/RetroReads/pages/login.html";
-        }
+        } */
 
         document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo");
 

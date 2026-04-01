@@ -176,6 +176,7 @@
 .btn-detalhes:hover{
     background-color: var(--corPrincipal);
     color: var(--corBranco);
+
 }
 
 /* ---------- MOBILE OCULTO ---------- */
@@ -359,7 +360,7 @@
         padding: 0.3rem 2rem;
 
         box-shadow: none;
-        border-bottom: 2px solid var(--corPrincipal);
+       border-bottom-width: 2px;
         border-radius: .8rem .8rem 0rem 0rem;
 
         font-size: 1.5rem;
@@ -368,6 +369,10 @@
         max-width: fit-content;
 
         width: 100%;
+    }
+
+    #btn-dropdown:hover{
+        border-bottom-color: var(--corPrincipal);
     }
 
     .btn-dropdown-ativo{

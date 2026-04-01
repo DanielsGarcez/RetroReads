@@ -33,19 +33,24 @@ const hrMobile = document.querySelectorAll(".hr-mobile");
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
 // Função do botão de dropdown dos filtros
-btnFiltros.addEventListener("click", () => {
-  const formFiltro = document.getElementById("form-filtro-catalogo")
 
-  if (formFiltro.classList.contains("conteudo-oculto-mobile")){
-    formFiltro.classList.remove("conteudo-oculto-mobile");
-    btnFiltros.classList.add("btn-dropdown-ativo");
+try {
+  btnFiltros.addEventListener("click", () => {
+    const formFiltro = document.getElementById("form-filtro-catalogo")
 
-  } else {
-    formFiltro.classList.add("conteudo-oculto-mobile");
-    btnFiltros.classList.remove("btn-dropdown-ativo");
+    if (formFiltro.classList.contains("conteudo-oculto-mobile")){
+      formFiltro.classList.remove("conteudo-oculto-mobile");
+      btnFiltros.classList.add("btn-dropdown-ativo");
 
-  }
-});
+    } else {
+      formFiltro.classList.add("conteudo-oculto-mobile");
+      btnFiltros.classList.remove("btn-dropdown-ativo");
+
+    }
+  });
+} catch (error) {
+  console.log("O elemento não existe nessa página, prosseguindo...");
+}
 
 // Função que desativa o card do livro caso ele esteja reservado
 function desativarItem(data, btnDetalhes, itemGrid){
