@@ -51,7 +51,6 @@
 }
 
 .container p{
-    margin-top: 1.3rem;
     margin-bottom: 1rem;
 }
 
@@ -67,6 +66,7 @@
 
 #btn-logar{
     margin-top: 2rem;
+    margin-bottom: 1.3rem;
     padding: .4rem 4rem;
 
     font-size: 1.3rem;
