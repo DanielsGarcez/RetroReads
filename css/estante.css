@@ -44,7 +44,7 @@ main{
     width: auto;
 }
 
-#form-filtro {
+#form-filtro-estante {
     gap: .8rem;
     justify-content: end;
 }
@@ -269,7 +269,7 @@ main{
         background-image: url(./img/Icon-Filtro-Verde.png);
     }
 
-    #form-filtro {
+    #form-filtro-estante {
         padding-top: 1rem;
         padding-bottom: 2rem;   
     }

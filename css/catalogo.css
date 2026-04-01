@@ -336,7 +336,8 @@
     .filtro-mobile hr{
         align-self: end;
         width: 100%;
-        border-top: 1px solid var(--corCinzaMedio);
+
+        color: var(--corPrincipal);
     }
 
     #hr-left {
@@ -359,7 +360,7 @@
         text-decoration: none;
         max-width: fit-content;
 
-        border-bottom: 1px solid var(--corCinzaMedio);
+        border-bottom: 1px solid var(--corPrincipal);
         margin-bottom: 1px;
 
         width: 100%;
@@ -379,8 +380,8 @@
         width: 100vw;
     }
 
-    #form-filtro{
-        padding-top: 0;
+    #form-filtro-catalogo{
+        padding-top: 1rem;
 
         border: none;
         border-radius: 0;
