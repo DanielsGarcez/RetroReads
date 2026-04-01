@@ -260,11 +260,11 @@ main{
 
     /* BOTÃO DE ADICIONAR */
     .span-btn-adicionar-icon{
-        background-image: url(../img/Icon-Adicionar-Livro-Branco.png);
+        background-image: url(../img/icons/Icon-Adicionar-Livro-Branco.png);
     }
 
     .span-btn-adicionar-icon:hover{
-        background-image: url(../img/Icon-Adicionar-Livro-Verde.png);
+        background-image: url(../img/icons/Icon-Adicionar-Livro-Verde.png);
     }
 
     .span-btn-adicionar-livro{
@@ -273,22 +273,22 @@ main{
 
     /* BOTÃO DE FILTRO */
     .span-btn-filtro-icon{
-        background-image: url(../img/Icon-Filtro-Cinza.png);
+        background-image: url(../img/icons/Icon-Filtro-Cinza.png);
     }
 
     .span-btn-filtro-icon:hover{
-        background-image: url(../img/Icon-Filtro-Verde.png);
+        background-image: url(../img/icons/Icon-Filtro-Verde.png);
     }
 
     
 
     /* BOTÃO DE FILTRO com X */
     .span-btn-filtro-x{
-        background-image: url(../img/Icon-Filtro-Cinza-X.png);
+        background-image: url(../img/icons/Icon-Filtro-Cinza-X.png);
     }
     
     .span-btn-filtro-x:hover{
-        background-image: url(../img/Icon-Filtro-Verde-X.png);
+        background-image: url(../img/icons/Icon-Filtro-Verde-X.png);
     }
 
 

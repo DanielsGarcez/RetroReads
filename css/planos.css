@@ -72,7 +72,7 @@ h3{
 }
 
 .descricao-planos li{
-    background-image: url("../img/Icon-CheckMark.png");
+    background-image: url("../img/icons/Icon-CheckMark.png");
     background-repeat: no-repeat;
     background-position: 0 6px; /* ajusta o alinhamento vertical */
     background-size: 20px;      /* <-- tamanho do ícone (mude aqui) */
