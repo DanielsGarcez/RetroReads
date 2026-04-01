@@ -82,7 +82,7 @@ btnFechar.addEventListener("click", () => {
 // ---------------------- BOTÃO FILTRO ----------------------
 btnMostrarFiltro.addEventListener("click", () => {
   const formFiltro = document.getElementById("form-filtro-estante")
-  const spanFiltroIcon = document.querySelector("span-btn-filtro-icon");
+  const spanFiltroIcon = document.querySelector(".span-btn-filtro-icon");
 
   console.log(formFiltro, spanFiltroIcon);
 

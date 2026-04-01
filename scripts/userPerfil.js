@@ -17,7 +17,12 @@ const formDados = document.getElementById("form-dados-user");
 
 const inputDateText = document.getElementById("dados-user-nasc")
 
-inputDateText.value = inputDateText.value.reverse(replace(/-/g,'/'));
+if (inputDateText.value) {
+  inputDateText.value = inputDateText.value
+    .split('-')
+    .reverse()
+    .join('/');
+}
 
 // ------------------ Variáveis Endereços ------------------
 const btnEditarEndereco = document.getElementById("btn-editar-endereco");
