@@ -86,11 +86,11 @@ btnMostrarFiltro.addEventListener("click", () => {
   if (formFiltro.classList.contains("conteudo-oculto-mobile")){
     formFiltro.classList.remove("conteudo-oculto-mobile");
 
-    btnMostrarFiltroIcon.classList.add("span-btn-filtro-icon-X");
+    btnMostrarFiltroIcon.classList.add("span-btn-filtro-X");
   } else{
     formFiltro.classList.add("conteudo-oculto-mobile");
 
-    btnMostrarFiltroIcon.classList.remove("span-btn-filtro-icon-X");
+    btnMostrarFiltroIcon.classList.remove("span-btn-filtro-X");
   }
 });
 

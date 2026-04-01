@@ -92,12 +92,15 @@ document.addEventListener("DOMContentLoaded", () =>{
     onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log(`Logado como: ${user.email}.`);
-        }
-        
-        if (!user) {
+        } else {
             alert("ID do usuário não encontrado na URL.");
             window.location.href = "/RetroReads/pages/login.html";
         }
+        
+/*         if (!user) {
+            alert("ID do usuário não encontrado na URL.");
+            window.location.href = "/RetroReads/pages/login.html";
+        } */
 
         document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo");
 
