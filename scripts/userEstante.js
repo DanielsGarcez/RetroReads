@@ -82,7 +82,9 @@ btnFechar.addEventListener("click", () => {
 // ---------------------- BOTÃO FILTRO ----------------------
 btnMostrarFiltro.addEventListener("click", () => {
   const formFiltro = document.getElementById("form-filtro-estante")
-  const spanFiltroIcon = document.getElementById("span-btn-filtro-icon");
+  const spanFiltroIcon = document.querySelector("span-btn-filtro-icon");
+
+  console.log(formFiltro, spanFiltroIcon);
 
   if (formFiltro.classList.contains("conteudo-oculto-mobile")){
     formFiltro.classList.remove("conteudo-oculto-mobile");
