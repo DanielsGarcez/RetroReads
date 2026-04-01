@@ -262,16 +262,23 @@ main{
 
     /* BOTÃO DE FILTRO */
     .span-btn-filtro-icon{
-        background-image: url(./img/Icon-Filtro-Cinza.png);
+        background-image: url(../img/Icon-Filtro-Cinza.png);
     }
 
-    .span-btn-filtro-livro{
-        background-image: url(./img/Icon-Filtro-Verde.png);
+    .span-btn-filtro-icon-X{
+        background-image: url(../img/Icon-Filtro-Cinza.png);
+    }
+
+    .span-btn-filtro-icon:hover{
+        background-image: url(../img/Icon-Filtro-Verde.png);
     }
 
     #form-filtro-estante {
         padding-top: 1rem;
-        padding-bottom: 2rem;   
+        padding-bottom: 2rem;
+
+        border: none;
+        box-shadow: none;
     }
 
     #btn-editar-estante {

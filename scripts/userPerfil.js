@@ -94,10 +94,10 @@ document.addEventListener("DOMContentLoaded", () =>{
             console.log(`Logado como: ${user.email}.`);
         }
         
-/*         if (!user) {
+        if (!user) {
             alert("ID do usuário não encontrado na URL.");
             window.location.href = "/RetroReads/pages/login.html";
-        } */
+        }
 
         document.getElementById("aba-dados-pessoais").classList.add("btn-menu-ativo");
 
@@ -105,10 +105,10 @@ document.addEventListener("DOMContentLoaded", () =>{
             const ref = doc(db, "usuarios", usuarioId)
             const snap = await getDoc(ref);
 
-            if (!snap.exists()){
+/*             if (!snap.exists()){
                 alert("Usuário não encontrado");
                 return;
-            }
+            } */
 
             const usuario = snap.data();
 

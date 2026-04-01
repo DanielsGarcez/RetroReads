@@ -86,11 +86,11 @@ btnMostrarFiltro.addEventListener("click", () => {
   if (formFiltro.classList.contains("conteudo-oculto-mobile")){
     formFiltro.classList.remove("conteudo-oculto-mobile");
 
-    btnMostrarFiltroIcon.style.backgroundImage = "url('../img/Icon-Filtro-Cinza-X.png')"
+    btnMostrarFiltroIcon.classList.add("span-btn-filtro-icon-X");
   } else{
     formFiltro.classList.add("conteudo-oculto-mobile");
 
-    btnMostrarFiltroIcon.style.backgroundImage = "url('../img/Icon-Filtro-Cinza.png')"
+    btnMostrarFiltroIcon.classList.remove("span-btn-filtro-icon-X");
   }
 });
 
