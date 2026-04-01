@@ -42,6 +42,11 @@ main{
 
 #dropdown-content {
     width: auto;
+    display: flex;
+
+    box-shadow: var(--sombra);
+    border: var(--borda);
+    border-radius: 2rem;
 }
 
 #form-filtro-estante {
@@ -64,9 +69,11 @@ main{
 
 #btn-adicionar-livro {
     box-shadow: var(--sombra);
-    margin-right: auto;
 
+    margin: .8rem;
     padding-bottom: .4rem;
+
+    font-size: .9rem;
 }
 
 #btn-editar-estante{
@@ -265,13 +272,21 @@ main{
         background-image: url(../img/Icon-Filtro-Cinza.png);
     }
 
-    .span-btn-filtro-X{
-        background-image: url(../img/Icon-Filtro-Cinza.png);
-    }
-
     .span-btn-filtro-icon:hover{
         background-image: url(../img/Icon-Filtro-Verde.png);
     }
+
+    
+
+    /* BOTÃO DE FILTRO com X */
+    .span-btn-filtro-x{
+        background-image: url(../img/Icon-Filtro-Cinza-X.png);
+    }
+    
+    .span-btn-filtro-x:hover{
+        background-image: url(../img/Icon-Filtro-Verde-X.png);
+    }
+
 
     #form-filtro-estante {
         padding-top: 1rem;
