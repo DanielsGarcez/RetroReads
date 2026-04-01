@@ -206,6 +206,10 @@ main{
 
     #dropdown-content {
         width: 100%;
+
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
     }
 
     .conteudo-oculto-mobile {
@@ -245,7 +249,7 @@ main{
         background-color: var(--corBranco);
     }
 
-    .span-btn-adicionar-icon, .span-btn-filtro-icon{
+    .span-btn-adicionar-icon, .span-btn-filtro-icon, .span-btn-filtro-x{
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;

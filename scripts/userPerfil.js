@@ -17,6 +17,8 @@ const formDados = document.getElementById("form-dados-user");
 
 const inputDateText = document.getElementById("dados-user-nasc")
 
+inputDateText.value = inputDateText.value.replace(/-/g,'/').reverse();
+
 // ------------------ Variáveis Endereços ------------------
 const btnEditarEndereco = document.getElementById("btn-editar-endereco");
 
@@ -51,7 +53,6 @@ function desativarModoEdicaoDados(){
         input.classList.add("input-desativado");
     });
     inputDateText.type = 'text';
-    inputDateText.value = inputDateText.value.replace(/-/m,'/');
 
     console.log("Modo de edição desativado");
 }

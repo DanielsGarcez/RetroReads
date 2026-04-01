@@ -82,15 +82,16 @@ btnFechar.addEventListener("click", () => {
 // ---------------------- BOTÃO FILTRO ----------------------
 btnMostrarFiltro.addEventListener("click", () => {
   const formFiltro = document.getElementById("form-filtro-estante")
+  const spanFiltroIcon = document.getElementById("span-btn-filtro-icon");
 
   if (formFiltro.classList.contains("conteudo-oculto-mobile")){
     formFiltro.classList.remove("conteudo-oculto-mobile");
 
-    btnMostrarFiltro.classList.add("span-btn-filtro-x");
+    spanFiltroIcon.classList.add("span-btn-filtro-x");
   } else{
     formFiltro.classList.add("conteudo-oculto-mobile");
 
-    btnMostrarFiltro.classList.remove("span-btn-filtro-x");
+    spanFiltroIcon.classList.remove("span-btn-filtro-x");
   }
 });
 
