@@ -176,7 +176,6 @@
 .btn-detalhes:hover{
     background-color: var(--corPrincipal);
     color: var(--corBranco);
-
 }
 
 /* ---------- MOBILE OCULTO ---------- */
@@ -371,10 +370,6 @@
         width: 100%;
     }
 
-    #btn-dropdown:hover{
-        border-bottom-color: var(--corPrincipal);
-    }
-
     .btn-dropdown-ativo{
         background-color: var(--corBranco);
         border-bottom-color: var(--corBranco);
@@ -474,8 +469,26 @@
         border-radius: 1.5rem;
     }
 
+    /* ---------- HOVERS DESABILITADOS ---------- */
+
+    .barra-ferramentas-input:hover{
+        border-color: var(--corPrincipal); 
+        cursor: pointer;
+    }
+
     .item-grid:hover {
-        transform: translateY(0px);
+        border: none;
+        transform: none;
+    }
+
+    #btn-dropdown:hover{
+        background-color: var(--corBranco);
+        color: var(--corPrincipal);
+    }
+
+    .btn-detalhes:hover{
+        background-color: var(--corPrincipalTransparente);
+        color: var(--corPrincipal);
     }
 }
 

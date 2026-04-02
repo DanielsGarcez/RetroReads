@@ -293,7 +293,9 @@ main{
 
 
     /* Hovers desabilitados no mobile */
-
-
+    .barra-ferramentas-input:hover {
+        border-color: none;
+        cursor: pointer;
+    }
 }
 

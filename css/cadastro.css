@@ -320,13 +320,27 @@
     }
 
     .link-a:hover{
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     .btn-ambos{
         width: 100%;
         margin-top: 1rem;
         margin-bottom: 0;
+    }
+
+    /* ---------- HOVER DESATIVADOS ---------- */
+
+    #btn-livroCadastro:hover{
+        cursor: pointer;
+        color: var(--corPrincipal);
+        background-color: var(--corPrincipalTransparente);
+    }
+
+    #btn-cadastro:hover{
+        cursor: pointer;
+        color: var(--corPrincipal);
+        background-color: var(--corPrincipalTransparente);
     }
 }
 
