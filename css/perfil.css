@@ -231,15 +231,15 @@ main{
         justify-content: center;
     }
 
-    .menu-secoes > .btn-secao{
+    .btn-secao{
         width: 100%;
+        max-width: none;
+
         text-align: center;
         font-size: 1rem;
 
         padding: .3rem 1rem;
-    }
-    
-    .btn-secao{
+
         color: var(--corPrincipal);
         background-color: var(--corPrincipalTransparente);
 

@@ -2,14 +2,8 @@ import { auth, db } from "./firebase.js";
 import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 import { collection, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
-const btnCadastrar = document.getElementById("btn-janelaLivroCadastro");
 
-if (!btnCadastrar){
-    console.error("Botão de cadastro não encontrado");
-    return;
-}
-
-btnCadastrar.addEventListener("click", () =>{
+document.addEventListener("DOMContentLoaded", () =>{
     const form = document.getElementById("form-cadastro-user")
 
     if (!form){

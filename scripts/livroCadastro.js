@@ -23,7 +23,7 @@ btnAbrirJanela.addEventListener("click", () => {
     const preview = document.getElementById("preview-capa");
 
     inputCapa.addEventListener("input", () => {
-    const url = inputCapa.value.trim();
+        const url = inputCapa.value.trim();
 
         if (!url) {
             preview.src = "img/Mockup-Livro.png";
@@ -43,10 +43,10 @@ btnAbrirJanela.addEventListener("click", () => {
 
     onAuthStateChanged(auth,(user) => {
         usuarioLogado = user;
+        console.log("Usuário logado: ", user);
 
         if(!user){
             alert("Você precisa estar logado para adicionar livros");
-            
         }
     })
 

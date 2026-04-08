@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
       await carregarLoading();
       // mostra a tela de Loading
       mostrarLoading();
+      console.log("### Função mostrarLoading chamada na estante ###");
 
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);

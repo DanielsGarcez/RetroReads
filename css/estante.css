@@ -200,6 +200,10 @@ main{
         font-size: .9rem;
     }
 
+    .container-perfil-user {
+        width: 100vw;
+    }
+
     #btn-mostrar-filtro {
         position: fixed;
         bottom: 0;
@@ -316,6 +320,10 @@ main{
 
     #btn-editar-estante {
         font-size: .8rem;
+    }
+
+    .btn-secao{
+        max-width: none;
     }
 
 

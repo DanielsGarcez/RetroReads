@@ -477,7 +477,7 @@
     }
 
     .item-grid:hover {
-        border: none;
+        border: var(--borda);
         transform: none;
     }
 
