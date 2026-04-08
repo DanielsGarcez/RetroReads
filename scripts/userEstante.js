@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (!user) {
         alert("ID do usuário não encontrado na URL.");
-        window.location.href = "/RetroReads/pages/login.html";
+        /* window.location.href = "/RetroReads/pages/login.html"; ############ */ 
     }
 
     document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");

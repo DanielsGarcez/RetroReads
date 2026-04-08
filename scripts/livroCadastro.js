@@ -9,126 +9,129 @@ btnAbrirJanela.addEventListener("click", () => {
     console.log("Botão 'Adicionar Livro' clicado, janela de cadastro deve abrir.");
 
     document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("form-livroCadastro");
+        const form = document.getElementById("form-livroCadastro");
 
-    // Verifica se há formulário
-    if (!form){
-        alert("Formulário não encontrado");
-        console.error("Formulário não encontrado");
-        return;
-    }
+        // Verifica se há formulário
+        if (!form){
+            alert("Formulário não encontrado");
 
-    // Preview da Imagem enviada pelo usuário
-    const inputCapa = document.getElementById("capa-livro");
-    const preview = document.getElementById("preview-capa");
-
-    inputCapa.addEventListener("input", () => {
-        const url = inputCapa.value.trim();
-
-        if (!url) {
-            preview.src = "img/Mockup-Livro.png";
+            console.error("Formulário não encontrado");
             return;
         }
+        console.log("Formulário encontrado: ", form);
 
-        preview.src = url;
-    });
+        // Preview da Imagem enviada pelo usuário
+        const inputCapa = document.getElementById("capa-livro");
+        const preview = document.getElementById("preview-capa");
 
-    // fallback se a URL quebrar
-    preview.onerror = () => {
-        preview.src = "img/Mockup-Livro.png";
-    };
+        inputCapa.addEventListener("input", () => {
+            const url = inputCapa.value.trim();
 
-    // Verifica se o usuário está logado
-    let usuarioLogado = null;
+            if (!url) {
+                preview.src = "img/Mockup-Livro.png";
+                return;
+            }
 
-    onAuthStateChanged(auth,(user) => {
-        usuarioLogado = user;
-        console.log("Usuário logado: ", user);
+            preview.src = url;
+        });
+        console.log("Foi encontrado o input de capa: ", inputCapa);
 
-        if(!user){
-            alert("Você precisa estar logado para adicionar livros");
-        }
-    })
-
-
-    form.addEventListener("submit", async (e) =>{
-        e.preventDefault();
-
-        // Pega os IDs do formulário "form-livroCadastro":
-        const capaLivro = document.getElementById("capa-livro").value;
-
-        const tituloLivro = document.getElementById("titulo-livro").value;
-        const autorLivro = document.getElementById("autor-livro").value;
-        const descricaoLivro = document.getElementById("descricao-livro").value;
-
-        const generoLivro = document.getElementById("genero-livro").value;
-        const anoLivro = document.getElementById("ano-livro").value;
-        const isbn = document.getElementById("ISBN").value;
-        const idiomaLivro = document.getElementById("idioma-livro").value;
-        const tipoCapa = document.getElementById("tipos-capa").value;
-        const numPaginas = document.getElementById("paginas-livro").value;
-        const valorLivro = document.getElementById("valor-livro").value;
-
-        // Validação dos campos do Formulário:
-        if(
-            !capaLivro      ||
-            !descricaoLivro ||
-            !tituloLivro    ||
-            !autorLivro     ||
-            !generoLivro    ||
-            !anoLivro       ||
-            !isbn           ||
-            !idiomaLivro    ||
-            !tipoCapa       ||
-            !numPaginas     ||
-            !valorLivro
-        ){
-            alert("Por favor, preencha todos os campos.");
-            return
+        // fallback se a URL quebrar
+        preview.onerror = () => {
+            preview.src = "img/Mockup-Livro.png";
         };
 
-        // valida ISBN
-        if (!validarISBN(isbn)) {
-            alert("ISBN inválido. Verifique o número informado.");
-            return;
-        }
-        console.log("Cadastro válido! Enviando dados...");
+        // Verifica se o usuário está logado
+        let usuarioLogado = null;
 
-        try{
-            // Salva no Firebase em outra coleção
-            const docRef = await addDoc(collection(db, "livros"),{
-                capa: capaLivro,
-                
-                titulo: tituloLivro,
-                autor: autorLivro,
-                descricao: descricaoLivro,
+        onAuthStateChanged(auth,(user) => {
+            usuarioLogado = user;
+            console.log("Usuário logado: ", user);
 
-                genero: generoLivro,
-                ano: anoLivro,
-                isbn: isbn,
-                idioma: idiomaLivro,
-                tipoCapa: tipoCapa,
-                paginas: numPaginas,
-                valor: parseFloat(valorLivro),
-                disponibilidade: 'Disponivel',
+            if(!user){
+                alert("Você precisa estar logado para adicionar livros");
+            }
+        })
 
-                criadoPor: {
-                    uid: usuarioLogado.uid,
-                    //name: nomeusuário.name,
-                    email: usuarioLogado.email
-                },
 
-                criadoEm: new Date()
-            });
-        
-            alert("Livro cadastrado com sucesso!")
-            console.log("Cadastrou com o ID: ", docRef.id);
-            e.target.reset();
+        form.addEventListener("submit", async (e) =>{
+            e.preventDefault();
 
-        } catch (erro){
-            console.error("Erro ao cadastrar livro:", erro);
-            alert("Erro ao cadastrar livro")
-        }
+            // Pega os IDs do formulário "form-livroCadastro":
+            const capaLivro = document.getElementById("capa-livro").value;
+
+            const tituloLivro = document.getElementById("titulo-livro").value;
+            const autorLivro = document.getElementById("autor-livro").value;
+            const descricaoLivro = document.getElementById("descricao-livro").value;
+
+            const generoLivro = document.getElementById("genero-livro").value;
+            const anoLivro = document.getElementById("ano-livro").value;
+            const isbn = document.getElementById("ISBN").value;
+            const idiomaLivro = document.getElementById("idioma-livro").value;
+            const tipoCapa = document.getElementById("tipos-capa").value;
+            const numPaginas = document.getElementById("paginas-livro").value;
+            const valorLivro = document.getElementById("valor-livro").value;
+
+            // Validação dos campos do Formulário:
+            if(
+                !capaLivro      ||
+                !descricaoLivro ||
+                !tituloLivro    ||
+                !autorLivro     ||
+                !generoLivro    ||
+                !anoLivro       ||
+                !isbn           ||
+                !idiomaLivro    ||
+                !tipoCapa       ||
+                !numPaginas     ||
+                !valorLivro
+            ){
+                alert("Por favor, preencha todos os campos.");
+                return
+            };
+
+            // valida ISBN
+            if (!validarISBN(isbn)) {
+                alert("ISBN inválido. Verifique o número informado.");
+                return;
+            }
+            console.log("Cadastro válido! Enviando dados...");
+
+            try{
+                // Salva no Firebase em outra coleção
+                const docRef = await addDoc(collection(db, "livros"),{
+                    capa: capaLivro,
+                    
+                    titulo: tituloLivro,
+                    autor: autorLivro,
+                    descricao: descricaoLivro,
+
+                    genero: generoLivro,
+                    ano: anoLivro,
+                    isbn: isbn,
+                    idioma: idiomaLivro,
+                    tipoCapa: tipoCapa,
+                    paginas: numPaginas,
+                    valor: parseFloat(valorLivro),
+                    disponibilidade: 'Disponivel',
+
+                    criadoPor: {
+                        uid: usuarioLogado.uid,
+                        //name: nomeusuário.name,
+                        email: usuarioLogado.email
+                    },
+
+                    criadoEm: new Date()
+                });
+            
+                alert("Livro cadastrado com sucesso!")
+                console.log("Cadastrou com o ID: ", docRef.id);
+                e.target.reset();
+
+            } catch (erro){
+                console.error("Erro ao cadastrar livro:", erro);
+                alert("Erro ao cadastrar livro")
+            }
 
         });
     });

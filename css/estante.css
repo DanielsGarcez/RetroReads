@@ -322,6 +322,10 @@ main{
         font-size: .8rem;
     }
 
+    .menu-secoes {
+        width: 100vw;
+    }
+
     .btn-secao{
         max-width: none;
     }
