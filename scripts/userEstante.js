@@ -138,6 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       async function aplicarFiltrosEstante() {
+        console.log("###Função aplicarFiltrosEstante chamada###");
+
         const genero = selectGeneroEstante.value;
         const idioma = selectIdiomaEstante.value;
         const acabamento = selectAcabamentoEstante.value;
@@ -156,6 +158,9 @@ document.addEventListener("DOMContentLoaded", () => {
           ...filtros,
           orderBy("criadoEm", "desc")
         );
+
+        console.log("###Função queryFiltros concluida###");
+
 
         const snapshot = await getDocs(queryFiltros);
         renderizar(snapshot);

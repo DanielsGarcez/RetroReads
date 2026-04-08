@@ -77,7 +77,7 @@ main{
     margin: .8rem;
     padding-bottom: .4rem;
 
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 #btn-editar-estante{
@@ -161,8 +161,29 @@ main{
 }
 
 @media (max-width: 1080px) {
+    .container-perfil-user {
+        width: 90vw;
+    }
+
     #grid-catalogo {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .barra-ferramentas-input {
+        font-size: .7rem;
+    }
+
+    .menu-secoes {
+        width: max-content;
+    }
+
+    .btn-secao{
+        font-size: 1.1rem;
+        max-width: max-content;
+    }
+
+    .textos-perfil-menu {
+        max-width: max-content;
     }
 }
 
@@ -173,6 +194,10 @@ main{
 
     .section-principal {
         width: 100%;
+    }
+
+    .barra-ferramentas-input {
+        font-size: .9rem;
     }
 
     #btn-mostrar-filtro {
@@ -247,6 +272,8 @@ main{
         padding: .5rem;
         margin-right: 1rem;
         margin-bottom: 1rem;
+
+        font-size: .9rem;
     }
 
     .span-btn-adicionar-icon, .span-btn-filtro-icon, .span-btn-filtro-x{
@@ -294,7 +321,7 @@ main{
 
     /* Hovers desabilitados no mobile */
     .barra-ferramentas-input:hover {
-        border-color: none;
+        border: var(--borda);
         cursor: pointer;
     }
 }
