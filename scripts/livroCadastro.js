@@ -8,7 +8,7 @@ const btnAbrirJanela = document.getElementById("btn-adicionar-livro");
 btnAbrirJanela.addEventListener("click", () => {
     console.log("Botão 'Adicionar Livro' clicado, janela de cadastro deve abrir.");
 
-    document.addEventListener("DOMContentLoaded", () => {
+    //document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("form-livroCadastro");
 
         // Verifica se há formulário
@@ -134,7 +134,7 @@ btnAbrirJanela.addEventListener("click", () => {
             }
 
         });
-    });
+    //});
 
     function validarISBN(isbn) {
     // Remove hífens e espaços

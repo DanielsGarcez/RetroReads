@@ -187,6 +187,13 @@ main{
     }
 }
 
+@media (max-width: 800px){
+    .menu-secoes {
+        width: 100vw;
+    }
+
+}
+
 @media (max-width: 600px){
     main {
         margin-top: 1rem;
@@ -320,10 +327,6 @@ main{
 
     #btn-editar-estante {
         font-size: .8rem;
-    }
-
-    .menu-secoes {
-        width: 100vw;
     }
 
     .btn-secao{
