@@ -163,6 +163,7 @@ main{
 @media (max-width: 1080px) {
     .container-perfil-user {
         width: 90vw;
+        gap: .5rem;
     }
 
     #grid-catalogo {
@@ -180,6 +181,13 @@ main{
     .btn-secao{
         font-size: 1.1rem;
         max-width: max-content;
+
+        border-left: 5px solid var(--corBranco);
+        padding: .8rem;
+    }
+
+    .btn-secao{
+        transform: translateX(5px);
     }
 
     .textos-perfil-menu {
@@ -187,16 +195,20 @@ main{
     }
 }
 
-@media (max-width: 800px){
+/* @media (max-width: 800px){
     .menu-secoes {
         width: 100vw;
     }
 
-}
+} */
 
 @media (max-width: 600px){
     main {
         margin-top: 1rem;
+    }
+
+    .menu-secoes {
+        width: 100vw;
     }
 
     .section-principal {
@@ -331,6 +343,7 @@ main{
 
     .btn-secao{
         max-width: none;
+        border-left-color: var(--corPrincipal);
     }
 
 
@@ -338,6 +351,10 @@ main{
     .barra-ferramentas-input:hover {
         border: var(--borda);
         cursor: pointer;
+    }
+
+    .btn-secao:hover{
+        transform: translateX(0px);
     }
 }
 
