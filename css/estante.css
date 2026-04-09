@@ -186,7 +186,7 @@ main{
         padding: .8rem;
     }
 
-    .btn-secao{
+    .btn-secao:hover{
         transform: translateX(5px);
     }
 
@@ -195,20 +195,33 @@ main{
     }
 }
 
-/* @media (max-width: 800px){
+@media (max-width: 800px){
     .menu-secoes {
         width: 100vw;
     }
 
-} */
+    #dropdown-content {
+        width: 100%;
+
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+    }
+
+    .span-btn-adicionar-texto{
+        font-size: 1rem;
+        display: none;
+    }
+
+    .span-btn-adicionar-icon{
+        display: block;
+    }
+
+}
 
 @media (max-width: 600px){
     main {
         margin-top: 1rem;
-    }
-
-    .menu-secoes {
-        width: 100vw;
     }
 
     .section-principal {
@@ -256,26 +269,9 @@ main{
         row-gap: 1.5rem;
     }
 
-    #dropdown-content {
-        width: 100%;
-
-        box-shadow: none;
-        border: none;
-        border-radius: 0;
-    }
-
     .conteudo-oculto-mobile {
         pointer-events: none;
         display: none;
-    }
-
-    .span-btn-adicionar-texto{
-        font-size: 1rem;
-        display: none;
-    }
-
-    .span-btn-adicionar-icon{
-        display: block;
     }
 
     #btn-adicionar-livro{
@@ -354,6 +350,7 @@ main{
     }
 
     .btn-secao:hover{
+        border: var(--borda);
         transform: translateX(0px);
     }
 }
