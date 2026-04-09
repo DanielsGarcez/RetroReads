@@ -1,4 +1,4 @@
-main-{
+main{
     margin-top: 6.5rem;
 }
 
@@ -196,6 +196,11 @@ main-{
 }
 
 @media (max-width: 800px){
+
+    main {
+        margin-top: 5rem;
+    }
+
     .container-perfil-user {
         width: 100vw;
     }
@@ -239,8 +244,19 @@ main-{
     }
 
 
-    
+
     /* ---------- BOTÕES FLUTUANTES FILTRO E ADICIONAR ---------- */
+
+    #form-filtro-estante {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+
+        border: none;
+        box-shadow: none;
+
+        gap: .5rem;
+    }
+
     #btn-adicionar-livro{
         position: fixed;
         bottom: 0;
@@ -290,16 +306,34 @@ main-{
         background-image: url(../img/icons/Icon-Filtro-Cinza-X.png);
     }
 
-    
-    #form-filtro-estante {
-        padding-top: 1rem;
-        padding-bottom: 2rem;
+    #btn-mostrar-filtro {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
 
-        border: none;
-        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        gap: .5rem;
+        box-shadow: var(--sombra);
+
+        border-radius: 50%;
+        margin-left: auto;
+
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: .5rem;
+
+        margin-right: 1.5rem;
+        margin-bottom: 5rem;
     }
+
+    .icon-img-config{
+        width: 100%;
+        height: 100%;
+    }
+
     /* ^^^^^^^^^^  BOTÕES FLUTUANTES FILTRO E ADICIONAR ^^^^^^^^^^ */
 
 
@@ -332,34 +366,6 @@ main-{
         width: 100vw;
     }
 
-    #btn-mostrar-filtro {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: 100;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        box-shadow: var(--sombra);
-
-        border-radius: 50%;
-        margin-left: auto;
-
-        width: 2.5rem;
-        height: 2.5rem;
-        padding: .5rem;
-
-        margin-right: 1.5rem;
-        margin-bottom: 5rem;
-    }
-
-    .icon-img-config{
-        width: 100%;
-        height: 100%;
-    }
-
     #grid-catalogo {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 1.5rem;
@@ -369,7 +375,6 @@ main-{
         pointer-events: none;
         display: none;
     }
-
 
     #btn-editar-estante {
         font-size: .8rem;

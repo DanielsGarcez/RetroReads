@@ -107,11 +107,10 @@ onAuthStateChanged(auth, (user) => {
       console.log("Usuário não autenticado. Redirecionando para a página de login...");
       window.location.href = "/RetroReads/pages/login.html";
   }
-  
-  document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
 
+  document.addEventListener("DOMContentLoaded", async () => {
 
-  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
 
     async () =>{
       // espera carregar a função tela de loading
