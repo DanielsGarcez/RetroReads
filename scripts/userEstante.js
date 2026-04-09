@@ -99,19 +99,19 @@ btnMostrarFiltro.addEventListener("click", () => {
 
 // ------------------------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", () => {
+onAuthStateChanged(auth, (user) => {
 
-  onAuthStateChanged(auth, (user) => {
+  if (user) {
+      console.log(`Logado como: ${user.email}.`);
+  }
+  
+  if (!user) {
+      alert("ID do usuário não encontrado na URL.");
+      /* window.location.href = "/RetroReads/pages/login.html"; ############ */ 
+  }
 
-    if (user) {
-        console.log(`Logado como: ${user.email}.`);
-    }
+  document.addEventListener("DOMContentLoaded", () => {
     
-    if (!user) {
-        alert("ID do usuário não encontrado na URL.");
-        /* window.location.href = "/RetroReads/pages/login.html"; ############ */ 
-    }
-
     document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
 
     async () =>{

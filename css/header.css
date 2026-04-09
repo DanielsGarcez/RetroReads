@@ -237,12 +237,6 @@ hr{
         margin-left: 0rem;
         gap: 10%;
     }
-
-    /* ---------- Responsividade HeaderSimples ---------- */
-    .container-header-simples{
-        margin-right: 5%;
-        margin-left: 5%;
-    }
 }
 
 @media (max-width: 900px) {
