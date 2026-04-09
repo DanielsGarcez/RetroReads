@@ -49,6 +49,10 @@ main{
     border-radius: 2rem;
 }
 
+.barra-ferramentas{
+    width: auto;
+}
+
 #form-filtro-estante {
     gap: .8rem;
     justify-content: end;
@@ -194,6 +198,35 @@ main{
         max-width: max-content;
     }
 }
+
+
+@media (max-width: 900px){
+    #dropdown-content > hr{
+        display: none;
+    }
+
+    #btn-adicionar-livro{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+
+        width: 2.5rem;
+        height: 2.5rem;
+
+        background-color: var(--corPrincipal);
+        border-radius: 50%;
+        box-shadow: var(--sombra);
+        box-sizing: content-box;
+
+        padding: .5rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+
+        font-size: .9rem;
+    }
+}
+
 
 @media (max-width: 800px){
 
