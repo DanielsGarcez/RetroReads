@@ -109,7 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "/RetroReads/pages/login.html";
     }
 
-    document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
+    try {
+      document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
+    }
+    catch (error) {
+      console.error("O elemento da aba Estante Virtual não existe:", error);
+    }
 
     (async () =>{
       // espera carregar a função tela de loading
