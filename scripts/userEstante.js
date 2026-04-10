@@ -133,18 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       filtros.forEach(select => {
         if (select) {
-          mostrarLoading();
-
           select.addEventListener("change", aplicarFiltrosEstante);
-
-          esconderLoading();
         }
-
       });
 
       async function aplicarFiltrosEstante() {
-
-
+        
         const genero = selectGeneroEstante.value;
         const idioma = selectIdiomaEstante.value;
         const acabamento = selectAcabamentoEstante.value;
@@ -166,9 +160,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const snapshot = await getDocs(queryFiltros);
         renderizar(snapshot);
-
       }
-      // --------------------------------------------------------------------------------
+
     })();
   });
 });
