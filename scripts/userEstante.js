@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (async () =>{
       // espera carregar a função tela de loading
       await carregarLoading();
-      
+
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);
       renderizar(snapshotInicial);
@@ -133,12 +133,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
       filtros.forEach(select => {
         if (select) {
+          mostrarLoading();
+
           select.addEventListener("change", aplicarFiltrosEstante);
+
+          esconderLoading();
         }
+
       });
 
       async function aplicarFiltrosEstante() {
-        mostrarLoading();
+
 
         const genero = selectGeneroEstante.value;
         const idioma = selectIdiomaEstante.value;
@@ -162,7 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const snapshot = await getDocs(queryFiltros);
         renderizar(snapshot);
 
-        esconderLoading();
       }
       // --------------------------------------------------------------------------------
     })();
