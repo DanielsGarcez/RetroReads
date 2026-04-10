@@ -109,9 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "/RetroReads/pages/login.html";
     }
 
-    document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
+    const aba = document.getElementById("aba-estante-virtual");
+      if (aba) {
+        aba.classList.add("btn-menu-ativo");
+      } 
 
-    async () =>{
+    (async () =>{
       // espera carregar a função tela de loading
       await carregarLoading();
       // mostra a tela de Loading
@@ -164,6 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderizar(snapshot);
       }
       // --------------------------------------------------------------------------------
-    };
+    })();
   });
 });
