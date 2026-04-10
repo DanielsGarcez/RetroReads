@@ -102,7 +102,7 @@ btnMostrarFiltro.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, async (user) => {
 
-    if (c) {
+    if (user) {
       console.log(`Logado como: ${user.email}.`);
     } else {
       console.log("Usuário não autenticado. Redirecionando para a página de login...");
