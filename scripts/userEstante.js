@@ -99,16 +99,15 @@ btnMostrarFiltro.addEventListener("click", () => {
 
 // ------------------------------------------------------------------------
 
-onAuthStateChanged(auth, (user) => {
+document.addEventListener("DOMContentLoaded", () => {
+    onAuthStateChanged(auth, async (user) => {
 
-  if (user) {
-      console.log(`Logado como: ${user.email}.`);
-  } else {
-      console.log("Usuário não autenticado. Redirecionando para a página de login...");
-      window.location.href = "/RetroReads/pages/login.html";
-  }
-
-  document.addEventListener("DOMContentLoaded", async () => {
+    if (user) {
+        console.log(`Logado como: ${user.email}.`);
+    } else {
+        console.log("Usuário não autenticado. Redirecionando para a página de login...");
+        window.location.href = "/RetroReads/pages/login.html";
+    }
 
     document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
 

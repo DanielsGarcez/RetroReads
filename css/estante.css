@@ -146,6 +146,10 @@ main{
 }
 
 @media (max-width: 1500px){
+    .barra-ferramentas-input{
+        width: 100%;
+    }
+
     #grid-catalogo{
         grid-template-columns: repeat(5, 1fr);
     }
@@ -166,7 +170,7 @@ main{
 
 @media (max-width: 1080px) {
     .container-perfil-user {
-        width: 90vw;
+        width: 95vw;
         gap: .5rem;
     }
 
