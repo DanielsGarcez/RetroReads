@@ -113,6 +113,9 @@ function renderizar(snapshot){
     const item = renderItem(doc.data(), doc.id);
     grid.appendChild(item);
   });
+
+  //esconde a tela de Loading
+  esconderLoading();
 }
 
 
