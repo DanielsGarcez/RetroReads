@@ -103,16 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, async (user) => {
 
     if (user) {
-        console.log(`Logado como: ${user.email}.`);
+      console.log(`Logado como: ${user.email}.`);
     } else {
-        console.log("Usuário não autenticado. Redirecionando para a página de login...");
-        window.location.href = "/RetroReads/pages/login.html";
+      console.log("Usuário não autenticado. Redirecionando para a página de login...");
+      window.location.href = "/RetroReads/pages/login.html";
     }
 
-    const aba = document.getElementById("aba-estante-virtual");
-      if (aba) {
-        aba.classList.add("btn-menu-ativo");
-      } 
+    document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
 
     (async () =>{
       // espera carregar a função tela de loading
