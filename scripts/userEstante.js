@@ -119,10 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (async () =>{
       // espera carregar a função tela de loading
       await carregarLoading();
-      // mostra a tela de Loading
-      mostrarLoading();
-      console.log("### Função mostrarLoading chamada na estante ###");
-
+      
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);
       renderizar(snapshotInicial);
@@ -141,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       async function aplicarFiltrosEstante() {
-        console.log("###Função aplicarFiltrosEstante chamada###");
+        mostrarLoading();
 
         const genero = selectGeneroEstante.value;
         const idioma = selectIdiomaEstante.value;
@@ -162,11 +159,10 @@ document.addEventListener("DOMContentLoaded", () => {
           orderBy("criadoEm", "desc")
         );
 
-        console.log("###Função queryFiltros concluida###");
-
-
         const snapshot = await getDocs(queryFiltros);
         renderizar(snapshot);
+
+        esconderLoading();
       }
       // --------------------------------------------------------------------------------
     })();
