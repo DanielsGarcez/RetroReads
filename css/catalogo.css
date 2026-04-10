@@ -90,7 +90,7 @@
     border: var(--borda);
     border-radius: 1rem;
     align-self: center;
-    
+
     min-width: 140px;
     max-height: 200px;
 
@@ -211,7 +211,7 @@
     #grid-catalogo{
         box-sizing: border-box;
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(8, 1fr);
     }
 }
 
@@ -247,7 +247,10 @@
 
 /* -------------------- RESPONSIVIDADE 1050px -------------------- */
 @media (max-width: 1080px) {
-
+    .main-catalogo {
+        margin-top: 8.5rem;
+    }
+    
     #grid-catalogo {
         box-sizing: border-box;
         grid-template-columns: repeat(4, 1fr);
@@ -310,6 +313,8 @@
         display: flex;
         justify-content: center;
         gap: 0;
+
+        margin-top: 2.5rem;
     }
 
     .main-catalogo h1{

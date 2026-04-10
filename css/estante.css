@@ -196,6 +196,7 @@ main{
 
     .textos-perfil-menu {
         max-width: max-content;
+        margin-right: 1rem;
     }
 
     .barra-ferramentas-input {
@@ -205,6 +206,10 @@ main{
 
 
 @media (max-width: 900px){
+    *{
+        overflow-x: visible;
+    }
+
     .container-perfil-user {
         width: 100%;
     }
@@ -213,8 +218,16 @@ main{
         width: 100%;
     }
 
+    .menu-perfil-user {
+        margin-left: .5rem;
+    }
+
     hr.filtro-item{
         display: none;
+    }
+
+    #dropdown-content {
+        margin-bottom: 1rem;
     }
 
     #btn-adicionar-livro{
@@ -254,6 +267,10 @@ main{
 
     .span-btn-adicionar-livro{
         display: none;
+    }
+
+    .textos-perfil-menu {
+        margin-right: 1rem;
     }
 
 }
