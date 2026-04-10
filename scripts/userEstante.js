@@ -102,7 +102,7 @@ btnMostrarFiltro.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, async (user) => {
 
-    if (user) {
+    if (c) {
       console.log(`Logado como: ${user.email}.`);
     } else {
       console.log("Usuário não autenticado. Redirecionando para a página de login...");
@@ -122,7 +122,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // carrega o snapshot inical
       const snapshotInicial = await getDocs(queryLivros);
-      renderizar(snapshotInicial);
+      
+      try {
+        renderizar(snapshotInicial);
+      } catch (e) {
+        console.error("Erro ao renderizar:", e);
+      }
 
       const filtros = [
         selectGeneroEstante,
@@ -138,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       async function aplicarFiltrosEstante() {
-        
+
         const genero = selectGeneroEstante.value;
         const idioma = selectIdiomaEstante.value;
         const acabamento = selectAcabamentoEstante.value;
@@ -153,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const queryFiltros = query(
           collection(db, "livros"),
-          where("userId", "==", localStorage.getItem("userId")),
+          where("userId", "==", user.uid),
           ...filtros,
           orderBy("criadoEm", "desc")
         );
