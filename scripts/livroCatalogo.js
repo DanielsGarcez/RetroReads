@@ -16,10 +16,10 @@ let grid;
 let template;
 
 // Variáveis de Filtros
-const selectGenero = document.getElementById("filtro-genero");
-const selectIdioma = document.getElementById("filtro-idioma");
-const selectAcabamento = document.getElementById("filtro-acabamento");
-const selectDisponibilidade = document.getElementById("filtro-disponibilidade");
+const genero = selectGenero?.value;
+const idioma = selectIdioma?.value;
+const acabamento = selectAcabamento?.value;
+const disponibilidade = selectDisponibilidade?.value;
 
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
@@ -27,8 +27,6 @@ const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 
 // Variáveis do Dropdown dos filtros
 const btnFiltros = document.getElementById("btn-dropdown");
-const filtrosContent = document.getElementById("dropdown-content");
-const hrMobile = document.querySelectorAll(".hr-mobile");
 
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
@@ -90,7 +88,10 @@ function renderItem(data, id) {
   autor.textContent = data?.autor || 'Sem autor';
 
   // converte o valor
-  let valorReais = parseFloat(data?.valor).toFixed(2);
+  let valorReais = data?.valor
+  ? parseFloat(data.valor).toFixed(2)
+  : '0.00';
+
   clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
 
   // altera conteudo do item
@@ -139,10 +140,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // ------------------------------------------------------------
   // função que filtra as categorias
     const filtros = [
-      selectGenero,
-      selectIdioma,
-      selectAcabamento,
-      selectDisponibilidade
+      genero,
+      idioma,
+      acabamento,
+      disponibilidade
     ];
 
     filtros.forEach(select => {
@@ -152,17 +153,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function aplicarFiltros() {
-      const genero = selectGenero.value;
-      const idioma = selectIdioma.value;
-      const acabamento = selectAcabamento.value;
-      const disponibilidade = selectDisponibilidade.value;
+      const generoFiltros = genero.value;
+      const idiomaFiltros = idioma.value;
+      const acabamentoFiltros = acabamento.value;
+      const disponibilidadeFiltros = disponibilidade.value;
 
       let filtros = [];
 
-      if (genero) filtros.push(where("genero", "==", genero));
-      if (idioma) filtros.push(where("idioma", "==", idioma));
-      if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
-      if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
+      if (generoFiltros) filtros.push(where("genero", "==", generoFiltros));
+      if (idiomaFiltros) filtros.push(where("idioma", "==", idiomaFiltros));
+      if (acabamentoFiltros) filtros.push(where("tipoCapa", "==", acabamentoFiltros));
+      if (disponibilidadeFiltros) filtros.push(where("disponibilidade", "==", disponibilidadeFiltros));
 
       const queryFiltros = query(
         livrosRef,
