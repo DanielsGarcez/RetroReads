@@ -16,10 +16,10 @@ let grid;
 let template;
 
 // Variáveis de Filtros
-const genero = selectGenero?.value;
-const idioma = selectIdioma?.value;
-const acabamento = selectAcabamento?.value;
-const disponibilidade = selectDisponibilidade?.value;
+const selectGenero = document.getElementById("filtro-genero-catalogo");
+const selectIdioma = document.getElementById("filtro-idioma-catalogo");
+const selectAcabamento = document.getElementById("filtro-acabamento-catalogo");
+const selectDisponibilidade = document.getElementById("filtro-disponibilidade-catalogo");
 
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
@@ -123,6 +123,11 @@ function renderizar(snapshot){
 // -------------------- ÁREA DE INICIALIZAÇÃO --------------------
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const genero = selectGenero?.value;
+  const idioma = selectIdioma?.value;
+  const acabamento = selectAcabamento?.value;
+  const disponibilidade = selectDisponibilidade?.value;
 
   grid = document.getElementById('grid-catalogo');
   template = document.getElementById('card-template');
