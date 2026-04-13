@@ -12,8 +12,8 @@ import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} f
 export { renderizar, renderItem };
 
 // Variáveis de Template e Grid da área dos livros
-const grid = document.getElementById('grid-catalogo');
-const template = document.getElementById('card-template');
+let grid;
+let template;
 
 // Variáveis de Filtros
 const selectGenero = document.getElementById("filtro-genero");
@@ -122,6 +122,10 @@ function renderizar(snapshot){
 // -------------------- ÁREA DE INICIALIZAÇÃO --------------------
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  grid = document.getElementById('grid-catalogo');
+  template = document.getElementById('card-template');
+
   (async () =>{
   // espera carregar a função tela de loading
   await carregarLoading();
@@ -131,10 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // carrega o snapshot inical
   const snapshotInicial = await getDocs(queryLivros);
   renderizar(snapshotInicial);
-
-  // ------------------------------------------------------------
-  // função que simula a tela de carregamento
-  setTimeout(function() {
+    
   // ------------------------------------------------------------
   // função que filtra as categorias
     const filtros = [
@@ -164,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
 
       const queryFiltros = query(
-        collection(db, "livros"),
+        livrosRef,
         ...filtros,
         orderBy("criadoEm", "desc")
       );
@@ -174,9 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // --------------------------------------------------------------------------------
-
-    // --------------------------------------------------------------------------------
-
     // botão que abre a página de detalhes do livro clicado
     grid.addEventListener("click", (event) =>{
       const botao = event.target.closest(".btn-detalhes");
@@ -194,8 +192,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Título: ",livroNome)
       }
     });
-
-  }, 500);
   })();
 
 });

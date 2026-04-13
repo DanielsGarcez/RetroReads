@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
 
         const queryFiltros = query(
-          collection(db, "livros"),
+          livrosRef,
           where("userId", "==", user.uid),
           ...filtros,
           orderBy("criadoEm", "desc")
