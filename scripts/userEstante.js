@@ -19,15 +19,14 @@ const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem(
 
 // Variáveis de Filtros
 const btnMostrarFiltro = document.getElementById("btn-mostrar-filtro");
-const btnMostrarFiltroIcon = document.getElementById("span-btn-filtro-livro")
 
-const selectGeneroEstante = document.getElementById("filtro-genero-estante");
-const selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
-const selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
-const selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
+let selectGeneroEstante;
+let selectIdiomaEstante;
+let selectAcabamentoEstante;
+let selectDisponibilidadeEstante;
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
-function renderItem(data, id) {
+function renderItemEstante(data, id) {
   // Variáveis
   const clone = template.content.cloneNode(true);
 
@@ -100,6 +99,11 @@ btnMostrarFiltro.addEventListener("click", () => {
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
+    selectGeneroEstante = document.getElementById("filtro-genero-estante");
+    selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
+    selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
+    selectDisponibilidadeEstante = document.getElementById("filtro-disponibilidade-estante");
+
     onAuthStateChanged(auth, async (user) => {
 
     if (user) {

@@ -9,17 +9,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 import {carregarLoading, capitalizarPalavras, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 
-export { renderizar, renderItem };
+export { renderizar };
 
 // Variáveis de Template e Grid da área dos livros
-let grid;
-let template;
+let grid, template;
 
 // Variáveis de Filtros
-const selectGenero = document.getElementById("filtro-genero-catalogo");
-const selectIdioma = document.getElementById("filtro-idioma-catalogo");
-const selectAcabamento = document.getElementById("filtro-acabamento-catalogo");
-const selectDisponibilidade = document.getElementById("filtro-disponibilidade-catalogo");
+let selectGenero, selectIdioma, selectAcabamento, selectDisponibilidade;
 
 // Variáveis com as informações do livro no banco de dados
 const livrosRef = collection(db, "livros");
@@ -65,7 +61,7 @@ function desativarItem(data, btnDetalhes, itemGrid){
 }
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
-function renderItem(data, id) {
+function renderItemCatalogo(data, id) {
   // Variáveis
   const clone = template.content.cloneNode(true);
 
@@ -111,7 +107,7 @@ function renderizar(snapshot){
   grid.innerHTML = "";
 
   snapshot.forEach((doc) => {
-    const item = renderItem(doc.data(), doc.id);
+    const item = renderItemCatalogo(doc.data(), doc.id);
     grid.appendChild(item);
   });
 
@@ -123,6 +119,11 @@ function renderizar(snapshot){
 // -------------------- ÁREA DE INICIALIZAÇÃO --------------------
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  selectGenero = document.getElementById("filtro-genero-catalogo");
+  selectIdioma = document.getElementById("filtro-idioma-catalogo");
+  selectAcabamento = document.getElementById("filtro-acabamento-catalogo");
+  selectDisponibilidade = document.getElementById("filtro-disponibilidade-catalogo");
 
   const genero = selectGenero?.value;
   const idioma = selectIdioma?.value;
