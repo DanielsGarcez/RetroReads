@@ -16,7 +16,6 @@ let template;
 let usuarioAtual;
 
 const livrosRef = collection(db, "livros");
-const queryLivros = query(livrosRef, where("userId", "==", usuarioAtual.uid));
 // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
 // Variáveis de Filtros
@@ -109,46 +108,38 @@ document.addEventListener("DOMContentLoaded", () => {
     if (user) {
       usuarioAtual = user;
       console.log(`Logado como: ${user.email}.`);
-      
-    } else {
-      console.log("Usuário não autenticado. Redirecionando para a página de login...");
-      window.location.href = "/RetroReads/pages/login.html";
-    }
 
-    try {
-      document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
-    }
-    catch (error) {
-      console.error("O elemento da aba Estante Virtual não existe:", error);
-    }
-
-    (async () =>{
       // espera carregar a função tela de loading
       await carregarLoading();
 
-      // carrega o snapshot inical
-      const snapshotInicial = await getDocs(queryLivros);
-      
+      const snapshotInicial = await getDocs(
+        query(livrosRef, where("userId", "==", usuarioAtual.uid))
+      );
+
+      // Tenta renderizar os livros, e se der erro, mostra no console
       try {
         renderizarEstante(snapshotInicial);
       } catch (e) {
         console.error("Erro ao renderizar:", e);
       }
-
+    
       const filtros = [
         selectGeneroEstante,
         selectIdiomaEstante,
         selectAcabamentoEstante,
         selectDisponibilidadeEstante
       ];
-
+    
       filtros.forEach(select => {
         if (select) {
           select.addEventListener("change", aplicarFiltrosEstante);
         }
       });
-
+    
       async function aplicarFiltrosEstante() {
+
+        // Garante que o usuário esteja autenticado antes de aplicar os filtros
+        if (!usuarioAtual) return;
 
         // Se o select não existir, o "?.value" impede que o código quebre e retorna undefined
         const genero = selectGeneroEstante?.value;
@@ -173,7 +164,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const snapshot = await getDocs(queryFiltros);
         renderizarEstante(snapshot);
       }
+    
+    
+    
+    } else {
+      console.log("Usuário não autenticado. Redirecionando para a página de login...");
+      window.location.href = "/RetroReads/pages/login.html";
+    }
 
-    })();
+    try {
+      document.getElementById("aba-estante-virtual").classList.add("btn-menu-ativo");
+    }
+    catch (error) {
+      console.error("O elemento da aba Estante Virtual não existe:", error);
+    }
   });
 });
