@@ -7,7 +7,7 @@ import {
   where,
   getDocs
 } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
-import {carregarLoading, mostrarLoading, esconderLoading} from "./globalFunctions.js";
+import { carregarLoading, mostrarLoading, esconderLoading } from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
 // Variáveis com as informações do livro no banco de dados
@@ -15,8 +15,8 @@ let grid;
 let template;
 let usuarioAtual;
 
+// Variáveis de Renderização
 const livrosRef = collection(db, "livros");
-// Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
 // Variáveis de Filtros
 const btnMostrarFiltro = document.getElementById("btn-mostrar-filtro");
@@ -75,10 +75,11 @@ btnFechar.addEventListener("click", () => {
 // ---------------------- BOTÃO FILTRO ----------------------
 if (btnMostrarFiltro) {
   btnMostrarFiltro.addEventListener("click", () => {
-    if (!formFiltro) return;
-    
+
     const formFiltro = document.getElementById("form-filtro-estante");
     const spanFiltroIcon = document.querySelector(".span-btn-filtro-icon");
+
+    if (!formFiltro) return;
 
     console.log(formFiltro, spanFiltroIcon);
 
@@ -101,7 +102,8 @@ if (btnMostrarFiltro) {
 
 document.addEventListener("DOMContentLoaded", () => {
     grid = document.getElementById("grid-estante");
-    template = document.getElementById("card-template");  
+    template = document.getElementById("card-template");
+    console.log("TEMPLATE:", template);
 
     selectGeneroEstante = document.getElementById("filtro-genero-estante");
     selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
