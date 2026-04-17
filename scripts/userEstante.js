@@ -15,7 +15,7 @@ let grid;
 let template;
 
 const livrosRef = collection(db, "livros");
-const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem("userId")));
+const queryLivros = query(livrosRef, where("userId", "==", user.uid));
 // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
 // Variáveis de Filtros
@@ -147,10 +147,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       async function aplicarFiltrosEstante() {
 
-        const genero = selectGeneroEstante.value;
-        const idioma = selectIdiomaEstante.value;
-        const acabamento = selectAcabamentoEstante.value;
-        const disponibilidade = selectDisponibilidadeEstante.value;
+        // Se o select não existir, o "?.value" impede que o código quebre e retorna undefined
+        const genero = selectGeneroEstante?.value;
+        const idioma = selectIdiomaEstante?.value;
+        const acabamento = selectAcabamentoEstante?.value;
+        const disponibilidade = selectDisponibilidadeEstante?.value;
 
         let filtros = [];
 
