@@ -122,8 +122,12 @@ main{
 }
 
 #grid-estante {
+    display: grid;
     grid-template-columns: repeat(7, 1fr);
+    gap: .5rem;
     row-gap: 1.5rem;
+
+    padding: 1rem;
 }
 
 
