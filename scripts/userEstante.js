@@ -33,8 +33,11 @@ function renderItemEstante(data, id) {
   const imagem = clone.querySelector('.capa-livro');
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
+  
+  imagem.src = data?.capa && data.capa.trim() !== ""
+  ? data.capa
+  : "img/Mockup-Livro.png";
 
-  imagem.src = data?.capa || "img/Mockup-Livro.png";
   titulo.textContent = data?.titulo || 'Sem título';
   autor.textContent = data?.autor || 'Sem autor';
 
@@ -72,6 +75,8 @@ btnFechar.addEventListener("click", () => {
 // ---------------------- BOTÃO FILTRO ----------------------
 if (btnMostrarFiltro) {
   btnMostrarFiltro.addEventListener("click", () => {
+    if (!formFiltro) return;
+    
     const formFiltro = document.getElementById("form-filtro-estante");
     const spanFiltroIcon = document.querySelector(".span-btn-filtro-icon");
 
