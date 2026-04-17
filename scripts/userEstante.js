@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Tenta renderizar os livros, e se der erro, mostra no console
       try {
         const snapshotInicial = await getDocs(
-          query(livrosRef, where("userId", "==", usuarioAtual.uid))
+          query(livrosRef, where("criadoPor.uid", "==", usuarioAtual.uid))
         );
 
         renderizarEstante(snapshotInicial);
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const queryFiltros = query(
           livrosRef,
-          where("userId", "==", usuarioAtual.uid),
+          where("criadoPor.uid", "==", usuarioAtual.uid),
           ...filtros,
           orderBy("criadoEm", "desc")
         );
