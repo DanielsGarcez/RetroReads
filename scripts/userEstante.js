@@ -111,17 +111,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // espera carregar a função tela de loading
       await carregarLoading();
-
-      const snapshotInicial = await getDocs(
-        query(livrosRef, where("userId", "==", usuarioAtual.uid))
-      );
+      mostrarLoading();
 
       // Tenta renderizar os livros, e se der erro, mostra no console
       try {
+        const snapshotInicial = await getDocs(
+          query(livrosRef, where("userId", "==", usuarioAtual.uid))
+        );
+
         renderizarEstante(snapshotInicial);
+
       } catch (e) {
         console.error("Erro ao renderizar:", e);
-      }
+
+      } finally {
+      esconderLoading(); // SEMPRE executa
+    }
     
       const filtros = [
         selectGeneroEstante,
@@ -164,8 +169,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const snapshot = await getDocs(queryFiltros);
         renderizarEstante(snapshot);
       }
-    
-    
     
     } else {
       console.log("Usuário não autenticado. Redirecionando para a página de login...");
