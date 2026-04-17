@@ -10,9 +10,10 @@ import {
 import {carregarLoading, mostrarLoading, esconderLoading} from "./globalFunctions.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-import { renderizar } from "/RetroReads/scripts/livroCatalogo.js";
-
 // Variáveis com as informações do livro no banco de dados
+let grid;
+let template;
+
 const livrosRef = collection(db, "livros");
 const queryLivros = query(livrosRef, where("userId", "==", localStorage.getItem("userId")));
 // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
@@ -27,36 +28,26 @@ let selectDisponibilidadeEstante;
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItemEstante(data, id) {
-  // Variáveis
   const clone = template.content.cloneNode(true);
-
-  const btnEditarLivro = clone.querySelector('.btn-detalhes');
-  const itemGrid = clone.querySelector('.item-grid');
 
   const imagem = clone.querySelector('.capa-livro');
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
 
-  // busca a imagem no firestore
-  if (data?.capa && data.capa.trim() !== "") {
-    imagem.src = data.capa;
-  } else {
-    imagem.src = "img/Mockup-Livro.png";
-  }
-
-  // define o texto de titulo e autor pego no firestore
-  titulo.textContent = capitalizarPalavras(data?.titulo || 'Sem título');
+  imagem.src = data?.capa || "img/Mockup-Livro.png";
+  titulo.textContent = data?.titulo || 'Sem título';
   autor.textContent = data?.autor || 'Sem autor';
 
-  // converte o valor
-  let valorReais = parseFloat(data?.valor).toFixed(2);
-  clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
-
-  // altera conteudo do item
-  itemGrid.dataset.id = id;
-  itemGrid.dataset.titulo = data?.titulo || 'Sem título';
-
   return clone;
+}
+
+function renderizarEstante(snapshot) {
+  grid.innerHTML = "";
+
+  snapshot.forEach(doc => {
+    const item = renderItemEstante(doc.data(), doc.id);
+    grid.appendChild(item);
+  });
 }
 
 // ---------------------- JANELA DE ADIÇÃO DE LIVRO ----------------------
@@ -79,26 +70,34 @@ btnFechar.addEventListener("click", () => {
 
 
 // ---------------------- BOTÃO FILTRO ----------------------
-btnMostrarFiltro.addEventListener("click", () => {
-  const formFiltro = document.getElementById("form-filtro-estante")
-  const spanFiltroIcon = document.querySelector(".span-btn-filtro-icon");
+if (btnMostrarFiltro) {
+  btnMostrarFiltro.addEventListener("click", () => {
+    const formFiltro = document.getElementById("form-filtro-estante");
+    const spanFiltroIcon = document.querySelector(".span-btn-filtro-icon");
 
-  console.log(formFiltro, spanFiltroIcon);
+    console.log(formFiltro, spanFiltroIcon);
 
-  if (formFiltro.classList.contains("conteudo-oculto-mobile")){
-    formFiltro.classList.remove("conteudo-oculto-mobile");
+    if (formFiltro.classList.contains("conteudo-oculto-mobile")){
+      formFiltro.classList.remove("conteudo-oculto-mobile");
 
-    spanFiltroIcon.classList.add("span-btn-filtro-x");
-  } else{
-    formFiltro.classList.add("conteudo-oculto-mobile");
+      if (spanFiltroIcon) {
+        spanFiltroIcon.classList.add("span-btn-filtro-x");
+      }
+    } else{
+      formFiltro.classList.add("conteudo-oculto-mobile");
 
-    spanFiltroIcon.classList.remove("span-btn-filtro-x");
-  }
-});
-
+      if (spanFiltroIcon) {
+        spanFiltroIcon.classList.remove("span-btn-filtro-x");
+      }
+    }
+  });
+};
 // ------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
+    grid = document.getElementById("grid-estante");
+    template = document.getElementById("card-template");  
+
     selectGeneroEstante = document.getElementById("filtro-genero-estante");
     selectIdiomaEstante = document.getElementById("filtro-idioma-estante");
     selectAcabamentoEstante = document.getElementById("filtro-acabamento-estante");
@@ -128,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const snapshotInicial = await getDocs(queryLivros);
       
       try {
-        renderizar(snapshotInicial);
+        renderizarEstante(snapshotInicial);
       } catch (e) {
         console.error("Erro ao renderizar:", e);
       }
@@ -168,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
         const snapshot = await getDocs(queryFiltros);
-        renderizar(snapshot);
+        renderizarEstante(snapshot);
       }
 
     })();

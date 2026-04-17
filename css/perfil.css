@@ -194,6 +194,11 @@ main{
 }
 
 @media (max-width: 1080px) {
+    .container-perfil-user {
+        width: 95vw;
+        gap: .5rem;
+    }
+
     .section-principal{
         flex-direction: column;
     }
@@ -201,7 +206,39 @@ main{
     .menu-perfil-user {
         width: unset;
     }
+
+        .menu-secoes {
+        width: max-content;
+    }
+
+    .btn-secao{
+        font-size: 1.1rem;
+        max-width: 25vw;
+
+        border-left: 5px solid var(--corBranco);
+        padding: .7rem;
+    }
+
+    .btn-secao:hover{
+        transform: translateX(5px);
+    }
+
+    .textos-perfil-menu {
+        max-width: max-content;
+        margin-right: 1rem;
+    }
 }
+
+@media (max-width: 900px){
+    .container-perfil-user {
+        width: 100%;
+    }
+
+    .menu-perfil-user {
+        margin-left: .5rem;
+    }
+}
+
 
 @media (max-width: 800px) {
     .container-perfil-user{
