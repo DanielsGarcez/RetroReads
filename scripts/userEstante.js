@@ -13,9 +13,10 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/fi
 // Variáveis com as informações do livro no banco de dados
 let grid;
 let template;
+let usuarioAtual;
 
 const livrosRef = collection(db, "livros");
-const queryLivros = query(livrosRef, where("userId", "==", user.uid));
+const queryLivros = query(livrosRef, where("userId", "==", usuarioAtual.uid));
 // Onde("ID de usuário", "estiver no", "banco de dados, pegueos itens com esse ID")
 
 // Variáveis de Filtros
@@ -106,7 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, async (user) => {
 
     if (user) {
+      usuarioAtual = user;
       console.log(`Logado como: ${user.email}.`);
+      
     } else {
       console.log("Usuário não autenticado. Redirecionando para a página de login...");
       window.location.href = "/RetroReads/pages/login.html";
@@ -162,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const queryFiltros = query(
           livrosRef,
-          where("userId", "==", user.uid),
+          where("userId", "==", usuarioAtual.uid),
           ...filtros,
           orderBy("criadoEm", "desc")
         );
