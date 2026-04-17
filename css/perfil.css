@@ -191,16 +191,16 @@ main{
         margin: 0px 10%;
         width: 90vw;
     }
+
+    .section-principal{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1080px) {
     .container-perfil-user {
         width: 95vw;
         gap: .5rem;
-    }
-
-    .section-principal{
-        flex-direction: column;
     }
 
     .menu-perfil-user {
