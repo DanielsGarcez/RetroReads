@@ -54,8 +54,8 @@ function renderItemEstante(data, id) {
   clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
 
   // altera conteudo do item
-  itemGrid.dataset.id = id;
-  itemGrid.dataset.titulo = data?.titulo || 'Sem título';
+  clone.dataset.id = id;
+  clone.dataset.titulo = data?.titulo || 'Sem título';
 
   return clone;
 }
