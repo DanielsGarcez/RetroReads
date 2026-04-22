@@ -50,7 +50,8 @@
     font-size: 1.1rem;
     font-weight: bold;
 
-    padding: .7em 1rem;
+    padding: .7em 0rem;
+    padding-right: 1rem;
 }
 
 .barra-ferramentas-input{

@@ -28,18 +28,34 @@ let selectDisponibilidadeEstante;
 
 // Função que renderiza os Cards do Grid com informações do banco de dados
 function renderItemEstante(data, id) {
+  // Variáveis
   const clone = template.content.cloneNode(true);
 
   const imagem = clone.querySelector('.capa-livro');
   const titulo = clone.querySelector('.titulo-livro');
   const autor = clone.querySelector('.autor-livro');
   
-  imagem.src = data?.capa && data.capa.trim() !== ""
-  ? data.capa
-  : "img/Mockup-Livro.png";
+  // busca a imagem no firestore
+  if (data?.capa && data.capa.trim() !== "") {
+    imagem.src = data.capa;
+  } else {
+    imagem.src = "img/Mockup-Livro.png";
+  }
 
+  // define o texto de titulo e autor pego no firestore
   titulo.textContent = data?.titulo || 'Sem título';
   autor.textContent = data?.autor || 'Sem autor';
+
+    // converte o valor
+  let valorReais = data?.valor
+  ? parseFloat(data.valor).toFixed(2)
+  : '0.00';
+
+  clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
+
+  // altera conteudo do item
+  itemGrid.dataset.id = id;
+  itemGrid.dataset.titulo = data?.titulo || 'Sem título';
 
   return clone;
 }
