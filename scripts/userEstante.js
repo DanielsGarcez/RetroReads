@@ -53,10 +53,6 @@ function renderItemEstante(data, id) {
 
   clone.querySelector('.valor').textContent = valorReais || 'Sem valor';
 
-  // altera conteudo do item
-  clone.dataset.id = id;
-  clone.dataset.titulo = data?.titulo || 'Sem título';
-
   return clone;
 }
 
