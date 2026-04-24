@@ -24,6 +24,11 @@ const queryLivros = query(livrosRef, orderBy("criadoEm", "desc"));
 // Variáveis do Dropdown dos filtros
 const btnFiltros = document.getElementById("btn-dropdown");
 
+let selectGeneroCatalogo;
+let selectIdiomaCatalogo;
+let selectAcabamentoCatalogo;
+let selectDisponibilidadeCatalogo;
+
 // -------------------- ÁREA DE FUNÇÕES --------------------
 
 // Função do botão de dropdown dos filtros
@@ -119,19 +124,13 @@ function renderizar(snapshot){
 // -------------------- ÁREA DE INICIALIZAÇÃO --------------------
 
 document.addEventListener("DOMContentLoaded", () => {
-
-  selectGenero = document.getElementById("filtro-genero-catalogo");
-  selectIdioma = document.getElementById("filtro-idioma-catalogo");
-  selectAcabamento = document.getElementById("filtro-acabamento-catalogo");
-  selectDisponibilidade = document.getElementById("filtro-disponibilidade-catalogo");
-
-  const genero = selectGenero?.value;
-  const idioma = selectIdioma?.value;
-  const acabamento = selectAcabamento?.value;
-  const disponibilidade = selectDisponibilidade?.value;
-
   grid = document.getElementById('grid-catalogo');
   template = document.getElementById('card-template');
+
+  selectGeneroCatalogo = document.getElementById("filtro-genero-catalogo");
+  selectIdiomaCatalogo = document.getElementById("filtro-idioma-catalogo");
+  selectAcabamentoCatalogo = document.getElementById("filtro-acabamento-catalogo");
+  selectDisponibilidadeCatalogo = document.getElementById("filtro-disponibilidade-catalogo");
 
   (async () =>{
   // espera carregar a função tela de loading
@@ -146,30 +145,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // ------------------------------------------------------------
   // função que filtra as categorias
     const filtros = [
-      genero,
-      idioma,
-      acabamento,
-      disponibilidade
+        selectGeneroCatalogo,
+        selectIdiomaCatalogo,
+        selectAcabamentoCatalogo,
+        selectDisponibilidadeCatalogo
     ];
 
     filtros.forEach(select => {
       if (select) {
-        select.addEventListener("change", aplicarFiltros);
+        select.addEventListener("change", aplicarFiltrosCatalogo);
       }
     });
 
-    async function aplicarFiltros() {
-      const generoFiltros = genero.value;
-      const idiomaFiltros = idioma.value;
-      const acabamentoFiltros = acabamento.value;
-      const disponibilidadeFiltros = disponibilidade.value;
+    async function aplicarFiltrosCatalogo() {
+      const genero = selectGeneroCatalogo?.value;
+      const idioma = selectIdiomaCatalogo?.value;
+      const acabamento = selectAcabamentoCatalogo?.value;
+      const disponibilidade = selectDisponibilidadeCatalogo?.value;
 
       let filtros = [];
 
-      if (generoFiltros) filtros.push(where("genero", "==", generoFiltros));
-      if (idiomaFiltros) filtros.push(where("idioma", "==", idiomaFiltros));
-      if (acabamentoFiltros) filtros.push(where("tipoCapa", "==", acabamentoFiltros));
-      if (disponibilidadeFiltros) filtros.push(where("disponibilidade", "==", disponibilidadeFiltros));
+      if (genero) filtros.push(where("genero", "==", genero));
+      if (idioma) filtros.push(where("idioma", "==", idioma));
+      if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
+      if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
 
       const queryFiltros = query(
         livrosRef,

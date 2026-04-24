@@ -235,45 +235,6 @@ main{
         margin-bottom: 1rem;
     }
 
-    #btn-adicionar-livro{
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        z-index: 100;
-
-        width: 2.5rem;
-        height: 2.5rem;
-
-        background-color: var(--corPrincipal);
-        border-radius: 50%;
-        box-shadow: var(--sombra);
-        box-sizing: content-box;
-
-        padding: .5rem;
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-
-        font-size: .9rem;
-    }
-
-    .span-btn-adicionar-icon, .span-btn-filtro-icon, .span-btn-filtro-x{
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        height: 100%;
-        width: 100%;
-    }
-
-    .span-btn-adicionar-icon{
-        display: block;
-        background-image: url(../img/icons/Icon-Adicionar-Livro-Branco.png);
-    }
-
-    .span-btn-adicionar-livro{
-        display: none;
-    }
-
     .textos-perfil-menu {
         margin-right: 1rem;
     }

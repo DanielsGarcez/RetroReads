@@ -293,6 +293,8 @@ main{
 
         border: 1px solid var(--corPrincipal);
         border-bottom-width: 2px;
+
+        transform: translateX(0px);
     }
 
     .btn-menu-ativo, .btn-menu-ativo:hover{

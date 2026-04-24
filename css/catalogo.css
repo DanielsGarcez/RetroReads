@@ -51,6 +51,7 @@
     font-weight: bold;
 
     padding: .7em 0rem;
+    padding-left: 1rem;
     padding-right: 1rem;
 }
 
@@ -74,6 +75,9 @@
 #btn-limpa-filtro {
     padding-left: .8rem;
     padding-right: .8rem;
+
+    margin-left: auto;
+    margin-right: 1rem;
 }
 
 /* ---------- Lista de Livro do Catalogo ---------- */
@@ -313,8 +317,6 @@
         display: flex;
         justify-content: center;
         gap: 0;
-
-        margin-top: 2.5rem;
     }
 
     .main-catalogo h1{
@@ -406,6 +408,7 @@
         padding-left: .8rem;
 
         margin-left: auto;
+        margin-right: 0rem;
     }
 
     .container-catalogo{
@@ -499,6 +502,10 @@
 
 /* ---------- Mostra no Mobile ---------- */
 @media (max-width: 600px){
+    .main-catalogo{
+        margin-top: 2rem;
+    }
+
     .mobile-header{
         display: flex;
         box-sizing: content-box;
