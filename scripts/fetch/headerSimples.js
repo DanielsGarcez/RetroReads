@@ -27,7 +27,10 @@ function configurarLinkPerfil() {
         const iconPerfil = document.querySelector(".user-perfil");
   
         if (user) {
-          console.log(`HeaderSimples: Logado como: ${user.email}.`);
+          console.log(`
+            Logado como: ${user.email} 
+            UID: ${user.uid}
+          `);
           iconPerfil.href = `/RetroReads/pages/userPerfil.html?id=${user.uid}`;
   
         } else {

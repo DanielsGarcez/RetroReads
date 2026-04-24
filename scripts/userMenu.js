@@ -22,14 +22,14 @@ carregarMenu();
 document.addEventListener("DOMContentLoaded", async () => {
     await carregarMenu();
 
-/*     const userId = new URLSearchParams(window.location.search).get("id");
+    const userId = new URLSearchParams(window.location.search).get("id");
 
     if (!userId) {
         alert("ID do usuário não encontrado.");
         
         window.location.href = "/RetroReads/pages/login.html";
         return;
-    } */
+    }
 
     // Variáveis das abas de menu
     const abaDadosPessoais = document.getElementById("aba-dados-pessoais");
@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     onAuthStateChanged(auth, async (user) => {
 
         if (!user) {
-            alert("Usuário não encontrado.");
-
             window.location.href = "/RetroReads/pages/login.html";
             return;
         }
