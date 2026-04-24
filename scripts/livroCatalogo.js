@@ -144,14 +144,14 @@ document.addEventListener("DOMContentLoaded", () => {
     
   // ------------------------------------------------------------
   // função que filtra as categorias
-    const filtros = [
+    const filtrosCatalogo = [
         selectGeneroCatalogo,
         selectIdiomaCatalogo,
         selectAcabamentoCatalogo,
         selectDisponibilidadeCatalogo
     ];
 
-    filtros.forEach(select => {
+    filtrosCatalogo.forEach(select => {
       if (select) {
         select.addEventListener("change", aplicarFiltrosCatalogo);
       }
@@ -163,18 +163,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const acabamento = selectAcabamentoCatalogo?.value;
       const disponibilidade = selectDisponibilidadeCatalogo?.value;
 
-      let filtros = [];
+      let filtrosCatalogo = [];
 
-      if (genero) filtros.push(where("genero", "==", genero));
-      if (idioma) filtros.push(where("idioma", "==", idioma));
-      if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
-      if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
+      if (genero) filtrosCatalogo.push(where("genero", "==", genero));
+      if (idioma) filtrosCatalogo.push(where("idioma", "==", idioma));
+      if (acabamento) filtrosCatalogo.push(where("tipoCapa", "==", acabamento));
+      if (disponibilidade) filtrosCatalogo.push(where("disponibilidade", "==", disponibilidade));
+
+      console.log({ genero, idioma, acabamento, disponibilidade });
 
       const queryFiltros = query(
         livrosRef,
-        ...filtros,
+        ...filtrosCatalogo,
         orderBy("criadoEm", "desc")
       );
+
+      console.log("Filtros aplicados:", filtros);
 
       const snapshot = await getDocs(queryFiltros);
       renderizar(snapshot);

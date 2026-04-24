@@ -147,14 +147,14 @@ document.addEventListener("DOMContentLoaded", () => {
       esconderLoading(); // SEMPRE executa
     }
     
-      const filtros = [
+      const filtrosEstante = [
         selectGeneroEstante,
         selectIdiomaEstante,
         selectAcabamentoEstante,
         selectDisponibilidadeEstante
       ];
     
-      filtros.forEach(select => {
+      filtrosEstante.forEach(select => {
         if (select) {
           select.addEventListener("change", aplicarFiltrosEstante);
         }
@@ -171,17 +171,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const acabamento = selectAcabamentoEstante?.value;
         const disponibilidade = selectDisponibilidadeEstante?.value;
 
-        let filtros = [];
+        let filtrosEstante = [];
 
-        if (genero) filtros.push(where("genero", "==", genero));
-        if (idioma) filtros.push(where("idioma", "==", idioma));
-        if (acabamento) filtros.push(where("tipoCapa", "==", acabamento));
-        if (disponibilidade) filtros.push(where("disponibilidade", "==", disponibilidade));
+        if (genero) filtrosEstante.push(where("genero", "==", genero));
+        if (idioma) filtrosEstante.push(where("idioma", "==", idioma));
+        if (acabamento) filtrosEstante.push(where("tipoCapa", "==", acabamento));
+        if (disponibilidade) filtrosEstante.push(where("disponibilidade", "==", disponibilidade));
 
         const queryFiltros = query(
           livrosRef,
           where("criadoPor.uid", "==", usuarioAtual.uid),
-          ...filtros,
+          ...filtrosEstante,
           orderBy("criadoEm", "desc")
         );
 

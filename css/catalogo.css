@@ -52,7 +52,6 @@
 
     padding: .7em 0rem;
     padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .barra-ferramentas-input{
@@ -257,7 +256,7 @@
     
     #grid-catalogo {
         box-sizing: border-box;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     .container-catalogo{
