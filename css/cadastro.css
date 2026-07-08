@@ -29,7 +29,10 @@
     border-radius: 2rem;
     
     /* background estica para toda a caixa */
-    align-items: stretch
+    align-items: stretch;
+
+    margin-top: 6.5rem;
+    margin-bottom: 6.5rem;
 }
 
 .seccoes{
@@ -296,6 +299,8 @@
     .cadastrar form{
         width: 100%;
         margin: auto;
+
+        gap: 1.5rem;
     }
 
     .cadastrar input{
@@ -325,9 +330,13 @@
     }
 
     .btn-ambos{
-        width: 100%;
-        margin-top: 1rem;
+        width: 60%;
         margin-bottom: 0;
+    }
+
+    #btn-cadastro{
+        padding: .8rem 3rem;
+        border-radius: 2rem;
     }
 
     /* ---------- HOVER DESATIVADOS ---------- */
@@ -351,7 +360,7 @@
     }
     
     .seccoes{
-        padding: 1rem;
+        padding: 3rem;
     }
 
     .container{
@@ -360,6 +369,9 @@
         border: none;
         box-shadow: none;
         border-radius: 0rem;
+
+        margin-top: 0rem;
+        margin-bottom: 0rem;
     }
 
     .container-duplo {
