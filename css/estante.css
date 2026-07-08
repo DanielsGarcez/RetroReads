@@ -272,9 +272,11 @@ main{
     .btn-secao{
         border-left-color: var(--corPrincipal);
         border-left-width: 1px;
+
+        padding: .3rem 1rem;
     }
 
-    
+
 
     /* ---------- BOTÕES FLUTUANTES FILTRO E ADICIONAR ---------- */
 
@@ -311,6 +313,9 @@ main{
         display: none;
     }
 
+    .span-btn-adicionar-icon:hover{
+        display: none;
+    }
 
     
     #btn-adicionar-livro{
