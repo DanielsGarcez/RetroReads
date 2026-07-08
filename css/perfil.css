@@ -93,6 +93,8 @@ main{
 }
 
 .info-edit > h2{
+    font-size: 2rem;
+
     color: var(--corCinzaEscuro);
     margin-left: .5rem;
     font-weight: 400;
@@ -114,6 +116,8 @@ main{
     display: flex;
     flex-direction: column;
     gap: .5rem;
+
+    font-size: 1.2rem;
 }
 
 .dados-grid-item > label{
@@ -141,6 +145,7 @@ main{
 
     justify-content: end;
     margin-right: 2.5rem;
+    padding-top: 5rem;
 }
 
 .btn-editar{
@@ -257,6 +262,8 @@ main{
         gap: 0rem;
 
         margin-right: 0rem;
+        margin-left: 0rem;
+    
     }
 
     .menu-secoes{
@@ -360,6 +367,8 @@ main{
     }
 
     .dados-grid-item {
+        font-size: 1rem;
+
         width: 100%;
     }
 
@@ -371,6 +380,8 @@ main{
         gap: 2rem;
         justify-content: center;
         margin-right: 0;
+
+        padding-top: 0rem;
     }
 
     .btn-editar {
@@ -395,6 +406,8 @@ main{
     }
 
     .info-edit > h2 {
+        font-size: 1.5rem;
+
         margin-left: 2rem;
         padding: 0rem;
     }
