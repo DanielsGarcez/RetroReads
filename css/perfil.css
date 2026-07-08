@@ -402,6 +402,11 @@ main{
 }
 
 @media (max-width: 350px){
+
+    .main-perfil-user{
+        margin-top: 2rem;
+    }
+
     .area-usuario {
         display: flex;
         flex-direction: column;

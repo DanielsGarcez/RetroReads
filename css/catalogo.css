@@ -515,6 +515,11 @@
         display: inline-flex;
     }
 
+    .barra-ferramentas{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     #grid-catalogo{
         grid-template-columns: repeat(3, 1fr);
     } 

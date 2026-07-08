@@ -292,6 +292,27 @@ main{
         gap: .5rem;
     }
 
+    .barra-ferramentas{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    #barra-busca-estante{
+        margin-top: 1.5rem;
+    }
+
+
+    /* ^^^^^^^^^  BOTÕES FLUTUANTES FILTRO E ADICIONAR ^^^^^^^^^ */
+
+    .span-btn-adicionar-icon{
+        background-image: url(../img/icons/Icon-Adicionar-Livro-Branco.png);
+
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+    }
+
+    
     #btn-adicionar-livro{
         position: fixed;
         bottom: 0;
@@ -316,11 +337,19 @@ main{
     /* BOTÃO DE FILTRO */
     .span-btn-filtro-icon{
         background-image: url(../img/icons/Icon-Filtro-Cinza.png);
+
+        width: 100%;
+        height: 100%;
+        background-size: contain;
     }
 
     /* BOTÃO DE FILTRO com X */
     .span-btn-filtro-x{
         background-image: url(../img/icons/Icon-Filtro-Cinza-X.png);
+
+        width: 100%;
+        height: 100%;
+        background-size: contain;
     }
 
     #btn-mostrar-filtro {
@@ -351,9 +380,6 @@ main{
         height: 100%;
     }
 
-    /* ^^^^^^^^^^  BOTÕES FLUTUANTES FILTRO E ADICIONAR ^^^^^^^^^^ */
-
-
     /* Hovers desabilitados no mobile */
     .barra-ferramentas-input:hover {
         border: var(--borda);
@@ -381,6 +407,10 @@ main{
 
     .container-perfil-user {
         width: 100vw;
+    }
+
+    .menu-perfil-user {
+        margin-left: 0rem;
     }
 
     #grid-estante {
