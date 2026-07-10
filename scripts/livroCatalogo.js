@@ -62,7 +62,6 @@ function desativarItem(data, btnDetalhes, itemGrid){
     itemGrid.classList.add("conteudo-desativado");
 
     console.log("Desativado:", itemGrid);
-    console.log("Disponibilidade:", data.nome);
   }
 }
 
