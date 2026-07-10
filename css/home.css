@@ -23,23 +23,22 @@
 }
 
 
-body {
-  margin: 0;
-  font-family: "Helvetica", "Arial", sans-serif;
-}
+
+
+
 
 h1 {
   text-align: center;
   font-size: 1.7rem;
 }
-ul {
+ul.banner-carrossel .banner-carrossel {
   width: 100vw;
   height: 300px;
   padding: 20px;
   display: flex;
   gap: 4vw;
 }
-li {
+li.banner-item {
   list-style-type: none;
   background-color: #eeeeee;
   border: 1px solid #dddddd;
@@ -48,17 +47,17 @@ li {
   flex: 0 0 100%;
 }
 
-li:nth-child(even) {
+li.banner-item:nth-child(even) {
   background-color: cyan;
 }
-ul {
+ul.banner-carrossel  {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
 }
-li {
+li.banner-item {
   scroll-snap-align: center;
 }
-ul::scroll-button(*) {
+ul.banner-carrossel ::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
@@ -67,47 +66,47 @@ ul::scroll-button(*) {
   cursor: pointer;
 }
 
-ul::scroll-button(*):hover,
-ul::scroll-button(*):focus {
+ul.banner-carrossel ::scroll-button(*):hover,
+ul.banner-carrossel ::scroll-button(*):focus {
   opacity: 1;
 }
 
-ul::scroll-button(*):active {
+ul.banner-carrossel ::scroll-button(*):active {
   translate: 1px 1px;
 }
 
-ul::scroll-button(*):disabled {
+ul.banner-carrossel ::scroll-button(*):disabled {
   opacity: 0.2;
   cursor: unset;
 }
-ul::scroll-button(left) {
+ul.banner-carrossel ::scroll-button(left) {
   content: "◄" / "Previous";
 }
 
-ul::scroll-button(right) {
+ul.banner-carrossel ::scroll-button(right) {
   content: "►" / "Next";
 }
-ul {
+ul.banner-carrossel  {
   anchor-name: --my-carousel;
 }
 
-ul::scroll-button(*) {
+ul.banner-carrossel ::scroll-button(*) {
   position: absolute;
   position-anchor: --my-carousel;
 }
-ul::scroll-button(left) {
+ul.banner-carrossel ::scroll-button(left) {
   right: calc(anchor(left) - 70px);
   bottom: calc(anchor(top) + 13px);
 }
 
-ul::scroll-button(right) {
+ul.banner-carrossel ::scroll-button(right) {
   left: calc(anchor(right) - 70px);
   bottom: calc(anchor(top) + 13px);
 }
-ul {
+ul.banner-carrossel  {
   scroll-marker-group: after;
 }
-ul::scroll-marker-group {
+ul.banner-carrossel ::scroll-marker-group {
   position: absolute;
   position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
@@ -117,7 +116,7 @@ ul::scroll-marker-group {
   justify-content: center;
   gap: 20px;
 }
-li::scroll-marker {
+li.banner-item::scroll-marker {
   content: attr(data-accName);
   width: 16px;
   height: 16px;
@@ -127,9 +126,10 @@ li::scroll-marker {
   overflow: hidden;
   text-indent: 16px;
 }
-li::scroll-marker:target-current {
+li.banner-item::scroll-marker:target-current {
   background-color: black;
 }
+
 
 
 
