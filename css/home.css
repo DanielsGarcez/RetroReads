@@ -7,5 +7,14 @@
 .main-home img {
     width: 200px;
     height: auto;
+
+    margin-top: 5rem;
 }
 
+.banner-home{
+    width: 100%;
+    height: 300px;
+
+
+    background-color: red;
+}
