@@ -17,7 +17,24 @@
 
 .banner-home > img{
     width: 100%;
-    height: 300px;
+    height: auto;
 
     box-shadow: var(--sombra);
 }
+
+
+
+/* ------------- Mobile ------------- */
+
+@media (max-width: 768px) {
+
+    main.main-home{
+        margin-top: 0rem;
+    }
+
+    .banner-home > img{
+        margin-top: 3.5rem;
+        scale: 2;
+    }
+}
+
