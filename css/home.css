@@ -9,3 +9,9 @@
     height: auto;
 }
 
+.banner-home{
+    width: 100%;
+    height: 300px;
+
+    background-color: var(--cor-primaria);
+}
