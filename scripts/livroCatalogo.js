@@ -63,7 +63,7 @@ function desativarItem(data, btnDetalhes, itemGrid){
 
     console.log("Desativado:", itemGrid);
 
-    console.log("Criado por:", data.criadoPor);
+    console.log("Criado por:", data.criadoPor.nome);
   }
 }
 

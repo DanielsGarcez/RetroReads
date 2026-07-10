@@ -2,13 +2,13 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
+
+    margin-top: 7.3rem;
 }
 
 .main-home img {
     width: 200px;
     height: auto;
-
-    margin-top: 5rem;
 }
 
 .banner-home{
