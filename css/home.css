@@ -22,7 +22,10 @@
     box-shadow: var(--sombra);
 }
 
-
+.banner-img{
+    width: 100%;
+    height: auto;
+}
 
 
 /* ------------- Carrosssel de Banners ------------- */
@@ -69,7 +72,7 @@ ul.banner-carrossel  {
 ul.banner-carrossel::scroll-marker-group{
     position: absolute;
     position-anchor: --my-carousel;
-    top: calc(anchor(bottom) - 70px);
+    top: calc(anchor(bottom) + 20px);
     justify-self: anchor-center;
 
     display: flex;
