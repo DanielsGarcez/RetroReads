@@ -38,6 +38,10 @@ ul.banner-carrossel{
 
     display: flex;
     gap: 4vw;
+
+    box-shadow: var(--sombra);
+
+    scrollbar-width: none;
 }
 
 li.banner-item{
@@ -60,7 +64,6 @@ ul.banner-carrossel{
 
 ul.banner-carrossel  {
     scroll-marker-group: after;
-    scrollbar-width: none;
 }
 
 ul.banner-carrossel::scroll-marker-group{
@@ -88,7 +91,7 @@ li.banner-item::scroll-marker{
 }
 
 li.banner-item::scroll-marker:hover{
-    background-color: var(--corCinzaMedio);
+    border-color: var(--corPrincipal);
 }
 
 li.banner-item::scroll-marker:target-current{
