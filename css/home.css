@@ -34,8 +34,8 @@ h1{
 
 ul.banner-carrossel{
   width: 100vw;
-  height: 300px;
-  padding: 20px;
+  height: auto;
+
   display: flex;
   gap: 4vw;
 }
@@ -80,30 +80,13 @@ ul.banner-carrossel::scroll-button(*):disabled{
   opacity: 0.2;
   cursor: unset;
 }
-ul.banner-carrossel::scroll-button(left){
-  content: "◄" / "Previous";
-}
 
-ul.banner-carrossel::scroll-button(right){
-  content: "►" / "Next";
-}
+
 ul.banner-carrossel{
   anchor-name: --my-carousel;
 }
 
-ul.banner-carrossel::scroll-button(*){
-  position: absolute;
-  position-anchor: --my-carousel;
-}
-ul.banner-carrossel::scroll-button(left){
-  right: calc(anchor(left) - 70px);
-  bottom: calc(anchor(top) + 13px);
-}
 
-ul.banner-carrossel::scroll-button(right){
-  left: calc(anchor(right) - 70px);
-  bottom: calc(anchor(top) + 13px);
-}
 ul.banner-carrossel  {
   scroll-marker-group: after;
 }
@@ -119,18 +102,19 @@ ul.banner-carrossel::scroll-marker-group{
 }
 li.banner-item::scroll-marker{
   content: attr(data-accName);
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
+
   background-color: transparent;
-  border: 2px solid black;
+  border: 2px solid var(--corCinzaMedio);
   border-radius: 50%;
+  
   overflow: hidden;
-  text-indent: 16px;
+  text-indent: 1rem;
 }
 li.banner-item::scroll-marker:target-current{
-  background-color: black;
+  background-color: var(--corCinzaMedio);
 }
-
 
 
 
