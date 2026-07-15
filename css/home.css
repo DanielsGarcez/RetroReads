@@ -57,7 +57,7 @@ ul.banner-carrossel  {
 li.banner-item {
   scroll-snap-align: center;
 }
-ul.banner-carrossel ::scroll-button(*) {
+ul.banner-carrossel::scroll-button(*) {
   border: 0;
   font-size: 2rem;
   background: none;
@@ -66,47 +66,47 @@ ul.banner-carrossel ::scroll-button(*) {
   cursor: pointer;
 }
 
-ul.banner-carrossel ::scroll-button(*):hover,
-ul.banner-carrossel ::scroll-button(*):focus {
+ul.banner-carrossel::scroll-button(*):hover,
+ul.banner-carrossel::scroll-button(*):focus {
   opacity: 1;
 }
 
-ul.banner-carrossel ::scroll-button(*):active {
+ul.banner-carrossel::scroll-button(*):active {
   translate: 1px 1px;
 }
 
-ul.banner-carrossel ::scroll-button(*):disabled {
+ul.banner-carrossel::scroll-button(*):disabled {
   opacity: 0.2;
   cursor: unset;
 }
-ul.banner-carrossel ::scroll-button(left) {
+ul.banner-carrossel::scroll-button(left) {
   content: "◄" / "Previous";
 }
 
-ul.banner-carrossel ::scroll-button(right) {
+ul.banner-carrossel::scroll-button(right) {
   content: "►" / "Next";
 }
 ul.banner-carrossel  {
   anchor-name: --my-carousel;
 }
 
-ul.banner-carrossel ::scroll-button(*) {
+ul.banner-carrossel::scroll-button(*) {
   position: absolute;
   position-anchor: --my-carousel;
 }
-ul.banner-carrossel ::scroll-button(left) {
+ul.banner-carrossel::scroll-button(left) {
   right: calc(anchor(left) - 70px);
   bottom: calc(anchor(top) + 13px);
 }
 
-ul.banner-carrossel ::scroll-button(right) {
+ul.banner-carrossel::scroll-button(right) {
   left: calc(anchor(right) - 70px);
   bottom: calc(anchor(top) + 13px);
 }
 ul.banner-carrossel  {
   scroll-marker-group: after;
 }
-ul.banner-carrossel ::scroll-marker-group {
+ul.banner-carrossel::scroll-marker-group {
   position: absolute;
   position-anchor: --my-carousel;
   top: calc(anchor(bottom) - 70px);
