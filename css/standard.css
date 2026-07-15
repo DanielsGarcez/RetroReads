@@ -5,10 +5,13 @@
 :root{
     /* Cores: */
     --corPrincipalTransparente: #12945842;
+    --corVermelhoTransparente: #f09595;
+    --corCinzaTransparente: #d3d3d342;
+
     --corPrincipal: #129458;
     --corSecundaria: #317554;
     --corVermelhoPrincipal: #a31a1a;
-    --corVermelhoTransparente: #f09595;
+
     --corBranco: #fff;
     --corCinzaEscuro:#666;
     --corCinzaMedio: #d3d3d3;
