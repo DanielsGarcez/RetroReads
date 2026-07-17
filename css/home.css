@@ -6,11 +6,6 @@
     margin-top: 7.2rem;
 }
 
-.main-home img{
-    width: 100%;
-    height: auto;
-}
-
 .banner-home{
     padding-bottom: 5rem;
 }
@@ -40,7 +35,7 @@ ul.banner-carrossel{
     height: auto;
 
     display: flex;
-    gap: 4vw;
+    gap: 100%;
 
     box-shadow: var(--sombra);
 
@@ -105,18 +100,22 @@ li.banner-item::scroll-marker:target-current{
 /* ------------- Mobile ------------- */
 
 @media (max-width: 900px){
-    .banner-home > img{
+    .banner-img{
         margin-top: 3.5rem;
         scale: 1.5;
     }
 }
 
 @media (max-width: 768px) {
-    main.main-home{
+    .main-home{
         margin-top: 0rem;
     }
 
-    .banner-home > img{
+    .banner-item{
+        padding: 0 3.5rem;
+    }
+
+    .banner-img{
         margin-top: 3.5rem;
         scale: 2;
     }
