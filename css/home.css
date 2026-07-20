@@ -112,7 +112,8 @@ li.banner-item::scroll-marker:target-current{
     }
 
     .banner-item{
-        padding: 0 3.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 4rem;
     }
 
     .banner-img{
