@@ -67,12 +67,12 @@ ul.banner-carrossel  {
 ul.banner-carrossel::scroll-marker-group{
     position: absolute;
     position-anchor: --my-carousel;
-    top: calc(anchor(bottom) + 20px);
+    top: calc(anchor(bottom) + 1rem);
     justify-self: anchor-center;
 
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 1rem;
 }
 
 li.banner-item::scroll-marker{

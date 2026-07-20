@@ -70,12 +70,11 @@
     cursor: pointer;
 }
 
-#btn-limpa-filtro {
+#btn-limpa-filtro{
     padding-left: .8rem;
     padding-right: .8rem;
 
     margin-left: auto;
-    margin-right: 1rem;
 }
 
 /* ---------- Lista de Livro do Catalogo ---------- */
@@ -407,6 +406,7 @@
 
         margin-left: auto;
         margin-right: 0rem;
+        margin-right: 1rem;
     }
 
     .container-catalogo{
